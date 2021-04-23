@@ -8,7 +8,6 @@ twitter: awardsnom
 github:  melvitax/awardsnom
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
 markdown: kramdown
