@@ -58,6 +58,12 @@ For example the steps to add JQuery are:
 
 `$ npm run webpack`
 
+### Bootstap Grid size
+
+If Bootsrap gets updated, the gris size variable in /vendor/bootstrap/_scss/_variables.scss needs to be updated
+
+`$grid-columns: 10 !default;`
+
 #### Running locally
 ```
 $ npm run dev

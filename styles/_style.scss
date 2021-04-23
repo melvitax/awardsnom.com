@@ -5,15 +5,29 @@
 body {
     background-color: #f8f9fa;
 }
-.show-site-title a:link, .show-site-title a:visited {
-    color: rgb(170, 170, 170);
-    text-decoration: none;
+h1.site-title {
+    clear: both;
+    font-size: 13.8vw;
+    font-weight: bold;
+    line-height: 1em;
 }
-.show-site-title a:hover {
-    color: #6D757D;
+@media (min-width: 768px) {  
+    h1.site-title { font-size: 7.8em; }
 }
-.show-site-title a:active {
-    color: rgb(255, 72, 0);
+@media (min-width: 992px) { 
+    h1.site-title { font-size: 10.5em; } 
+}
+@media (min-width: 1200px) {  
+    h1.site-title { font-size: 12.5em; }     
+}
+h2.show-title {
+    clear: both;
+    font-size: 7.8vw;
+    font-weight: bold;
+    line-height: 1em;
+}
+@media (min-width: 768px) { 
+    font-size: 5.8vw;
 }
 .fav-button {
     background-image: url('/images/heart-regular.svg');
@@ -21,7 +35,7 @@ body {
     transition: scale .2s ease-in-out; 
     opacity: 0;
 }
-.card:hover .fav-button, .card:active .fav-button, .isFavorite .fav-button {
+.poster:hover .fav-button, .poster:active .fav-button, .isFavorite .fav-button {
     opacity: 100;
 }
 .card:hover .fav-button{
@@ -38,30 +52,26 @@ body {
   cursor: pointer;
 }
 .icon-play {
-  display: none;
-}
-.list-group-item svg {
-    width: 22px;
-    height: 22px;
-    position: absolute;
-    right: 1.25rem;
-    top: 50%;
-    transform: translateY(-50%)
-}
-.poster-link:hover .icon-play {
     display: block;
-    position: absolute;
-    width: 70%;
-    height: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%)
+    width: 1em;
+    height: 1em;
 }
 .card {
     background-color: rgb(225, 229, 236);
 }
 .sub {
     color: rgb(99, 108, 117);
+}
+.video_wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+}
+iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 @media (prefers-color-scheme: dark) {

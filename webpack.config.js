@@ -16,11 +16,6 @@ module.exports = {
             { from: './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', to: './vendor/bootstrap' },
             { from: './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js.map', to: './vendor/bootstrap' },
             { from: './node_modules/bootstrap/scss/', to: './vendor/bootstrap/_scss' },
-            // Video.js
-            { from: './node_modules/video.js/dist/video.min.js', to: './vendor/video.js/' },
-            { from: './node_modules/video.js/src/css', to: './vendor/video.js/_scss' },
-            // YouTube-Video.js
-            { from: './node_modules/youtube-video-js/dist/youtube-video.js', to: './vendor/video.js/' },
             // Font Awesome
             { from: './node_modules/font-awesome/fonts', to: './vendor/font-awesome/fonts' },
             { from: './node_modules/font-awesome/scss', to: './vendor/font-awesome/_scss' },

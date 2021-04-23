@@ -1,12 +1,16 @@
 title: AwardsNom
-email: your-email@example.com
-description: >- 
-  Award Show Nominee Ballot
+description: Award Show Nominee Ballot
+keywords: filmmaking, oscards, awards, goldenglobes
 baseurl: "" 
 url: "https://awardsnom.com"
 twitter: awardsnom
 github:  melvitax/awardsnom
-
+socialimage: http://awardsnom.com/images/socialimage.jpg
+socialinfo: "An award show nominee ballot tracker"
+author:
+  name: Melvin Rivera
+  twitter: melvitax
+  role: designer/developer
 # Build settings
 plugins:
   - jekyll-feed
