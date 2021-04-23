@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
-    // Fav Show Buttons
-  var faved = getCookie('favedShows')
+  // Fav Show Buttons
+  var faved = getCookie('faved')
   if (faved) {
     var array = faved.split(",")
     if (array) {
@@ -12,32 +12,7 @@ $( document ).ready(function() {
     }
   }
   
-  // Fav Button Logic
-  $('.fav-button').click(function() {
-    var id = $(this).parent().parent().attr('id').split("__")[1]
-    console.log('id: '+id)
-    $('#card__'+id).toggleClass('isFavorite')
-    var isFavorite = $('#card__'+id).hasClass('isFavorite')
-    var faved = getCookie('favedShows')
-    var array = []
-    if (faved) {
-      array = faved.split(",")
-    }
-    if (isFavorite) {
-      array.push(id)
-    } else {
-      var filtered = []
-      for(var i = 0; i < array.length; i++) {
-        var item = array[0]
-        if (item != id) {
-          filtered.push(item)
-        }
-      }
-      array = filtered
-    }
-    var string = array.join(",")
-    setCookie('favedShows', string, 365)
-  })
+  
   
   // Animate on Intersect
   $('body').removeClass('no-observer')
@@ -83,3 +58,30 @@ $( document ).ready(function() {
     }
   }
 })
+
+// Fav Button Logic
+function fav(obj) {
+  var id = $(obj).parent().parent().attr('id').split("__")[1]
+  console.log('id: '+id)
+  $('#card__'+id).toggleClass('isFavorite')
+  var isFavorite = $('#card__'+id).hasClass('isFavorite')
+  var faved = getCookie('faved')
+  var array = []
+  if (faved) {
+    array = faved.split(",")
+  }
+  if (isFavorite) {
+    array.push(id)
+  } else {
+    var filtered = []
+    for(var i = 0; i < array.length; i++) {
+      var item = array[0]
+      if (item != id) {
+        filtered.push(item)
+      }
+    }
+    array = filtered
+  }
+  var string = array.join(",")
+  setCookie('faved', string, 365)
+}

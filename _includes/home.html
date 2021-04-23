@@ -1,4 +1,3 @@
-
 <main class="hide">
 <div class="pb-5 main-content">
 <div class="container">
@@ -10,7 +9,7 @@
     {% capture imagePath %}images/{{ event }}/{{ year }}{% endcapture %}
     <h2 class="col-10 pt-4 pb-2">{{ event | upcase }} {{ year }}</h2>
     {% for cat in data.categories %}
-    <h3 class="col-10 pt-4 pb-2">{{ cat.name }}</h3>
+        <h3 class="col-10 pt-4 pb-2">{{ cat.name }}</h3>
         {% for film in data.films %}
             {% assign nominated = film.nominated | where: "category", cat.key %}
             {% for nominee in nominated %}
@@ -21,11 +20,11 @@
                 <div class="animate card mb-3 shadow-sm" id="card__{{ id }}">
                     <div class="row no-gutters"> 
                         <!-- Poster -->
-                        <img class="card-img-top w-100 h-100" src="{{ imagePath }}/{{ image }}.jpg" width="230" height="355" alt="{{ name }}" />
+                        <a onclick="fav(this)" class="grow poster" ><img class="card-img-top w-100 h-100" src="{{ imagePath }}/{{ image }}.jpg" width="230" height="355" alt="{{ name }}" /></a>
                         <!-- Title -->
                         <div class="text-wrap text-muted text-monospace  text-center position-absolute w-100 home-show-title" style="top: -1.8em; z-index: 0"><small>{{ film.name }}</small></div>
                         <!-- Favorite -->
-                        <div id="fav__{{ id }}" class="fav-button position-absolute" style="top: 16px; right: 16px; z-index: 2; width: 44px; height: 44px;">&nbsp;</div>
+                        <div onclick="fav(this)" class="fav-button position-absolute" style="top: 16px; right: 16px; z-index: 2; width: 44px; height: 44px;">&nbsp;</div>
                         <!-- Sub -->
                         <div class="sub p-2">
                             {% if nominee.name %}{{ nominee.name }}<br />{% endif %}
