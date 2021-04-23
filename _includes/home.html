@@ -14,7 +14,7 @@
         {% for film in data.films %}
             {% assign nominated = film.nominated | where: "category", cat.key %}
             {% for nominee in nominated %}
-            <div class="col-sm-3 col-md-2 pt-4" >
+            <div class="col-5 col-sm-3 col-md-2 pt-4" >
                 {% capture id %}{{ event }}_{{ year }}_{{ cat.key }}_{{ key }}{% endcapture %}
                 {% capture key %}{% if nominee.key %}{{ nominee.key }}{% else %}{{ film.key }}{% endif %}{% endcapture %}
                 {% capture image %}{% if nominee.image %}{{ nominee.image }}{% else %}{{ film.key }}{% endif %}{% endcapture %}
