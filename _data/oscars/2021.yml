@@ -1,0 +1,481 @@
+title: Oscars 2021
+categories:
+  - key: picture
+    name: Best Picture
+  - key: director
+    name: Best Director
+  - key: international
+    name: Best International Feature Film
+  - key: actress
+    name: Best Actress
+  - key: actor
+    name: Best Actor
+  - key: supportingactress
+    name: Best Supporting Actress
+  - key: supportingactor
+    name: Best Supporting Actor
+  - key: screenplay
+    name: Best Original Screenplay
+  - key: adaptedscreenplay
+    name: Best Adapted Screenplay
+  - key: animated
+    name: Best Animated Feature
+  - key: song
+    name: Best Original Song
+  - key: score
+    name: Best Original Score
+  - key: documentary
+    name: Best Documentary, Feature
+  - key: documentaryshort
+    name: Best Documentary, Short
+  - key: shortfilm
+    name: Best Short Film, Live Action
+  - key: makeup
+    name: Best Makeup and Hairstyling
+  - key: editing
+    name: Best Film Editing
+  - key: effects
+    name: Best Visual Effects
+  - key: animatedshort
+    name: Best Short Film, Animated
+  - key: productiondesign
+    name: Best Production Design
+  - key: cinematography
+    name: Best Cinematography
+  - key: costume
+    name: Best Costume Design
+  - key: sound
+    name: Best Sound
+films:
+  - name: The Father
+    key: father
+    nominated:
+      - category: picture
+        sub: David Parfitt, Jean-Louis Livi & Philippe Carcassonne
+      - category: actor
+        image: anthonyhopkins
+        name: Anthony Hopkins
+      - category: supportingactress
+        image: oliviacolman
+        name: Olivia Colman
+      - category: adaptedscreenplay
+        sub: Christopher Hampton & Florian Zeller
+      - category: editing
+        sub: Yorgos Lamprinos
+      - category: productiondesign
+        sub: Peter Francis & Cathy Featherstone
+  - name: Judas and the Black Messiah
+    key: judas
+    nominated:
+      - category: picture
+        sub: Shaka King, Charles D. King & Ryan Coogler
+      - category: supportingactor
+        image: danielkaluuya
+        key: danielkaluuya
+        name: Daniel Kaluuya
+      - category: supportingactor
+        image: lakeithstanfield
+        key: lakeithstanfield
+        name: LaKeith Stanfield
+      - category: screenplay
+        sub: Will Berson, Shaka King, Kenny Lucas & Keith Lucas
+      - category: song
+        name: Fight for You
+        sub: H.E.R., Dernst Emile II & Tiara Thomas
+      - category: cinematography
+        sub: Sean Bobbitt
+  - name: Mank
+    key: mank
+    nominated:
+      - category: picture
+        sub: Ceán Chaffin, Eric Roth & Douglas Urbanski
+      - category: director
+        name: David Fincher
+      - category: actor
+        image: garyoldman
+        name: Gary Oldman
+      - category: supportingactress
+        image: amandaseyfried
+        name: Amanda Seyfried
+      - category: score
+        sub: Trent Reznor & Atticus Ross
+      - category: makeup
+        sub: Gigi Williams, Kimberley Spiteri & Colleen LaBaff
+      - category: productiondesign
+        sub: Donald Graham Burt & Jan Pascale
+      - category: cinematography
+        sub: Erik Messerschmidt
+      - category: costume
+        sub: Trish Summerville
+      - category: sound
+        sub: Ren Klyce, Jeremy Molod, David Parker, Nathan Nance & Drew Kunin
+  - name: Minari
+    key: minari
+    nominated:
+      - category: picture
+        sub: Christina Oh
+      - category: director
+        name: Lee Isaac Chung
+      - category: actor
+        image: stevenyeun
+        name: Steven Yeun
+      - category: supportingactress
+        image: yuhjungyoun
+        name: Yuh-Jung Youn
+      - category: screenplay
+        name: Lee Isaac Chung
+      - category: score
+        sub: Emile Mosseri
+  - name: Nomadland
+    key: nomadland
+    nominated:
+      - category: picture
+        sub: Frances McDormand, Peter Spears, Mollye Asher, Dan Janvey & Chloé Zhao
+      - category: director
+        name: Chloé Zhao
+      - category: actress
+        image: francesmcdormand
+        name: Frances McDormand
+      - category: adaptedscreenplay
+        sub: Chloé Zhao
+      - category: editing
+        sub: Chloé Zhao
+      - category: cinematography
+        sub: Joshua James Richards
+  - name: Promising Young Woman
+    key: promising
+    nominated:
+      - category: picture
+        sub: Ben Browning, Ashley Fox, Emerald Fennell & Josey McNamara
+      - category: director
+        name: Emerald Fennell
+      - category: actress
+        image: careymulligan
+        name: Carey Mulligan
+      - category: screenplay
+        sub: Emerald Fennell
+      - category: editing
+        sub: Frédéric Thoraval
+  - name: Sound of Metal
+    key: metal
+    nominated:
+      - category: picture
+        sub: Bert Hamelinck & Sacha Ben Harroche
+      - category: actor
+        image: rizahmed
+        name: Riz Ahmed
+      - category: supportingactor
+        image: paulraci
+        name: Paul Raci
+      - category: screenplay
+        sub: Darius Marder, Abraham Marder & Derek Cianfrance
+      - category: editing
+        sub: Mikkel E. G. Nielsen
+      - category: sound
+        sub: Nicolas Becker, Jaime Baksht, Michelle Couttolenc, Carlos Cortés & Phillip Bladh
+  - name: The Trial of the Chicago 7
+    key: chicago7
+    nominated:
+      - category: picture
+        sub: Marc Platt & Stuart Besser
+      - category: supportingactor
+        image: sachabaroncohen
+        name: Sacha Baron Cohen
+      - category: screenplay
+        sub: Aaron Sorkin
+      - category: song
+        name: Hear My Voice
+        sub: Daniel Pemberton & Celeste Waite
+      - category: editing
+        sub: Alan Baumgarten
+      - category: cinematography
+        sub: Phedon Papamichael
+  - name: Another Round
+    key: another
+    nominated:
+      - category: director
+        name: Thomas Vinterberg
+      - category: international
+        sub: Denmark
+  - name: Ma Rainey’s Black Bottom
+    key: maraineys
+    nominated:
+      - category: actress
+        image: violadavis
+        name: Viola Davis
+      - category: actor
+        image: chadwickboseman
+        name: Chadwick Boseman
+      - category: makeup
+        sub: Sergio Lopez-Rivera, Mia Neal & Jamika Wilson
+      - category: productiondesign
+        sub: Mark Ricker, Karen O’Hara & Diana Stoughton
+      - category: costume
+        sub: Ann Roth
+  - name: The United States vs. Billie Holiday
+    key: billieholiday
+    nominated: 
+      - category: actress
+        image: andraday
+        name: Andra Day
+  - name: Pieces of a Woman
+    key: piecesofawoman
+    nominated:
+      - category: actress
+        image: vanessakirby
+        name: Vanessa Kirby
+  - name: Borat Subsequent Moviefilm
+    key: borat
+    nominated:
+      - category: supportingactress
+        image: mariabakalova
+        name: Maria Bakalova
+      - category: adaptedscreenplay
+        sub: Sacha Baron Cohen, Anthony Hines, Dan Swimer, Peter Baynham, Erica Rivinoja, Dan Mazer, Jena Friedman, Lee Kern & Nina Pedrad
+  - name: Hillbilly Elegy
+    key: hillbilly
+    nominated:
+      - category: supportingactress
+        image: glennclose
+        name: Glenn Close
+      - category: makeup
+        sub: Eryn Krueger Mekash, Matthew Mungle & Patricia Dehaney
+  - name: One Night in Miami…
+    key: onenight
+    nominated:
+      - category: supportingactor
+        image: leslieodomjr
+        name: Leslie Odom Jr.
+      - category: adaptedscreenplay
+        sub: Kemp Powers
+      - category: song
+        name: Speak Now
+        sub: Leslie Odom Jr. & Sam Ashworth
+  - name: The White Tiger
+    key: whitetiger
+    nominated: 
+      - category: adaptedscreenplay
+        sub: Ramin Bahrani
+  - name: Onward
+    key: onward
+    nominated: 
+      - category: animated
+        sub: Dan Scanlon & Kori Rae
+  - name: Over the Moon
+    key: overthemoon
+    nominated:
+      - category: animated
+        sub: Glen Keane, Gennie Rim & Peilin Chou
+  - name: "A Shaun the Sheep Movie: Farmageddon"
+    key: farmageddon
+    nominated:
+      - category: animated
+        sub: Richard Phelan, Will Becher & Paul Kewley
+  - name: Soul
+    key: soul
+    nominated:
+      - category: animated
+        sub: Pete Docter & Dana Murray
+      - category: score
+        sub: Trent Reznor, Atticus Ross & Jon Batiste
+      - category: sound
+        sub: Ren Klyce, Coya Elliott & David Parker
+  - name: Wolfwalkers
+    key: wolfwalkers
+    nominated:
+      - category: animated
+        sub: Tomm Moore, Ross Stewart, Paul Young & Stéphan Roelants
+  - name: "Eurovision Song Contest: The Story of Fire Saga"
+    key: eurovision
+    nominated:
+      - category: song
+        name: Husavik
+        sub: Savan Kotecha, Fat Max Gsus & Rickard Göransson
+  - name: The Life Ahead (La Vita Davanti a Se)
+    key: lifeahead
+    nominated:
+      - category: song
+        name: Io Sì (Seen)
+        sub: Diane Warren & Laura Pausini
+  - name: Da 5 Bloods
+    key: da5bloods
+    nominated:
+      - category: score
+        sub: Terence Blanchard
+  - name: News of the World
+    key: newsoftheworld
+    nominated:
+      - category: score
+        sub: James Newton Howard
+      - category: productiondesign
+        sub: David Crank & Elizabeth Keenan
+      - category: cinematography
+        sub: Dariusz Wolski
+      - category: sound
+        sub: Oliver Tarney, Mike Prestwood Smith, William Miller & John Pritchett
+  - name: Collectiv
+    key: collectiv
+    nominated:
+      - category: documentary
+        sub: Alexander Nanau & Bianca Oana
+      - category: international
+        sub: Romania
+  - name: Crip Camp
+    key: cripcamp
+    nominated:
+      - category: documentary
+        sub: Nicole Newnham, Jim LeBrecht & Sara Bolder
+  - name: The Mole Agent
+    key: moleagent
+    nominated:
+      - category: documentary
+        sub: Maite Alberdi & Marcela Santibáñez
+  - name: My Octopus Teacher
+    key: octopusteacher
+    nominated:
+      - category: documentary
+        sub: Pippa Ehrlich, James Reed & Craig Foster
+  - name: Time
+    key: time
+    nominated: 
+      - category: documentary
+        sub: Garrett Bradley, Lauren Domino & Kellen Quinn
+  - name: Colette
+    key: colette
+    nominated: 
+      - category: documentaryshort
+        sub: Anthony Giacchino & Alice Doyard
+  - name: A Concerto Is a Conversation
+    key: concerto
+    nominated: 
+      - category: documentaryshort
+        sub: Ben Proudfoot & Kris Bowers
+  - name: Do Not Split
+    key: donotsplit
+    nominated: 
+      - category: documentaryshort
+        sub: Anders Hammer & Charlotte Cook
+  - name: Hunger Ward
+    key: hungerward
+    nominated: 
+      - category: documentaryshort
+        sub: Skye Fitzgerald & Michael Scheuerman
+  - name: A Love Song for Latasha
+    key: latasha
+    nominated: 
+      - category: documentaryshort
+        sub: Sophia Nahli Allison & Janice Duncan
+  - name: Feeling Through
+    key: feelingthrough
+    nominated: 
+      - category: shortfilm
+        sub: Doug Roland & Susan Ruzenski
+  - name: The Letter Room
+    key: letterroom
+    nominated: 
+      - category: shortfilm
+        sub: Elvira Lind & Sofia Sondervan
+  - name: The Present
+    key: thepresent
+    nominated: 
+      - category: shortfilm
+        sub: Farah Nabulsi & Ossama Bawardi
+  - name: Two Distant Strangers
+    key: twodistantstrangers
+    nominated: 
+      - category: shortfilm
+        sub: Travon Free & Martin Desmond Roe
+  - name: White Eye
+    key: whiteeye
+    nominated: 
+      - category: shortfilm
+        sub: Tomer Shushan & Shira Hochman
+  - name: Emma
+    key: emma
+    nominated: 
+      - category: makeup
+        sub: Marese Langan, Laura Allen & Claudia Stolze
+      - category: costume
+        sub: Alexandra Byrne
+  - name: Pinocchio
+    key: pinocchio
+    nominated: 
+      - category: makeup
+        sub: Mark Coulier, Dalia Colli & Francesco Pegoretti
+      - category: costume
+        sub: Massimo Cantini Parrini
+  - name: Love and Monsters
+    key: loveandmosters
+    nominated: 
+      - category: effects
+        sub: Matt Sloan, Genevieve Camilleri, Matt Everitt & Brian Cox
+  - name: The Midnight Sky
+    key: midnightsky
+    nominated: 
+      - category: effects
+        sub: Matthew Kasmir, Christopher Lawrence, Max Solomon & David Watkins
+  - name: Mulan
+    key: mulan
+    nominated: 
+      - category: effects
+        sub: Sean Faden, Anders Langlands, Seth Maury & Steve Ingram
+      - category: costume
+        sub: Bina Daigeler
+  - name: The One and Only Ivan
+    key: ivan
+    nominated: 
+      - category: effects
+        sub: Nick Davis, Greg Fisher, Ben Jones & Santiago Colomo Martinez
+  - name: Tenet
+    key: tenet
+    nominated: 
+      - category: effects
+        sub: Andrew Jackson, David Lee, Andrew Lockley & Scott Fisher
+      - category: productiondesign
+        sub: Nathan Crowley & Kathy Lucas
+  - name: Burrow
+    key: burrow
+    nominated: 
+      - category: animatedshort
+        sub: Madeline Sharafian & Michael Capbarat
+  - name: Genius Loci
+    key: loci
+    nominated: 
+      - category: animatedshort
+        sub: Adrien Mérigeau & Amaury Ovise
+  - name: If Anything Happens I Love You
+    key: ifanythinghappens
+    nominated: 
+      - category: animatedshort
+        sub: Will McCormack & Michael Govier
+  - name: Opera
+    key: opera
+    nominated: 
+      - category: animatedshort
+        sub: Erick Oh
+  - name: Yes-People
+    key: yespeople
+    nominated: 
+      - category: animatedshort
+        sub: Gísli Darri Halldórsson & Arnar Gunnarsson
+  - name: Greyhound
+    key: greyhound
+    nominated: 
+      - category: sound
+        sub: Warren Shaw, Michael Minkler, Beau Borders & David Wyman
+  - name: Better Days
+    key: betterdays
+    nominated:
+      - category: international
+        sub: Hong Kong
+  - name: The Man Who Sold His Skin
+    key: theman
+    nominated: 
+      - category: international
+        sub: Tunisia
+  - name: Quo Vadis, Aida?
+    key: aida
+    nominated: 
+      - category: international
+        sub: Bosnia and Herzegovina
+

@@ -1,0 +1,105 @@
+:root {
+    color-scheme: light dark;
+}
+  
+body {
+    background-color: #f8f9fa;
+}
+.show-site-title a:link, .show-site-title a:visited {
+    color: rgb(170, 170, 170);
+    text-decoration: none;
+}
+.show-site-title a:hover {
+    color: #6D757D;
+}
+.show-site-title a:active {
+    color: rgb(255, 72, 0);
+}
+.fav-button {
+    background-image: url('/images/heart-regular.svg');
+    background-size: 50px 50px;
+    transition: scale .2s ease-in-out; 
+    opacity: 0;
+}
+.card:hover .fav-button, .card:active .fav-button, .isFavorite .fav-button {
+    opacity: 100;
+}
+.fav-button:hover {
+    cursor: pointer;
+    transform: translateZ(0px) scale(1.15);
+}
+.isFavorite .fav-button {
+    background-image: url('/images/heart-solid.svg');
+}
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { 
+  transform: translateZ(0px) scale(1.05);
+  box-shadow: 0 10px 50px rgba(0, 0, 0, .5);
+  cursor: pointer;
+}
+.icon-play {
+  display: none;
+}
+.list-group-item svg {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%)
+}
+.poster-link:hover .icon-play {
+    display: block;
+    position: absolute;
+    width: 70%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+.card {
+    background-color: rgb(225, 229, 236);
+}
+.sub {
+    color: rgb(99, 108, 117);
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+      background-color: #000;
+      color: white;
+      height: 100%;
+    }
+    .site-title a:link, .site-title a:visited {
+        color: rgb(124, 124, 124) ;
+    }
+    .site-title a:hover {
+        color: #6D757D;
+    }
+    .site-title a:active {
+        color: rgb(255, 72, 0);
+    }
+    .card {
+        background-color: rgb(29, 31, 34);
+    }
+    .sub {
+        color: slategray;
+    }
+}
+
+/***************
+ *  Effects   *
+****************/
+.no-observer .animate {
+    opacity: 1;
+    transform: none;
+  }
+  .animate {
+    opacity: 0;
+    transition: opacity 1.6s, transform 0.6s ease-out;
+    transform: translateY(10px);
+  }
+  .animate.is-active {
+    opacity: 1;
+    transform: none;
+  }

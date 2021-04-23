@@ -1,0 +1,31 @@
+title: AwardsNom
+email: your-email@example.com
+description: >- 
+  Award Show Nominee Ballot
+baseurl: "" 
+url: "https://awardsnom.com"
+twitter: awardsnom
+github:  melvitax/awardsnom
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+markdown: kramdown
+url: 
+exclude: ["node_modules",  "package.json", "Gemfile", "Gemfile.lock", "README.md", "LICENSE"]
+timezone: 'America/New_York'
+fonts:
+  - "Lato:400,900,700,500,300,100:latin"
+sass:
+    style: compressed
+    sass_dir: styles
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+  envs: []
+  blanklines: false
+  profile: false
+  startings: [html, head, body]

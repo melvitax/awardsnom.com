@@ -1,0 +1,44 @@
+<head>
+    <meta charset="utf-8">
+    {% if page.id == "home" %}
+    <title>{{ page.title }} | {{site.description}}</title>
+    {% else %}
+    <title>{{ page.title }} | {{ site.title }}</title>
+    {% endif %}
+    <meta name="description" content="{{site.description}}">
+    <meta name="keywords" content="{{site.keywords}}">
+    <meta name="author" content="{{site.author.name}}">
+    <meta name="handheldfriendly" content="true">
+    <meta name="mobileoptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="author" href="/humans.txt">
+    <link rel="apple-touch-icon" href="/assets/icon.jpg">
+    <link rel="icon" sizes="192x192" href="/assets/icon.jpg">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:site" content="@{{site.twitter}}">
+    <meta property="twitter:creator" content="@{{site.author.twitter}}">
+    <!-- Facebook -->
+    <meta property="og:site_name" content="{{site.title}}">
+    
+    <meta property="og:type" content="article">
+    <!-- Shared -->
+    {% if page.id == "home" %}
+    <meta property="og:url" content="{{site.url}}">
+    <meta property="og:title" content="{{page.title}}">
+    <meta property="og:description" content="{{site.socialinfo}}">
+    <meta property="og:image" content="{{site.socialimage}}">
+    {% else %}
+    <meta property="og:url" content="{{site.url}}{{page.url}}">
+    <meta property="og:title" content="{{page.title}}">
+    <meta property="og:description" content="{{site.socialinfo}}">
+    {% if page.header and page.header !=blank and page.header != "" %}
+    <meta property="og:image" content="{{site.url}}{{page.header}}">
+    {% else %}
+    <meta property="og:image" content="{{site.url}}{{page.poster}}">
+    {% endif %}
+    {% endif %}
+    <!-- CSS: Main -->
+    <link rel="stylesheet" href="/styles/main.css">
+  </head>
+  
