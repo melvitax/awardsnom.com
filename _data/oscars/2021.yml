@@ -56,11 +56,13 @@ films:
       - category: actor
         image: anthonyhopkins
         name: Anthony Hopkins
+        winner: true
       - category: supportingactress
         image: oliviacolman
         name: Olivia Colman
       - category: adaptedscreenplay
         sub: Christopher Hampton & Florian Zeller
+        winner: true
       - category: editing
         sub: Yorgos Lamprinos
       - category: productiondesign
@@ -75,6 +77,7 @@ films:
         image: danielkaluuya
         key: danielkaluuya
         name: Daniel Kaluuya
+        winner: true
       - category: supportingactor
         image: lakeithstanfield
         key: lakeithstanfield
@@ -84,6 +87,7 @@ films:
       - category: song
         name: Fight for You
         sub: H.E.R., Dernst Emile II & Tiara Thomas
+        winner: true
       - category: cinematography
         sub: Sean Bobbitt
   - name: Mank
@@ -106,8 +110,10 @@ films:
         sub: Gigi Williams, Kimberley Spiteri & Colleen LaBaff
       - category: productiondesign
         sub: Donald Graham Burt & Jan Pascale
+        winner: true
       - category: cinematography
         sub: Erik Messerschmidt
+        winner: true
       - category: costume
         sub: Trish Summerville
       - category: sound
@@ -126,6 +132,7 @@ films:
       - category: supportingactress
         image: yuhjungyoun
         name: Yuh-Jung Youn
+        winner: true
       - category: screenplay
         name: Lee Isaac Chung
       - category: score
@@ -136,11 +143,14 @@ films:
     nominated:
       - category: picture
         sub: Frances McDormand, Peter Spears, Mollye Asher, Dan Janvey & Chloé Zhao
+        winner: true
       - category: director
         name: Chloé Zhao
+        winner: true
       - category: actress
         image: francesmcdormand
         name: Frances McDormand
+        winner: true
       - category: adaptedscreenplay
         sub: Chloé Zhao
       - category: editing
@@ -160,6 +170,7 @@ films:
         name: Carey Mulligan
       - category: screenplay
         sub: Emerald Fennell
+        winner: true
       - category: editing
         sub: Frédéric Thoraval
   - name: Sound of Metal
@@ -178,8 +189,10 @@ films:
         sub: Darius Marder, Abraham Marder & Derek Cianfrance
       - category: editing
         sub: Mikkel E. G. Nielsen
+        winner: true
       - category: sound
         sub: Nicolas Becker, Jaime Baksht, Michelle Couttolenc, Carlos Cortés & Phillip Bladh
+        winner: true
   - name: The Trial of the Chicago 7
     key: chicago7
     trailer: https://www.youtube.com/watch?v=FVb6EdKDBfU
@@ -206,6 +219,7 @@ films:
         name: Thomas Vinterberg
       - category: international
         sub: Denmark
+        winner: true
   - name: Ma Rainey’s Black Bottom
     key: maraineys
     trailer: https://www.youtube.com/watch?v=ord7gP151vk
@@ -218,10 +232,12 @@ films:
         name: Chadwick Boseman
       - category: makeup
         sub: Sergio Lopez-Rivera, Mia Neal & Jamika Wilson
+        winner: true
       - category: productiondesign
         sub: Mark Ricker, Karen O’Hara & Diana Stoughton
       - category: costume
         sub: Ann Roth
+        winner: true
   - name: The United States vs. Billie Holiday
     key: billieholiday
     trailer: https://www.youtube.com/watch?v=USi-ppCfxEA
@@ -296,8 +312,10 @@ films:
     nominated:
       - category: animated
         sub: Pete Docter & Dana Murray
+        winner: true
       - category: score
         sub: Trent Reznor, Atticus Ross & Jon Batiste
+        winner: true
       - category: sound
         sub: Ren Klyce, Coya Elliott & David Parker
   - name: Wolfwalkers
@@ -364,6 +382,7 @@ films:
     nominated:
       - category: documentary
         sub: Pippa Ehrlich, James Reed & Craig Foster
+        winner: true
   - name: Time
     key: time
     trailer: https://www.youtube.com/watch?v=kq6Hh07oLvs
@@ -376,6 +395,7 @@ films:
     nominated: 
       - category: documentaryshort
         sub: Anthony Giacchino & Alice Doyard
+        winner: true
   - name: A Concerto Is a Conversation
     key: concerto
     trailer: https://www.youtube.com/watch?v=LoEZR5miMvo
@@ -424,6 +444,7 @@ films:
     nominated: 
       - category: shortfilm
         sub: Travon Free & Martin Desmond Roe
+        winner: true
   - name: White Eye
     key: whiteeye
     trailer: https://www.youtube.com/watch?v=k2Jc-UvppFo
@@ -478,6 +499,7 @@ films:
     nominated: 
       - category: effects
         sub: Andrew Jackson, David Lee, Andrew Lockley & Scott Fisher
+        winner: true
       - category: productiondesign
         sub: Nathan Crowley & Kathy Lucas
   - name: Burrow
@@ -498,6 +520,7 @@ films:
     nominated: 
       - category: animatedshort
         sub: Will McCormack & Michael Govier
+        winner: true
   - name: Opera
     key: opera
     trailer: https://www.youtube.com/watch?v=Cbn9ufpOfno

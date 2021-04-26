@@ -24,6 +24,9 @@
                 <!-- Favorite -->
                 <div  class="fav-button position-absolute" style="top: 16px; right: 16px; z-index: 2; width: 44px; height: 44px;">&nbsp;</div>
                 </a>
+                {% if nominee.winner %}
+                <!-- Winner -->
+                <div class="bg-danger w-100 text-light py-2 text-center text-monospace">WINNER</div>{% endif %}
                 <!-- Title -->
                 <div class="text-wrap text-muted text-monospace  text-center position-absolute w-100 home-film-title" style="top: -1.8em; z-index: 0"><small>{{ film.name }}</small></div>
                 <!-- Sub -->
