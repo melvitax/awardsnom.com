@@ -1,6 +1,7 @@
 ---
 title: The Father
 image: father.jpg
+trailer: https://www.youtube.com/watch?v=4TZb7YfK-JI
 nominations:
   - winner: false
     category: Best Picture
