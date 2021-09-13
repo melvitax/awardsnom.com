@@ -7,7 +7,7 @@ nominations:
     category: Best Picture
     sub: Marc Platt & Stuart Besser
   - winner: false
-    category: Best Actor
+    category: Best Supporting Actor
     name: Sacha Baron Cohen
     image: sachabaroncohen.jpg
   - winner: false
