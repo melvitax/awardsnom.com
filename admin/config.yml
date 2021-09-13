@@ -48,6 +48,6 @@ collections:
             displayFields: ["title"]
             valueField: "title"
           - {label: Name, name: name, widget: string, required: false}
-          - {label: Subtitle, name: sub, widget: string, required: false}
+          - {label: Sub, name: sub, widget: string, required: false}
           - {label: Image, name: image, widget: image, required: false}
           - {label: Critic's Pick, name: criticspick, widget: boolean, default: false}
