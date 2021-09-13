@@ -30,20 +30,25 @@ collections:
             identifier_field: title
             fields:
             - {label: "Name", name: "title", widget: string}
-  - label: "Oscar Shows"
+  - label: "Oscars"
     label_singular: Oscar Show
-    name: "oscar-shows"
+    name: "oscar-show"
     folder: "_oscars"
     format: frontmatter
     create: true
     identifier_field: title
+    media_folder: ''
+    public_folder: ''
+    nested:
+      depth: 1
+      summary: '{{title}}' 
     fields: 
       - {label: Title, name: title, widget: string}
       - {label: Image, name: image, widget: image, required: false}
       - {label: Trailer, name: trailer, widget: string, required: false}
-      - label: Nominees
-        label_singular: Nominee
-        name: Nominee
+      - label: Nominations
+        label_singular: Nomination
+        name: nominations
         required: true
         widget: list
         fields:
@@ -58,4 +63,4 @@ collections:
           - {label: Name, name: name, widget: string, required: false}
           - {label: Subtitle, name: sub, widget: string, required: false}
           - {label: Image, name: image, widget: image, required: false}
-          - {label: Critic's Pick, name: criticspick, widget: boolean, default: false}
+          - {label: Winner, name: winner, widget: boolean, default: false}
