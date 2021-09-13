@@ -6,22 +6,34 @@ backend:
   repo: melvitax/awardsnom.com 
 media_folder: 'assets/uploads'
 collections:
-  - label: Emmy Categories
-    label_singular: Category
-    name: "emmys-categories"
-    folder: "emmys-categories"
-    create: true
-    identifier_field: title
-    fields:
-      - {label: "Name", name: "title", widget: string}
-  - label: Oscar Categories
-    label_singular: Category
-    name: "oscars-category"
-    folder: "oscars-categories"
-    create: true
-    identifier_field: title
-    fields:
-      - {label: "Name", name: "title", widget: string}
+  - label: "Categories"
+      name: "emmys-categories"
+      create: true
+      files:
+        - label: "Oscars"
+          name: "oscars"
+          file: "_data/oscars.yml"
+          fields:
+             - label: Nominees
+              label_singular: Nominee
+              name: Nominee
+              required: true
+              widget: list
+              identifier_field: title
+              fields:
+                - {label: "Name", name: "title", widget: string}
+        - label: "Emmys"
+          name: "emmys"
+          file: "_data/emmys.yml"
+          fields:
+             - label: Nominees
+              label_singular: Nominee
+              name: Nominee
+              required: true
+              widget: list
+              identifier_field: title
+              fields:
+                - {label: "Name", name: "title", widget: string}
   - label: "Oscar Shows"
     label_singular: Oscar Show
     name: "oscar-shows"
