@@ -4,4 +4,5 @@ image: father.jpg
 nominations:
   - winner: false
     category: Best Picture
+    sub: David Parfitt, Jean-Louis Livi & Philippe Carcassonne
 ---
