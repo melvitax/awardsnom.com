@@ -15,24 +15,24 @@ collections:
         file: "_data/oscars.yml"
         fields:
           - label: Nominees
-          label_singular: Nominee
-          name: Nominee
-          required: true
-          widget: list
-          identifier_field: title
-          fields:
-            - {label: "Name", name: "title", widget: string}
-      - label: "Emmys"
-        name: "emmys"
-        file: "_data/emmys.yml"
-        fields:
-            - label: Nominees
             label_singular: Nominee
             name: Nominee
             required: true
             widget: list
             identifier_field: title
             fields:
+            - {label: "Name", name: "title", widget: string}
+      - label: "Emmys"
+        name: "emmys"
+        file: "_data/emmys.yml"
+        fields:
+            - label: Nominees
+              label_singular: Nominee
+              name: Nominee
+              required: true
+              widget: list
+              identifier_field: title
+              fields:
               - {label: "Name", name: "title", widget: string}
   - label: "Oscar Shows"
     label_singular: Oscar Show
