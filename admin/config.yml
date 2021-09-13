@@ -7,42 +7,21 @@ backend:
 media_folder: 'assets/uploads'
 collections:
   - label: "Categories"
-    name: "emmys-categories"
-    create: true
-    files:
-      - label: "Categories"
-        name: "categories"
-        file: "_data/categories.yml"
-        fields:
-          - label: Oscars Categories
-            label_singular: Category
-            name: oscars-category
-            required: true
-            widget: list
-            identifier_field: title
-            fields:
-            - {label: "Name", name: "title", widget: string}
-          - label: Emmys Categories
-            label_singular: Category
-            name: emmys-category
-            required: true
-            widget: list
-            identifier_field: title
-            fields:
-            - {label: "Name", name: "title", widget: string}
-  - label: "Oscars"
-    label_singular: Oscar Show
-    name: "oscar-show"
-    folder: "_oscars"
-    format: frontmatter
+    name: "categories"
+    folder: "_data/categories"
+    format: yml
     create: true
     identifier_field: title
+    fields:
+      - {label: "Name", name: "title", widget: string}
+  - label: "Oscars 2021"
+    folder: "_data/oscars/2021"
+    name: "oscars-2021"
+    label_singular: Nominee
+    format: frontmatter
+    create: true
     media_folder: ''
     public_folder: ''
-    nested:
-      depth: 2
-      summary: '{{title}}'
-    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
     fields: 
       - {label: Title, name: title, widget: string}
       - {label: Image, name: image, widget: image, required: false}
@@ -57,7 +36,7 @@ collections:
             name: category
             required: true
             widget: relation
-            collection: oscars-category
+            collection: categories
             searchFields: ["title"]
             displayFields: ["title"]
             valueField: "title"
