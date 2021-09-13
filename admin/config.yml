@@ -1,0 +1,53 @@
+# config.yml
+
+backend:
+  name: git-gateway
+  branch: master
+  repo: melvitax/awardsnom.com 
+media_folder: 'assets/uploads'
+collections:
+  - label: Emmy Categories
+    label_singular: Category
+    name: "emmys-categories"
+    file: "_data/emmys.yml"
+    format: yml
+    identifier_field: title
+    fields:
+      - {label: "Name", name: "title", widget: string}
+  - label: Oscar Categories
+    label_singular: Category
+    name: "oscars-category"
+    file: "_data/oscars.yml"
+    format: yml
+    identifier_field: title
+    fields:
+      - {label: "Name", name: "title", widget: string}
+  - label: "Oscar Shows"
+    label_singular: Oscar Show
+    name: "oscar-shows"
+    folder: "_oscars"
+    format: frontmatter
+    create: true
+    identifier_field: title
+    fields: 
+      - {label: Title, name: title, widget: string}
+      - {label: Image, name: image, widget: image, required: false}
+      - {label: Trailer, name: trailer, widget: string, required: false}
+      - label: Nominees
+        label_singular: Nominee
+        name: Nominee
+        required: true
+        widget: list
+        fields:
+          - label: Category
+            name: category
+            required: true
+            widget: relation
+            collection: oscars-category
+            searchFields: ["title"]
+            displayFields: ["title"]
+            valueField: "title"
+          - {label: Name, name: name, widget: string, required: false}
+          - {label: Subtitle, name: sub, widget: string, required: false}
+          - {label: Image, name: image, widget: image, required: false}
+          - {label: Critic's Pick, name: criticspick, widget: boolean, default: false}

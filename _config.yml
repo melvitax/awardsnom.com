@@ -5,7 +5,7 @@ baseurl: ""
 url: "https://awardsnom.com"
 twitter: awardsnom
 github:  melvitax/awardsnom
-socialimage: http://awardsnom.com/images/socialimage.jpg
+socialimage: http://awardsnom.com/assets/socialimage.jpg
 socialinfo: "An award show nominee ballot tracker"
 author:
   name: Melvin Rivera

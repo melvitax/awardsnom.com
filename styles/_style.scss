@@ -30,7 +30,7 @@ h2.show-title {
     font-size: 5.8vw;
 }
 .fav-button {
-    background-image: url('/images/heart-regular.svg');
+    background-image: url('/assets/heart-regular.svg');
     background-size: 42px 42px;
     transition: scale .2s ease-in-out; 
     opacity: 0;
@@ -43,7 +43,7 @@ h2.show-title {
     transform: translateZ(0px) scale(1.15);
 }
 .isFavorite .fav-button {
-    background-image: url('/images/heart-solid.svg');
+    background-image: url('/assets/heart-solid.svg');
 }
 .grow { transition: all .2s ease-in-out; }
 .grow:hover, .grow:active { 
