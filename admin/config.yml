@@ -9,16 +9,14 @@ collections:
   - label: Emmy Categories
     label_singular: Category
     name: "emmys-categories"
-    file: "_data/emmys.yml"
-    format: yml
+    file: "emmys.yml"
     identifier_field: title
     fields:
       - {label: "Name", name: "title", widget: string}
   - label: Oscar Categories
     label_singular: Category
     name: "oscars-category"
-    file: "_data/oscars.yml"
-    format: yml
+    file: "oscars.yml"
     identifier_field: title
     fields:
       - {label: "Name", name: "title", widget: string}
