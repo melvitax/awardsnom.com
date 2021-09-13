@@ -7,33 +7,33 @@ backend:
 media_folder: 'assets/uploads'
 collections:
   - label: "Categories"
-      name: "emmys-categories"
-      create: true
-      files:
-        - label: "Oscars"
-          name: "oscars"
-          file: "_data/oscars.yml"
-          fields:
-             - label: Nominees
-              label_singular: Nominee
-              name: Nominee
-              required: true
-              widget: list
-              identifier_field: title
-              fields:
-                - {label: "Name", name: "title", widget: string}
-        - label: "Emmys"
-          name: "emmys"
-          file: "_data/emmys.yml"
-          fields:
-             - label: Nominees
-              label_singular: Nominee
-              name: Nominee
-              required: true
-              widget: list
-              identifier_field: title
-              fields:
-                - {label: "Name", name: "title", widget: string}
+    name: "emmys-categories"
+    create: true
+    files:
+      - label: "Oscars"
+        name: "oscars"
+        file: "_data/oscars.yml"
+        fields:
+            - label: Nominees
+            label_singular: Nominee
+            name: Nominee
+            required: true
+            widget: list
+            identifier_field: title
+            fields:
+              - {label: "Name", name: "title", widget: string}
+      - label: "Emmys"
+        name: "emmys"
+        file: "_data/emmys.yml"
+        fields:
+            - label: Nominees
+            label_singular: Nominee
+            name: Nominee
+            required: true
+            widget: list
+            identifier_field: title
+            fields:
+              - {label: "Name", name: "title", widget: string}
   - label: "Oscar Shows"
     label_singular: Oscar Show
     name: "oscar-shows"
