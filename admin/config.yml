@@ -40,8 +40,9 @@ collections:
     media_folder: ''
     public_folder: ''
     nested:
-      depth: 1
-      summary: '{{title}}' 
+      depth: 2
+      summary: '{{title}}'
+    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
     fields: 
       - {label: Title, name: title, widget: string}
       - {label: Image, name: image, widget: image, required: false}
