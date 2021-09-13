@@ -10,30 +10,26 @@ collections:
     name: "emmys-categories"
     create: true
     files:
-      - label: "Oscars"
-        name: "oscars"
-        file: "_data/oscars.yml"
+      - label: "Categories"
+        name: "categories"
+        file: "_data/categories.yml"
         fields:
-          - label: Nominees
-            label_singular: Nominee
-            name: Nominee
+          - label: Oscars Categories
+            label_singular: Category
+            name: oscars-category
             required: true
             widget: list
             identifier_field: title
             fields:
             - {label: "Name", name: "title", widget: string}
-      - label: "Emmys"
-        name: "emmys"
-        file: "_data/emmys.yml"
-        fields:
-            - label: Nominees
-              label_singular: Nominee
-              name: Nominee
-              required: true
-              widget: list
-              identifier_field: title
-              fields:
-              - {label: "Name", name: "title", widget: string}
+          - label: Emmys Categories
+            label_singular: Category
+            name: emmys-category
+            required: true
+            widget: list
+            identifier_field: title
+            fields:
+            - {label: "Name", name: "title", widget: string}
   - label: "Oscar Shows"
     label_singular: Oscar Show
     name: "oscar-shows"
