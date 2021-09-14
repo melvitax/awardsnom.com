@@ -1,6 +1,6 @@
 ---
 title: Test
-image: images/billie-holiday.jpg
+image: images/aida.jpg
 show: Oscars
 year: "2021"
 nominations:
