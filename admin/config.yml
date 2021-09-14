@@ -21,7 +21,7 @@ collections:
     format: frontmatter
     create: true
     media_folder: 'images'
-    public_folder: ''
+    public_folder: 'assets/oscars-2021'
     fields: 
       - {label: Title, name: title, widget: string}
       - {label: Image, name: image, widget: image, required: false}
