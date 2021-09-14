@@ -14,18 +14,31 @@ collections:
     identifier_field: title
     fields:
       - {label: "Name", name: "title", widget: string}
-  - label: "Oscars 2021"
-    folder: "_oscars/2021"
-    name: "oscars-2021"
+  - label: "Nominees"
+    folder: "nominees"
+    name: "nominees"
     label_singular: Nominee
     format: frontmatter
     create: true
     media_folder: 'images'
     public_folder: ''
+    nested:
+      depth: 100 
+      summary: '{{title}}'
+     meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
     fields: 
       - {label: Title, name: title, widget: string}
       - {label: Image, name: image, widget: image, required: false}
       - {label: Trailer, name: trailer, widget: string, required: false}
+      - {label: "Show", name: "show", widget: "select", options: ["Oscars", "Emmys"]}
+      - label: "Year"
+        name: "year"
+        widget: "datetime"
+        default: ""
+        date_format: "YYYY"
+        time_format: false
+        format: "YYYY"
+        picker_utc: false
       - label: Nominations
         label_singular: Nomination
         name: nominations
@@ -41,6 +54,6 @@ collections:
             displayFields: ["title"]
             valueField: "title"
           - {label: Name, name: name, widget: string, required: false}
-          - {label: Subtitle, name: sub, widget: string, required: false}
+          - {label: Sub, name: sub, widget: string, required: false}
           - {label: Image, name: image, widget: image, required: false}
           - {label: Winner, name: winner, widget: boolean, default: false}
