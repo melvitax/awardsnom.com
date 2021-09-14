@@ -1,6 +1,6 @@
 ---
 title: Collectiv
-image: colette.jpg
+image: collectiv.jpg
 trailer: https://www.youtube.com/watch?v=KLgGoT7v3ro
 nominations:
   - winner: false
