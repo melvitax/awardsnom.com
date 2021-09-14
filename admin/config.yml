@@ -15,13 +15,13 @@ collections:
     fields:
       - {label: "Name", name: "title", widget: string}
   - label: "Oscars 2021"
-    folder: "_data/oscars/2021"
+    folder: "_oscars/2021"
     name: "oscars-2021"
     label_singular: Nominee
     format: frontmatter
     create: true
     media_folder: 'images'
-    public_folder: 'assets/oscars-2021'
+    public_folder: ''
     fields: 
       - {label: Title, name: title, widget: string}
       - {label: Image, name: image, widget: image, required: false}
