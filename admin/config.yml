@@ -15,13 +15,13 @@ collections:
     fields:
       - {label: "Name", name: "title", widget: string}
   - label: "Nominees"
-    folder: "shows"
+    folder: "_data/nominees"
     name: "nominees"
     label_singular: Nominee
     format: frontmatter
     create: true
     media_folder: 'images'
-    public_folder: ''
+    public_folder: 'images'
     nested:
       depth: 100 
       summary: '{{title}}'
