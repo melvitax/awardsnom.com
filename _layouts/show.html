@@ -1,0 +1,88 @@
+---
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	{% include head.html %}
+	<body class="no-observer">
+		{% include header.html %}
+        <main class="hide">
+            <div class="pb-5 main-content">
+            <div class="container">
+            <div class="row card-columns">
+                {% assign event = page.collection %}
+                {% assign year = page.title %}
+                <h2 class="show-title col-10 pt-4 pb-2 text-center">{{ event | upcase }} {{ year }}</h2>
+                {{ page.categories | size }}
+                {% for category in page.categories %}
+                <h3 class="col-10 pt-4 pb-2">{{ category.name }}</h3>
+                {% for nominee in page.nominees %}
+                {% assign nominations = nominee.nominations | where: "category", category.name %}
+                {% for nomination in nominations %}
+                <div class="col-5 col-sm-3 col-md-2 pt-4" >
+                    {% capture categoryID %}{{ category.name | slugify }}{% endcapture %}
+                    {% capture key %}{% if nomination.name %}{{ nomination.name | slugify }}{% else %}{{ nominee.name | slugify }}{% endif %}{% endcapture %}
+                    {% capture image %}{% if nomination.image %}{{ nomination.image }}{% else %}{{ nominee.image }}{% endif %}{% endcapture %}
+                    <div class="animate card mb-3 shadow-sm" id="card__{{ id }}">
+                        <div class="row no-gutters"> 
+                            <!-- Poster -->
+                            <a class="grow poster fav" >
+                            <img class="card-img-top w-100 h-100" src="images/{{ image }}" width="230" height="355" alt="{{ name }}" />
+                            <!-- Favorite -->
+                            <div  class="fav-button position-absolute" style="top: 16px; right: 16px; z-index: 2; width: 44px; height: 44px;">&nbsp;</div>
+                            </a>
+                            {% if nomination.winner %}
+                            <!-- Winner -->
+                            <div class="bg-danger w-100 text-light py-2 text-center text-monospace">WINNER</div>{% endif %}
+                            <!-- Title -->
+                            <div class="text-wrap text-muted text-monospace  text-center position-absolute w-100 home-film-title" style="top: -1.8em; z-index: 0"><small>{{ nominee.title }}</small></div>
+                            <!-- Sub -->
+                            <div class="sub p-2 w-100">
+                                {% if nomination.name %}{{ nomination.name }}<br />{% endif %}
+                                {% if nomination.sub %}{{ nomination.sub }}<br />{% endif %}
+                                {% if nominee.trailer %}
+                                {% if nominee.trailer contains "youtube.com" %}
+                                {% assign urlParts = nominee.trailer | split: "v=" %}
+                                {% assign videoID = urlParts[1] %}
+                                {% assign src = 'https://www.youtube.com/embed/' | append: videoID | append: '?showinfo=0&modestbranding=0&color=white&autoplay=0' %}
+                                <a href="#" class="btn btn-outline-secondary btn-block mt-2" data-toggle="modal" data-target="#videoModal" data-theVideo="{{ src }}"><span class="fa fa-play"> Play Trailer</span></a>
+                                {% elsif nominee.trailer contains "vimeo.com" %}
+                                {% assign urlParts = nominee.trailer | split: "/" %}
+                                {% assign videoID = urlParts | last %}
+                                {% assign src = 'https://player.vimeo.com/video/' | append: videoID | append: '?title=0&byline=0&portrait=0' %}
+                                <a href="#" class="btn btn-outline-secondary btn-block mt-2" data-toggle="modal" data-target="#videoModal" data-theVideo="{{ src }}"><span class="fa fa-play"> Play Trailer</span></a>
+                                {% endif %}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                {% endfor %}
+                {% endfor %}
+                {% endfor %}    
+            </div>
+            </div>
+            </div>
+            
+            <!-- Modal Window -->
+            <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <div class="video_wrapper">
+                            <iframe width="100%" height="100%" src="" allowfullscreen allow="autoplay"></iframe>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
+            </main>
+            
+		
+		{% include footer.html %}
+		{% include scripts.html %}
+	</body>
+</html>

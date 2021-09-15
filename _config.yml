@@ -27,6 +27,13 @@ collections:
   oscars:
     output: true
     permalink: /:collection/:path/
+defaults:
+  -
+    scope:
+      path: ""
+      type: "oscars" 
+    values:
+      layout: "show"
 compress_html:
   clippings: all
   comments: ["<!-- ", " -->"]

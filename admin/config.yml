@@ -6,14 +6,6 @@ backend:
   repo: melvitax/awardsnom.com 
 media_folder: 'assets/uploads'
 collections:
-  - label: "Categories"
-    name: "categories"
-    folder: "_data/categories"
-    format: yml
-    create: true
-    identifier_field: title
-    fields:
-      - {label: "Name", name: "title", widget: string}
   - label: "Oscars"
     folder: "_oscars"
     name: "oscars"
@@ -31,6 +23,14 @@ collections:
         time_format: false
         format: "YYYY"
         picker_utc: false
+      - label: Categories
+        label_singular: category
+        name: categories
+        required: true
+        identifier_field: title
+        widget: list
+        fields: 
+          - {label: "Name", name: "title", widget: string}
       - label: Nominees
         label_singular: Nominee
         name: nominees
