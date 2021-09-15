@@ -14,46 +14,47 @@ collections:
     identifier_field: title
     fields:
       - {label: "Name", name: "title", widget: string}
-  - label: "Nominees"
-    folder: "shows"
-    name: "nominees"
-    label_singular: Nominee
+  - label: "Oscars"
+    folder: "oscars"
+    name: "oscars"
+    label_singular: Year
     format: frontmatter
     create: true
-    media_folder: 'images'
-    public_folder: 'images'
-    nested:
-      depth: 100 
-      summary: '{{title}}'
-    meta: { path: {  widget: "string", default: "oscars/2021/{{slug}}", label: 'Path', index_file: 'index' } }
-    fields: 
-      - {label: Title, name: title, widget: string}
-      - {label: Image, name: image, widget: image, required: false}
-      - {label: Trailer, name: trailer, widget: string, required: false}
-      - {label: "Show", name: "show", widget: "select", options: ["Oscars", "Emmys"]}
+    media_folder: '{{slug}}/images'
+    public_folder: ''
+    fields:
       - label: "Year"
         name: "year"
         widget: "datetime"
-        default: ""
+        default: "2021"
         date_format: "YYYY"
         time_format: false
         format: "YYYY"
         picker_utc: false
-      - label: Nominations
-        label_singular: Nomination
-        name: nominations
+      - label: Nominees
+        label_singular: Nominee
+        name: nominees
         required: true
         widget: list
-        fields:
-          - label: Category
-            name: category
-            required: true
-            widget: relation
-            collection: categories
-            searchFields: ["title"]
-            displayFields: ["title"]
-            valueField: "title"
-          - {label: Name, name: name, widget: string, required: false}
-          - {label: Sub, name: sub, widget: string, required: false}
+        fields: 
+          - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image, required: false}
-          - {label: Winner, name: winner, widget: boolean, default: false}
+          - {label: Trailer, name: trailer, widget: string, required: false}
+          - label: Nominations
+            label_singular: Nomination
+            name: nominations
+            required: true
+            widget: list
+            fields:
+              - label: Category
+                name: category
+                required: true
+                widget: relation
+                collection: categories
+                searchFields: ["title"]
+                displayFields: ["title"]
+                valueField: "title"
+              - {label: Name, name: name, widget: string, required: false}
+              - {label: Sub, name: sub, widget: string, required: false}
+              - {label: Image, name: image, widget: image, required: false}
+              - {label: Winner, name: winner, widget: boolean, default: false}
