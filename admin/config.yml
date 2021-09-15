@@ -25,7 +25,7 @@ collections:
     nested:
       depth: 100 
       summary: '{{title}}'
-    meta: { path: {  widget: "select", options: ["oscars/2021/{{slug}}", "emmys/2021/{{slug}}"], label: 'Path', index_file: 'index' } }
+    meta: { path: {  widget: "string", default: "oscars/2021/{{slug}}", label: 'Path', index_file: 'index' } }
     fields: 
       - {label: Title, name: title, widget: string}
       - {label: Image, name: image, widget: image, required: false}
