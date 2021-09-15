@@ -30,7 +30,7 @@ collections:
         identifier_field: title
         widget: list
         fields: 
-          - {label: "Name", name: "title", widget: string}
+          - {label: "Name", name: "name", widget: string}
       - label: Nominees
         label_singular: Nominee
         name: nominees
