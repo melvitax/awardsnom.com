@@ -20,7 +20,7 @@ collections:
     label_singular: Year
     format: frontmatter
     create: true
-    media_folder: 'images'
+    media_folder: '{{title}}/images'
     public_folder: ''
     fields:
       - label: "Year"
