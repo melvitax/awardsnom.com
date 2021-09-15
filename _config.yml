@@ -23,6 +23,10 @@ fonts:
 sass:
     style: compressed
     sass_dir: styles
+collections:
+  oscars:
+    output: true
+    permalink: /:collection/:path/
 compress_html:
   clippings: all
   comments: ["<!-- ", " -->"]

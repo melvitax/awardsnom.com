@@ -15,7 +15,7 @@ collections:
     fields:
       - {label: "Name", name: "title", widget: string}
   - label: "Oscars"
-    folder: "oscars"
+    folder: "_oscars"
     name: "oscars"
     label_singular: Year
     format: frontmatter
