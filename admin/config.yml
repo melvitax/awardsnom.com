@@ -15,7 +15,7 @@ collections:
     fields:
       - {label: "Name", name: "title", widget: string}
   - label: "Nominees"
-    folder: "_data/nominees"
+    folder: ""
     name: "nominees"
     label_singular: Nominee
     format: frontmatter
@@ -25,7 +25,7 @@ collections:
     nested:
       depth: 100 
       summary: '{{title}}'
-    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+    meta: { path: { widget: select, label: 'Path', options: ["oscars/2021", "emmys/2021"], index_file: 'index' } }
     fields: 
       - {label: Title, name: title, widget: string}
       - {label: Image, name: image, widget: image, required: false}
