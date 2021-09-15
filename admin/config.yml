@@ -15,7 +15,7 @@ collections:
     fields:
       - {label: "Name", name: "title", widget: string}
   - label: "Nominees"
-    folder: ""
+    folder: "./"
     name: "nominees"
     label_singular: Nominee
     format: frontmatter
