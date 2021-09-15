@@ -24,13 +24,14 @@ collections:
     public_folder: ''
     fields:
       - label: "Year"
-        name: "year"
+        date: "year"
         widget: "datetime"
         default: "2021"
         date_format: "YYYY"
         time_format: false
         format: "YYYY"
         picker_utc: false
+      - name: "{{date | date('YYYY')}}"
       - label: Nominees
         label_singular: Nominee
         name: nominees
