@@ -14,14 +14,18 @@
                 {% assign event = page.collection %}
                 {% assign year = page.title %}
                 <h2 class="show-title col-10 pt-4 pb-2 text-center">{{ event | upcase }} {{ year }}</h2>
-                {{ page.categories | size }}
-                {% for category in page.categories %}
-                <h3 class="col-10 pt-4 pb-2">{{ category.name }}</h3>
+               
+                {% assign all_categories = page.categories | map: "name" %}
+                {{ page.categories | size }} now {{ all_categories | size }}
+                {{page.categories}}
+                {{all_categories}}
+                {% for category in all_categories %}
+                <h3 class="col-10 pt-4 pb-2">{{ category }}</h3>
                 {% for nominee in page.nominees %}
-                {% assign nominations = nominee.nominations | where: "category", category.name %}
+                {% assign nominations = nominee.nominations | where: "category", category %}
                 {% for nomination in nominations %}
                 <div class="col-5 col-sm-3 col-md-2 pt-4" >
-                    {% capture categoryID %}{{ category.name | slugify }}{% endcapture %}
+                    {% capture categoryID %}{{ category | slugify }}{% endcapture %}
                     {% capture key %}{% if nomination.name %}{{ nomination.name | slugify }}{% else %}{{ nominee.name | slugify }}{% endif %}{% endcapture %}
                     {% capture image %}{% if nomination.image %}{{ nomination.image }}{% else %}{{ nominee.image }}{% endif %}{% endcapture %}
                     <div class="animate card mb-3 shadow-sm" id="card__{{ id }}">
@@ -58,9 +62,9 @@
                         </div>
                     </div> 
                 </div>
-                {% endfor %}
-                {% endfor %}
-                {% endfor %}    
+                {% endfor %} <!–– end nominations ––>
+                {% endfor %} <!–– end nomiees ––>
+                {% endfor %} <!–– end categories ––>
             </div>
             </div>
             </div>
