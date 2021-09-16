@@ -6,6 +6,57 @@ backend:
   repo: melvitax/awardsnom.com 
 media_folder: 'assets/uploads'
 collections:
+  - label: "Emmys"
+    folder: "_emmys"
+    name: "emmys"
+    label_singular: Year
+    format: frontmatter
+    create: true
+    media_folder: '{{title}}/images'
+    public_folder: ''
+    fields:
+      - label: "Year"
+        name: "title"
+        widget: "datetime"
+        default: "2021"
+        date_format: "YYYY"
+        time_format: false
+        format: "YYYY"
+        picker_utc: false
+      - label: Categories
+        label_singular: category
+        name: categories
+        required: true
+        identifier_field: title
+        widget: list
+        field: {label: "Name", name: "name", widget: string}
+      - label: Nominees
+        label_singular: Nominee
+        name: nominees
+        required: true
+        widget: list
+        fields: 
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image, required: false}
+          - {label: Trailer, name: trailer, widget: string, required: false}
+          - label: Nominations
+            label_singular: Nomination
+            name: nominations
+            required: true
+            widget: list
+            fields:
+              - label: Category
+                name: category
+                required: true
+                widget: relation
+                collection: categories
+                searchFields: ["title"]
+                displayFields: ["title"]
+                valueField: "title"
+              - {label: Name, name: name, widget: string, required: false}
+              - {label: Sub, name: sub, widget: string, required: false}
+              - {label: Image, name: image, widget: image, required: false}
+              - {label: Winner, name: winner, widget: boolean, default: false}
   - label: "Oscars"
     folder: "_oscars"
     name: "oscars"

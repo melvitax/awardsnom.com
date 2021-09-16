@@ -14,12 +14,7 @@
                 {% assign event = page.collection %}
                 {% assign year = page.title %}
                 <h2 class="show-title col-10 pt-4 pb-2 text-center">{{ event | upcase }} {{ year }}</h2>
-               
-                {% assign all_categories = page.categories | map: "name" %}
-                {{ page.categories | size }} now {{ all_categories | size }}
-                {{page.categories}}
-                {{all_categories}}
-                {% for category in all_categories %}
+                {% for category in page.categories %}
                 <h3 class="col-10 pt-4 pb-2">{{ category }}</h3>
                 {% for nominee in page.nominees %}
                 {% assign nominations = nominee.nominations | where: "category", category %}
