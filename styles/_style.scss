@@ -1,3 +1,4 @@
+
 :root {
     color-scheme: light dark;
 }
@@ -27,13 +28,18 @@ h2.show-title {
     line-height: 1em;
 }
 @media (min-width: 768px) { 
-    font-size: 5.8vw;
+    h2.show-title {
+        font-size: 5.8vw;
+    }
 }
 .fav-button {
     background-image: url('/assets/heart-regular.svg');
     background-size: 42px 42px;
     transition: scale .2s ease-in-out; 
     opacity: 0;
+}
+.poster {
+    padding: 0;
 }
 .poster:hover .fav-button, .poster:active .fav-button, .isFavorite .fav-button {
     opacity: 100;
@@ -44,6 +50,10 @@ h2.show-title {
 }
 .isFavorite .fav-button {
     background-image: url('/assets/heart-solid.svg');
+}
+.row {
+    margin-left: 0;
+    margin-right: 0;
 }
 .grow { transition: all .2s ease-in-out; }
 .grow:hover, .grow:active { 
@@ -72,9 +82,6 @@ iframe{
     left: 0;
     width: 100%;
     height: 100%;
-}
-.card-columns {
-    column-gap: 0 !important;
 }
 @media (prefers-color-scheme: dark) {
     body {

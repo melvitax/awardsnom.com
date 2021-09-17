@@ -15,7 +15,6 @@ author:
 plugins:
   - jekyll-feed
 markdown: kramdown
-url: 
 exclude: ["node_modules",  "package.json", "Gemfile", "Gemfile.lock", "README.md", "LICENSE"]
 timezone: 'America/New_York'
 fonts:
@@ -26,14 +25,16 @@ sass:
 collections:
   oscars:
     output: true
-    permalink: /:collection/:path/
+    permalink: /oscars/:path/
+  emmys:
+    output: true
+    permalink: /emmys/:path/
 defaults:
   -
     scope:
       path: ""
-      type: "oscars" 
     values:
-      layout: "show"
+      layout: "default"
 compress_html:
   clippings: all
   comments: ["<!-- ", " -->"]

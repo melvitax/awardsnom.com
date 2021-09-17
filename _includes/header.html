@@ -1,3 +1,19 @@
 <header class="header text-center">
     <h1 class="site-title pt-4">{{site.title}}</h1>
+    <div class="dropdown">
+         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            Award Shows
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><h6 class="dropdown-header">Oscars</h6></li>
+            {% for item in site.oscars %}
+            <li><a class="dropdown-item" href="{{ item.url }}">{{ item.title }}</a></li>
+            {% endfor %}
+            <li><hr class="dropdown-divider"></li>
+            <li><h6 class="dropdown-header">Emmys</h6></li>
+            {% for item in site.emmys %}
+            <li><a class="dropdown-item" href="{{ item.url }}">{{ item.title }}</a></li>
+            {% endfor %}
+        </ul>
+      </div>
 </header>
