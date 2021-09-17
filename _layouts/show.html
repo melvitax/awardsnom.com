@@ -22,6 +22,7 @@
                 <div class="col-5 col-sm-3 col-md-2 pt-4" >
                     {% capture categoryID %}{{ category | slugify }}{% endcapture %}
                     {% capture key %}{% if nomination.name %}{{ nomination.name | slugify }}{% else %}{{ nominee.name | slugify }}{% endif %}{% endcapture %}
+                    {% capture id %}{{ event }}_{{ year }}_{{ categoryID }}_{{ key }}{% endcapture %}
                     {% capture image %}{% if nomination.image %}{{ nomination.image }}{% else %}{{ nominee.image }}{% endif %}{% endcapture %}
                     <div class="animate card mb-3 shadow-sm" id="card__{{ id }}">
                         <div class="row no-gutters"> 
