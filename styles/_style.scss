@@ -33,8 +33,11 @@ h2.show-title {
     }
 }
 .fav-button {
-    background-image: url('/assets/heart-regular.svg');
+    background-color: rgba(243, 188, 7, 0.8);
+    background-image: url('/assets/fav-regular.svg');
     background-size: 42px 42px;
+    background-position: center;
+    background-repeat: no-repeat;
     transition: scale .2s ease-in-out; 
     opacity: 0;
 }
@@ -43,13 +46,13 @@ h2.show-title {
 }
 .poster:hover .fav-button, .poster:active .fav-button, .isFavorite .fav-button {
     opacity: 100;
+    
 }
 .card:hover .fav-button{
     cursor: pointer;
-    transform: translateZ(0px) scale(1.15);
 }
 .isFavorite .fav-button {
-    background-image: url('/assets/heart-solid.svg');
+    background-image: url('/assets/fav-solid.svg');
 }
 .row {
     margin-left: 0;
