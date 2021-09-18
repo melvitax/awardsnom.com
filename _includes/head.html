@@ -2,6 +2,8 @@
     <meta charset="utf-8">
     {% if page.id == "home" %}
     <title>{{ page.title }} | {{site.description}}</title>
+    {% elsif page.collection != null %}
+    <title>{{ page.collection | upcase }} {{ page.title }} | {{ site.title }}</title>
     {% else %}
     <title>{{ page.title }} | {{ site.title }}</title>
     {% endif %}
