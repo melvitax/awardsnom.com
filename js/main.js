@@ -1,17 +1,6 @@
 $( document ).ready(function() {
 
-  // Show Active Fav Buttons
-  var faved = getCookie('faved')
-  if (faved) {
-    var array = faved.split(",")
-    if (array) {
-      for(var i = 0; i < array.length; i++) {
-        let rawID = array[i]
-        $('#card__'+rawID).addClass('isFavorite')
-      }
-    }
-  }
-
+  updateAllFavButtons()
   enableModalWindowTrailers();
 
   // Modal Window
@@ -20,7 +9,6 @@ $( document ).ready(function() {
       var theModal = $(this).data( "target" );
       var videoSRC = $(this).attr( "data-theVideo" );
       $(theModal+' iframe').attr('src', videoSRC);
-      
       $(theModal).on('hidden.bs.modal', function () {
           $(theModal+' iframe').attr('src', $(theModal+' iframe').attr("src"));
       }); 
@@ -74,29 +62,30 @@ $( document ).ready(function() {
   // Fav Button Logic
   $('.fav').click(function() {
     var id = $(this).parent().parent().attr('id').split("__")[1]
-    console.log('id: '+id)
-    $('#card__'+id).toggleClass('isFavorite')
-    var isFavorite = $('#card__'+id).hasClass('isFavorite')
-    var faved = getCookie('faved')
-    var array = []
-    if (faved) {
-      array = faved.split(",")
-    }
-    if (isFavorite) {
-      array.push(id)
-    } else {
-      var filtered = []
-      for(var i = 0; i < array.length; i++) {
-        var item = array[0]
-        if (item != id) {
-          filtered.push(item)
-        }
-      }
-      array = filtered
-    }
-    var string = array.join(",")
-    setCookie('faved', string, 365)
+    var idParts = id.split("_")
+    var value = idParts[idParts.length - 1]
+    var key = id.substr(0, id.length-value.length-1)
+    var cookie = getCookie(key)
+    var newValue = (cookie == value) ? null : value
+    setCookie(key, newValue, 365)
+    updateAllFavButtons()
   })
+
+  // Update Fav Buttons status
+  function updateAllFavButtons() {
+    $('.card').each(function() {
+      var id = $(this).attr('id').split("__")[1]
+      var idParts = id.split("_")
+      var value = idParts[idParts.length - 1]
+      var key = id.substr(0, id.length-value.length-1)
+      var cookie = getCookie(key)
+      if (cookie == value) {
+        $('#card__'+id).addClass('isFavorite')
+      } else {
+        $('#card__'+id).removeClass('isFavorite')
+      }
+    });
+  }
 
 })
 
