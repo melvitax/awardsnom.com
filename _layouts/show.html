@@ -11,12 +11,13 @@
             <div class="pb-5 main-content">
             <div class="container">
             <div class="row card-columns">
-                {% assign event = page.collection %}
-                {% assign year = page.title %}
+                {% capture event %}{% if page.event %}{{ page.event }}{% else %}{{ page.collection }}{% endif %}{% endcapture %}
+                {% capture year %}{% if page.year %}{{ page.year }}{% else %}{{ page.title }}{% endif %}{% endcapture %}
                 <h2 class="show-title col-10 pt-4 pb-2 text-center">{{ event | upcase }} {{ year }}</h2>
-                {% for category in page.categories %}
+                {% assign show = site[event] | where: "title", year | first %}
+                {% for category in show.categories %}
                 <h3 class="col-10 pt-4 pb-2">{{ category }}</h3>
-                {% for nominee in page.nominees %}
+                {% for nominee in show.nominees %}
                 {% assign nominations = nominee.nominations | where: "category", category %}
                 {% for nomination in nominations %}
                 <div class="col-5 col-sm-3 col-md-2 pt-4" >
@@ -28,7 +29,7 @@
                         <div class="row no-gutters"> 
                             <!-- Poster -->
                             <a class="grow poster fav" >
-                            <img class="card-img-top w-100 h-100" src="images/{{ image }}" width="230" height="355" alt="{{ name }}" />
+                            <img class="card-img-top w-100 h-100" src="/{{event}}/{{year}}/images/{{ image }}" width="230" height="355" alt="{{ name }}" />
                             <!-- Favorite -->
                             <div  class="fav-button position-absolute" style="top: 0; right: 0; z-index: 2; width: 100%; height: 44px;">&nbsp;</div>
                             </a>

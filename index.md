@@ -1,5 +1,6 @@
 ---
-title: AwardsNom
-redirect: emmys/2021
-layout: redirect
+title: EMMYS 2021
+layout: show
+event: emmys
+year: 2021
 ---
