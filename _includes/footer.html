@@ -1,7 +1,22 @@
 
 <footer class="text-muted w-100 py-5">
     <div class="container">
+      <hr />
       <p class="float-right"><a href="#">Back to top</a></p>
+      <h4> Award Shows</h4>
+      <dl class="d-inline float-left">
+           <dt>Oscars</dt>
+           {% for item in site.oscars %}
+           <dd"><a href="{{ item.url }}">{{ item.title }}</a></dd>
+           {% endfor %}
+      </dl>
+      <dl class="d-inline">
+          <dt>Emmys</dt>
+          {% for item in site.emmys %}
+          <dd><a href="{{ item.url }}">{{ item.title }}</a></dd>
+          {% endfor %}
+      </dl>
+      <hr />
       <p>Updated: {{ 'now' | date: '%B %d, %Y' }} <br />
         <a href="https://twitter.com/{{site.twitter}}">@{{site.twitter}}</a> is <a href="https://github.com/{{site.github}}">open source</a></p>
     </div>
