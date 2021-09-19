@@ -16,7 +16,8 @@
                 <h2 class="show-title col-10 pt-4 pb-2 text-center">{{ event | upcase }} {{ year }}</h2>
                 {% assign show = site[event] | where: "title", year | first %}
                 {% for category in show.categories %}
-                <h3 class="col-10 pt-4 pb-2">{{ category }}</h3>
+                {% assign categoryParts = category | split: ":" %}
+                <h3 class="col-10 pt-4 pb-2 text-center">{{ categoryParts[0] | upcase }}{% if categoryParts[1] %}<br /><small class="fs-6">{{ categoryParts[1] | upcase}}</small>{% endif %}</h3>
                 {% for nominee in show.nominees %}
                 {% assign nominations = nominee.nominations | where: "category", category %}
                 {% for nomination in nominations %}
