@@ -1,6 +1,6 @@
 ---
-title: EMMYS 2021
+title: TONNYS 2021
 layout: show
-event: emmys
+event: tonnys
 year: 2021
 ---

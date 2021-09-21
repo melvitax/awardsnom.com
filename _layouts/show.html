@@ -32,7 +32,7 @@
                         
                     </div>
                 </nav>
-                
+                <div class="text-center text-muted lead">{{ show.date | date: "%b %-d, %Y" }}</div>
                 {% for category in show.categories %}
                 {% assign categoryParts = category | split: ":" %}
                 <h3 class="col-10 pt-5 pb-2 text-center" id="{{ category | slugify }}">{{ categoryParts[0] | upcase }}{% if categoryParts[1] %}<br /><small class="fs-5 text-warning">{{ categoryParts[1] | upcase}}</small>{% endif %}</h3>

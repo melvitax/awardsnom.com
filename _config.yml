@@ -29,6 +29,9 @@ collections:
   emmys:
     output: true
     permalink: /emmys/:path/
+  tonnys:
+    output: true
+    permalink: /tonnys/:path/
 defaults:
   -
     scope:

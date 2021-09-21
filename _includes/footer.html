@@ -16,6 +16,12 @@
           <dd><a href="{{ item.url }}">{{ item.title }}</a></dd>
           {% endfor %}
       </dl>
+      <dl class="d-inline">
+        <dt>Tonnys</dt>
+        {% for item in site.tonnys %}
+        <dd><a href="{{ item.url }}">{{ item.title }}</a></dd>
+        {% endfor %}
+    </dl>
       <hr />
       <p>Updated: {{ 'now' | date: '%B %d, %Y' }} <br />
         <a href="https://twitter.com/{{site.twitter}}">@{{site.twitter}}</a> is <a href="https://github.com/{{site.github}}">open source</a></p>
