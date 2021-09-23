@@ -5,8 +5,8 @@ $( document ).ready(function() {
 
   // Modal Window
   function enableModalWindowTrailers(){
-    $("body").find('[data-toggle="modal"]').click(function() {
-      var theModal = $(this).data( "target" );
+    $("body").find('[data-bs-toggle="modal"]').click(function() {
+      var theModal = $(this).data( "bs-target" );
       var videoSRC = $(this).attr( "data-theVideo" );
       $(theModal+' iframe').attr('src', videoSRC);
       $(theModal).on('hidden.bs.modal', function () {

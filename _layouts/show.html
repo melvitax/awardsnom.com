@@ -14,7 +14,7 @@
                 {% capture event %}{% if page.event %}{{ page.event }}{% else %}{{ page.collection }}{% endif %}{% endcapture %}
                 {% capture year %}{% if page.year %}{{ page.year }}{% else %}{{ page.title }}{% endif %}{% endcapture %}
                 {% assign show = site[event] | where: "title", year | first %}
-                <nav class="navbar sticky-top navbar-light bg-light bg-opacity-75" style="-webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);">
+                <nav class="navbar sticky-top navbar-light " style="-webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);">
                     <div class="container-fluid">
                         <h2 class="show-title col-10 pt-4 pb-2 text-center">{{ event | upcase }} <span class="text-warning">{{ year }}</span>
                             <!-- Categories Drop Down -->
@@ -32,7 +32,7 @@
                         
                     </div>
                 </nav>
-                <div class="text-center text-muted lead">{{ show.date | date: "%b %-d, %Y" }}</div>
+                <div class="text-center text-muted lead">{{ show.day | date: "%b %-d, %Y" }}</div>
                 {% for category in show.categories %}
                 {% assign categoryParts = category | split: ":" %}
                 <h3 class="col-10 pt-5 pb-2 text-center" id="{{ category | slugify }}">{{ categoryParts[0] | upcase }}{% if categoryParts[1] %}<br /><small class="fs-5 text-warning">{{ categoryParts[1] | upcase}}</small>{% endif %}</h3>
@@ -45,7 +45,7 @@
                     {% capture id %}{{ event }}_{{ year }}_{{ categoryID }}_{{ key }}{% endcapture %}
                     {% capture image %}{% if nomination.image %}{{ nomination.image }}{% else %}{{ nominee.image }}{% endif %}{% endcapture %}
                     <div class="animate card mb-3 shadow-sm" id="card__{{ id }}">
-                        <div class="row no-gutters"> 
+                        <div class="row g-0"> 
                             <!-- Poster -->
                             <a class="grow poster fav" >
                             <img class="card-img-top w-100 h-100" src="/{{event}}/{{year}}/images/{{ image }}" width="230" height="355" alt="{{ name }}" />
@@ -66,12 +66,12 @@
                                 {% assign urlParts = nominee.trailer | split: "v=" %}
                                 {% assign videoID = urlParts[1] %}
                                 {% assign src = 'https://www.youtube.com/embed/' | append: videoID | append: '?showinfo=0&modestbranding=0&color=white&autoplay=0' %}
-                                <a href="#" class="btn btn-outline-secondary btn-block mt-2" data-toggle="modal" data-target="#videoModal" data-theVideo="{{ src }}"><span class="fa fa-play"> Play Trailer</span></a>
+                                <a href="#" class="btn btn-outline-secondary btn-block mt-2" data-bs-toggle="modal" data-bs-target="#videoModal" data-theVideo="{{ src }}"><span class="fa fa-play"> Play Trailer</span></a>
                                 {% elsif nominee.trailer contains "vimeo.com" %}
                                 {% assign urlParts = nominee.trailer | split: "/" %}
                                 {% assign videoID = urlParts | last %}
                                 {% assign src = 'https://player.vimeo.com/video/' | append: videoID | append: '?title=0&byline=0&portrait=0' %}
-                                <a href="#" class="btn btn-outline-secondary btn-block mt-2" data-toggle="modal" data-target="#videoModal" data-theVideo="{{ src }}"><span class="fa fa-play"> Play Trailer</span></a>
+                                <a href="#" class="btn btn-outline-secondary btn-block mt-2" data-bs-toggle="modal" data-bs-target="#videoModal" data-theVideo="{{ src }}"><span class="fa fa-play"> Play Trailer</span></a> 
                                 {% endif %}
                                 {% endif %}
                             </div>
@@ -90,7 +90,7 @@
                 <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                         <div class="modal-body">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
                         <div class="video_wrapper">
                             <iframe width="100%" height="100%" src="" allowfullscreen allow="autoplay"></iframe>
                         </div>

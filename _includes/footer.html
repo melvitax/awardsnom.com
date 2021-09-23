@@ -2,21 +2,21 @@
 <footer class="text-muted w-100 py-5">
     <div class="container">
       <hr />
-      <p class="float-right"><a href="#">Back to top</a></p>
+      <p class="float-end"><a href="#">Back to top</a></p>
       <h4> Award Shows</h4>
-      <dl class="d-inline float-left">
+      <dl>
            <dt>Oscars</dt>
            {% for item in site.oscars %}
            <dd"><a href="{{ item.url }}">{{ item.title }}</a></dd>
            {% endfor %}
       </dl>
-      <dl class="d-inline">
+      <dl">
           <dt>Emmys</dt>
           {% for item in site.emmys %}
           <dd><a href="{{ item.url }}">{{ item.title }}</a></dd>
           {% endfor %}
       </dl>
-      <dl class="d-inline">
+      <dl>
         <dt>Tonnys</dt>
         {% for item in site.tonnys %}
         <dd><a href="{{ item.url }}">{{ item.title }}</a></dd>
