@@ -14,7 +14,7 @@
                 {% capture event %}{% if page.event %}{{ page.event }}{% else %}{{ page.collection }}{% endif %}{% endcapture %}
                 {% capture year %}{% if page.year %}{{ page.year }}{% else %}{{ page.title }}{% endif %}{% endcapture %}
                 {% assign show = site[event] | where: "title", year | first %}
-                <nav class="navbar sticky-top navbar-light " style="-webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);">
+                <nav class="navbar sticky-top navbar-light navbar-blur">
                     <div class="container-fluid">
                         <h2 class="show-title col-10 pt-4 pb-2 text-center">{{ event | upcase }} <span class="text-warning">{{ year }}</span>
                             <!-- Categories Drop Down -->
@@ -98,10 +98,7 @@
                   </div>
                 </div>
             </div>
-            
-            </main>
-            
-		
+        </main>
 		{% include footer.html %}
 		{% include scripts.html %}
 	</body>

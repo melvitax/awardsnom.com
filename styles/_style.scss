@@ -59,6 +59,12 @@ h2.show-title {
     margin-left: 0;
     margin-right: 0;
 }
+.navbar-blur {
+    background-color: #f8f9faa1;
+    -webkit-backdrop-filter: blur(10px); 
+    backdrop-filter: blur(10px);
+    border-bottom: rgba(128, 128, 128, 0.3) 1px solid;
+} 
 .grow { transition: all .2s ease-in-out; }
 .grow:hover, .grow:active { 
   transform: translateZ(0px) scale(1.05);
@@ -107,6 +113,9 @@ iframe{
     }
     .sub {
         color: slategray;
+    }
+    .navbar-blur {
+        background-color: rgba(0, 0, 0, 0.7);
     }
 }
 
