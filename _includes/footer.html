@@ -4,29 +4,20 @@
       <hr />
       <p class="float-end"><a href="#">Back to top</a></p>
       <h4> Award Shows</h4>
-      <dl>
-           <dt>Oscars</dt>
-           {% for item in site.oscars %}
-           <dd"><a href="{{ item.url }}">{{ item.title }}</a></dd>
-           {% endfor %}
-      </dl>
-      <dl>
-          <dt>Emmys</dt>
-          {% for item in site.emmys %}
-          <dd><a href="{{ item.url }}">{{ item.title }}</a></dd>
-          {% endfor %}
-      </dl>
-      <dl>
-        <dt>Tonnys</dt>
-        {% for item in site.tonnys %}
-        <dd><a href="{{ item.url }}">{{ item.title }}</a></dd>
-        {% endfor %}
-      </dl>
+      <table class="table w-auto">
+        <tbody>
+          <tr>
+            <th scope="row">2001</th>
+            <td><a href="/oscars/2021/">Oscars</td>
+            <td><a href="/emmys/2021/">Emmys</td>
+            <td><a href="/tonys/2021/">Tonys</td>
+          </tr>
+        </tbody>
+      </table>
       <hr />
       <p>Last Updated: {{ 'now' | date: '%B %d, %Y' }} <br />
          {{ site.title }} is an <a href="https://github.com/{{site.github}}">open source</a> project by <a href="http://melvitax.com">Melvin Rivera</a><br />
         Follow on <a href="https://twitter.com/{{site.twitter}}"><i class="fab fa-twitter"></i></a>
       </p>
-
     </div>
   </footer>

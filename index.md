@@ -1,6 +1,6 @@
 ---
-title: TONNYS 2021
+title: TONYS 2021
 layout: show
-event: tonnys
+event: tonys
 year: 2021
 ---
