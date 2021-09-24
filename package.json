@@ -13,7 +13,11 @@
     "url": "git+https://melvitax@github.com/melvitax/awardsnom.com.git"
   },
   "keywords": [
-    "emmys", "oscars", "awards", "voting", "ballot"
+    "emmys",
+    "oscars",
+    "awards",
+    "voting",
+    "ballot"
   ],
   "author": "Melvin Rivera",
   "license": "MIT",
@@ -25,7 +29,7 @@
     "bootstrap": "^5.1.0",
     "browser-sync": "^2.27.5",
     "copy-webpack-plugin": "^9.0.1",
-    "font-awesome": "^4.7.0",
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "intersection-observer": "0.12.0",
     "jquery": "^3.6.0",
     "webpack": "^5.52.1",

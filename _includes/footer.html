@@ -10,7 +10,7 @@
            <dd"><a href="{{ item.url }}">{{ item.title }}</a></dd>
            {% endfor %}
       </dl>
-      <dl">
+      <dl>
           <dt>Emmys</dt>
           {% for item in site.emmys %}
           <dd><a href="{{ item.url }}">{{ item.title }}</a></dd>
@@ -21,9 +21,12 @@
         {% for item in site.tonnys %}
         <dd><a href="{{ item.url }}">{{ item.title }}</a></dd>
         {% endfor %}
-    </dl>
+      </dl>
       <hr />
-      <p>Updated: {{ 'now' | date: '%B %d, %Y' }} <br />
-        <a href="https://twitter.com/{{site.twitter}}">@{{site.twitter}}</a> is <a href="https://github.com/{{site.github}}">open source</a></p>
+      <p>Last Updated: {{ 'now' | date: '%B %d, %Y' }} <br />
+         {{ site.title }} is an <a href="https://github.com/{{site.github}}">open source</a> project by <a href="http://melvitax.com">Melvin Rivera</a><br />
+        Follow on <a href="https://twitter.com/{{site.twitter}}"><i class="fab fa-twitter"></i></a>
+      </p>
+
     </div>
   </footer>
