@@ -68,7 +68,6 @@ h2.show-title {
     color: rgb(99, 108, 117);
 }
 @include media-breakpoint-up(lg) { .nominee-data { padding-left: 1em } }
-
 .video_wrapper {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
