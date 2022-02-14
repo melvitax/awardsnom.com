@@ -20,7 +20,7 @@
             <div class="container">
             <div class="row card-columns ml-0 mr-0">
 
-                <h2 class="show-title pt-4 pb-2 fw-bold lh-4">{{ page.event | upcase }}   <span class="text-muted">{{ show.day | date: "%b %-d, %Y" }}</span>
+                <h2 class="show-title pt-4 pb-2 fw-bold lh-4">{{ page.event | upcase }}   <span class="text-muted fw-light">{{ show.day | date: "%b %-d, %Y" }}</span>
                 </h2>
 
                 {% assign grouped = show.nominees | group_by_exp: "item", "item.nominations | size" | sort: "name" | reverse %}

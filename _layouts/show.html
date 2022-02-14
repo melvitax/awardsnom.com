@@ -18,8 +18,10 @@
             <div class="pb-5 main-content">
             <div class="container">
             <div class="row card-columns ml-0 mr-0">
-                <h2 class="show-title pt-4 pb-2 fw-bold lh-4">{{ page.event | upcase }}   <span class="text-muted">{{ show.day | date: "%b %-d, %Y" }}</span>
+                
+                <h2 class="show-title pt-4 pb-2 fw-bold lh-4">{{ page.event | upcase }}   <span class="text-muted fw-light">{{ show.day | date: "%b %-d, %Y" }}</span>
                 </h2>
+
                 {% for category in show.categories %}
                 {% assign categoryParts = category | split: ":" %}
                 <h3 class="col-10 pt-5 pb-2 text-center" id="{{ category | slugify }}">{{ categoryParts[0] | upcase }}{% if categoryParts[1] %}<br /><small class="fs-5 text-warning">{{ categoryParts[1] | upcase}}</small>{% endif %}</h3>
