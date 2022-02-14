@@ -13,29 +13,6 @@ h1.site-title {
     font-size: 10.8vw;
 }
 @include media-breakpoint-up(md) { h1.site-title { font-size: 2.8em; } }
-.navbar .btn {
-    font-size: 4.2vw;
-}
-@include media-breakpoint-up(md) { .navbar .btn { font-size: 1.0em; } }
-@include media-breakpoint-up(lg) { .navbar .btn { font-size: 1.2em; } }
-@include media-breakpoint-down(sm) { 
-    .btn.nominees span {
-        display: none;
-    }
-    .btn.nominees:after {
-        content: 'Nom';
-    }
-}
-@include media-breakpoint-down(sm) { 
-    .btn.categories span {
-        display: none;
-    }
-    .btn.categories:after {
-        content: 'Cat';
-    }
-}
-
-
 h2.show-title {
     color: black;
 }
