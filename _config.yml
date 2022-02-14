@@ -1,18 +1,16 @@
 title: AwardsNom
-description: Award Show Nominee Ballot
+description: An award show ballot for Oscars, Emmys and Tonys
 keywords: filmmaking, oscards, awards, goldenglobes
 baseurl: "" 
 url: "https://awardsnom.com"
 twitter: awardsnom
-github:  melvitax/awardsnom
+github: melvitax/awardsnom
 socialimage: http://awardsnom.com/assets/socialimage.jpg
 socialinfo: "An award show nominee ballot tracker"
 author:
   name: Melvin Rivera
   twitter: melvitax
   role: designer/developer
-plugins:
-  - jekyll-feed
 markdown: kramdown
 exclude: ["node_modules",  "package.json", "Gemfile", "Gemfile.lock", "README.md", "LICENSE"]
 timezone: 'America/New_York'
@@ -21,16 +19,6 @@ fonts:
 sass:
     style: compressed
     sass_dir: styles
-collections:
-  oscars:
-    output: true
-    permalink: /oscars/:path/
-  emmys:
-    output: true
-    permalink: /emmys/:path/
-  tonys:
-    output: true
-    permalink: /tonys/:path/
 defaults:
   -
     scope:

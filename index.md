@@ -1,6 +1,6 @@
 ---
-title: TONYS 2021
+title: OSCARS 2022
 layout: show
-event: tonys
-year: 2021
+event: oscars
+year: '2022'
 ---
