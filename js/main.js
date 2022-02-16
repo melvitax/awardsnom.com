@@ -89,4 +89,70 @@ $( document ).ready(function() {
 
 })
 
+window.addEventListener('cloudkitloaded', function() {
+  // Configure
+  CloudKit.configure({
+    containers: [{
+    containerIdentifier: 'iCloud.io.startway.CloudKitCatalog',
+      apiTokenAuth: {
+          apiToken: '046e21559bac3935deffbacbe5df358a7cbc3cbc263a0b2a694592f0331ae024',
+          persist: true, 
+          signInButton: {
+            id: 'apple-sign-in-button',
+            theme: 'black' 
+          },
+          signOutButton: {
+            id: 'apple-sign-out-button',
+            theme: 'black'
+          }
+      },
+      environment: 'development'
+      }]
+  });
 
+  function setUpAuth() {
+
+    // Get the container.
+    var container = CloudKit.getDefaultContainer();
+  
+    function gotoAuthenticatedState(userIdentity) {
+      var name = userIdentity.nameComponents;
+      if(name) {
+        displayUserName(name.givenName + ' ' + name.familyName);
+      } else {
+        displayUserName('User record name: ' + userIdentity.userRecordName);
+      }
+      container
+        .whenUserSignsOut()
+        .then(gotoUnauthenticatedState);
+    }
+    function gotoUnauthenticatedState(error) {
+  
+      if(error && error.ckErrorCode === 'AUTH_PERSIST_ERROR') {
+        showDialogForPersistError();
+      }
+  
+      displayUserName('Unauthenticated (Please Login First)');
+      container
+        .whenUserSignsIn()
+        .then(gotoAuthenticatedState)
+        .catch(gotoUnauthenticatedState);
+    }
+  
+    // Check a user is signed in and render the appropriate button.
+    return container.setUpAuth()
+      .then(function(userIdentity) {
+  
+        // Either a sign-in or a sign-out button was added to the DOM.
+  
+        // userIdentity is the signed-in user or null.
+        if(userIdentity) {
+          gotoAuthenticatedState(userIdentity);
+        } else {
+          gotoUnauthenticatedState();
+        }
+      });
+
+  }
+  setUpAuth()
+});

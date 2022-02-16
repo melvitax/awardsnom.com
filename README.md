@@ -24,10 +24,9 @@ $ gem install jekyll
 ```
 
 #### Installing Bundler 
-2.0.1 is the version supported by Netlify CMS
 
 ```
-$ gem install bundler -v 2.0.1
+$ gem install bundler
 ```
 
 #### Installing Gems
