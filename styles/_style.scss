@@ -39,6 +39,9 @@ h2.show-title {
     backdrop-filter: blur(10px);
     border-bottom: rgba(128, 128, 128, 0.3) 1px solid;
 } 
+.navbar .btn-outline-warning {
+    color: black;
+}
 .grow { transition: all .2s ease-in-out; }
 .grow:hover, .grow:active { 
   transform: translateZ(0px) scale(1.05);
@@ -87,12 +90,9 @@ iframe {
     }
     h1.site-title {
         color: white;
-    }    
-    .site-description a:link, .site-description a:visited {
-        color: rgb(99, 108, 117);
     }
-    .site-description a:hover, .site-description a:active {
-        color: rgb(147, 160, 173);
+    .navbar .btn-outline-warning {
+        color: #ffc107;
     }
     h2.show-title {
         color: white;
@@ -108,6 +108,9 @@ iframe {
     }
     .sourceLogo svg {
         fill: #fff;
+    }
+    footer th {
+        color: white;
     }
 }
 
