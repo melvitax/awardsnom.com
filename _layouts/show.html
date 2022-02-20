@@ -6,6 +6,10 @@
 <html lang="en">
 	{% include head.html %}
 	<body class="no-observer">
+        <script>
+            var event = "{{ page.event }}";
+            var year = "{{ page.year }}";
+        </script>
         {% assign show = site.data[page.event][page.year] %}
         {% assign dates = "" | split: ',' %}
         {% for aDate in site.data[page.event] %}
@@ -17,36 +21,48 @@
 
             <div class="pb-5 main-content">
             <div class="container">
-            <div class="row card-columns ml-0 mr-0">
-                
-                <h2 class="show-title pt-4 pb-2 fw-bold lh-4">{{ page.event | upcase }}   <span class="text-muted fw-light">{{ show.day | date: "%b %-d, %Y" }}</span>
-                </h2>
 
+            {% include subheader.html %} 
+
+            <div class="row card-columns ml-0 mr-0">
+          
                 {% for category in show.categories %}
                 {% assign categoryParts = category | split: ":" %}
-                <h3 class="col-10 pt-5 pb-2 text-center" id="{{ category | slugify }}">{{ categoryParts[0] | upcase }}{% if categoryParts[1] %}<br /><small class="fs-5 text-warning">{{ categoryParts[1] | upcase}}</small>{% endif %}</h3>
+                <h3 class="col-10 pt-3 pb-2 text-center border-bottom text-warning fw-light fs-5 category-title" id="{{ category | slugify }}">{{ categoryParts[0] | upcase }}{% if categoryParts[1] %}<br /><small class="fs-5 text-warning">{{ categoryParts[1] | upcase}}</small>{% endif %}</h3>
                 {% for nominee in show.nominees %}
                 {% assign nominations = nominee.nominations | where: "category", category %}
                 {% for nomination in nominations %}
                 <div class="col-5 col-sm-3 col-md-2 pt-4 pb-2" >
-                    {% capture categoryID %}{{ category | slugify }}{% endcapture %}
-                    {% capture key %}{% if nomination.key %}{{ nomination.key }}{% else %}{{ nominee.key }}{% endif %}{% endcapture %}
-                    {% capture id %}{{ page.event }}_{{ page.year }}_{{ categoryID }}_{{ key }}{% endcapture %}
-                    {% capture image %}{% if nomination.image %}{{ nomination.image }}{% else %}{{ nominee.image }}{% endif %}{% endcapture %}
-                    <div class="card mb-3 border-0 animate" id="card__{{ id }}">
+                    {% capture nomination_id %}{% if nomination.key %}{{ nomination.key }}{% else %}{{ nominee.key }}{% endif %}{% endcapture %}
+                    {% assign category_id =  category | slugify %}
+                    <div class="card mb-3 border-0 animate nomination" data-category="{{ category_id }}" data-nomination="{{ nomination_id }}">
                         <div class="row g-0"> 
                             <!-- Poster -->
-                            <a class="grow poster fav" >
+                            <a class="grow poster">
+                            {% capture image %}{% if nomination.image %}{{ nomination.image }}{% else %}{{ nominee.image }}{% endif %}{% endcapture %}
                             <img class="card-img w-100 h-100 rounded-5 p-0" src="/{{page.event}}/{{page.year}}/images/{{ image }}" width="230" height="355" alt="{{ name }}" />
-                            <!-- Favorite -->
-                            <div class="fav-icon position-absolute text-white fs-1" style="top: 2px; left: 12px; z-index: 2; height: 44px;"></div>
                             </a>
+                            {% if nomination.winner %}
+                            <!-- Winner -->
+                            <div class="badge rounded-pill bg-danger text-white text-monospace position-absolute top-0 start-50 translate-middle w-auto">WINNER</div> 
+                            {% endif %}
+
+                            <!-- Rating -->
+                            <div class="rating">
+                                &nbsp;
+                            </div>
+
                             <!-- Title -->
-                            <h3 class="w-100 item-title mt-3 fw-bold fs-6 pt-2" >{{ nominee.title }}</h3>
+                            <h3 class="w-100 item-title mt-1 fw-bold fs-6" >{{ nominee.title }}</h3>
+
                             <!-- Meta -->
-                            <div class="meta w-100">
+                            <div class="meta w-100 py-1">
                                 {% if nomination.name %}{{ nomination.name }}<br />{% endif %}
                                 {% if nomination.sub %}<div class="pb-3">{{ nomination.sub }}</div>{% endif %}
+                                
+                            </div>
+
+                            <div class="buttons">
                                 {% if nominee.trailer %}
                                 {% if nominee.trailer contains "youtube.com" %}
                                 {% assign urlParts = nominee.trailer | split: "v=" %}
@@ -76,20 +92,7 @@
             </div>
             </div>
             </div>
-            
-            <!-- Modal Window -->
-            <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
-                <div class="modal-dialog modal-xl">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-                        <div class="video_wrapper">
-                            <iframe width="100%" height="100%" src="" allowfullscreen allow="autoplay"></iframe>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
+            {% include video.html %}
         </main>
 		{% include footer.html %}
 		{% include scripts.html %}

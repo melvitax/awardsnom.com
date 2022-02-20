@@ -8,39 +8,49 @@ body {
 a:link, a:hover, a:active, a:visited {
     text-decoration: none;
 }
+@include media-breakpoint-up(sm) { 
+    .signout { 
+        float: right; 
+        display: inline;
+    }
+}
 h1.site-title {
     color: black;
     font-size: 10.8vw;
 }
 @include media-breakpoint-up(md) { h1.site-title { font-size: 2.8em; } }
+.category-title {
+    letter-spacing: 0.2em;
+}
 h2.show-title {
     color: black;
 }
 .item-title {
-    color: rgb(0, 0, 0);
+    color: rgb(66, 66, 66);
     border-top: 6px solid transparent;
 }
-.card.isFavorite .item-title {
-    color: black;
-    border-top: 6px solid rgb(255, 193, 7);
+.nomination:hover {
+    cursor: pointer;
+}
+.nomination:hover .item-title {
+    color: black
+}
+.nomination:hover .meta {
+    color: black
 }
 .nominee-title {
+    color: black;
     border-bottom: 1px solid rgba(128, 128, 128, 0.2);
 }
-.card a .fav-icon {
-    text-shadow: 2px 6px 12px #0000006c;
-}
-.card.isFavorite .fav-icon::before {
-    font-family: "Font Awesome 6 Free"; font-weight: 900; content: "\f004";
-}
-.navbar-blur {
+.header-blur {
     background-color: #f8f9faa1;
     -webkit-backdrop-filter: blur(10px); 
     backdrop-filter: blur(10px);
     border-bottom: rgba(128, 128, 128, 0.3) 1px solid;
 } 
-.navbar .btn-outline-warning {
-    color: black;
+.nav .btn-outline-warning:not(.active) {
+    background-color: rgba(255, 255, 255, 0.333);
+    color: rgb(0, 0, 0);
 }
 .grow { transition: all .2s ease-in-out; }
 .grow:hover, .grow:active { 
@@ -84,26 +94,40 @@ iframe {
 }
 @media (prefers-color-scheme: dark) {
     body {
-      background-color: #000;
+      background-color: rgb(18, 17, 17);
       color: white;
       height: 100%;
+    }
+    .border-bottom {
+        border-bottom: 1px solid #252626 !important;
     }
     h1.site-title {
         color: white;
     }
-    .navbar .btn-outline-warning {
-        color: #ffc107;
+    .nav .btn-outline-warning:not(.active) {
+        background-color: transparent;
+        color: white;
+    }
+    .nominee-title {
+        color: white;
+        border-bottom: 1px solid rgb(98, 98, 98);
     }
     h2.show-title {
         color: white;
     }
     .item-title {
+        color: rgb(179, 179, 179)
+    }
+    .nomination:hover .item-title {
+        color: white
+    }
+    .nomination:hover .meta {
         color: white
     }
     .meta {
         color: slategray;
     }
-    .navbar-blur {
+    .header-blur {
         background-color: rgba(0, 0, 0, 0.7);
     }
     .sourceLogo svg {

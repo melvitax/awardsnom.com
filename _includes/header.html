@@ -1,11 +1,9 @@
-<header class="header sticky-top navbar-light navbar-blur py-2">
-    <nav class="navbar">
+<header class="header sticky-top header-blur pt-1 pb-2">
+    <nav class="nav">
         <div class="container">
-            <div>
-                <h1 class="site-title fw-bold lh-1 w-100">{{site.title}}</h1>
-            </div>
+            <h1 class="site-title fw-bold lh-2 d-inline-flex mb-0 pt-1 pe-4 align-middle">{{site.title}}</h1>
             {% capture layoutChoice  %}{% if include.pagelayout == "nominees" %}nominees/{% else %}{% endif %}{% endcapture %}
-            <div class="btn-group">
+            <div class="btn-group pt-1 align-middle">
                 <div class="btn-group" role="group">
                     <button type="button" class="btn btn-outline-warning dropdown-toggle dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         <span class="">{{ include.event | capitalize }}</span>
@@ -39,7 +37,6 @@
                     </ul>
                 </div>
             </div>
-            <button type="button" class="btn btn-outline-warning" id="apple-sign-in-button"></button><button type="button" class="btn btn-outline-warning" id="apple-sign-out-button"></button>
         </div>
     </nav>
 </header>
