@@ -26,7 +26,8 @@ function configureCloudKit() {
           signInButton: {id: 'apple-sign-in-button', theme: 'black'},
           signOutButton: {id: 'apple-sign-out-button', theme: 'black'}
       },
-      environment: 'development'
+      environment: 'production'
+      //environment: 'development'
       }]
   });
 }
