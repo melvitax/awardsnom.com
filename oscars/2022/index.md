@@ -1,6 +1,6 @@
 ---
 title: "2022"
 layout: show
-event: oscars
+show: oscars
 year: '2022'
 ---

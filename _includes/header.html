@@ -6,7 +6,7 @@
             <div class="btn-group pt-1 align-middle">
                 <div class="btn-group" role="group">
                     <button type="button" class="btn btn-outline-warning dropdown-toggle dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="">{{ include.event | capitalize }}</span>
+                        <span class="">{{ include.show | capitalize }}</span>
                     </button>
                     <ul class="dropdown-menu" style="max-height: 50vh; max-width: 90vw; overflow-y: scroll">
                         <li><a class="dropdown-item" href="/oscars/2022/{{layoutChoice}}">Oscars</a></li>
@@ -20,19 +20,19 @@
                     </button>
                     <ul class="dropdown-menu" style="max-height: 50vh; max-width: 90vw; overflow-y: scroll">
                         {% for aDate in include.dates %}
-                        <li><a class="dropdown-item" href="/{{include.event}}/{{aDate}}/{{layoutChoice}}">{{aDate}}</a></li>
+                        <li><a class="dropdown-item" href="/{{include.show}}/{{aDate}}/{{layoutChoice}}">{{aDate}}</a></li>
                         {% endfor %}                            
                     </ul>
                 </div>
-                <a class="btn btn-outline-warning {% if include.pagelayout == "nominees" %}active{% endif %} nominees" href="/{{include.event}}/{{include.year}}/nominees/"><i class="fa-solid fa-list-ul"></i></a>
-                <a class="btn btn-outline-warning {% if include.pagelayout == "show" %}active{% endif %} categories" href="/{{include.event}}/{{include.year}}/"><i class="fa-solid fa-grip"></i></a>
+                <a class="btn btn-outline-warning {% if include.pagelayout == "nominees" %}active{% endif %} nominees" href="/{{include.show}}/{{include.year}}/nominees/"><i class="fa-solid fa-list-ul"></i></a>
+                <a class="btn btn-outline-warning {% if include.pagelayout == "show" %}active{% endif %} categories" href="/{{include.show}}/{{include.year}}/"><i class="fa-solid fa-grip"></i></a>
                 <div class="btn-group" role="group">
                     <button type="button" class="btn btn-outline-warning dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
                         <span class="visually-hidden">Toggle Dropdown</span>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end" style="max-height: 50vh; max-width: 90vw; overflow-y: scroll">
                         {% for category in include.categories %}
-                        <li><a class="dropdown-item" href="/{{include.event}}/{{include.year}}/#{{ category | slugify  }}">{{ category }}</a></li>
+                        <li><a class="dropdown-item" href="/{{include.show}}/{{include.year}}/#{{ category | slugify  }}">{{ category }}</a></li>
                         {% endfor %}
                     </ul>
                 </div>

@@ -1,6 +1,6 @@
 ---
 title: "2021"
 layout: show
-event: emmys
+show: emmys
 year: '2021'
 ---

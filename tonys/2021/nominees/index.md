@@ -1,6 +1,6 @@
 ---
 title: "2021"
 layout: nominees
-event: tonys
+show: tonys
 year: '2021'
 ---

@@ -1,6 +1,6 @@
 ---
 title: "2021"
 layout: nominees
-event: oscars
+show: oscars
 year: '2021'
 ---

@@ -8,7 +8,7 @@ window.addEventListener('cloudkitloaded', function() {
   configureCloudKit();
   console.log("CloudKit: Loaded");
   setUpAuth();
-  getTopRated();
+  getTop();
 });
 
 /*************************
@@ -41,7 +41,7 @@ function setUpAuth() {
     if(name) {
       displayUserName(name.givenName + ' ' + name.familyName);
     }
-    getEventPicks();
+    getPicks();
     container
       .whenUserSignsOut()
       .then(gotoUnauthenticatedState);
@@ -80,16 +80,16 @@ function displayUserName(name) {
   displayedUserName.textContent = name;
 }
 
-// Fetch Event Picks
-function getEventPicks() {
-  console.log("CloudKit: getEventPicks()")
+// Fetch Picks
+function getPicks() {
+  console.log("CloudKit: getPicks()")
   var container = CloudKit.getDefaultContainer();
   var privateDB = container.privateCloudDatabase;
 
   var query = {
     recordType: 'Picks',
     filterBy: [{
-      comparator: 'EQUALS', fieldName: 'event', fieldValue: { value: event }
+      comparator: 'EQUALS', fieldName: 'show', fieldValue: { value: show }
     }, {
       comparator: 'EQUALS', fieldName: 'year', fieldValue: { value: year }
     }]
@@ -117,15 +117,15 @@ function getEventPicks() {
 }
 
 // Fetch Top Rated
-function getTopRated(category) {
-  console.log("CloudKit: getTopRated()")
+function getTop(category) {
+  console.log("CloudKit: getTop()")
   var container = CloudKit.getDefaultContainer();
   var publicDB = container.publicCloudDatabase;
 
   var query = {
-    recordType: 'TopRated',
+    recordType: 'Top',
     filterBy: [{
-      comparator: 'EQUALS', fieldName: 'event', fieldValue: { value: event }
+      comparator: 'EQUALS', fieldName: 'show', fieldValue: { value: show }
     }, {
       comparator: 'EQUALS', fieldName: 'year', fieldValue: { value: year }
     }]
@@ -144,9 +144,9 @@ function getTopRated(category) {
         var records = response.records;
         var numberOfRecords = records.length;
         if (numberOfRecords === 0) {
-          console.log('No TopRated items')
+          console.log('No Top items')
         } else {
-          console.log('Found ' + numberOfRecords + ' TopRated records');
+          console.log('Found ' + numberOfRecords + ' Top records');
           records.forEach(function (record) {
             var fields = record.fields;
             console.log("record: " + JSON.stringify(fields))
@@ -156,7 +156,7 @@ function getTopRated(category) {
       }
     })
     .catch(function(error){
-      console.log("TopRated fetch error: " + error)
+      console.log("Top fetch error: " + error)
   });
 }
 
@@ -166,7 +166,7 @@ $('.nomination').on( "click", function() {
   var category = $(this).data( "category" );
   var nomination = $(this).data( "nomination" );
 
-  console.log("CloudKit toggle: event: " + event + " year: " + year + " category: " + category + " nomination: " + nomination)
+  console.log("CloudKit toggle: show: " + show + " year: " + year + " category: " + category + " nomination: " + nomination)
 
   var container = CloudKit.getDefaultContainer();
   var privateDB = container.privateCloudDatabase;
@@ -176,7 +176,7 @@ $('.nomination').on( "click", function() {
   var query = {
     recordType: 'Picks',
     filterBy: [{
-      comparator: 'EQUALS', fieldName: 'event', fieldValue: { value: event }
+      comparator: 'EQUALS', fieldName: 'show', fieldValue: { value: show }
     }, {
       comparator: 'EQUALS', fieldName: 'year', fieldValue: { value: year }
     }, {
@@ -229,13 +229,13 @@ $('.nomination').on( "click", function() {
             hideMyPickLoading(category, nomination)
           });
           // Update count
-          increaseVote(false, event, year, category, nominationVoteToDecrease)
-          updateTopRated(event, year, category, nomination)
+          increaseVote(false, show, year, category, nominationVoteToDecrease)
+          syncTop(show, year, category, nomination)
         } else {
           var record = {
             recordType: 'Picks',
             fields: {
-              event: { value: event },
+              show: { value: show },
               year: { value: year },
               category: { value: category },
               nomination: { value: nomination }
@@ -260,10 +260,10 @@ $('.nomination').on( "click", function() {
           });
           // Update count
           if (isUpdatingPick) {
-            increaseVote(false, event, year, category, nominationVoteToDecrease) 
+            increaseVote(false, show, year, category, nominationVoteToDecrease) 
           }
-          increaseVote(true, event, year, category, nomination)
-          updateTopRated(event, year, category, nomination)
+          increaseVote(true, show, year, category, nomination)
+          syncTop(show, year, category, nomination)
         }
       }
     })
@@ -276,8 +276,8 @@ $('.nomination').on( "click", function() {
 })
 
 // Update Top Rated
-function updateTopRated(event, year, category, nomination) {
-  console.log("updateTopRated()")
+function syncTop(show, year, category, nomination) {
+  console.log("syncTop()")
   var container = CloudKit.getDefaultContainer();
   var publicDB = container.publicCloudDatabase;
   var options = { zoneID: "_defaultZone" };
@@ -285,7 +285,7 @@ function updateTopRated(event, year, category, nomination) {
   var query = {
     recordType: 'Votes',
     filterBy: [{
-      comparator: 'EQUALS', fieldName: 'event', fieldValue: { value: event }
+      comparator: 'EQUALS', fieldName: 'show', fieldValue: { value: show }
     }, {
       comparator: 'EQUALS', fieldName: 'year', fieldValue: { value: year }
     }, {
@@ -306,35 +306,35 @@ function updateTopRated(event, year, category, nomination) {
         console.log("error: " + response.errors[0])
       } else {
         if (numberOfRecords > 0) {
-          console.log('updateTopRated() Found ' + numberOfRecords + ' Votes records');
-          var topRatedQuery = {
-            recordType: 'TopRated',
+          console.log('syncTop() Found ' + numberOfRecords + ' Votes records');
+          var topQuery = {
+            recordType: 'Top',
             filterBy: [{
-              comparator: 'EQUALS', fieldName: 'event', fieldValue: { value: event }
+              comparator: 'EQUALS', fieldName: 'show', fieldValue: { value: show }
             }, {
               comparator: 'EQUALS', fieldName: 'year', fieldValue: { value: year }
             }, {
               comparator: 'EQUALS', fieldName: 'category', fieldValue: { value: category }
             }]
           };
-          publicDB.performQuery(topRatedQuery, { resultsLimit: 1 })
-            .then(function (topRatedResponse) {
+          publicDB.performQuery(topQuery, { resultsLimit: 1 })
+            .then(function (topResponse) {
               var recordChangeTag
               var recordName
               if(response.hasErrors) {
                 console.log("error: " + response.errors[0])
               } else {
                 var votes = 0
-                if (topRatedResponse.records.length > 0) {
-                  var record = topRatedResponse.records[0]
+                if (topResponse.records.length > 0) {
+                  var record = topResponse.records[0]
                   recordChangeTag = record.recordChangeTag
                   recordName = record.recordName
                   votes = record.fields.votes.value
                 }
                 var record = {
-                  recordType: 'TopRated',
+                  recordType: 'Top',
                   fields: {
-                    event: { value: event },
+                    show: { value: show },
                     year: { value: year },
                     category: { value: category },
                     nomination: { value: nomination }, 
@@ -357,7 +357,7 @@ function updateTopRated(event, year, category, nomination) {
                       var createdRecord = response.records[0];
                       var fields = createdRecord.fields;
                       console.log("new vote " + category + " " + nomination +": " +fields.votes.value )
-                      getTopRated(category)
+                      getTop(category)
                     }
                 });
               }
@@ -368,7 +368,7 @@ function updateTopRated(event, year, category, nomination) {
 }
 
 // Update Vote
-function increaseVote(increasing, event, year, category, nomination) {
+function increaseVote(increasing, show, year, category, nomination) {
   var container = CloudKit.getDefaultContainer();
   var publicDB = container.publicCloudDatabase;
   var options = { zoneID: "_defaultZone" };
@@ -376,7 +376,7 @@ function increaseVote(increasing, event, year, category, nomination) {
   var query = {
     recordType: 'Votes',
     filterBy: [{
-      comparator: 'EQUALS', fieldName: 'event', fieldValue: { value: event }
+      comparator: 'EQUALS', fieldName: 'show', fieldValue: { value: show }
     }, {
       comparator: 'EQUALS', fieldName: 'year', fieldValue: { value: year }
     }, {
@@ -411,7 +411,7 @@ function increaseVote(increasing, event, year, category, nomination) {
         var record = {
           recordType: 'Votes',
           fields: {
-            event: { value: event },
+            show: { value: show },
             year: { value: year },
             category: { value: category },
             nomination: { value: nomination }, 
