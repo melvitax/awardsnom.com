@@ -9,6 +9,8 @@
         <script>
             var show = "{{ page.show }}";
             var year = "{{ page.year }}";
+            var cloudKitApiToken = "{{ site.cloudKitApiToken }}";
+            var cloudKitEnvironment = "{{ site.cloudKitEnvironment }}";
         </script>
         {% assign data = site.data[page.show][page.year] %}
         {% assign dates = "" | split: ',' %}

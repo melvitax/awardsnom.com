@@ -15,19 +15,20 @@ window.addEventListener('cloudkitloaded', function() {
     CLOUD KIT FUNCTIONS 
 **************************/
 
+
 // Configure CloudKit
 function configureCloudKit() {
+  console.log("configure CloudKit for " + cloudKitEnvironment)
   CloudKit.configure({
     containers: [{
     containerIdentifier: 'iCloud.com.awardsnom',
       apiTokenAuth: {
-          apiToken: '046e21559bac3935deffbacbe5df358a7cbc3cbc263a0b2a694592f0331ae024',
-          persist: true, 
+        persist: true, 
+        apiToken: cloudKitApiToken,
           signInButton: {id: 'apple-sign-in-button', theme: 'black'},
           signOutButton: {id: 'apple-sign-out-button', theme: 'black'}
       },
-      environment: 'production'
-      //environment: 'development'
+      environment: cloudKitEnvironment
       }]
   });
 }
