@@ -229,10 +229,9 @@ $('.nomination').on( "click", function() {
               displayMyPick(fields.category.value, fields.nomination.value, false)
             }
             hideMyPickLoading(category, nomination)
+            // Update count
+            increaseVote(false, show, year, category, nominationVoteToDecrease)
           });
-          // Update count
-          increaseVote(false, show, year, category, nominationVoteToDecrease)
-          syncTop(show, year, category, nomination)
         } else {
           var record = {
             recordType: 'Picks',
@@ -259,13 +258,13 @@ $('.nomination').on( "click", function() {
                 displayMyPick(fields.category.value, fields.nomination.value, true)
               }
               hideMyPickLoading(category, nomination)
+              // Update count
+            if (isUpdatingPick) {
+              increaseVote(false, show, year, category, nominationVoteToDecrease) 
+            }
+            increaseVote(true, show, year, category, nomination)
           });
-          // Update count
-          if (isUpdatingPick) {
-            increaseVote(false, show, year, category, nominationVoteToDecrease) 
-          }
-          increaseVote(true, show, year, category, nomination)
-          syncTop(show, year, category, nomination)
+          
         }
       }
     })
@@ -437,6 +436,7 @@ function increaseVote(increasing, show, year, category, nomination) {
               var fields = createdRecord.fields;
               console.log("new vote " + category + " " + nomination +": " +fields.votes.value )
             }
+            syncTop(show, year, category, nomination)
         });
       }
     })
