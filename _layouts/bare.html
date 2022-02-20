@@ -1,0 +1,20 @@
+---
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	{% include head.html %}
+	<body class="no-observer">
+		<header class="header sticky-top header-blur pt-1 pb-2">
+            <nav class="nav">
+                <div class="container">
+                    <h1 class="site-title fw-bold lh-2 d-inline-flex mb-0 pt-1 pe-4 align-middle">{{site.title}}</h1>
+                </div>
+            </nav>
+        </header>
+		{{ content }}
+		{% include footer.html %}
+		{% include ga.html %}
+	</body>
+</html>
