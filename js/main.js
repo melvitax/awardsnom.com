@@ -76,12 +76,6 @@ function setUpAuth() {
     });
 }
 
-// Display username
-function displayUserName(name) {
-  var displayedUserName = document.getElementById('displayed-username');
-  displayedUserName.textContent = name;
-}
-
 // Fetch Picks
 function getPicks() {
   console.log("CloudKit: getPicks()")
@@ -105,7 +99,7 @@ function getPicks() {
         var records = response.records;
         var numberOfRecords = records.length;
         if (numberOfRecords === 0) {
-          console.log('No matching items')
+          console.log('No matching Picks items')
         } else {
           console.log('Found ' + numberOfRecords + ' records');
           records.forEach(function (record) {
@@ -174,7 +168,7 @@ $('.nomination').on( "click", function() {
   var privateDB = container.privateCloudDatabase;
   var publicDB = container.publicCloudDatabase;
   var options = { zoneID: "_defaultZone" };
-
+  // Pick query
   var query = {
     recordType: 'Picks',
     filterBy: [{
@@ -204,7 +198,7 @@ $('.nomination').on( "click", function() {
         var nominationVoteToDecrease = nomination
 
         if (isUpdatingPick) {         
-          console.log('Found ' + numberOfRecords + ' records');
+          console.log('Pick found: ' + numberOfRecords + ' records');
           var record = records[0]
           var fields = record.fields;
           recordChangeTag = record.recordChangeTag
@@ -215,25 +209,30 @@ $('.nomination').on( "click", function() {
             nominationVoteToDecrease = fields.nomination.value
           }
           console.log("record: " + JSON.stringify(fields))
-        } else {
-          console.log('No matching items')
         }
         if (isDeselectingPick) {
           // Delete pick
-          privateDB.deleteRecords(recordName).then(function(response) {
-            if(response.hasErrors) {
-              console.log("error: " + response.errors[0])
+          privateDB.deleteRecords(recordName).then(function(deleteResponse) {
+            if(deleteResponse.hasErrors) {
+              console.log("error: " + deleteResponse.errors[0])
             } else {
-              var deletedRecord = response.records[0];
-              console.log("deletedRecord: " + deletedRecord)
-              displayMyPick(fields.category.value, fields.nomination.value, false)
+              var deletedRecord = deleteResponse.records[0];
+              console.log("Pick deletedRecord: " + deletedRecord)
+              displayMyPick(category, nomination, false)
             }
             hideMyPickLoading(category, nomination)
             // Update count
-            increaseVote(false, show, year, category, nominationVoteToDecrease)
+            console.log("updateVote( "+show+" "+year+" "+category+" - "+nominationVoteToDecrease+")")
+            updateVote(show, year, category, null, nominationVoteToDecrease)
+              .then(function () {
+                syncTop(show, year, category)
+                  .then(function() {
+                    getTop(category)
+                  })
+              })
           });
         } else {
-          var record = {
+          var newRecord = {
             recordType: 'Picks',
             fields: {
               show: { value: show },
@@ -243,203 +242,214 @@ $('.nomination').on( "click", function() {
             }
           };
           if(recordChangeTag) {
-            record.recordChangeTag = recordChangeTag;
+            newRecord.recordChangeTag = recordChangeTag;
           }
           if(recordName) {
-            record.recordName = recordName;
+            newRecord.recordName = recordName;
           }
           // Save Pick - new or updated
-          privateDB.saveRecords(record).then(function(response) {
-              if(response.hasErrors) {
-                console.log("error: " + response.errors[0])
+          privateDB.saveRecords(newRecord).then(function(saveResponse) {
+              if(saveResponse.hasErrors) {
+                console.log("error: " + saveResponse.errors[0])
               } else {
-                var createdRecord = response.records[0];
+                var createdRecord = saveResponse.records[0];
                 var fields = createdRecord.fields;
                 displayMyPick(fields.category.value, fields.nomination.value, true)
               }
               hideMyPickLoading(category, nomination)
               // Update count
             if (isUpdatingPick) {
-              increaseVote(false, show, year, category, nominationVoteToDecrease) 
+              updateVote(show, year, category, nomination, nominationVoteToDecrease) 
+                .then(function (updated) {
+                  syncTop(show, year, category)
+                    .then(function() {
+                      getTop(category)
+                    })
+                })
+            } else {
+              updateVote(show, year, category, nomination, null)
+                .then(function (updated) {
+                  syncTop(show, year, category)
+                    .then(function() {
+                      getTop(category)
+                    })
+                })
             }
-            increaseVote(true, show, year, category, nomination)
           });
-          
         }
       }
     })
     .catch(function(error){
       if (error.ckErrorCode == "AUTHENTICATION_REQUIRED") {
-        showSignIn()
+        displaySignIn()
       }
       hideMyPickLoading(category, nomination)
     });
 })
 
-// Update Top Rated
-function syncTop(show, year, category, nomination) {
-  console.log("syncTop()")
-  var container = CloudKit.getDefaultContainer();
-  var publicDB = container.publicCloudDatabase;
-  var options = { zoneID: "_defaultZone" };
-
-  var query = {
-    recordType: 'Votes',
-    filterBy: [{
-      comparator: 'EQUALS', fieldName: 'show', fieldValue: { value: show }
-    }, {
-      comparator: 'EQUALS', fieldName: 'year', fieldValue: { value: year }
-    }, {
-      comparator: 'EQUALS', fieldName: 'category', fieldValue: { value: category }
-    }], 
-    sortBy: [{
-      fieldName: 'votes',
-      ascending: false
-    }]
-  };
-
-  // Check for highest vote in categery
-  publicDB.performQuery(query, { resultsLimit: 1 })
-    .then(function (response) {
-      var records = response.records;
-      var numberOfRecords = records.length;
-      if(response.hasErrors) {
-        console.log("error: " + response.errors[0])
-      } else {
-        if (numberOfRecords > 0) {
-          console.log('syncTop() Found ' + numberOfRecords + ' Votes records');
-          var topQuery = {
-            recordType: 'Top',
-            filterBy: [{
-              comparator: 'EQUALS', fieldName: 'show', fieldValue: { value: show }
-            }, {
-              comparator: 'EQUALS', fieldName: 'year', fieldValue: { value: year }
-            }, {
-              comparator: 'EQUALS', fieldName: 'category', fieldValue: { value: category }
-            }]
-          };
-          publicDB.performQuery(topQuery, { resultsLimit: 1 })
-            .then(function (topResponse) {
-              var recordChangeTag
-              var recordName
-              if(response.hasErrors) {
-                console.log("error: " + response.errors[0])
-              } else {
-                var votes = 0
-                if (topResponse.records.length > 0) {
-                  var record = topResponse.records[0]
-                  recordChangeTag = record.recordChangeTag
-                  recordName = record.recordName
-                  votes = record.fields.votes.value
+// Update Votes
+function updateVote(show, year, category, nominationToIncrease, nominationToDecrease) {
+  console.log("updateVote()")
+  return new Promise(function (fulfilled) {
+    var container = CloudKit.getDefaultContainer();
+    var publicDB = container.publicCloudDatabase;
+    // Votes Query
+    var query = {
+      recordType: 'Votes',
+      filterBy: [{
+        comparator: 'EQUALS', fieldName: 'show', fieldValue: { value: show }
+      }, {
+        comparator: 'EQUALS', fieldName: 'year', fieldValue: { value: year }
+      }, {
+        comparator: 'EQUALS', fieldName: 'category', fieldValue: { value: category }
+      }]
+    };
+    // Check if there's an entry first
+    publicDB.performQuery(query)
+      .then(function (response) {
+        var records = response.records;
+        if(response.hasErrors) {
+          console.log("error: " + response.errors[0])
+        } else {
+          var newRecords = []
+          if (nominationToIncrease) {
+            newRecords.push(
+              {
+                recordType: 'Votes',
+                fields: {
+                  show: { value: show },
+                  year: { value: year },
+                  category: { value: category },
+                  nomination: { value: nominationToIncrease }, 
+                  votes: { value: 1 }
                 }
-                var record = {
+              }
+            )
+          }
+          if (nominationToDecrease) {
+            newRecords.push(
+              {
+                recordType: 'Votes',
+                fields: {
+                  show: { value: show },
+                  year: { value: year },
+                  category: { value: category },
+                  nomination: { value: nominationToDecrease }
+                }
+              }
+            )
+          }
+          if (records.length === 0) {
+            console.log('No matching items in Votes')
+          } else {
+            for (i=0; i<records.length; i++) {
+              var record = records[i]
+              var fields = record.fields;
+              for (j=0; j<newRecords.length; j++) {
+                if (fields.nomination.value === newRecords[j].fields.nomination.value) {
+                  var offset = fields.nomination.value === nominationToIncrease ? 1 : -1
+                  var currentVote = (fields.votes.value === undefined) ? 0 : fields.votes.value
+                  newRecords[j].fields.votes = { value: Math.max((currentVote + offset), 0) }
+                  newRecords[j].recordChangeTag = record.recordChangeTag
+                  newRecords[j].recordName = record.recordName
+                }
+              }
+            }
+          }
+          return publicDB.saveRecords(newRecords).then(function(saveResponse) {
+              if(saveResponse.hasErrors) {
+                console.log("updateVote error: " + saveResponse.errors[0])
+              } else {
+                fulfilled(saveResponse.records)
+              }
+          }).catch(function(error){
+            console.log("updateVote saving vote error: " + error)
+          });
+        }
+      }).catch(function(error){
+        console.log("updateVote Query error: " + error)
+      })
+  })
+}
+
+// Update Top Rated
+function syncTop(show, year, category) {
+  console.log("syncTop()")
+  return new Promise(function (fulfilled) {
+    var container = CloudKit.getDefaultContainer();
+    var publicDB = container.publicCloudDatabase;
+    // Votes Query
+    var query = {
+      recordType: 'Votes',
+      filterBy: [{
+        comparator: 'EQUALS', fieldName: 'show', fieldValue: { value: show }
+      }, {
+        comparator: 'EQUALS', fieldName: 'year', fieldValue: { value: year }
+      }, {
+        comparator: 'EQUALS', fieldName: 'category', fieldValue: { value: category }
+      }], 
+      sortBy: [{
+        fieldName: 'votes',
+        ascending: false
+      }]
+    };
+
+    // Check for highest vote in categery
+    publicDB.performQuery(query, { resultsLimit: 1 })
+      .then(function (votesResponse) {
+        var votesRecords = votesResponse.records;
+        if(votesResponse.hasErrors) {
+          console.log("error: " + votesResponse.errors[0])
+        } else {
+          if (votesRecords.length > 0) {
+            console.log('syncTop() Found ' + votesRecords.length + ' Votes records');
+            var voteRecord = votesRecords[0]
+            // Top Query
+            var topQuery = {
+              recordType: 'Top',
+              filterBy: [{
+                comparator: 'EQUALS', fieldName: 'show', fieldValue: { value: show }
+              }, {
+                comparator: 'EQUALS', fieldName: 'year', fieldValue: { value: year }
+              }, {
+                comparator: 'EQUALS', fieldName: 'category', fieldValue: { value: category }
+              }]
+            };
+            publicDB.performQuery(topQuery, { resultsLimit: 1 })
+              .then(function (topResponse) {
+                var newRecord = {
                   recordType: 'Top',
                   fields: {
                     show: { value: show },
                     year: { value: year },
                     category: { value: category },
-                    nomination: { value: nomination }, 
-                    votes: { value: votes }
+                    nomination: { value: voteRecord.fields.nomination.value }, 
+                    votes: { value: voteRecord.fields.votes.value }
                   }
                 };
-                // To modify an existing record, supply a recordChangeTag.
-                if(recordChangeTag) {
-                  record.recordChangeTag = recordChangeTag;
+                if(topResponse.hasErrors) {
+                  console.log("error: " + topResponse.errors[0])
+                } else {
+                  var votes = 0
+                  if (topResponse.records.length > 0) {
+                    var record = topResponse.records[0]
+                    newRecord.recordChangeTag = record.recordChangeTag
+                    newRecord.recordName = record.recordName
+                  }
                 }
-                // If no recordName is supplied the server will generate one.
-                if(recordName) {
-                  record.recordName = recordName;
-                }
-                console.log("saving vote record: " + JSON.stringify(record))
-                publicDB.saveRecords(record).then(function(response) {
-                    if(response.hasErrors) {
-                      console.log("error: " + response.errors[0])
+                console.log("saving vote record: " + JSON.stringify(newRecord))
+                publicDB.saveRecords(newRecord).then(function(saveResponse) {
+                    if(saveResponse.hasErrors) {
+                      console.log("error: " + saveResponse.errors[0])
                     } else {
-                      var createdRecord = response.records[0];
-                      var fields = createdRecord.fields;
-                      console.log("new vote " + category + " " + nomination +": " +fields.votes.value )
-                      getTop(category)
+                      fulfilled(saveResponse.records)
                     }
-                });
-              }
-            })
-        }
-      }
-    })
-}
-
-// Update Vote
-function increaseVote(increasing, show, year, category, nomination) {
-  var container = CloudKit.getDefaultContainer();
-  var publicDB = container.publicCloudDatabase;
-  var options = { zoneID: "_defaultZone" };
-
-  var query = {
-    recordType: 'Votes',
-    filterBy: [{
-      comparator: 'EQUALS', fieldName: 'show', fieldValue: { value: show }
-    }, {
-      comparator: 'EQUALS', fieldName: 'year', fieldValue: { value: year }
-    }, {
-      comparator: 'EQUALS', fieldName: 'category', fieldValue: { value: category }
-    }, {
-      comparator: 'EQUALS', fieldName: 'nomination', fieldValue: { value: nomination }
-    }]
-  };
-
-  // Check if there's an entry first
-  publicDB.performQuery(query, { resultsLimit: 1 })
-    .then(function (response) {
-      var records = response.records;
-      var numberOfRecords = records.length;
-      var recordChangeTag
-      var recordName
-      var votes = increasing ? 1 : -1
-      if(response.hasErrors) {
-        console.log("error: " + response.errors[0])
-      } else {
-        if (numberOfRecords === 0) {
-          console.log('No matching items in Votes')
-        } else {
-          console.log('Found ' + numberOfRecords + ' records');
-          var record = records[0]
-          var fields = record.fields;
-          recordChangeTag = record.recordChangeTag
-          recordName = record.recordName
-          votes += fields.votes.value
-          console.log("found vote " + category + " " + nomination +": " +fields.votes.value )
-        }
-        var record = {
-          recordType: 'Votes',
-          fields: {
-            show: { value: show },
-            year: { value: year },
-            category: { value: category },
-            nomination: { value: nomination }, 
-            votes: { value: votes }
+                })
+              })
           }
-        };
-        // To modify an existing record, supply a recordChangeTag.
-        if(recordChangeTag) {
-          record.recordChangeTag = recordChangeTag;
         }
-        // If no recordName is supplied the server will generate one.
-        if(recordName) {
-          record.recordName = recordName;
-        }
-        console.log("saving vote record: " + JSON.stringify(record))
-        publicDB.saveRecords(record).then(function(response) {
-            if(response.hasErrors) {
-              console.log("error: " + response.errors[0])
-            } else {
-              var createdRecord = response.records[0];
-              var fields = createdRecord.fields;
-              console.log("new vote " + category + " " + nomination +": " +fields.votes.value )
-            }
-            syncTop(show, year, category, nomination)
-        });
-      }
-    })
+      })
+  })
 }
 
 // Share with UI
@@ -464,7 +474,7 @@ function shareWithUI() {
     })
     .catch(function(error){
       if (error.ckErrorCode == "AUTHENTICATION_REQUIRED") {
-        showSignIn()
+        displaySignIn()
       }
       console.log("shareWithUI error: " + error)
     });
@@ -487,28 +497,37 @@ function discoverAllUserIdentities() {
     })
     .catch(function(error){
       if (error.ckErrorCode == "AUTHENTICATION_REQUIRED") {
-        showSignIn()
+        displaySignIn()
       }
       console.log("discoverAllUserIdentities error: " + error)
     });
 }
-$('.discover-users').on( "click", function() {
-  discoverAllUserIdentities()
-})
+// $('.discover-users').on( "click", function() {
+//   discoverAllUserIdentities()
+// })
 
-function showSignIn() {
+// Display Sign In
+function displaySignIn() {
   alert("Sign in to iCloud to save your pick")
 }
 
+// Display username
+function displayUserName(name) {
+  var displayedUserName = document.getElementById('displayed-username');
+  displayedUserName.textContent = name;
+}
+
+// Display Loading My Pick
 function displayMyPickLoading(category, nomination) {
   $(".nomination[data-category='" + category + "'][data-nomination='" + nomination + "'] .rating").prepend('<span class="loading-spinner spinner-border text-warning mt-1" role="status" style="width: 1.1em; height: 1.1em;"><span class="visually-hidden">Loading...</span></span>')
 }
 
+// Hide Loading My Pick
 function hideMyPickLoading(category, nomination) {
   $(".nomination[data-category='" + category + "'][data-nomination='" + nomination + "'] .loading-spinner").remove()
 }
 
-// Display isPick
+// Display My Pick
 function displayMyPick(category, nomination, isPick) {
   $(".nomination[data-category='" + category + "'] .pick-icon").remove()
   if (isPick) {
