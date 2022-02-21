@@ -1,0 +1,106 @@
+---
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	{% include head.html %}
+	<body class="no-observer">
+        <script>
+            var show = "{{ page.show }}";
+            var year = "{{ page.year }}";
+            var cloudKitApiToken = "{{ site.cloudKitApiToken }}";
+            var cloudKitEnvironment = "{{ site.cloudKitEnvironment }}";
+        </script>
+        {% assign data = site.data[page.show][page.year] %}
+        {% assign dates = "" | split: ',' %}
+        {% for aDate in site.data[page.show] %}
+            {% assign dates = dates | push: aDate[0] %}
+        {% endfor %}
+        {% assign sortedDates = dates | sort | reverse %}
+        {% include header.html show=page.show year=page.year dates=sortedDates categories=data.categories pagelayout=page.layout %}
+        <main class="hide">
+
+            <div class="pb-5 main-content">
+            <div class="container">
+
+            {% include subheader.html %} 
+
+            <div class="row card-columns ml-0 mr-0">
+
+                {% for service in site.data.services %}
+                    {% assign nominees = "" | split: ',' %}
+                    {% for nominee in data.nominees %}
+                        {% assign numOfStreamers = nominee.streaming | size %}
+                        {% if service == "unknown" and numOfStreamers == 0 %}
+                            {% assign nominees =  nominees | push: nominee %}
+                        {% else %}
+                            {% for streamer in nominee.streaming %}
+                                {% if streamer.source == service %}
+                                    {% assign nominees =  nominees | push: nominee %}
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                    {% assign numOfNominees = nominees | size %}
+                    {% if numOfNominees > 0 %}
+                        <h3 class="col-10 pt-3 pb-2 text-center border-bottom text-warning fw-bold fs-3 category-title"><span class="source-logo {{service}} align-bottom">{% include icons/{{service}}.svg %}</span><br />{{ numOfNominees }}</h3>
+                        {% for nominee in nominees %}
+                            <div class="col-5 col-sm-3 col-md-2 pt-4 pb-2" >
+                                <div class="card mb-3 border-0 animate">
+                                    <div class="row g-0"> 
+                                        <!-- Poster -->
+                                        <img class="card-img w-100 h-100 rounded-5 p-0" src="/{{page.show}}/{{page.year}}/images/{{ nominee.image }}" width="230" height="355" alt="{{ name }}" />
+                                        <!-- Buttons -->
+                                        <div class="buttons w-100 pt-3">
+                                            {% assign streaming = nominee.streaming | where:"source", service %}
+                                            {% for streamer in streaming %}
+                                                {% if streamer.source %}
+                                                {% capture watchURL %}{% if streamer.url %}{{ streamer.url }}{% else %}#{% endif %}{% endcapture %}
+                                                <a href="{{ watchURL }}" class="btn btn-outline-secondary btn-block mb-2 w-100"><span class="source-logo {{streamer.source}}">{% include icons/{{streamer.source}}.svg %}</span></a>
+                                                {% endif %}
+                                            {% endfor %}
+                                            {% if nominee.trailer %}
+                                                {% if nominee.trailer contains "youtube.com" %}
+                                                {% assign urlParts = nominee.trailer | split: "v=" %}
+                                                {% assign videoID = urlParts[1] %}
+                                                {% assign src = 'https://www.youtube.com/embed/' | append: videoID | append: '?showinfo=0&modestbranding=0&color=white&autoplay=0' %}
+                                                <a href="#" class="btn btn-outline-secondary btn-block w-100" data-bs-toggle="modal" data-bs-target="#videoModal" data-theVideo="{{ src }}"><i class="fa-regular fa-play"></i> Trailer</a>
+                                                {% elsif nominee.trailer contains "vimeo.com" %}
+                                                {% assign urlParts = nominee.trailer | split: "/" %}
+                                                {% assign videoID = urlParts | last %}
+                                                {% assign src = 'https://player.vimeo.com/video/' | append: videoID | append: '?title=0&byline=0&portrait=0' %}
+                                                <a href="#" class="btn btn-outline-secondary btn-block w-100" data-bs-toggle="modal" data-bs-target="#videoModal" data-theVideo="{{ src }}"><span class="fa fa-play"> Trailer</span></a> 
+                                                {% endif %}
+                                            {% endif %}
+                                        </div>
+                                        {% if nomination.winner %}
+                                        <!-- Winner -->
+                                        <div class="badge rounded-pill bg-danger text-white text-monospace position-absolute top-0 start-50 translate-middle w-auto">WINNER</div> 
+                                        {% endif %}
+                                        <!-- Title -->
+                                        <h3 class="w-100 item-title mt-1 fw-bold fs-6" >{{ nominee.title }}</h3>
+                                        <div class="text-muted">{{ nominee.nominations | size }} {% if nominee.nominations.size > 1 %}NOMINATIONS{% else %}NOMINATION{% endif %}</div>
+                                        {% assign showDay = data.day | date: '%Y%m%d' %}
+                                        {% if today >= showDay %}
+                                            {% assign wins = nominee.nominations | where: "winner", true | map: "winner" | size  %}
+                                            {% if wins > 0 %}
+                                            <div class="text-muted">{{ wins }} {% if wins == 1 %}WIN{% else %}WINS{% endif %}</div>
+                                            {% endif %}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+    
+            </div>
+            </div>
+            </div>
+            {% include video.html %}
+        </main>
+		{% include footer.html %}
+		{% include scripts.html %}
+	</body>
+</html>

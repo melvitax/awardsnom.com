@@ -59,10 +59,10 @@
                             <a href="#" class="btn btn-outline-secondary btn-block w-100" data-bs-toggle="modal" data-bs-target="#videoModal" data-theVideo="{{ src }}"><span class="fa fa-play"> Trailer</span></a> 
                             {% endif %}
                             {% endif %}
-                            {% for streaming in nominee.streaming %}
-                                {% if streaming.source %}
-                                {% capture watchURL %}{% if streaming.url %}{{ streaming.url }}{% else %}#{% endif %}{% endcapture %}
-                                <a href="{{ watchURL }}" class="btn btn-outline-secondary btn-block mt-2 w-100"><span class="source-logo {{streaming.source}}">{% include icons/{{streaming.source}}.svg %}</span></a>
+                            {% for streamer in nominee.streaming %}
+                                {% if streamer.source %}
+                                {% capture watchURL %}{% if streamer.url %}{{ streamer.url }}{% else %}#{% endif %}{% endcapture %}
+                                <a href="{{ watchURL }}" class="btn btn-outline-secondary btn-block mt-2 w-100"><span class="source-logo {{streamer.source}}">{% include icons/{{streamer.source}}.svg %}</span></a>
                                 {% endif %}
                             {% endfor %}
                         </div>
