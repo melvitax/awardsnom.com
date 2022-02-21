@@ -124,6 +124,10 @@ function getTop(category) {
       comparator: 'EQUALS', fieldName: 'show', fieldValue: { value: show }
     }, {
       comparator: 'EQUALS', fieldName: 'year', fieldValue: { value: year }
+    }], 
+    sortBy: [{
+      fieldName: 'votes',
+      ascending: false
     }]
   };
   if (category) {
@@ -222,7 +226,6 @@ $('.nomination').on( "click", function() {
             }
             hideMyPickLoading(category, nomination)
             // Update count
-            console.log("updateVote( "+show+" "+year+" "+category+" - "+nominationVoteToDecrease+")")
             updateVote(show, year, category, null, nominationVoteToDecrease)
               .then(function () {
                 syncTop(show, year, category)
@@ -437,7 +440,6 @@ function syncTop(show, year, category) {
                     newRecord.recordName = record.recordName
                   }
                 }
-                console.log("saving vote record: " + JSON.stringify(newRecord))
                 publicDB.saveRecords(newRecord).then(function(saveResponse) {
                     if(saveResponse.hasErrors) {
                       console.log("error: " + saveResponse.errors[0])
