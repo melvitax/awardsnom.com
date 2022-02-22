@@ -105,7 +105,6 @@ function getPicks() {
           console.log('Found ' + numberOfRecords + ' records');
           records.forEach(function (record) {
             var fields = record.fields;
-            console.log("record: " + JSON.stringify(fields))
             displayMyPick(fields.category.value, fields.nomination.value, true)
           });
         }
@@ -151,7 +150,6 @@ function getTop(category) {
 
           records.forEach(function (record) {
             var fields = record.fields;
-            console.log("record: " + JSON.stringify(fields))
             displayTopVote(fields.category.value, fields.nomination.value)
           });
         }
@@ -562,6 +560,7 @@ function registerForNotifications() {
 // Display Sign In
 function displaySignIn() {
   alert("Sign in to iCloud to save your pick")
+  alert("Sign in to iCloud")
 }
 
 // Display username
@@ -586,7 +585,6 @@ function displayMyPick(category, nomination, isPick) {
   if (isPick) {
     $(".nomination[data-category='" + category + "'][data-nomination='" + nomination + "'] .rating").prepend('<span class="pick-icon lh-1 text-warning pt-1 w-auto" ><i class="fa-solid fa-heart"></i> Pick</span>')
   }
-  console.log("displayMyPick: " + category + " " + nomination + " " + isPick)
 }
 
 // Display isTop
