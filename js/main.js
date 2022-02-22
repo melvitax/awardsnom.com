@@ -9,6 +9,7 @@ window.addEventListener('cloudkitloaded', function() {
   console.log("CloudKit: Loaded");
   setUpAuth();
   getTop();
+  registerForNotifications();
 });
 
 /*************************
@@ -491,9 +492,9 @@ function shareWithUI() {
       console.log("shareWithUI error: " + error)
     });
 }
-// $('.share-picks').on( "click", function() {
-//   shareWithUI()
-// })
+$('.share-picks').on( "click", function() {
+  shareWithUI()
+})
 
 // Discover All Users
 function discoverAllUserIdentities() {
@@ -514,9 +515,49 @@ function discoverAllUserIdentities() {
       console.log("discoverAllUserIdentities error: " + error)
     });
 }
-// $('.discover-users').on( "click", function() {
-//   discoverAllUserIdentities()
-// })
+$('.discover-users').on( "click", function() {
+  discoverAllUserIdentities()
+})
+
+// Accept Share
+function demoAcceptShares(shortGUID) {
+  var container = CloudKit.getDefaultContainer();
+  container.acceptShares(shortGUID)
+    .then(function(response) {
+      if(response.hasErrors) {
+        console.log("acceptShares error: " + response.errors[0])
+      } else {
+        var result = response.results[0];
+        console.log("acceptShares result "+ JSON.stringify(result))
+      }
+    });
+}
+
+// Notifications
+function registerForNotifications() {
+  var container = CloudKit.getDefaultContainer();
+  if(container.isRegisteredForNotifications) {
+    CloudKit.Promise.resolve();
+  }
+  function renderNotification(notification) {
+    appendNotificationToTable(
+      notification.notificationID,
+      notification.notificationType,
+      notification.subscriptionID,
+      notification.zoneID
+    );
+    console.log("****** NOTIFICATION *****")
+    console.log(JSON.stringify(notification))
+    console.log("********************")
+  }
+  container.addNotificationListener(renderNotification);
+  container.registerForNotifications().then(function(container) {
+    if(container.isRegisteredForNotifications) {
+      console.log('NOTIFICATIONS: Connected');
+    }
+  });
+}
+
 
 // Display Sign In
 function displaySignIn() {
