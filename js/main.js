@@ -559,7 +559,6 @@ function registerForNotifications() {
 
 // Display Sign In
 function displaySignIn() {
-  alert("Sign in to iCloud to save your pick")
   alert("Sign in to iCloud")
 }
 
