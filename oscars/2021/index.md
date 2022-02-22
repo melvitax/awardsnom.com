@@ -1,5 +1,5 @@
 ---
-title: "2021"
+title: "Oscars 2021"
 layout: show
 show: oscars
 year: '2021'

@@ -18,6 +18,12 @@ h1.site-title {
     color: black;
     font-size: 10.8vw;
 }
+h1.site-title a:link, h1.site-title a:visited {
+    color: black;
+}
+h1.site-title a:hover, h1.site-title a:active {
+    color: #ffc107;
+}
 @include media-breakpoint-up(md) { h1.site-title { font-size: 2.8em; } }
 .category-title {
     letter-spacing: 0.2em;
@@ -103,6 +109,12 @@ iframe {
     }
     h1.site-title {
         color: white;
+    }
+    h1.site-title a:link, h1.site-title a:visited {
+        color: white;
+    }
+    h1.site-title a:hover, h1.site-title a:active {
+        color: #ffc107;
     }
     .nav .btn-outline-warning:not(.active) {
         background-color: transparent;
