@@ -147,6 +147,7 @@ function getTop(category) {
           console.log('No Top items')
         } else {
           console.log('Found ' + numberOfRecords + ' Top records');
+
           records.forEach(function (record) {
             var fields = record.fields;
             console.log("record: " + JSON.stringify(fields))
@@ -165,8 +166,6 @@ $('.nomination').on( "click", function() {
 
   var category = $(this).data( "category" );
   var nomination = $(this).data( "nomination" );
-
-  console.log("CloudKit toggle: show: " + show + " year: " + year + " category: " + category + " nomination: " + nomination)
 
   var container = CloudKit.getDefaultContainer();
   var privateDB = container.privateCloudDatabase;
@@ -212,7 +211,6 @@ $('.nomination').on( "click", function() {
           } else {
             nominationVoteToDecrease = fields.nomination.value
           }
-          console.log("record: " + JSON.stringify(fields))
         }
         if (isDeselectingPick) {
           // Delete pick
@@ -359,15 +357,16 @@ function updateVote(show, year, category, nominationToIncrease, nominationToDecr
               }
             }
           }
-          return publicDB.saveRecords(newRecords).then(function(saveResponse) {
-              if(saveResponse.hasErrors) {
-                console.log("updateVote error: " + saveResponse.errors[0])
-              } else {
-                fulfilled(saveResponse.records)
-              }
-          }).catch(function(error){
-            console.log("updateVote saving vote error: " + error)
-          });
+          publicDB.saveRecords(newRecords)
+            .then(function(saveResponse) {
+                if(saveResponse.hasErrors) {
+                  console.log("updateVote error: " + saveResponse.errors[0])
+                } else {
+                  fulfilled(saveResponse.records)
+                }
+            }).catch(function(error){
+              console.log("updateVote saving vote error: " + error)
+            });
         }
       }).catch(function(error){
         console.log("updateVote Query error: " + error)
@@ -381,31 +380,33 @@ function syncTop(show, year, category) {
   return new Promise(function (fulfilled) {
     var container = CloudKit.getDefaultContainer();
     var publicDB = container.publicCloudDatabase;
+    var options = {
+      zoneName: '_defaultZone'
+    };
     // Votes Query
-    var query = {
+    var votesQuery = {
       recordType: 'Votes',
+      sortBy: [{
+        fieldName: 'votes',
+        ascending: false
+      }],  
       filterBy: [{
         comparator: 'EQUALS', fieldName: 'show', fieldValue: { value: show }
       }, {
         comparator: 'EQUALS', fieldName: 'year', fieldValue: { value: year }
       }, {
         comparator: 'EQUALS', fieldName: 'category', fieldValue: { value: category }
-      }], 
-      sortBy: [{
-        fieldName: 'votes',
-        ascending: false
       }]
     };
 
     // Check for highest vote in categery
-    publicDB.performQuery(query, { resultsLimit: 1 })
+    publicDB.performQuery(votesQuery, options)
       .then(function (votesResponse) {
         var votesRecords = votesResponse.records;
         if(votesResponse.hasErrors) {
           console.log("error: " + votesResponse.errors[0])
         } else {
           if (votesRecords.length > 0) {
-            console.log('syncTop() Found ' + votesRecords.length + ' Votes records');
             var voteRecord = votesRecords[0]
             // Top Query
             var topQuery = {
@@ -418,6 +419,15 @@ function syncTop(show, year, category) {
                 comparator: 'EQUALS', fieldName: 'category', fieldValue: { value: category }
               }]
             };
+            // Sorting fix
+            var indexAndCount = []
+            for (i=0; i<votesRecords.length; i++) {
+              indexAndCount.push({index: i, count: votesRecords[i].fields.votes.value})
+            }
+            var sorted = indexAndCount.sort(({count:a}, {count:b}) => b-a);
+            var index = sorted[0].index
+            var voteRecord = votesRecords[index]
+            
             publicDB.performQuery(topQuery, { resultsLimit: 1 })
               .then(function (topResponse) {
                 var newRecord = {
