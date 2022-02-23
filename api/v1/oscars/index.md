@@ -2,5 +2,5 @@
 title: "Oscars"
 show: oscars
 layout: json-years
-permalink: /api/oscars/index.json
+permalink: /api/v1/oscars/index.json
 ---

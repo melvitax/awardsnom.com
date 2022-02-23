@@ -1,5 +1,5 @@
 ---
 title: "Shows"
 layout: json-shows
-permalink: /api/index.json
+permalink: /api/v1/index.json
 ---

@@ -2,5 +2,5 @@
 title: "Tonys"
 show: tonys
 layout: json-years
-permalink: /api/tonys/index.json
+permalink: /api/v1/tonys/index.json
 ---
