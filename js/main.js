@@ -1,3 +1,4 @@
+"use strict";
 jQuery(function() { 
   enableVideoModal();
   fadeOnScroll();
@@ -31,6 +32,10 @@ function configureCloudKit() {
       },
       environment: cloudKitEnvironment
       }]
+      // , 
+      // services: {
+      //   logger: window.console
+      // }
   });
 }
 

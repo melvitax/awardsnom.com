@@ -1,0 +1,13 @@
+---
+
+---
+{% assign data = site.data[page.show][page.year] %}
+{% assign dates = "" | split: ',' %}
+{% for aDate in site.data[page.show] %}
+    {% assign dates = dates | push: aDate[0] %}
+{% endfor %}
+{% assign sortedDates = dates | sort | reverse %}
+{
+    "title": "{{ page.title }}"
+    "years": ["{{ sortedDates | join: '", "' }}"]
+}
