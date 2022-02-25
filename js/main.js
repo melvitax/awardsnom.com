@@ -200,24 +200,49 @@ function togglePick(cat, nom) {
         // Pick Exists
         if (records.length > 0) {
           var record = records[0]
-          privateDB.deleteRecords(recordName).then(function(deleteResponse) {
-            if(deleteResponse.hasErrors) {
-            } else {
-              var deletedRecord = deleteResponse.records[0];
-              console.log("Pick deletedRecord: " + deletedRecord)
-              displayMyPick(category, nomination, false)
+          // Delete unexpected extra picks
+          if (records.length > 1) {
+            console.log("togglePick removing " + (records.length-1) + "extra records ")
+            for(i=1; i<records.length; i++) {
+              var record = records[i]
+              privateDB.deleteRecords(record.recordName)
+                .then(function(deleteResponse) {
+                  if(deleteResponse.hasErrors) {
+                    console.log("togglePick delete error: " + deleteResponse.errors[0])
+                  } else {
+                    var deletedRecord = deleteResponse.records[0];
+                    var votes = [{ nom: deletedRecord.fields.nom.value, value: -1} ]
+                    updateVotes(show, year, cat, votes)
+                      .then(function() {
+                        getTopRated()
+                      })
+                    console.log("togglePick deleted: " + JSON.stringify(deletedRecord))
+                  }
+                })
+                .catch(function(error){
+                  console.log("togglePick delete error: " + error)
+                })
             }
-            hideMyPickLoading(category, nomination)
-            // Update count
-            updateVote(show, year, category, null, nominationVoteToDecrease)
-              .then(function () {
-                syncTop(show, year, category)
-                    getTop(category)
-                  })
           }
+          // Delete Pick
           if (nom == record.fields.nom.value) {
+            console.log("togglePick delete: " + record.fields.nom.value)
+            privateDB.deleteRecords(record.recordName)
+              .then(function(deleteResponse) {
+                if(deleteResponse.hasErrors) {
+                  console.log("togglePick delete error: " + deleteResponse.errors[0])
+                } else {
+                  var deletedRecord = deleteResponse.records[0]
+                  var votes = [{ nom: deletedRecord.fields.nom.value, value: -1 }]
+                  updateVotes(show, year, cat, votes)
+                    .then(function() {
+                      getTopRated()
+                    })
+                  console.log("togglePick deleted: " + JSON.stringify(deletedRecord))
+                }
+                removePickIndicators(cat)
+                hideLoading()
               })
-          });
               .catch(function(error){
                 if (error.ckErrorCode == "AUTHENTICATION_REQUIRED") {
                   displaySignIn()
