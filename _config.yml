@@ -14,7 +14,7 @@ author:
 markdown: kramdown
 exclude: ["node_modules",  "package.json", "Gemfile", "Gemfile.lock", "README.md", "LICENSE"]
 timezone: 'America/New_York'
-cloudKitApiToken: "453f7abfc9c751c71eaf871d9d88eefc2b0def21f19f77a3e517238ff0c889b5"
+cloudKitApiToken: "94d9b5bf1c7d0d906288b87ea68985c7110a903bb78946c9517157b8b74ad14b"
 cloudKitEnvironment: "production"
 fonts:
   - "Lato:400,900,700,500,300,100:latin"

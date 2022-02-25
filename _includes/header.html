@@ -37,8 +37,8 @@
                         <span class="visually-hidden">Toggle Dropdown</span>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end" style="max-height: 50vh; max-width: 90vw; overflow-y: scroll">
-                        {% for category in include.categories %}
-                        <li><a class="dropdown-item" href="/{{include.show}}/{{include.year}}/#{{ category | slugify  }}">{{ category }}</a></li>
+                        {% for cat in include.categories %}
+                        <li><a class="dropdown-item" href="/{{include.show}}/{{include.year}}/#{{ cat | slugify  }}">{{ cat }}</a></li>
                         {% endfor %}
                     </ul>
                 </div>

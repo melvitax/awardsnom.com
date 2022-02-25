@@ -32,17 +32,17 @@ nominees:
     streaming:
       - source: primevideo
         url: https://www.amazon.com/gp/video/detail/B09JBBYLBD/ref=atv_dp_share_cu_r
-    nominations:
+    noms:
       - winner: false
-        category: Best Actor
+        cat: Best Actor
         sub: Javier Bardem
         image: javier-bardem.jpg
       - winner: false
-        category: Best Supporting Actor
+        cat: Best Supporting Actor
         sub: J.K. Simmons
         image: jk-simmons.jpg
       - winner: false
-        category: Best Actress
+        cat: Best Actress
         sub: Nicole Kidman
         image: nicole-kidman.jpg
   - title: The Power of the Dog
@@ -52,48 +52,48 @@ nominees:
     streaming:
       - source: netflix
         url: https://www.netflix.com/title/81127997
-    nominations:
+    noms:
       - winner: false
-        category: Best Actor
+        cat: Best Actor
         sub: Benedict Cumberbatch
         image: benedict-cumberbatch.jpg
       - winner: false
-        category: Best Supporting Actor
+        cat: Best Supporting Actor
         sub: Jesse Plemons
         image: jesse-plemons.jpg
         key: jesseplemons
       - winner: false
-        category: Best Supporting Actor
+        cat: Best Supporting Actor
         sub: Kodi Smit-McPhee
         image: kodi-smit-mcphee.jpg
         key: kodismitmcphee
       - winner: false
-        category: Best Supporting Actress
+        cat: Best Supporting Actress
         sub: Kirsten Dunst
         image: kirsten-dunst.jpg
       - winner: false
-        category: Best Cinematography
+        cat: Best Cinematography
         sub: Ari Wegner
       - winner: false
-        category: Best Director
+        cat: Best Director
         sub: Jane Campion
       - winner: false
-        category: Best Film Editing
+        cat: Best Film Editing
         sub: Peter Sciberras
       - winner: false
-        category: Best Original Score
+        cat: Best Original Score
         sub: Jonny Greenwood
       - winner: false
-        category: Best Picture
+        cat: Best Picture
         sub: Jane Campion, Tanya Seghatchian, Emile Sherman, Iain Canning and Roger Frappier, Producers
       - winner: false
-        category: Best Production Design
+        cat: Best Production Design
         sub: 'Grant Major; Set Decoration: Amber Richards'
       - winner: false
-        category: Best Sound
+        cat: Best Sound
         sub: Richard Flynn, Robert Mackenzie and Tara Webb
       - winner: false
-        category: Best Adapted Screenplay
+        cat: Best Adapted Screenplay
         sub: Jane Campion
   - title: tick, tick...BOOM!
     image: tick-tick-boom.jpg
@@ -102,13 +102,13 @@ nominees:
     streaming:
       - source: netflix
         url: https://www.netflix.com/title/81149184
-    nominations:
+    noms:
       - winner: false
-        category: Best Actor
+        cat: Best Actor
         sub: Andrew Garfield
         image: andrew-garfield.jpg
       - winner: false
-        category: Best Film Editing
+        cat: Best Film Editing
         sub: Myron Kerstein and Andrew Weisblum
   - title: King Richard
     image: king-richard.jpg
@@ -117,27 +117,27 @@ nominees:
     streaming:
       - source: appletv
         url: https://tv.apple.com/us/movie/king-richard/umc.cmc.11i83ne5iq37usxzghkyicmwk
-    nominations:
+    noms:
       - winner: false
-        category: Best Actor
+        cat: Best Actor
         sub: Will Smith
         image: will-smith.jpg
       - winner: false
-        category: Best Supporting Actress
+        cat: Best Supporting Actress
         sub: Aunjanue Ellis
         image: aunjanue-ellis.jpg
       - winner: false
-        category: Best Film Editing
+        cat: Best Film Editing
         sub: Pamela Martin
       - winner: false
-        category: Best Original Song
+        cat: Best Original Song
         name: Be Alive
         sub: DIXSON and Beyoncé Knowles-Carter
       - winner: false
-        category: Best Picture
+        cat: Best Picture
         sub: Tim White, Trevor White and Will Smith, Producers
       - winner: false
-        category: Best Original Screenplay
+        cat: Best Original Screenplay
         sub: Zach Baylin
   - title: The Tragedy of Macbeth
     image: the-tragedy-of-macbeth.jpg
@@ -146,16 +146,16 @@ nominees:
     streaming: 
       - source: appletvplus
         url: https://tv.apple.com/us/movie/the-tragedy-of-macbeth/umc.cmc.4wpfk1xmi22h3zyv4a10lj1tw
-    nominations:
+    noms:
       - winner: false
-        category: Best Actor
+        cat: Best Actor
         sub: Denzel Washington
         image: denzel-washington.jpg
       - winner: false
-        category: Best Cinematography
+        cat: Best Cinematography
         sub: Bruno Delbonnel
       - winner: false
-        category: Best Production Design
+        cat: Best Production Design
         sub: 'Stefan Dechant; Set Decoration: Nancy Haigh'
   - title: Belfast
     image: belfast.jpg
@@ -164,30 +164,30 @@ nominees:
     streaming:
       - source: appletv
         url: https://tv.apple.com/us/movie/belfast/umc.cmc.2jz7n19smc0g791llqpxa0f3h
-    nominations:
+    noms:
       - winner: false
-        category: Best Supporting Actor
+        cat: Best Supporting Actor
         sub: Ciarán Hinds
         image: ciaran-hinds.jpg
       - winner: false
-        category: Best Supporting Actress
+        cat: Best Supporting Actress
         sub: Judi Dench
         image: judi-dench.jpg
       - winner: false
-        category: Best Director
+        cat: Best Director
         sub: Kenneth Branagh
       - winner: false
-        category: Best Original Song
+        cat: Best Original Song
         name: Down To Joy
         sub: Van Morrison
       - winner: false
-        category: Best Picture
+        cat: Best Picture
         sub: Laura Berwick, Kenneth Branagh, Becca Kovacik and Tamar Thomas, Producers
       - winner: false
-        category: Best Sound
+        cat: Best Sound
         sub: Denise Yarde, Simon Chase, James Mather and Niv Adiri
       - winner: false
-        category: Best Original Screenplay
+        cat: Best Original Screenplay
         sub: Kenneth Branagh
   - title: Coda
     image: coda.jpg
@@ -196,16 +196,16 @@ nominees:
     streaming:
       - source: appletvplus
         url: https://tv.apple.com/us/movie/coda/umc.cmc.3eh9r5iz32ggdm4ccvw5igiir
-    nominations:
+    noms:
       - winner: false
-        category: Best Supporting Actor
+        cat: Best Supporting Actor
         sub: Troy Kotsur
         image: troy-kotsur.jpg
       - winner: false
-        category: Best Picture
+        cat: Best Picture
         sub: Philippe Rousselet, Fabrice Gianfermi and Patrick Wachsberger, Producers
       - winner: false
-        category: Best Adapted Screenplay
+        cat: Best Adapted Screenplay
         sub: Siân Heder
   - title: The Eyes of Tammy Faye
     image: the-eyes-of-tammy-faye.jpg
@@ -214,13 +214,13 @@ nominees:
     streaming:
       - source: hbomax
         url: https://play.hbomax.com/page/urn:hbo:page:GYaf79gQvPMPDwgEAAAAH:type:feature
-    nominations:
+    noms:
       - winner: false
-        category: Best Actress
+        cat: Best Actress
         sub: Jessica Chastain
         image: jessica-chastain.jpg
       - winner: false
-        category: Best Makeup and Hairstyling
+        cat: Best Makeup and Hairstyling
         sub: Linda Dowds, Stephanie Ingram and Justin Raleigh
   - title: The Lost Daughter
     image: the-lost-daughter.jpg
@@ -229,29 +229,29 @@ nominees:
     streaming:
       - source: netflix
         url: https://www.netflix.com/title/81478910
-    nominations:
+    noms:
       - winner: false
-        category: Best Actress
+        cat: Best Actress
         sub: Olivia Colman
         image: olivia-colman.jpg
       - winner: false
-        category: Best Supporting Actress
+        cat: Best Supporting Actress
         sub: Jessie Buckley
         image: jessie-buckley.jpg
       - winner: false
-        category: Best Adapted Screenplay
+        cat: Best Adapted Screenplay
         sub: Maggie Gyllenhaal
   - title: Parallel Mothers
     image: parallel-mothers.jpg
     trailer: https://www.youtube.com/watch?v=cL6JDYkRa2g
     key: parallelmothers
-    nominations:
+    noms:
       - winner: false
-        category: Best Actress
+        cat: Best Actress
         sub: Penélope Cruz
         image: penelope-cruz.jpg
       - winner: false
-        category: Best Original Score
+        cat: Best Original Score
         sub: Alberto Iglesias
   - title: Spencer
     image: spencer.jpg
@@ -260,37 +260,37 @@ nominees:
     streaming:
       - source: hulu
         url: https://www.hulu.com/movie/spencer-6a4e4519-def0-41f8-898d-f4d3b8521af5
-    nominations:
+    noms:
       - winner: false
-        category: Best Actress
+        cat: Best Actress
         sub: Kristen Stewart
         image: kristen-stewart.jpg
   - title: West Side Story
     image: west-side-story.jpg
     trailer: https://www.youtube.com/watch?v=A5GJLwWiYSg
     key: westsidestory
-    nominations:
+    noms:
       - winner: false
-        category: Best Supporting Actress
+        cat: Best Supporting Actress
         sub: Ariana DeBose
         image: ariana-debose.jpg
       - winner: false
-        category: Best Cinematography
+        cat: Best Cinematography
         sub: Janusz Kaminski
       - winner: false
-        category: Best Costume Design
+        cat: Best Costume Design
         sub: Paul Tazewell
       - winner: false
-        category: Best Director
+        cat: Best Director
         sub: Steven Spielberg
       - winner: false
-        category: Best Picture
+        cat: Best Picture
         sub: Steven Spielberg and Kristie Macosko Krieger, Producers
       - winner: false
-        category: Best Production Design
+        cat: Best Production Design
         sub: 'Adam Stockhausen; Set Decoration: Rena DeAngelo'
       - winner: false
-        category: Best Sound
+        cat: Best Sound
         sub: Tod A. Maitland, Gary Rydstrom, Brian Chumney, Andy Nelson and Shawn Murphy
   - title: Encanto
     image: encanto.jpg
@@ -299,15 +299,15 @@ nominees:
     streaming: 
       - source: disneyplus
         url: https://www.disneyplus.com/movies/encanto/33q7DY1rtHQH
-    nominations:
+    noms:
       - winner: false
-        category: Best Animated Feature
+        cat: Best Animated Feature
         sub: Jared Bush, Byron Howard, Yvett Merino and Clark Spencer
       - winner: false
-        category: Best Original Score
+        cat: Best Original Score
         sub: Germaine Franco
       - winner: false
-        category: Best Original Song
+        cat: Best Original Song
         name: Dos Oruguitas
         sub: Lin-Manuel Miranda
   - title: Flee
@@ -317,15 +317,15 @@ nominees:
     streaming: 
       - source: hulu
         url: https://www.hulu.com/movie/flee-dbaf52c6-6944-442c-8064-863ef948200a
-    nominations:
+    noms:
       - winner: false
-        category: Best Animated Feature
+        cat: Best Animated Feature
         sub: Jonas Poher Rasmussen, Monica Hellström, Signe Byrge Sørensen and Charlotte De La Gournerie
       - winner: false
-        category: Best Documentary, Feature
+        cat: Best Documentary, Feature
         sub: Jonas Poher Rasmussen, Monica Hellström, Signe Byrge Sørensen and Charlotte De La Gournerie
       - winner: false
-        category: Best International Feature Film
+        cat: Best International Feature Film
         sub: Denmark
   - title: Luca
     image: luca.jpg
@@ -334,9 +334,9 @@ nominees:
     streaming: 
       - source: disneyplus
         url: https://www.disneyplus.com/movies/luca/7K1HyQ6Hl16P
-    nominations:
+    noms:
       - winner: false
-        category: Best Animated Feature
+        cat: Best Animated Feature
         sub: Enrico Casarosa and Andrea Warren
   - title: The Mitchells vs. The Machines
     image: the-mitchells-vs-the-machines.jpg
@@ -345,9 +345,9 @@ nominees:
     streaming: 
       - source: netflix
         url: https://www.netflix.com/title/81399614
-    nominations:
+    noms:
       - winner: false
-        category: Best Animated Feature
+        cat: Best Animated Feature
         sub: Mike Rianda, Phil Lord, Christopher Miller and Kurt Albrecht
   - title: Raya and the Last Dragon
     image: raya-and-the-last-dragon.jpg
@@ -356,9 +356,9 @@ nominees:
     streaming: 
       - source: disneyplus
         url: https://www.disneyplus.com/movies/raya-and-the-last-dragon/6dyengbx3iYK
-    nominations:
+    noms:
       - winner: false
-        category: Best Animated Feature
+        cat: Best Animated Feature
         sub: Don Hall, Carlos López Estrada, Osnat Shurer and Peter Del Vecho
   - title: Dune
     image: dune.jpg
@@ -367,36 +367,36 @@ nominees:
     streaming:
       - source: appletv
         url: https://tv.apple.com/us/movie/dune/umc.cmc.2l7qj9p33t3jww1roxi8cgiw5
-    nominations:
+    noms:
       - winner: false
-        category: Best Cinematography
+        cat: Best Cinematography
         sub: Greig Fraser
       - winner: false
-        category: Best Costume Design
+        cat: Best Costume Design
         sub: Jacqueline West and Robert Morgan
       - winner: false
-        category: Best Film Editing
+        cat: Best Film Editing
         sub: Joe Walker
       - winner: false
-        category: Best Makeup and Hairstyling
+        cat: Best Makeup and Hairstyling
         sub: Donald Mowat, Love Larson and Eva von Bahr
       - winner: false
-        category: Best Original Score
+        cat: Best Original Score
         sub: Hans Zimmer
       - winner: false
-        category: Best Picture
+        cat: Best Picture
         sub: Mary Parent, Denis Villeneuve and Cale Boyter, Producers
       - winner: false
-        category: Best Production Design
+        cat: Best Production Design
         sub: 'Patrice Vermette; Set Decoration: Zsuzsanna Sipos'
       - winner: false
-        category: Best Sound
+        cat: Best Sound
         sub: Mac Ruth, Mark Mangini, Theo Green, Doug Hemphill and Ron Bartlett
       - winner: false
-        category: Best Visual Effects
+        cat: Best Visual Effects
         sub: Paul Lambert, Tristan Myles, Brian Connor and Gerd Nefzer
       - winner: false
-        category: Best Adapted Screenplay
+        cat: Best Adapted Screenplay
         sub: Jon Spaihts, Denis Villeneuve and Eric Roth
   - title: Nightmare Alley
     image: nightmare-alley.jpg
@@ -407,18 +407,18 @@ nominees:
         url: https://www.hulu.com/movie/nightmare-alley-dd010294-61c6-4ab5-b8d9-7326836717bc
       - source: hbomax
         url: https://play.hbomax.com/page/urn:hbo:page:GYd9PZAt4esLDJwEAAAAK:type:feature
-    nominations:
+    noms:
       - winner: false
-        category: Best Cinematography
+        cat: Best Cinematography
         sub: Dan Laustsen
       - winner: false
-        category: Best Costume Design
+        cat: Best Costume Design
         sub: Luis Sequeira
       - winner: false
-        category: Best Picture
+        cat: Best Picture
         sub: Guillermo del Toro, J. Miles Dale and Bradley Cooper, Producers
       - winner: false
-        category: Best Production Design
+        cat: Best Production Design
         sub: 'Tamara Deverell; Set Decoration: Shane Vieau'
   - title: Cruella
     image: cruella.jpg
@@ -427,51 +427,51 @@ nominees:
     streaming: 
       - source: disneyplus
         url: https://www.disneyplus.com/movies/cruella/2GJTZuO8I01c
-    nominations:
+    noms:
       - winner: false
-        category: Best Costume Design
+        cat: Best Costume Design
         sub: Jenny Beavan
       - winner: false
-        category: Best Makeup and Hairstyling
+        cat: Best Makeup and Hairstyling
         sub: Nadia Stacey, Naomi Donne and Julia Vernon
   - title: Cyrano
     image: cyrano.jpg
     trailer: https://www.youtube.com/watch?v=5e8apSFDXsQ
     key: cyrano
-    nominations:
+    noms:
       - winner: false
-        category: Best Costume Design
+        cat: Best Costume Design
         sub: Massimo Cantini Parrini and Jacqueline Durran
   - title: Drive My Car
     image: drive-my-car.jpg
     trailer: https://www.youtube.com/watch?v=6BPKPb_RTwI
     key: drivemycar
-    nominations:
+    noms:
       - winner: false
-        category: Best Director
+        cat: Best Director
         sub: Ryusuke Hamaguchi
       - winner: false
-        category: Best International Feature Film
+        cat: Best International Feature Film
         sub: Japan
       - winner: false
-        category: Best Picture
+        cat: Best Picture
         sub: Teruhisa Yamamoto, Producer
       - winner: false
-        category: Best Adapted Screenplay
+        cat: Best Adapted Screenplay
         sub: Ryusuke Hamaguchi and Takamasa Oe
   - title: Licorice Pizza
     image: licorice-pizza.jpg
     trailer: https://www.youtube.com/watch?v=o_hRNmlk80g
     key: licoricepizza
-    nominations:
+    noms:
       - winner: false
-        category: Best Director
+        cat: Best Director
         sub: Paul Thomas Anderson
       - winner: false
-        category: Best Picture
+        cat: Best Picture
         sub: Sara Murphy, Adam Somner and Paul Thomas Anderson, Producers
       - winner: false
-        category: Best Original Screenplay
+        cat: Best Original Screenplay
         sub: Paul Thomas Anderson
   - title: Ascension
     image: ascension.jpg
@@ -480,9 +480,9 @@ nominees:
     streaming:
       - source: paramountplus
         url: https://www.paramountplus.com/movies/ascension/5WF18boWJHtAu2P65EQR_UT_VW_UQ53u/
-    nominations:
+    noms:
       - winner: false
-        category: Best Documentary, Feature
+        cat: Best Documentary, Feature
         sub: Jessica Kingdon, Kira Simon-Kennedy and Nathan Truesdell
   - title: Attica
     image: attica.jpg
@@ -493,9 +493,9 @@ nominees:
         url: https://www.amazon.com/gp/video/detail/B09L1BQYCS/ref=atv_dp_share_cu_r
       - source: showtime
         url: https://www.showtimeanytime.com/#/movie/3472216
-    nominations:
+    noms:
       - winner: false
-        category: Best Documentary, Feature
+        cat: Best Documentary, Feature
         sub: Stanley Nelson and Traci A. Curry
   - title: Summer of Soul
     image: summer-of-soul.jpg
@@ -506,17 +506,17 @@ nominees:
         url: https://www.hulu.com/movie/summer-of-soul-6f2160ed-eaa2-462a-b495-f61f4f31714d
       - source: disneyplus
         url: https://www.disneyplus.com/movies/summer-of-soul-or-when-the-revolution-could-not-be-televised/kbSrVIU25suX
-    nominations:
+    noms:
       - winner: false
-        category: Best Documentary, Feature
+        cat: Best Documentary, Feature
         sub: Ahmir "Questlove" Thompson, Joseph Patel, Robert Fyvolent and David Dinerstein
   - title: Writing With Fire 
     image: writing-with-fire.jpg
     trailer: https://www.youtube.com/watch?v=uv51mXOvjJw
     key: writingwithfire
-    nominations:
+    noms:
       - winner: false
-        category: Best Documentary, Feature
+        cat: Best Documentary, Feature
         sub: Rintu Thomas and Sushmit Ghosh
   - title: Audible 
     image: audible.jpg
@@ -525,9 +525,9 @@ nominees:
     streaming: 
       - source: netflix
         url: https://www.netflix.com/title/80219704
-    nominations:
+    noms:
       - winner: false
-        category: Best Documentary, Short
+        cat: Best Documentary, Short
         sub: Matt Ogens and Geoff McLean
   - title: Lead Me Home 
     image: lead-me-home.jpg
@@ -536,9 +536,9 @@ nominees:
     streaming: 
       - source: netflix
         url: https://www.netflix.com/title/81240756
-    nominations:
+    noms:
       - winner: false
-        category: Best Documentary, Short
+        cat: Best Documentary, Short
         sub: Pedro Kos and Jon Shenk
   - title: The Queen of Basketball 
     image: the-queen-of-basketball.jpg
@@ -549,9 +549,9 @@ nominees:
         url: https://www.youtube.com/watch?v=vPFkcoTfr7g
       - source: vimeo
         url: https://vimeo.com/580833148
-    nominations:
+    noms:
       - winner: false
-        category: Best Documentary, Short
+        cat: Best Documentary, Short
         sub: Ben Proudfoot
   - title: Three Songs For Benazir 
     image: three-songs-for-benazir.jpg
@@ -560,17 +560,17 @@ nominees:
     streaming:
       - source: netflix
         url: https://www.netflix.com/title/81562326
-    nominations:
+    noms:
       - winner: false
-        category: Best Documentary, Short
+        cat: Best Documentary, Short
         sub: Elizabeth Mirzaei and Gulistan Mirzaei
   - title: When We Were Bullies 
     image: when-we-were-bullies.jpg
     trailer: https://www.youtube.com/watch?v=hyt5Q1-u7_Q
     key: whenwewerebullies
-    nominations:
+    noms:
       - winner: false
-        category: Best Documentary, Short
+        cat: Best Documentary, Short
         sub: Jay Rosenblatt
   - title: Don't Look Up 
     image: dont-look-up.jpg
@@ -579,18 +579,18 @@ nominees:
     streaming: 
       - source: netflix
         url: https://www.netflix.com/title/81252357
-    nominations:
+    noms:
       - winner: false
-        category: Best Film Editing
+        cat: Best Film Editing
         sub: Hank Corwin
       - winner: false
-        category: Best Original Score
+        cat: Best Original Score
         sub: Nicholas Britell
       - winner: false
-        category: Best Picture
+        cat: Best Picture
         sub: Adam McKay and Kevin Messick, Producers
       - winner: false
-        category: Best Original Screenplay
+        cat: Best Original Screenplay
         sub: 'Screenplay by Adam McKay; Story by Adam McKay & David Sirota'
   - title: The Hand Of God 
     image: the-hand-of-god.jpg
@@ -599,9 +599,9 @@ nominees:
     streaming:
       - source: netflix
         url: https://www.netflix.com/title/81156325
-    nominations:
+    noms:
       - winner: false
-        category: Best International Feature Film
+        cat: Best International Feature Film
         sub: Italy
   - title: 'Lunana: A Yak in the Classroom'
     image: lunana-a-yak-in-the-classroom.jpg
@@ -610,20 +610,20 @@ nominees:
     streaming:
       - source: appletv
         url: https://tv.apple.com/us/movie/lunana-a-yak-in-the-classroom/umc.cmc.51nabq2x99pl8o8ilwrubis7d
-    nominations:
+    noms:
       - winner: false
-        category: Best International Feature Film
+        cat: Best International Feature Film
         sub: Bhutan
   - title: The Worst Person In The World
     image: the-worst-person-in-the-world.jpg
     trailer: https://www.youtube.com/watch?v=55M5ZgAqbWo
     key: theworstpersonintheworld
-    nominations:
+    noms:
       - winner: false
-        category: Best International Feature Film
+        cat: Best International Feature Film
         sub: Norway
       - winner: false
-        category: Best Original Screenplay
+        cat: Best Original Screenplay
         sub: Eskil Vogt and Joachim Trier
   - title: Coming 2 America
     image: coming-2-america.jpg
@@ -632,9 +632,9 @@ nominees:
     streaming: 
       - source: primevideo
         url: https://www.amazon.com/gp/video/detail/B08R114191/ref=atv_dp_share_cu_r
-    nominations:
+    noms:
       - winner: false
-        category: Best Makeup and Hairstyling
+        cat: Best Makeup and Hairstyling
         sub: Mike Marino, Stacey Morris and Carla Farmer
   - title: House of Gucci
     image: house-of-gucci.jpg
@@ -643,9 +643,9 @@ nominees:
     streaming: 
       - source: appletv
         url: https://tv.apple.com/us/movie/house-of-gucci/umc.cmc.5zhbapthrtlgvyyq4a17eqxne
-    nominations:
+    noms:
       - winner: false
-        category: Best Makeup and Hairstyling
+        cat: Best Makeup and Hairstyling
         sub: Göran Lundström, Anna Carin Lock and Frederic Aspiras
   - title: No Time To Die
     image: no-time-to-die.jpg
@@ -654,16 +654,16 @@ nominees:
     streaming: 
       - source: appletv
         url: https://tv.apple.com/us/movie/no-time-to-die/umc.cmc.1sk81aco37s8f5grnjp6ydqad
-    nominations:
+    noms:
       - winner: false
-        category: Best Original Song
+        cat: Best Original Song
         name: No Time To Die
         sub: Billie Eilish and Finneas O'Connell
       - winner: false
-        category: Best Sound
+        cat: Best Sound
         sub: Simon Hayes, Oliver Tarney, James Harrison, Paul Massey and Mark Taylor
       - winner: false
-        category: Best Visual Effects
+        cat: Best Visual Effects
         sub: Charlie Noble, Joel Green, Jonathan Fawkner and Chris Corbould
   - title: Four Good Days
     image: four-good-days.jpg
@@ -672,9 +672,9 @@ nominees:
     streaming: 
       - source: hulu
         url: https://www.hulu.com/movie/four-good-days-26ebefe8-f1f4-4250-b809-5a67c7cabc68
-    nominations:
+    noms:
       - winner: false
-        category: Best Original Song
+        cat: Best Original Song
         name: Somehow You Do
         sub: Diane Warren
   - title: Affairs of the Art
@@ -684,9 +684,9 @@ nominees:
     streaming: 
       - source: youtube
         url: https://www.youtube.com/watch?v=bAX9_rDvO_c
-    nominations:
+    noms:
       - winner: false
-        category: Best Short Film, Animated
+        cat: Best Short Film, Animated
         sub: Joanna Quinn and Les Mills
   - title: Bestia
     image: bestia.jpg
@@ -695,17 +695,17 @@ nominees:
     streaming: 
       source: vimeo
       url: https://vimeo.com/ondemand/bestia
-    nominations:
+    noms:
       - winner: false
-        category: Best Short Film, Animated
+        cat: Best Short Film, Animated
         sub: Hugo Covarrubias and Tevo Díaz
   - title: BoxBallet
     image: boxballet.jpg
     trailer: https://www.youtube.com/watch?v=PtgMobDO6Y0
     key: boxballet
-    nominations:
+    noms:
       - winner: false
-        category: Best Short Film, Animated
+        cat: Best Short Film, Animated
         sub: Anton Dyakov
   - title: Robin Robin
     image: robin-robin.jpg
@@ -714,9 +714,9 @@ nominees:
     streaming: 
       - source: netflix
         url: https://www.netflix.com/title/81058433
-    nominations:
+    noms:
       - winner: false
-        category: Best Short Film, Animated
+        cat: Best Short Film, Animated
         sub: Dan Ojari and Mikey Please
   - title: The Windshield Wiper
     image: the-windshield-wiper.jpg
@@ -725,49 +725,49 @@ nominees:
     streaming: 
       - source: youtube
         url: https://www.youtube.com/watch?v=i8MQl7vCkMQ
-    nominations:
+    noms:
       - winner: false
-        category: Best Short Film, Animated
+        cat: Best Short Film, Animated
         sub: Alberto Mielgo and Leo Sanchez
   - title: ALA KACHUU - Take and Run
     image: ala-kachuu-take-and-run.jpg
     trailer: https://www.youtube.com/watch?v=pRhWhNkPdiQ
     key: alakachuutakeandrun
-    nominations:
+    noms:
       - winner: false
-        category: Best Short Film, Live Action
+        cat: Best Short Film, Live Action
         sub: Maria Brendle and Nadine Lüchinger
   - title: The Dress
     image: the-dress.jpg
     trailer: https://www.youtube.com/watch?v=gbThHMjNGJw
     key: thedress
-    nominations:
+    noms:
       - winner: false
-        category: Best Short Film, Live Action
+        cat: Best Short Film, Live Action
         sub: Tadeusz Łysiak and Maciej Ślesicki
   - title: The Long Goodbye
     image: the-long-goodbye.jpg
     trailer: https://www.youtube.com/watch?v=aM8ZqeYxsJ4
     key: thelonggoodbye
-    nominations:
+    noms:
       - winner: false
-        category: Best Short Film, Live Action
+        cat: Best Short Film, Live Action
         sub: Aneil Karia and Riz Ahmed
   - title: On My Mind
     image: on-my-mind.jpg
     trailer: https://www.youtube.com/watch?v=JVnR-hmf0a4
     key: onmymind
-    nominations:
+    noms:
       - winner: false
-        category: Best Short Film, Live Action
+        cat: Best Short Film, Live Action
         sub: Martin Strange-Hansen and Kim Magnusson
   - title: Please Hold
     image: please-hold.jpg
     trailer: https://www.youtube.com/watch?v=YZzUGWTZvL0
     key: pleasehold
-    nominations:
+    noms:
       - winner: false
-        category: Best Short Film, Live Action
+        cat: Best Short Film, Live Action
         sub: K.D. Dávila and Levin Menekse
   - title: Free Guy
     image: free-guy.jpg
@@ -776,9 +776,9 @@ nominees:
     streaming: 
       - source: appletv
         url: https://tv.apple.com/us/movie/free-guy/umc.cmc.6sj9ca8vyjiz07awl17hqfbqn
-    nominations:
+    noms:
       - winner: false
-        category: Best Visual Effects
+        cat: Best Visual Effects
         sub: Swen Gillberg, Bryan Grill, Nikos Kalaitzidis and Dan Sudick
   - title: Marvel Studios’ Shang-Chi and the Legend of the Ten Rings 
     image: shang-chi.jpg
@@ -787,9 +787,9 @@ nominees:
     streaming: 
       - source: disneyplus
         url: https://www.disneyplus.com/movies/shang-chi-and-the-legend-of-the-ten-rings/5GyV9sf9Y041
-    nominations:
+    noms:
       - winner: false
-        category: Best Visual Effects
+        cat: Best Visual Effects
         sub: Christopher Townsend, Joe Farrell, Sean Noel Walker and Dan Oliver
   - title: 'Spider-Man: No Way Home'
     image: spider-man-no-way-home.jpg
@@ -798,7 +798,7 @@ nominees:
     streaming: 
       - source: appletv
         url: https://tv.apple.com/us/movie/spider-man-no-way-home/umc.cmc.2qf7xc5hds0m5jgx4roago580
-    nominations:
+    noms:
       - winner: false
-        category: Best Visual Effects
+        cat: Best Visual Effects
         sub: Kelly Port, Chris Waegner, Scott Edelstein and Dan Sudick

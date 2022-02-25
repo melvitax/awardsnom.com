@@ -25,30 +25,32 @@
             <div class="pb-5 main-content">
             <div class="container">
 
-            <button type="button" class="share-picks btn btn-outline-warning">Share Picks</button>
-            <button type="button" class="discover-users btn btn-outline-warning">Discover Users</button>
+                
+                <button type="button" class="fetch-current-user-identity btn btn-outline-warning">Fetch Current User ID</button>
+                <button type="button" class="share-picks btn btn-outline-warning">Share Picks</button>
+                <button type="button" class="discover-users btn btn-outline-warning">Discover Users</button>
 
             {% include subheader.html %} 
 
             <div class="row card-columns ml-0 mr-0">
           
-                {% for category in data.categories %}
-                {% assign categoryParts = category | split: ":" %}
-                <h3 class="col-10 pt-3 pb-2 text-center border-bottom text-warning fw-light fs-5 category-title" id="{{ category | slugify }}">{{ categoryParts[0] | upcase }}{% if categoryParts[1] %}<br /><small class="fs-5 text-warning">{{ categoryParts[1] | upcase}}</small>{% endif %}</h3>
+                {% for cat in data.categories %}
+                {% assign cat_split = cat | split: ":" %}
+                <h3 class="col-10 pt-3 pb-2 text-center border-bottom text-warning fw-light fs-5 cat-title" id="{{ cat | slugify }}">{{ cat_split[0] | upcase }}{% if cat_split[1] %}<br /><small class="fs-5 text-warning">{{ cat_split[1] | upcase}}</small>{% endif %}</h3>
                 {% for nominee in data.nominees %}
-                {% assign nominations = nominee.nominations | where: "category", category %}
-                {% for nomination in nominations %}
+                {% assign noms = nominee.noms | where: "cat", cat %}
+                {% for nom in noms %}
                 <div class="col-5 col-sm-3 col-md-2 pt-4 pb-2" >
-                    {% capture nomination_id %}{% if nomination.key %}{{ nomination.key }}{% else %}{{ nominee.key }}{% endif %}{% endcapture %}
-                    {% assign category_id =  category | slugify %}
-                    <div class="card mb-3 border-0 animate nomination" data-category="{{ category_id }}" data-nomination="{{ nomination_id }}">
+                    {% capture nomid %}{% if nom.key %}{{ nom.key }}{% else %}{{ nominee.key }}{% endif %}{% endcapture %}
+                    {% assign catid =  cat | slugify %}
+                    <div class="card mb-3 border-0 animate nom" data-cat="{{ catid }}" data-nom="{{ nomid }}">
                         <div class="row g-0"> 
                             <!-- Poster -->
                             <a class="grow poster">
-                            {% capture image %}{% if nomination.image %}{{ nomination.image }}{% else %}{{ nominee.image }}{% endif %}{% endcapture %}
+                            {% capture image %}{% if nom.image %}{{ nom.image }}{% else %}{{ nominee.image }}{% endif %}{% endcapture %}
                             <img class="card-img w-100 h-100 rounded-5 p-0" src="/{{page.show}}/{{page.year}}/images/{{ image }}" width="230" height="355" alt="{{ name }}" />
                             </a>
-                            {% if nomination.winner %}
+                            {% if nom.winner %}
                             <!-- Winner -->
                             <div class="badge rounded-pill bg-danger text-white text-monospace position-absolute top-0 start-50 translate-middle w-auto">WINNER</div> 
                             {% endif %}
@@ -63,8 +65,8 @@
 
                             <!-- Meta -->
                             <div class="meta w-100 py-1">
-                                {% if nomination.name %}{{ nomination.name }}<br />{% endif %}
-                                {% if nomination.sub %}<div class="pb-3">{{ nomination.sub }}</div>{% endif %}
+                                {% if nom.name %}{{ nom.name }}<br />{% endif %}
+                                {% if nom.sub %}<div class="pb-3">{{ nom.sub }}</div>{% endif %}
                                 
                             </div>
 
@@ -98,6 +100,7 @@
             </div>
             </div>
             </div>
+            {% include loading.html %}
             {% include video.html %}
         </main>
 		{% include footer.html %}

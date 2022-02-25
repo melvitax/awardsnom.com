@@ -44,7 +44,7 @@
                     {% endfor %}
                     {% assign numOfNominees = nominees | size %}
                     {% if numOfNominees > 0 %}
-                        <h3 class="col-10 pt-3 pb-2 text-center border-bottom text-warning fw-bold fs-3 category-title"><span class="source-logo {{service}} align-bottom">{% include icons/{{service}}.svg %}</span><br />{{ numOfNominees }}</h3>
+                        <h3 class="col-10 pt-3 pb-2 text-center border-bottom text-warning fw-bold fs-3 cat-title"><span class="source-logo {{service}} align-bottom">{% include icons/{{service}}.svg %}</span><br />{{ numOfNominees }}</h3>
                         {% for nominee in nominees %}
                             <div class="col-5 col-sm-3 col-md-2 pt-4 pb-2" >
                                 <div class="card mb-3 border-0 animate">
@@ -74,16 +74,16 @@
                                                 {% endif %}
                                             {% endif %}
                                         </div>
-                                        {% if nomination.winner %}
+                                        {% if nom.winner %}
                                         <!-- Winner -->
                                         <div class="badge rounded-pill bg-danger text-white text-monospace position-absolute top-0 start-50 translate-middle w-auto">WINNER</div> 
                                         {% endif %}
                                         <!-- Title -->
                                         <h3 class="w-100 item-title mt-1 fw-bold fs-6" >{{ nominee.title }}</h3>
-                                        <div class="text-muted">{{ nominee.nominations | size }} {% if nominee.nominations.size > 1 %}NOMINATIONS{% else %}NOMINATION{% endif %}</div>
+                                        <div class="text-muted">{{ nominee.noms | size }} {% if nominee.noms.size > 1 %}NOMINATIONS{% else %}NOMINATION{% endif %}</div>
                                         {% assign showDay = data.day | date: '%Y%m%d' %}
                                         {% if today >= showDay %}
-                                            {% assign wins = nominee.nominations | where: "winner", true | map: "winner" | size  %}
+                                            {% assign wins = nominee.noms | where: "winner", true | map: "winner" | size  %}
                                             {% if wins > 0 %}
                                             <div class="text-muted">{{ wins }} {% if wins == 1 %}WIN{% else %}WINS{% endif %}</div>
                                             {% endif %}
@@ -98,6 +98,7 @@
             </div>
             </div>
             </div>
+            {% include loading.html %}
             {% include video.html %}
         </main>
 		{% include footer.html %}

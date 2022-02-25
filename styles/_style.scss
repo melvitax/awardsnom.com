@@ -25,7 +25,7 @@ h1.site-title a:hover, h1.site-title a:active {
     color: #ffc107;
 }
 @include media-breakpoint-up(md) { h1.site-title { font-size: 2.8em; } }
-.category-title {
+.cat-title {
     letter-spacing: 0.2em;
 }
 h2.show-title {
@@ -35,13 +35,13 @@ h2.show-title {
     color: rgb(66, 66, 66);
     border-top: 6px solid transparent;
 }
-.nomination:hover {
+.nom:hover {
     cursor: pointer;
 }
-.nomination:hover .item-title {
+.nom:hover .item-title {
     color: black
 }
-.nomination:hover .meta {
+.nom:hover .meta {
     color: black
 }
 .nominee-title {
@@ -130,10 +130,10 @@ iframe {
     .item-title {
         color: rgb(179, 179, 179)
     }
-    .nomination:hover .item-title {
+    .nom:hover .item-title {
         color: white
     }
-    .nomination:hover .meta {
+    .nom:hover .meta {
         color: white
     }
     .meta {
