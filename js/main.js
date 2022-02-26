@@ -27,8 +27,8 @@ function configureCloudKit() {
       apiTokenAuth: {
         persist: true, 
         apiToken: cloudKitApiToken,
-          signInButton: {id: 'apple-sign-in-button', theme: 'black'},
-          signOutButton: {id: 'apple-sign-out-button', theme: 'black'}
+          signInButton: {id: 'apple-sign-in-button', theme: 'white-with-outline'},
+          signOutButton: {id: 'apple-sign-out-button', theme: 'white-with-outline'}
       },
       environment: cloudKitEnvironment
       }]
@@ -244,9 +244,6 @@ function togglePick(cat, nom) {
                 hideLoading()
               })
               .catch(function(error){
-                if (error.ckErrorCode == "AUTHENTICATION_REQUIRED") {
-                  displaySignIn()
-                }
                 hideLoading()
               })
           }
@@ -276,9 +273,6 @@ function togglePick(cat, nom) {
                 hideLoading()
               })
               .catch(function(error){
-                if (error.ckErrorCode == "AUTHENTICATION_REQUIRED") {
-                  displaySignIn()
-                }
                 hideLoading()
               })
           }
@@ -312,16 +306,13 @@ function togglePick(cat, nom) {
                 hideLoading()
               })
               .catch(function(error){
-                if (error.ckErrorCode == "AUTHENTICATION_REQUIRED") {
-                  displaySignIn()
-                }
                 hideLoading()
               })
         }
       }
     })
     .catch(function(error){
-      console.log("togglePick query error: " + error)
+      console.log("togglePick query catch error: " + error.message)
       if (error.ckErrorCode == "AUTHENTICATION_REQUIRED") {
         displaySignIn()
       }
@@ -537,7 +528,27 @@ function registerForNotifications() {
 
 // Display Sign In
 function displaySignIn() {
-  alert("Sign in to iCloud")
+  console.log("displaySignIn()")
+  //alert("Sign in to iCloud")
+  var modalEL = document.querySelector('#signin')
+  var modal = bootstrap.Modal.getOrCreateInstance(modalEL)
+  modalEL.addEventListener('show.bs.modal', function (event) {
+    var modalBody = modalEL.querySelector('.modal-body')
+    
+    var fragment = document.createDocumentFragment()
+    fragment.appendChild(document.getElementById('apple-sign-in-button'))
+    console.log("fragment: "+fragment)
+    modalBody.innerHTML = ""
+    modalBody.appendChild(fragment)
+    //modalBody.innerHTML += '<br /><button type="button" class="btn btn-secondary" aria-label="Close" data-bs-dismiss="modal">No Thanks</button>'
+  })
+  modalEL.addEventListener('hide.bs.modal', function (event) {
+    var fragment = document.createDocumentFragment()
+    fragment.appendChild(document.getElementById('apple-sign-in-button'))
+    var subheader = document.querySelector('.signinout')
+    subheader.appendChild(fragment)
+  })
+  modal.show()
 }
 
 // Display username
@@ -548,20 +559,24 @@ function displayUserName(name) {
 
 // Display Loading My Pick
 function displayLoading() {
-  var myModalEl = document.querySelector('#loading')
-  var modal = bootstrap.Modal.getOrCreateInstance(myModalEl, {
+  var modelEl = document.querySelector('#loading')
+  var modal = bootstrap.Modal.getOrCreateInstance(modelEl, {
     keyboard: false, backdrop: 'static'
+  })
+  modelEl.addEventListener('show.bs.modal', function (event) {
+    var modalBody = modelEl.querySelector('.modal-body')
+    modalBody.innerHTML = '<div class="spinner-border text-light" style="width: 3rem; height: 3rem;" role="status"><span class="visually-hidden">Loading...</span></div>'
   })
   modal.show()
 }
 
 // Hide Loading My Pick
 function hideLoading() {
-  var myModalEl = document.querySelector('#loading')
-  myModalEl.addEventListener('shown.bs.modal', function (event) {
+  var modelEl = document.querySelector('#loading')
+  modelEl.addEventListener('shown.bs.modal', function (event) {
     modal.hide()
   })
-  var modal = bootstrap.Modal.getOrCreateInstance(myModalEl, {
+  var modal = bootstrap.Modal.getOrCreateInstance(modelEl, {
     keyboard: false, backdrop: 'static'
   })
   modal.hide()

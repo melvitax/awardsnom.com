@@ -9,7 +9,7 @@ a:link, a:hover, a:active, a:visited {
     text-decoration: none;
 }
 @include media-breakpoint-up(sm) { 
-    .signout { 
+    .signinout { 
         float: right; 
         display: inline;
     }
