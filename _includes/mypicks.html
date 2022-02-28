@@ -1,0 +1,20 @@
+<div class="pb-3">
+    <h3>My Picks</h3>
+    {% assign numofcat = data.categories | size | plus: 1 | divided_by: 2.0 %}
+    {% assign imgwidth = 100.00 | divided_by: numofcat  %}
+    <div class="my-picks position-relative w-100">
+        {% for cat in data.categories %}
+        {% assign catid =  cat | slugify %}
+        {% assign halfimgwidth = imgwidth | divided_by: 2.0 %}
+        {% capture left %}{% if forloop.index > 1 %}-{{ halfimgwidth }}%{% else %}0{% endif %}{% endcapture %}
+        {% assign zindex = data.categories | size | plus: 1 |  minus: forloop.index %}
+        <div class="img-wrapper" data-cat="{{ catid }}" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-offset="0,20" title="{{ cat }}" style="margin-left: {{ left }}; width: {{ imgwidth }}%;  z-index: {{ zindex }}">
+            <div class="img-container" >
+                <div class="default">{{ cat }}</div>
+                <img class="" img="/assets/blank.gif" />
+            </div>
+        </div>
+        {% endfor %}
+        <div class="clearfix">&nbsp;</div>
+    </div>
+</div>

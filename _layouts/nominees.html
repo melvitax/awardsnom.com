@@ -28,6 +28,8 @@
                 
             {% include subheader.html %} 
 
+            {% include mypicks.html %} 
+
             <div class="row card-columns ml-0 mr-0">
 
                 {% assign grouped = data.nominees | group_by_exp: "item", "item.noms | size" | sort: "name" | reverse %}
@@ -41,7 +43,7 @@
 
                         <!-- Poster -->
                         <a class="poster" >
-                            <img class="card-img w-100 h-100 rounded-5 p-0" src="/{{page.show}}/{{page.year}}/images/{{ nominee.image }}" width="230" height="355" alt="{{ name }}" />
+                            <img class="card-img w-100 h-100 rounded-5 p-0" src="/{{page.show}}/{{page.year}}/images/{{ nominee.image }}" width="230" height="355" alt="{{ name }}" data-cat="{{ catid }}" data-nom="{{ nomid }}" />
                         </a>
                             
                         <!-- Buttons -->

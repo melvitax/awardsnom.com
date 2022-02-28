@@ -26,24 +26,30 @@
 
             {% include subheader.html %} 
 
-            <div class="row card-columns ml-0 mr-0">
+            {% include mypicks.html %} 
+
+            <div class="row card-columns ml-0 mr-0 clearfix">
           
                 <!-- Category -->
                 {% for cat in data.categories %}
                 {% assign cat_split = cat | split: ":" %}
                 <h3 class="col-10 pt-3 pb-2 text-center border-bottom text-warning fw-light fs-5 cat-title" id="{{ cat | slugify }}">{{ cat_split[0] | upcase }}{% if cat_split[1] %}<br /><small class="fs-5 text-warning">{{ cat_split[1] | upcase}}</small>{% endif %}</h3>
+
                 {% for nominee in data.nominees %}
                 {% assign noms = nominee.noms | where: "cat", cat %}
                 {% for nom in noms %}
+
                 <div class="col-5 col-sm-3 col-md-2 pt-4 pb-2" >
                     {% capture nomid %}{% if nom.key %}{{ nom.key }}{% else %}{{ nominee.key }}{% endif %}{% endcapture %}
                     {% assign catid =  cat | slugify %}
-                    <div class="card mb-3 border-0 animate nom" data-cat="{{ catid }}" data-nom="{{ nomid }}">
+                    {% capture nomtitle %}{% if nom.name %}{{ nom.name }}{% endif %}{% if nom.sub %}{% if nom.name %} - {% endif %}{{ nom.sub }}{% endif %}{% endcapture %}
+                    {% assign datatitle = cat | append: " - " | append: nominee.title | append: " - " | append: nomtitle  %}
+                    {% capture image %}{% if nom.image %}{{ nom.image }}{% else %}{{ nominee.image }}{% endif %}{% endcapture %}
+                    <div class="card mb-3 border-0 animate nom" data-cat="{{ catid }}" data-nom="{{ nomid }}" data-image="{{ image }}" data-title="{{ datatitle }}" >
                         <div class="row g-0"> 
                             <!-- Poster -->
                             <a class="grow poster">
-                            {% capture image %}{% if nom.image %}{{ nom.image }}{% else %}{{ nominee.image }}{% endif %}{% endcapture %}
-                            <img class="card-img w-100 h-100 rounded-5 p-0" src="/{{page.show}}/{{page.year}}/images/{{ image }}" width="230" height="355" alt="{{ name }}" />
+                            <img class="card-img w-100 h-100 rounded-5 p-0" src="/{{page.show}}/{{page.year}}/images/{{ image }}" width="230" height="355" alt="{{ alt }}"  />
                             </a>
                             {% if nom.winner %}
                             <!-- Winner -->
@@ -62,7 +68,6 @@
                             <div class="meta w-100 py-1">
                                 {% if nom.name %}{{ nom.name }}<br />{% endif %}
                                 {% if nom.sub %}<div class="pb-3">{{ nom.sub }}</div>{% endif %}
-                                
                             </div>
 
                             <div class="buttons">

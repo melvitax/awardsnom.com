@@ -31,6 +31,8 @@
                 <button type="button" class="discover-users btn btn-outline-warning">Discover Users</button>
 
             {% include subheader.html %} 
+            
+            {% include mypicks.html %} 
 
             <div class="row card-columns ml-0 mr-0">
           
@@ -48,7 +50,7 @@
                             <!-- Poster -->
                             <a class="grow poster">
                             {% capture image %}{% if nom.image %}{{ nom.image }}{% else %}{{ nominee.image }}{% endif %}{% endcapture %}
-                            <img class="card-img w-100 h-100 rounded-5 p-0" src="/{{page.show}}/{{page.year}}/images/{{ image }}" width="230" height="355" alt="{{ name }}" />
+                            <img class="card-img w-100 h-100 rounded-5 p-0" src="/{{page.show}}/{{page.year}}/images/{{ image }}" width="230" height="355" alt="{{ name }}" data-cat="{{ catid }}" data-nom="{{ nomid }}" />
                             </a>
                             {% if nom.winner %}
                             <!-- Winner -->

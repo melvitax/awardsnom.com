@@ -2,6 +2,7 @@
 jQuery(function() { 
   enableVideoModal();
   fadeOnScroll();
+  enableToolTips();
 })
 
 var userRecordName
@@ -557,7 +558,7 @@ function displayUserName(name) {
   displayedUserName.textContent = name;
 }
 
-// Display Loading My Pick
+// Display Loading
 function displayLoading() {
   var modelEl = document.querySelector('#loading')
   var modal = bootstrap.Modal.getOrCreateInstance(modelEl, {
@@ -570,7 +571,7 @@ function displayLoading() {
   modal.show()
 }
 
-// Hide Loading My Pick
+// Hide Loading
 function hideLoading() {
   var modelEl = document.querySelector('#loading')
   modelEl.addEventListener('shown.bs.modal', function (event) {
@@ -582,13 +583,24 @@ function hideLoading() {
   modal.hide()
 }
 
-// Display My Pick
+// Remove Pick From Category
 function removePickIndicators(cat) {
+  // Update pick label
   $(".nom[data-cat='" + cat + "'] .pick-icon").remove()
+  // Update My Picks list
+  $(".my-picks .img-wrapper[data-cat='" + cat + "']").attr("title", '')
+  $(".my-picks .img-wrapper[data-cat='" + cat + "'] img").attr("src", '/assets/blank.gif').hide()
 }
 
+// Display My Picks
 function displayMyPick(cat, nom) {
+  // Update pick label
   $(".nom[data-cat='" + cat + "'][data-nom='" + nom + "'] .rating").prepend('<span class="pick-icon lh-1 text-warning pt-1 w-auto" ><i class="fa-solid fa-heart"></i> Pick</span>')
+  // Update My Picks list
+  var image = $(".nom[data-cat='" + cat + "'][data-nom='" + nom + "']").attr("data-image")
+  var title = $(".nom[data-cat='" + cat + "'][data-nom='" + nom + "']").attr("data-title")
+  $(".my-picks .img-wrapper[data-cat='" + cat + "'] img").attr("src", '/'+show+'/'+year+'/images/'+image).show()
+  $(".my-picks .img-wrapper[data-cat='" + cat + "']").attr("title", title)
 }
 
 // Display isTop
@@ -596,6 +608,14 @@ function displayTopVote(cat, nom) {
   $(".nom[data-cat='" + cat + "'] .top-icon").remove()
   $(".nom[data-cat='" + cat + "'][data-nom='" + nom + "'] .rating").append('<span class="top-icon lh-1 text-info pt-1 w-auto float-end"><i class="fa-solid fa-star"></i> Top</span>')
 }
+
+function enableToolTips() {
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+}
+
 
 /*************************
   NON CLOUD KIT FUNCTIONS 

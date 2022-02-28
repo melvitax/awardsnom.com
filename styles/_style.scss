@@ -25,6 +25,58 @@ h1.site-title a:hover, h1.site-title a:active {
     color: #ffc107;
 }
 @include media-breakpoint-up(md) { h1.site-title { font-size: 2.8em; } }
+
+.my-picks .img-wrapper {
+    position: relative;
+    float: left;
+    box-shadow: 0.2rem 0 0.5rem rgba(0,0,0,0.15);
+    border-radius: .25rem;
+    background: rgb(238,242,246);
+    background: linear-gradient(0deg, rgb(222, 225, 227) 0%, rgb(238, 242, 246) 100%);
+    overflow: hidden;
+}
+.my-picks .img-wrapper:hover {
+    transition: ease-in-out 0.25s all !important;
+    transform: scale(1.2);
+    z-index: 999 !important;
+    box-shadow: 0 0.5rem 3rem rgba(0,0,0,0.5)
+}
+.my-picks .img-container::before {
+    float: left;
+    padding-top: 154.6875%;
+    content: '';
+  }
+.my-picks .img-container::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+.my-picks img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+.my-picks .default {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 0.7em;
+    text-align: center;
+    color: #c5c8cb;
+}
+@include media-breakpoint-down(lg) { .my-picks .default { opacity: 0 } }
+
 .cat-title {
     letter-spacing: 0.2em;
 }
@@ -119,6 +171,13 @@ iframe {
     .nav .btn-outline-warning:not(.active) {
         background-color: transparent;
         color: white;
+    }
+    .my-picks .img-wrapper {
+        background: rgb(84,91,97);
+        background: linear-gradient(0deg, rgba(84,91,97,1) 0%, rgba(108,117,125,1) 100%);
+    }
+    .my-picks .default {
+        color: rgb(116, 127, 136);
     }
     .nominee-title {
         color: white;
