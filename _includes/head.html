@@ -1,12 +1,7 @@
 <head>
     <meta charset="utf-8">
-    {% if page.layout == "nominees" %}
-    <title>{{ page.title }} | Nominees | {{site.title}}</title>
-    {% elsif page.layout == "streaming" %}
-    <title>{{ page.title }} | Streaming | {{ site.title }}</title>
-    {% else %}
-    <title>{{ page.title }} | {{ site.title }}</title>
-    {% endif %}
+    {% capture pagetitle %}{% if page.layout == "nominees" %}{{ page.title }} | Nominees | {{site.title}}{% elsif page.layout == "streaming" %}{{ page.title }} | Streaming | {{ site.title }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}{% endcapture %}
+    <title>{{ page.title }}</title>
     <meta name="description" content="{{site.description}}">
     <meta name="keywords" content="{{site.keywords}}">
     <meta name="author" content="{{site.author.name}}">
@@ -21,23 +16,19 @@
     <meta property="twitter:creator" content="@{{site.author.twitter}}">
     <!-- Facebook -->
     <meta property="og:site_name" content="{{site.title}}">
-    
     <meta property="og:type" content="article">
     <!-- Shared -->
-    {% if page.id == "home" %}
+    {% if page.url == "/index.html" %}
     <meta property="og:url" content="{{site.url}}">
-    <meta property="og:title" content="{{page.title}}">
-    <meta property="og:description" content="{{site.socialinfo}}">
-    <meta property="og:image" content="{{site.socialimage}}">
     {% else %}
     <meta property="og:url" content="{{site.url}}{{page.permalink}}">
-    <meta property="og:title" content="{{page.title}}">
-    <meta property="og:description" content="{{site.socialinfo}}">
-    {% if page.header and page.header !=blank and page.header != "" %}
-    <meta property="og:image" content="{{site.url}}{{page.header}}">
-    {% else %}
-    <meta property="og:image" content="{{site.url}}{{page.poster}}">
     {% endif %}
+    <meta property="og:title" content="{{pagetitle}}">
+    <meta property="og:description" content="{{site.socialinfo}}">
+    {% if page.show and page.year %}
+    <meta property="og:image" content="{{site.url}}/{{page.show}}/{{page.year}}/images/social-sharing.jpg">
+    {% else %}
+    <meta property="og:image" content="{{site.socialimage}}">
     {% endif %}
     <!-- CSS: Main -->
     <link rel="stylesheet" href="/styles/main.css">

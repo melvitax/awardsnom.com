@@ -1,12 +1,12 @@
 title: AwardsNom
-description: An award show ballot for Oscars, Emmys and Tonys
+description: Nominee ballot tracker for award shows
 keywords: filmmaking, oscards, awards, goldenglobes
 baseurl: "" 
 url: "https://awardsnom.com"
 twitter: awardsnom
 github: melvitax/awardsnom
-socialimage: http://awardsnom.com/assets/socialimage.jpg
-socialinfo: "An award show nominee ballot tracker"
+socialimage: http://awardsnom.com/assets/social-sharing.jpg
+socialinfo: "Nominee ballot tracker for award shows"
 author:
   name: Melvin Rivera
   twitter: melvitax
