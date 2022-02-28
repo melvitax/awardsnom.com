@@ -88,8 +88,11 @@
 
                         {% capture nomid %}{% if nom.key %}{{ nom.key }}{% else %}{{ nominee.key }}{% endif %}{% endcapture %}
                         {% assign catid =  nom.cat | slugify %}
-                    
-                        <div class="nom mb-2" data-cat="{{ catid }}" data-nom="{{ nomid }}">
+                        {% capture nomtitle %}{% if nom.name %}{{ nom.name }}{% endif %}{% if nom.sub %}{% if nom.name %} - {% endif %}{{ nom.sub }}{% endif %}{% endcapture %}
+                        {% assign datatitle = cat | append: " - " | append: nominee.title | append: " - " | append: nomtitle  %}
+                        {% capture image %}{% if nom.image %}{{ nom.image }}{% else %}{{ nominee.image }}{% endif %}{% endcapture %}
+                        
+                        <div class="nom mb-2" data-cat="{{ catid }}" data-nom="{{ nomid }}" data-image="{{ image }}" data-title="{{ datatitle }}>
                             
                             <!-- Nomination Title -->
                             <h4 class="item-title fs-6 fw-light mb-0" id="{{ nom.cat | slugify }}">
