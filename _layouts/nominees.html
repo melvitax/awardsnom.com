@@ -93,7 +93,7 @@
                         {% capture image %}{% if nom.image %}{{ nom.image }}{% else %}{{ nominee.image }}{% endif %}{% endcapture %}
                         {% assign thumb = image | replace: ".jpg", "-thumb.jpg" %}
 
-                        <div class="nom mb-2" data-cat="{{ catid }}" data-nom="{{ nomid }}" data-thumb="{{ thumb }}" data-title="{{ datatitle }}>
+                        <div class="nom mb-2" data-cat="{{ catid }}" data-nom="{{ nomid }}" data-thumb="{{ thumb }}" data-title="{{ datatitle }}">
                             
                             <!-- Nomination Title -->
                             <h4 class="item-title fs-6 fw-light mb-0" id="{{ nom.cat | slugify }}">
