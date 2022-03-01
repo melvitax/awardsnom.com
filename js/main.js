@@ -597,9 +597,9 @@ function displayMyPick(cat, nom) {
   // Update pick label
   $(".nom[data-cat='" + cat + "'][data-nom='" + nom + "'] .rating").prepend('<span class="pick-icon lh-1 text-warning pt-1 w-auto" ><i class="fa-solid fa-heart"></i> Pick</span>')
   // Update My Picks list
-  var image = $(".nom[data-cat='" + cat + "'][data-nom='" + nom + "']").attr("data-image")
+  var thumb = $(".nom[data-cat='" + cat + "'][data-nom='" + nom + "']").attr("data-thumb")
   var title = $(".nom[data-cat='" + cat + "'][data-nom='" + nom + "']").attr("data-title")
-  $(".my-picks .img-wrapper[data-cat='" + cat + "'] img").attr("src", '/'+show+'/'+year+'/images/'+image).show()
+  $(".my-picks .img-wrapper[data-cat='" + cat + "'] img").attr("src", '/'+show+'/'+year+'/images/'+thumb).show()
   $(".my-picks .img-wrapper[data-cat='" + cat + "']").attr("title", title)
 }
 

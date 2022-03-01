@@ -45,7 +45,8 @@
                     {% capture nomtitle %}{% if nom.name %}{{ nom.name }}{% endif %}{% if nom.sub %}{% if nom.name %} - {% endif %}{{ nom.sub }}{% endif %}{% endcapture %}
                     {% assign datatitle = cat | append: " - " | append: nominee.title | append: " - " | append: nomtitle  %}
                     {% capture image %}{% if nom.image %}{{ nom.image }}{% else %}{{ nominee.image }}{% endif %}{% endcapture %}
-                    <div class="card mb-3 border-0 animate nom" data-cat="{{ catid }}" data-nom="{{ nomid }}" data-image="{{ image }}" data-title="{{ datatitle }}" >
+                    {% assign thumb = image | replace: ".jpg", "-thumb.jpg" %}
+                    <div class="card mb-3 border-0 animate nom" data-cat="{{ catid }}" data-nom="{{ nomid }}" data-thumb="{{ thumb }}" data-title="{{ datatitle }}" >
                         <div class="row g-0"> 
                             <!-- Poster -->
                             <a class="grow poster">
