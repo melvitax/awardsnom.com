@@ -1,11 +1,13 @@
 "use strict";
 jQuery(function() { 
-  enableVideoModal();
-  fadeOnScroll();
-  enableToolTips();
+  enableVideoModal()
+  fadeOnScroll()
+  enableTogglePicks()
+  enableToolTips()
+  //enableDiscoverAllUserIdentities()
+  //enableFetchCurrentUserIdentity
+  //enableShareWithUI
 })
-
-var userRecordName
 
 console.log("CloudKit: listening for cloudkitloaded");
 window.addEventListener('cloudkitloaded', function() {
@@ -17,7 +19,6 @@ window.addEventListener('cloudkitloaded', function() {
 /*************************
     CLOUD KIT FUNCTIONS 
 **************************/
-
 
 // Configure CloudKit
 function configureCloudKit() {
@@ -46,7 +47,6 @@ function setUpAuth() {
 
   function gotoAuthenticatedState(userIdentity) {
     var name = userIdentity.nameComponents;
-    userRecordName = userIdentity.userRecordName
     //console.log("CloudKit: userIdentity: " + JSON.stringify(userIdentity))
     if(name) {
       displayUserName(name.givenName + ' ' + name.familyName);
@@ -320,9 +320,6 @@ function togglePick(cat, nom) {
       hideLoading()
     });
 }
-$('.nom').on( "click", function() {
-  togglePick($(this).data( "cat" ), $(this).data( "nom" ))
-})
 
 // Update Votes
 function updateVotes(show, year, cat, votes) {
@@ -440,9 +437,6 @@ function shareWithUI() {
       console.log("shareWithUI error: " + error)
     });
 }
-$('.share-picks').on( "click", function() {
-  shareWithUI()
-})
 
 function fetchCurrentUserIdentity() {
   var container = CloudKit.getDefaultContainer();
@@ -461,9 +455,6 @@ function fetchCurrentUserIdentity() {
       console.log("fetchCurrentUserIdentity error: " + error)
     });
 }
-$('.fetch-current-user-identity').on( "click", function() {
-  fetchCurrentUserIdentity()
-})
 
 // Discover All Users
 function discoverAllUserIdentities() {
@@ -484,9 +475,6 @@ function discoverAllUserIdentities() {
       console.log("discoverAllUserIdentities error: " + error)
     });
 }
-$('.discover-users').on( "click", function() {
-  discoverAllUserIdentities()
-})
 
 // Accept Share
 function demoAcceptShares(shortGUID) {
@@ -583,6 +571,43 @@ function hideLoading() {
   modal.hide()
 }
 
+// Enable discover users
+function enableDiscoverAllUserIdentities() {
+  $('.discover-users').on( "click", function() {
+    discoverAllUserIdentities()
+  })
+}
+
+// Enable fetch current user identity
+function enableFetchCurrentUserIdentity() {
+  $('.fetch-current-user-identity').on( "click", function() {
+    fetchCurrentUserIdentity()
+  })
+}
+
+// Enable share with UI
+function enableShareWithUI() {
+  $('.share-picks').on( "click", function() {
+    shareWithUI()
+  })
+}
+
+// Enable toggle picks
+function enableTogglePicks() {
+  $('.nom-selector').on( "click", function() {
+    var dataEl
+    // selector in nominee page
+    if ($(this).data( "cat" )) {
+      dataEl = $(this)
+    } else if ($(this).parent().parent().data( "cat" )) {
+      dataEl = $(this).parent().parent()
+    }
+    if (dataEl) {
+      togglePick($(dataEl).data( "cat" ), $(dataEl).data( "nom" ))
+    }
+  })
+}
+
 // Remove Pick From Category
 function removePickIndicators(cat) {
   // Update pick label
@@ -609,6 +634,7 @@ function displayTopVote(cat, nom) {
   $(".nom[data-cat='" + cat + "'][data-nom='" + nom + "'] .rating").append('<span class="top-icon lh-1 text-info pt-1 w-auto float-end"><i class="fa-solid fa-star"></i> Top</span>')
 }
 
+// Enable tool tips in My Picks
 function enableToolTips() {
   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
   var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
@@ -620,6 +646,7 @@ function enableToolTips() {
 /*************************
   NON CLOUD KIT FUNCTIONS 
 **************************/
+
 
 // Fade animation on scroll
 function fadeOnScroll() {
