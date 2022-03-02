@@ -269,6 +269,11 @@ nominees:
     image: west-side-story.jpg
     trailer: https://www.youtube.com/watch?v=A5GJLwWiYSg
     key: westsidestory
+    streaming:
+      - source: disneyplus
+        url: https://www.disneyplus.com/movies/west-side-story/2VCrDr9yQ2FQ
+      - source: hbomax
+        url: https://play.hbomax.com/page/urn:hbo:page:GYf0-iQ1eoRKojgEAAAAC:type:feature
     noms:
       - winner: false
         cat: Best Supporting Actress
@@ -446,6 +451,9 @@ nominees:
     image: drive-my-car.jpg
     trailer: https://www.youtube.com/watch?v=6BPKPb_RTwI
     key: drivemycar
+    streaming:
+      - source: hbomax
+        url: https://play.hbomax.com/page/urn:hbo:page:GYgQ3fg5VacMiZgEAAAAF:type:feature
     noms:
       - winner: false
         cat: Best Director
@@ -776,6 +784,10 @@ nominees:
     streaming: 
       - source: appletv
         url: https://tv.apple.com/us/movie/free-guy/umc.cmc.6sj9ca8vyjiz07awl17hqfbqn
+      - source: hbomax
+        url: https://play.hbomax.com/page/urn:hbo:page:GYdYmPQZFO7eZGAEAAAAT:type:feature
+      - source: disneyplus
+        url: https://www.disneyplus.com/movies/free-guy/3qBd6ESjzQOm
     noms:
       - winner: false
         cat: Best Visual Effects
