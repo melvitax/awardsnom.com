@@ -245,6 +245,9 @@ nominees:
     image: parallel-mothers.jpg
     trailer: https://www.youtube.com/watch?v=cL6JDYkRa2g
     key: parallelmothers
+    streaming:
+      source: appletv
+      url: https://tv.apple.com/us/movie/parallel-mothers/umc.cmc.2mw42e8fbdvanv6n9mg55n6p3
     noms:
       - winner: false
         cat: Best Actress
@@ -471,6 +474,9 @@ nominees:
     image: licorice-pizza.jpg
     trailer: https://www.youtube.com/watch?v=o_hRNmlk80g
     key: licoricepizza
+    streaming: 
+      - source: appletv
+        url: https://tv.apple.com/us/movie/licorice-pizza/umc.cmc.up1rt33i8x6cv83q9nk1tezz
     noms:
       - winner: false
         cat: Best Director
