@@ -5,8 +5,10 @@
     <div class="my-picks position-relative w-100">
         {% for cat in data.categories %}
         {% assign catid =  cat | slugify %}
-        {% assign halfimgwidth = imgwidth | divided_by: 2.0 %}
-        {% capture left %}{% if forloop.index > 1 %}-{{ halfimgwidth }}%{% else %}0{% endif %}{% endcapture %}
+        {% assign numofcat =  data.categories | size %}
+        {% capture widthpercent %}{% if forloop.index < numofcat %}{{ imgwidth }}{% else %}{{ imgwidth | plus: 0.1 }}{% endif %}{% endcapture %}
+        {% assign offset = widthpercent | divided_by: 2.0 %}
+        {% capture left %}{% if forloop.index > 1 %}-{{ offset }}%{% else %}0{% endif %}{% endcapture %}
         {% assign zindex = data.categories | size | plus: 1 |  minus: forloop.index %}
         <div class="img-wrapper" data-cat="{{ catid }}" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-offset="0,20" title="{{ cat }}" style="margin-left: {{ left }}; width: {{ imgwidth }}%;  z-index: {{ zindex }}">
             <div class="img-container" >

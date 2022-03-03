@@ -528,6 +528,9 @@ nominees:
     image: writing-with-fire.jpg
     trailer: https://www.youtube.com/watch?v=uv51mXOvjJw
     key: writingwithfire
+    streaming: 
+      - source: appletv
+        url: https://tv.apple.com/us/movie/writing-with-fire/umc.cmc.1eip7zb3nptgzrrjni06rkeod
     noms:
       - winner: false
         cat: Best Documentary, Feature
@@ -632,6 +635,9 @@ nominees:
     image: the-worst-person-in-the-world.jpg
     trailer: https://www.youtube.com/watch?v=55M5ZgAqbWo
     key: theworstpersonintheworld
+    streaming:
+      - source: appletv
+        url: https://tv.apple.com/us/movie/the-worst-person-in-the-world/umc.cmc.2hnkifuob5arwcg23hx1khztd
     noms:
       - winner: false
         cat: Best International Feature Film
