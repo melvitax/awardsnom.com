@@ -1,0 +1,647 @@
+title: "2022"
+day: 2022-02-27
+categories:
+  - Cast in a Motion Picture
+  - Female Actor in a Leading Role
+  - Male Actor in a Leading Role
+  - Female Actor in a Supporting Role
+  - Male Actor in a Supporting Role
+  - Ensemble in a Drama Series
+  - Female Actor in a Drama Series
+  - Male Actor in a Drama Series
+  - Ensemble in a Comedy Series
+  - Female Actor in a Comedy Series
+  - Male Actor in a Comedy Series
+  - Female Actor in a TV Movie or Series
+  - Male Actor in a TV Movie or Series
+  - Stunt Ensemble in a Television Series
+  - Stunt Ensemble in a Motion Picture
+nominees:
+  - title: Being the Ricardos
+    image: being-the-ricardos.jpg
+    trailer: https://www.youtube.com/watch?v=WvrjCdtB0zM
+    key: beingthericardos
+    streaming:
+      - source: primevideo
+        url: https://www.amazon.com/gp/video/detail/B09JBBYLBD/ref=atv_dp_share_cu_r
+    noms:
+      - winner: false
+        cat: Male Actor in a Leading Role
+        sub: Javier Bardem
+        image: javier-bardem.jpg
+      - winner: false
+        cat: Female Actor in a Leading Role
+        sub: Nicole Kidman
+        image: nicole-kidman.jpg
+  - title: The Power of the Dog
+    image: the-power-of-the-dog.jpg
+    trailer: https://www.youtube.com/watch?v=LRDPo0CHrko
+    key: thepowerofthedog
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81127997
+    noms:
+      - winner: false
+        cat: Male Actor in a Leading Role
+        sub: Benedict Cumberbatch
+        image: benedict-cumberbatch.jpg
+      - winner: false
+        cat: Male Actor in a Supporting Role
+        sub: Kodi Smit-McPhee
+        image: kodi-smit-mcphee.jpg
+        key: kodismitmcphee
+      - winner: false
+        cat: Female Actor in a Supporting Role
+        sub: Kirsten Dunst
+        image: kirsten-dunst.jpg
+  - title: tick, tick...BOOM!
+    image: tick-tick-boom.jpg
+    trailer: https://www.youtube.com/watch?v=YJserno8tyU
+    key: ticktickboom
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81149184
+    noms:
+      - winner: false
+        cat: Male Actor in a Leading Role
+        sub: Andrew Garfield
+        image: andrew-garfield.jpg
+  - title: King Richard
+    image: king-richard.jpg
+    trailer: https://www.youtube.com/watch?v=FIsNbpJIa6k
+    key: kingrichard
+    streaming:
+      - source: appletv
+        url: https://tv.apple.com/us/movie/king-richard/umc.cmc.11i83ne5iq37usxzghkyicmwk
+    noms:
+      - winner: true
+        cat: Male Actor in a Leading Role
+        sub: Will Smith
+        image: will-smith.jpg
+      - winner: false
+        cat: Cast in a Motion Picture
+        sub: Jon Bernthal - Rick Macci, Aunjanue Ellis - Oracene “Brandi” Williams, Tony Goldwyn - Paul Cohen, Saniyya, Sidney - Venus Williams, Demi Singleton - Serena Williams, Will Smith - Richard Williams
+  - title: The Tragedy of Macbeth
+    image: the-tragedy-of-macbeth.jpg
+    trailer: https://www.youtube.com/watch?v=HM3hsVrBMA4
+    key: thetragedyofmacbeth
+    streaming: 
+      - source: appletvplus
+        url: https://tv.apple.com/us/movie/the-tragedy-of-macbeth/umc.cmc.4wpfk1xmi22h3zyv4a10lj1tw
+    noms:
+      - winner: false
+        cat: Male Actor in a Leading Role
+        sub: Denzel Washington
+        image: denzel-washington.jpg
+  - title: Belfast
+    image: belfast.jpg
+    trailer: https://www.youtube.com/watch?v=Ja3PPOnJQ2k
+    key: belfast
+    streaming:
+      - source: appletv
+        url: https://tv.apple.com/us/movie/belfast/umc.cmc.2jz7n19smc0g791llqpxa0f3h
+    noms:
+      - winner: false
+        cat: Cast in a Motion Picture
+        sub: Caitríona Balfe - Mae, Judi Dench - Granny, Jamie Dornan - Pa, Jude Hill - Buddy, Ciarán Hinds - Pop, Colin Morgan - Billy Clanton
+      - winner: false
+        cat: Female Actor in a Supporting Role
+        sub: Catríona Balfe
+        image: caitriona-alfe.jpg
+  - title: Coda
+    image: coda.jpg
+    trailer: https://www.youtube.com/watch?v=0pmfrE1YL4I
+    key: coda
+    streaming:
+      - source: appletvplus
+        url: https://tv.apple.com/us/movie/coda/umc.cmc.3eh9r5iz32ggdm4ccvw5igiir
+    noms:
+      - winner: true
+        cat: Male Actor in a Supporting Role
+        sub: Troy Kotsur
+        image: troy-kotsur.jpg
+      - winner: true
+        cat: Cast in a Motion Picture
+        sub: Eugenio Derbez - Bernardo Villalobos, Daniel Durant - Leo Rossi, Emilia Jones - Ruby Rossi, Troy Kotsur - Frank Rossi, Marlee Matlin - Jackie Rossi, Ferdia Walsh-Peelo - Miles
+  - title: The Eyes of Tammy Faye
+    image: the-eyes-of-tammy-faye.jpg
+    trailer: https://www.youtube.com/watch?v=eMMLRnXPPJk
+    key: theeyesoftammyfaye
+    streaming:
+      - source: hbomax
+        url: https://play.hbomax.com/page/urn:hbo:page:GYaf79gQvPMPDwgEAAAAH:type:feature
+    noms:
+      - winner: true
+        cat: Female Actor in a Leading Role
+        sub: Jessica Chastain
+        image: jessica-chastain.jpg
+  - title: The Lost Daughter
+    image: the-lost-daughter.jpg
+    trailer: https://www.youtube.com/watch?v=xNq9YOfL0Zs
+    key: thelostdaughter
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81478910
+    noms:
+      - winner: false
+        cat: Female Actor in a Leading Role
+        sub: Olivia Colman
+        image: olivia-colman.jpg
+  - title: The Tender Bar
+    image: the-tender-bar.jpg
+    trailer: https://www.youtube.com/watch?v=5-DS9vtLeEs
+    key: thetenderbar
+    streaming:
+      - source: primevideo
+        url: https://www.amazon.com/gp/video/detail/B09J6J4595
+    noms:
+      - winner: false
+        cat: Male Actor in a Supporting Role
+        sub: Ben Affleck
+        image: ben-affleck.jpg
+  - title: West Side Story
+    image: west-side-story.jpg
+    trailer: https://www.youtube.com/watch?v=A5GJLwWiYSg
+    key: westsidestory
+    streaming:
+      - source: disneyplus
+        url: https://www.disneyplus.com/movies/west-side-story/2VCrDr9yQ2FQ
+      - source: hbomax
+        url: https://play.hbomax.com/page/urn:hbo:page:GYf0-iQ1eoRKojgEAAAAC:type:feature
+    noms:
+      - winner: true
+        cat: Female Actor in a Supporting Role
+        sub: Ariana DeBose
+        image: ariana-debose.jpg
+  - title: Respect
+    image: respect.jpg
+    trailer: https://www.youtube.com/watch?v=qTtxoz3OIlU
+    key: respect
+    streaming:
+      - source: appletv
+        url: https://tv.apple.com/us/movie/respect/umc.cmc.5yc02iy97walf1oxvl3zt7aue
+    noms:
+      - winner: false
+        cat: Female Actor in a Leading Role
+        sub: Jennifer Hudson
+        image: jennifer-hudson.jpg
+  - title: Passing
+    image: passing.jpg
+    trailer: https://www.youtube.com/watch?v=trwq3CNCMkU
+    key: passing
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81424320
+    noms:
+      - winner: false
+        cat: Female Actor in a Supporting Role
+        sub: Ruth Negga
+        image: ruth-negga.jpg
+  - title: Dune
+    image: dune.jpg
+    trailer: https://www.youtube.com/watch?v=Jd9L79koFkA
+    key: dune
+    streaming:
+      - source: appletv
+        url: https://tv.apple.com/us/movie/dune/umc.cmc.2l7qj9p33t3jww1roxi8cgiw5
+    noms:
+      - winner: false
+        cat: Stunt Ensemble in a Motion Picture
+        sub: Greig Fraser
+  - title: Nightmare Alley
+    image: nightmare-alley.jpg
+    trailer: https://www.youtube.com/watch?v=xR2OGv28uCw
+    key: nightmarealley
+    streaming:
+      - source: hulu
+        url: https://www.hulu.com/movie/nightmare-alley-dd010294-61c6-4ab5-b8d9-7326836717bc
+      - source: hbomax
+        url: https://play.hbomax.com/page/urn:hbo:page:GYd9PZAt4esLDJwEAAAAK:type:feature
+    noms:
+      - winner: false
+        cat: Female Actor in a Supporting Role
+        sub: Kate Blanchett
+        image: kate-blanchett.jpg
+  - title: Licorice Pizza
+    image: licorice-pizza.jpg
+    trailer: https://www.youtube.com/watch?v=o_hRNmlk80g
+    key: licoricepizza
+    streaming: 
+      - source: appletv
+        url: https://tv.apple.com/us/movie/licorice-pizza/umc.cmc.up1rt33i8x6cv83q9nk1tezz
+    noms:
+      - winner: false
+        cat: Male Actor in a Supporting Role
+        sub: Bradley Cooper
+        image: bradley-cooper.jpg
+  - title: Don't Look Up 
+    image: dont-look-up.jpg
+    trailer: https://www.youtube.com/watch?v=RbIxYm3mKzI
+    key: dontlookup
+    streaming: 
+      - source: netflix
+        url: https://www.netflix.com/title/81252357
+    noms:
+      - winner: false
+        cat: Cast in a Motion Picture
+        sub: Cate Blanchett - Brie Evantee, Timothée Chalamet - Yule, Leonardo DiCaprio - Dr. Randall Mindy, Ariana Grande - Riley Bina, Jonah Hill - Jason Orlean, Jennifer Lawrence - Kate Dibiasky, Melanie Lynskey - June Mindy, Scott Mescudi - DJ Chello, Rob Morgan - Dr. Teddy Oglethorpe, Himesh Patel - Phillip, Ron Perlman - Benedict Drask, Tyler Perry - Jack Bremmer, Mark Rylance - Peter Isherwell, Meryl Streep - President Orlean
+  - title: House of Gucci
+    image: house-of-gucci.jpg
+    trailer: https://www.youtube.com/watch?v=pGi3Bgn7U5U
+    key: houseofgucci
+    streaming: 
+      - source: appletv
+        url: https://tv.apple.com/us/movie/house-of-gucci/umc.cmc.5zhbapthrtlgvyyq4a17eqxne
+    noms:
+      - winner: false
+        cat: Cast in a Motion Picture
+        sub: Adam Driver - Maurizio Gucci, Lady Gaga - Patrizia Reggiani, Salma Hayek - Pina Auriemma, Jack Huston - Domenico De Sole, Jeremy Irons - Rodolfo Gucci, Jared Leto - Paolo Gucci, Al Pacino - Aldo Gucci
+      - winner: false
+        cat: Female Actor in a Leading Role
+        sub: Lady Gaga
+        image: lady-gaga.jpg
+      - winner: false
+        cat: Male Actor in a Supporting Role
+        sub: Jared Leto
+        image: jared-leto.jpg
+  - title: No Time To Die
+    image: no-time-to-die.jpg
+    trailer: https://www.youtube.com/watch?v=N_gD9-Oa0fg
+    key: notimetodie
+    streaming: 
+      - source: appletv
+        url: https://tv.apple.com/us/movie/no-time-to-die/umc.cmc.1sk81aco37s8f5grnjp6ydqad
+    noms:
+      - winner: true
+        cat: Stunt Ensemble in a Motion Picture
+  - title: Marvel Studios’ Shang-Chi and the Legend of the Ten Rings 
+    image: shang-chi.jpg
+    trailer: https://www.youtube.com/watch?v=8YjFbMbfXaQ
+    key: shangchi
+    streaming: 
+      - source: disneyplus
+        url: https://www.disneyplus.com/movies/shang-chi-and-the-legend-of-the-ten-rings/5GyV9sf9Y041
+    noms:
+      - winner: false
+        cat: Stunt Ensemble in a Motion Picture
+  - title: 'Spider-Man: No Way Home'
+    image: spider-man-no-way-home.jpg
+    trailer: https://www.youtube.com/watch?v=rt-2cxAiPJk
+    key: spidermannowayhome
+    streaming: 
+      - source: appletv
+        url: https://tv.apple.com/us/movie/spider-man-no-way-home/umc.cmc.2qf7xc5hds0m5jgx4roago580
+    noms:
+      - winner: false
+        cat: Best Visual Effects
+        sub: Kelly Port, Chris Waegner, Scott Edelstein and Dan Sudick
+  - title: "The Handmaid's Tale"
+    image: the-handmaids-tale.jpg
+    trailer: https://www.youtube.com/watch?v=rg_160Be71g
+    key: thehandmaidstale
+    streaming: 
+      - source: hulu
+        url: https://www.hulu.com/series/the-handmaids-tale-565d8976-9d26-4e63-866c-40f8a137ce5f
+    noms:
+      - winner: false
+        cat: Female Actor in a Drama Series
+        sub: Elisabeth Moss
+        image: elisabeth-moss.jpg
+      - winner: false
+        cat: Ensemble in a Drama Series
+        sub: Alexis Bledel - Emily Malek, Madeline Brewer - Janine Lindo, Amanda Brugel - Rita Blue, Ann Dowd - Aunt Lydia Clements, O-T Fagbenle - Luke Bankole, Joseph Fiennes - Commander Fred Waterford, Sam Jaeger - Mark Tuello, Max Minghella - Commander Fred Waterford, Elisabeth Moss - June Osborne / Offred, Yvonne Strahovski - Serena Joy Waterford, Bradley Whitford - Commander Joseph Lawrence, Samira Wiley - Moira Strand
+  - title: The Morning Show
+    image: the-morning-show.jpg
+    trailer: https://www.youtube.com/watch?v=-qZWPTsR-Wc
+    key: themorningshow
+    streaming: 
+      - source: appletvplus
+        url: https://tv.apple.com/us/show/the-morning-show/umc.cmc.25tn3v8ku4b39tr6ccgb8nl6m
+    noms:
+      - winner: false
+        cat: Ensemble in a Drama Series
+        sub: Jennifer Aniston - Alex Levy, Shari Belafonte - Julia, Eli Bildner - Joel Rapkin, Nestor Carbonell - Yanko Flores, Steve Carell - Mitch Kessler, Billy Crudup - Cory Ellison, Mark Duplass - Charlie "Chip" Black, Amber Friendly - Layla Bell, Janina Gavankar - Alison Namazi, Valeria Golino - Paola Lambruschini, Tara Karsian - Gayle Berman, Hannah Leder - Isabella, Greta Lee - Stella Bak, Julianna Margulies - Laura Peterson, Joe Marinelli - Donny Spagnoli, Michelle Meredith - Lindsey Sherman, Ruairi O'Connor - Ty Fitzgerald, Joe Pacheco - Bart Daley
+      - winner: false
+        cat: Female Actor in a Drama Series
+        sub: Reese Witherspoon
+        image: reese-witherspoon.jpg
+      - winner: false
+        cat: Female Actor in a Drama Series
+        sub: Jennifer Aniston
+        image: jennife-aniston.jpg
+      - winner: false
+        cat: Male Actor in a Drama Series
+        sub: Billy Crudup
+        image: billy-crudup.jpg
+  - title: Squid Game
+    image: squid-game.jpg
+    trailer: https://www.youtube.com/watch?v=oqxAJKy0ii4
+    key: squidgame
+    streaming: 
+      - source: netflix
+        url: https://www.netflix.com/title/81040344
+    noms:
+      - winner: true 
+        cat: Stunt Ensemble in a Television Series
+      - winner: true
+        cat: Female Actor in a Drama Series
+        sub: Jung Ho-Yeon
+        image: jung-ho-yeon.jpg
+      - winner: true
+        cat: Male Actor in a Drama Series
+        sub: Lee Jung-Jae
+        image: lee-jung-jae.jpg
+      - winner: false
+        cat: Ensemble in a Drama Series
+        sub: Heo Sung-Tae - Deok-su, Jun Young-Soo - Game Operator Voice, Jung Ho-Yeon - Kang Sae-byeok, Kim Joo-Ryoung - Mi-nyeo, Lee Byung-Hun - Front Man, Lee Jung-Jae - Seong Gi-hun, Oh Young-Soo - Oh Il-nam, Park Hae-Soo - Cho Sang-woo, Anupam Tripathi - Ali, Wi Ha-Jun - Hwang Jun-ho
+  - title: Sucession
+    image: sucession.jpg
+    trailer: https://www.youtube.com/watch?v=kevqiiYNFrc
+    key: sucession
+    streaming: 
+      - source: hbomax
+        url: https://play.hbomax.com/series/urn:hbo:series:GWukCJAq-nIuHwwEAAAB4
+    noms:
+      - winner: false
+        cat: Female Actor in a Drama Series
+        sub: Sarah Snook
+        image: sarah-snook.jpg
+      - winner: false
+        cat: Male Actor in a Drama Series
+        sub: Brian Cox
+        image: brian-cox.jpg
+      - winner: false
+        cat: Male Actor in a Drama Series
+        sub: Kieran Culkin
+        image: kieran-culkin.jpg
+      - winner: false
+        cat: Male Actor in a Drama Series
+        sub: Jeremy Strong
+        image: jeremy-strong.jpg
+      - winner: true
+        cat: Ensemble in a Drama Series
+        sub: Nicholas Braun - Greg Hirsch, Juliana Canfield - Jess Jordan, Brian Cox - Logan Roy, Kieran Culkin - Roman Roy, Dagmara Dominczyk - Karolina Novotney, Peter Friedman - Frank VernonJihae,  Berry Schneider - Justine Lupe - Willa, Matthew Macfadyen - Tom Wambsgans, Dasha Nekrasova - Comfrey Pellits, Scott Nicholson - Colin, David Rasche - Karl Muller, Alan Ruck - Connor Roy, J Smith-Cameron - Gerri Kellman, Sarah Snook - Shiv Roy, Fisher Steven - Hugo Baker, Jeremy Strong - Kendall Roy, Zoë Winters - Kerry Castellabate
+  - title: Yellowstone
+    image: yellowstone.jpg
+    trailer: https://www.youtube.com/watch?v=LLQNiiZgz9A
+    key: yellowstone
+    streaming: 
+      - source: paramountplus
+        url: https://www.paramountplus.com/shows/yellowstone/
+      - source: peacock
+        url: https://www.peacocktv.com/watch/asset/tv/yellowstone/7034893369976297112
+    noms:
+      - winner: false
+        cat: Ensemble in a Drama Series
+        sub: Kelsey Asbille - Monica Dutton, Wes Bentley - Jamie Dutton, Ryan Bingham - Walker, Gil Birmingham - Thomas Rainwater, Ian Bohen - Ryan, Eden Brolin - Mia, Kevin Costner - John Dutton, Hugh Dillon - Sheriff Donnie Haskell, Luke Grimes - Kayce Dutton, Hassie Harrison - Laramie, Cole Hauser - Rip Wheeler, Jen Landon - Teeter, Finn Little - Carter, Brecken Merrill - Tate Dutton, Will Patton - Garrett Randle - Piper Perabo - Summer Higgins, Kelly Reilly - Beth Dutton, Denim Richards - Colby
+  - title: The Great
+    image: the-great.jpg
+    trailer: https://www.youtube.com/watch?v=F1uFan_KgBw
+    key: thegreat
+    streaming: 
+      - source: hulu
+        url: https://www.hulu.com/series/the-great-238db0d4-c476-47ed-9bee-d326fd302f7d
+    noms:
+      - winner: false
+        cat: Female Actor in a Comedy Series
+        sub: Elle Fanning
+        image: elle-fanning.jpg
+      - winner: false
+        cat: Ensemble in a Comedy Series
+        sub: Julian Barratt - Dr. Vinodel, Belinda Bromilow - Aunt Elizabeth, Sacha Dhawan - Orlo, Elle Fanning - Catherine, Phoebe Fox - Marial, Bayo Gbadamosi - Arkady, Adam Godley - Archbishop, Douglas Hodge - Velementov, Nicholas Hoult - Peter, Florence Keith-Roach - Tatyana, Gwilym Lee - Grigor Dymov, Charity Wakefield - Georgina
+  - title: Hacks
+    image: hacks.jpg
+    trailer: https://www.youtube.com/watch?v=q6ke-bfXSBg
+    key: hacks
+    streaming: 
+      - source: hbomax
+        url: https://play.hbomax.com/series/urn:hbo:series:GYIBToQrPdotpNQEAAAEa
+    noms:
+      - winner: true
+        cat: Female Actor in a Comedy Series
+        sub: Jean Smart
+        image: jean-smart.jpg
+      - winner: false
+        cat: Ensemble in a Comedy Series
+        sub: Rose Abdoo - Josefina, Carol Clemons-Hopkins - Marcus Vaughan, Paul W. Downs - Jimmy Lusaque Jr., Hannah Einbinder - Ava Daniels, Mark Indelicato - Damien, Poppy Liu - Kiki, Chris McDonald - Marty Ghilain, Jean Smart - Deborah Vance, Megan Stalter - Kayla Schaeffer
+  - title: The Kominsky Method
+    image: the-kominsky-method.jpg
+    trailer: https://www.youtube.com/watch?v=Aj8ua1zQPSs
+    key: thekominskymethod
+    streaming: 
+      - source: netflix
+        url: https://www.netflix.com/title/80201680
+    noms:
+      - winner: false
+        cat: Male Actor in a Comedy Series
+        sub: Michael Douglas
+        image: michael-douglas.jpg
+      - winner: false
+        cat: Ensemble in a Comedy Series
+        sub: Jenna Lyng Adams - Darshani, Sarah Baker - Mindy Kominsky, Casey Thomas Brown - Lane, Michael Douglas - Sandy Kominsky, Lisa Edelstein - Phoebe, Ashleigh LaThrop - Breana, Emily Osment - Theresa, Haley Joel Osment - Robbie, Paul Reiser - Martin, Graham Rogers - Jude, Melissa Tang - Margaret, Kathleen Turner - Roz
+  - title: Only Murders In The Building
+    image: only-murders-in-the-building.jpg
+    trailer: https://www.youtube.com/watch?v=-V1rQdXXXyI
+    key: onlymurdersinthebuilding
+    streaming: 
+      - source: hulu
+        url: https://www.hulu.com/series/only-murders-in-the-building-ef31c7e1-cd0f-4e07-848d-1cbfedb50ddf
+    noms:
+      - winner: false
+        cat: Ensemble in a Comedy Series
+        sub: Aaron Dominguez - Oscar, Selena Gomez - Mabel Mora, Jackie Hoffman - Uma Heller, Jayne Houdyshell - Bunny, Steve Martin - Charles-Haden Savage, Amy Ryan - Jan, Martin Short - Oliver Putnam
+      - winner: false
+        cat: Male Actor in a Comedy Series
+        sub: Steve Martin
+        image: steve-martin.jpg
+      - winner: false
+        cat: Male Actor in a Comedy Series
+        sub: Martin Short
+        image: martin-short.jpg
+  - title: Ted Lasso
+    image: ted-lasso.jpg
+    trailer: https://www.youtube.com/watch?v=reP1gVGpFKo
+    key: tedlasso
+    streaming: 
+      - source: appletvplus
+        url: https://tv.apple.com/us/show/ted-lasso/umc.cmc.vtoh0mn0xn7t3c643xqonfzy
+    noms:
+      - winner: true
+        cat: Male Actor in a Comedy Series
+        sub: Jason Sudeikis
+        image: jason-sudeikis.jpg
+      - winner: false
+        cat: Male Actor in a Comedy Series
+        sub: Brett Goldstein
+        image: brett-goldstein.jpg
+      - winner: false
+        cat: Female Actor in a Comedy Series
+        sub: Hannah Waddingham
+        image: hannah-waddingham.jpg
+      - winner: false
+        cat: Female Actor in a Comedy Series
+        sub: Juno Temple
+        image: juno-temple.jpg
+      - winner: true
+        cat: Ensemble in a Comedy Series
+        sub: Annette Badland - Mae, Kola Bokinni - Isaac McAdoo, Phil Dunster - Jamie Tartt, Cristo Fernández - Dani Rojas, Brett Goldstein - Roy Kent, Brendan Hunt - Coach Beard, Toheeb Jimoh - Sam Obisanya, Nick Mohammed - Nathan Shelley, Sarah Niles - Dr. Sharon Fieldstone, Jason Sudeikis - Ted Lasso, Jeremy Swift - Leslie Higgins, Juno Temple - Keeley Jones, Hannah Waddingham - Rebecca Welton
+  - title: The Chair
+    image: the-chair.jpg
+    trailer: https://www.youtube.com/watch?v=eOqtBtWGl1Q
+    key: thechair
+    streaming: 
+      - source: netflix
+        url: https://www.netflix.com/title/81206259
+    noms:
+      - winner: false
+        cat: Female Actor in a Comedy Series
+        sub: Sandra Oh
+        image: sandra-oh.jpg
+  - title: Maid
+    image: maid.jpg
+    trailer: https://www.youtube.com/watch?v=tGtaHcqsSE8
+    key: maid
+    streaming: 
+      - source: netflix
+        url: https://www.netflix.com/title/81166770
+    noms:
+      - winner: false
+        cat: Female Actor in a TV Movie or Series
+        sub: Margaret Qualley
+        image: margaret-qualley.jpg
+  - title: The White Lotus
+    image: the-white-lotus.jpg
+    trailer: https://www.youtube.com/watch?v=TGLq7_MonZ4
+    key: thewhitelotus
+    streaming: 
+      - source: hbomax
+        url: https://play.hbomax.com/page/urn:hbo:page:GYLD3_ArixL1sggEAAAHk:type:series
+    noms:
+      - winner: false
+        cat: Female Actor in a TV Movie or Series
+        sub: Jennifer Coollidge
+        image: jennifer-coollidge.jpg
+      - winner: false 
+        cat: Male Actor in a TV Movie or Series
+        sub: Murray Bartlett
+        image: murray-bartlett.jpg
+  - title: Mare of Easttown
+    image: mare-of-easttown.jpg
+    trailer: https://www.youtube.com/watch?v=bm7RmpzCeyk
+    key: mareofeasttown
+    streaming: 
+      - source: hbomax
+        url: https://play.hbomax.com/page/urn:hbo:page:GYCiC1Q8picLCfAEAAAAC:type:series
+    noms:
+      - winner: true
+        cat: Female Actor in a TV Movie or Series
+        sub: Kate Winslet
+        image: kate-winslet.jpg
+      - winner: false
+        cat: Female Actor in a TV Movie or Series
+        sub: Jean Smart
+        image: jean-smart-easttown.jpg
+      - winner: false 
+        cat: Male Actor in a TV Movie or Series
+        sub: Evan Peters
+        image: evan-peters.jpg
+      - winner: false 
+        cat: Stunt Ensemble in a Television Series
+  - title: 'Genius: Aretha'
+    image: genius-aretha.jpg
+    trailer: https://www.youtube.com/watch?v=fZ5cyWLBk8o
+    key: geniusaretha
+    streaming: 
+      - source: hulu
+        url: https://www.hulu.com/series/genius-aretha-7af1d69e-e299-4f1c-be19-00018b903d3c
+    noms:
+      - winner: false
+        cat: Female Actor in a TV Movie or Series
+        sub: Cynthia Erivo
+        image: cynthia-erivo.jpg
+  - title: Scenes From a Marriege
+    image: scenes-from-a-marriege.jpg
+    trailer: https://www.youtube.com/watch?v=mRuVWHnQlV8
+    key: scenesfromamarriege
+    streaming: 
+      - source: hbomax
+        url: https://play.hbomax.com/page/urn:hbo:page:GYR0XEAt6Q4jDwgEAAAbB:type:series
+    noms:
+      - winner: false 
+        cat: Male Actor in a TV Movie or Series
+        sub: Oscar Isaac
+        image: oscar-isaac.jpg
+  - title: Dopesick
+    image: dopesick.jpg
+    trailer: https://www.youtube.com/watch?v=EzrLrUG2QVk
+    key: dopesick
+    streaming: 
+      - source: hulu
+        url: https://www.hulu.com/series/dopesick-227de06a-d3d4-42e0-9df1-bb5495e1738d
+    noms:
+      - winner: true 
+        cat: Male Actor in a TV Movie or Series
+        sub: Michael Keaton
+        image: michael-keaton.jpg
+  - title: Halston
+    image: halston.jpg
+    trailer: https://www.youtube.com/watch?v=yCgdWHwEnrg
+    key: halston
+    streaming: 
+      - source: netflix
+        url: https://www.netflix.com/title/80245103
+    noms:
+      - winner: false 
+        cat: Male Actor in a TV Movie or Series
+        sub: Ewan McGregor
+        image: ewan-mcgregor.jpg
+  - title: Cobra Kai
+    image: cobra-kai.jpg
+    trailer: https://www.youtube.com/watch?v=LcDQqGJG8pA
+    key: cobrakai
+    streaming: 
+      - source: netflix
+        url: https://www.netflix.com/title/81002370
+    noms:
+      - winner: false 
+        cat: Stunt Ensemble in a Television Series
+  - title: The Falcon and the Winter Soldier
+    image: the-falcon-and-the-winter-soldier.jpg
+    trailer: https://www.youtube.com/watch?v=IWBsDaFWyTE
+    key: thefalconandthewintersoldier
+    streaming: 
+      - source: disneyplus
+        url: https://www.disneyplus.com/series/the-falcon-and-the-winter-soldier/4gglDBMx8icA
+    noms:
+      - winner: false 
+        cat: Stunt Ensemble in a Television Series
+  - title: Black Widow
+    image: black-widow.jpg
+    trailer: https://www.youtube.com/watch?v=ybji16u608U
+    key: blackwidow
+    streaming: 
+      - source: disneyplus
+        url: https://www.disneyplus.com/movies/black-widow/3VfTap90rwZC
+    noms:
+      - winner: false 
+        cat: Stunt Ensemble in a Motion Picture
+  - title: The Matrix Resurrections
+    image: the-matrix-resurrections.jpg
+    trailer: https://www.youtube.com/watch?v=9ix7TUGVYIo
+    key: thematrixresurrections
+    streaming: 
+      - source: appletv
+        url: https://tv.apple.com/us/movie/the-matrix-resurrections/umc.cmc.1xfut1sq2hvb9faupyabxog7q
+    noms:
+      - winner: false 
+        cat: Stunt Ensemble in a Motion Picture
+  - title: Loki
+    image: loki.jpg
+    trailer: https://www.youtube.com/watch?v=nW948Va-l10
+    key: loki
+    streaming: 
+      - source: disneyplus
+        url: https://www.disneyplus.com/series/loki/6pARMvILBGzF
+    noms:
+      - winner: false 
+        cat: Stunt Ensemble in a Television Series
