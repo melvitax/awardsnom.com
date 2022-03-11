@@ -99,7 +99,9 @@ h1.site-title a:hover, h1.site-title a:active {
     width: 100%;
     font-size: 1rem;
 }
-
+.show-summary:hover {
+    cursor: pointer;
+}
 .border-bottom {
     border-bottom: 1px solid #252626 !important;
 }
