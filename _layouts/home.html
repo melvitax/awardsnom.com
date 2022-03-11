@@ -1,0 +1,66 @@
+---
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	{% include head.html %}
+	<body class="no-observer layout-{{ page.layout }}">
+
+        {% assign data = site.data[page.show][page.year] %}
+        {% assign dates = "" | split: ',' %}
+        {% for aDate in site.data[page.show] %}
+            {% assign dates = dates | push: aDate[0] %}
+        {% endfor %}
+        {% assign sortedDates = dates | sort | reverse %}
+        {% include header.html show=page.show year=page.year dates=sortedDates categories=data.categories pagelayout=page.layout %}
+
+        <main class="hide">
+
+            <div class="pb-5 main-content">
+            <div class="container">
+
+            {% include subheader.html %} 
+
+            <div class="row card-columns ml-0 mr-0 ">
+
+                {% assign jsyearstofetch = '["2021", "2022"]' %}
+                {% assign homeshows = "oscars-2022,sag-2022,goldenglobes-2022,emmys-2021,tonys-2021"  | split: ',' %}
+                {% assign jsnominees = "" | split: ',' %}
+                {% for showyear in homeshows %}
+                    {% assign parts = showyear | split: '-' %}
+                    {% assign aShow = parts[0] %}
+                    {% assign aYear = parts[1] %}
+                    {% assign data = site.data[aShow][aYear] %}
+                    {% for nominee in data.nominees %}
+                        {% assign noms = nominee.noms %}
+                        {% for nom in noms %}
+                            {% capture nomid %}{% if nom.key %}{{ nom.key }}{% else %}{{ nominee.key }}{% endif %}{% endcapture %}
+                            {% assign catid =  nom.cat | slugify %}
+                            {% capture nomtitle %}{% if nom.name %}{{ nom.name }}{% endif %}{% if nom.sub %}{% if nom.name %} - {% endif %}{{ nom.sub }}{% endif %}{% endcapture %}
+                            {% assign datatitle = nom.cat | append: " - " | append: nominee.title | append: " - " | append: nomtitle | replace: '"', '\"' %}
+                            {% capture image %}{% if nom.image %}{{ nom.image }}{% else %}{{ nominee.image }}{% endif %}{% endcapture %}
+                            {% assign thumb = image | replace: ".jpg", "-thumb.jpg" %}
+                            {% capture key %}{{ aShow }}|{{ aYear }}|{{ catid }}|{{ nomid }}{% endcapture %}
+                            {% capture line %}{ key: "{{ key }}", thumb: "{{ thumb }}", title: "{{ datatitle }}" }{% endcapture %}
+                            {% assign jsnominees = jsnominees | push: line %}
+                        {% endfor %}
+                    {% endfor %}
+                    <div class="col-10 col-sm-5" >
+                        <h3 class="fw-light text-uppercase text-warning">{{ data.showName }} <span class="float-end text-secondary">{{ data.year }}</span></h3>
+                        {% include mypicks.html show=aShow year=aYear %} 
+                        {% include winners.html show=aShow year=aYear %} 
+                    </div>
+                {% endfor %}
+            </div>
+            </div>
+            </div>
+            {% include video.html %}
+            {% include loading.html %}
+            {% include signin.html %}
+        </main>
+		{% include footer.html %}
+        {% include jsbridge.html jsnominees=jsnominees jsyearstofetch=jsyearstofetch %}
+		{% include scripts.html %}
+	</body>
+</html>

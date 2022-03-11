@@ -5,13 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	{% include head.html %}
-	<body class="no-observer">
-        <script>
-            var show = "{{ page.show }}";
-            var year = "{{ page.year }}";
-            var cloudKitApiToken = "{{ site.cloudKitApiToken }}";
-            var cloudKitEnvironment = "{{ site.cloudKitEnvironment }}";
-        </script>
+	<body class="no-observer layout-{{ page.layout }}">
         {% assign data = site.data[page.show][page.year] %}
         {% assign dates = "" | split: ',' %}
         {% for aDate in site.data[page.show] %}
@@ -19,6 +13,9 @@
         {% endfor %}
         {% assign sortedDates = dates | sort | reverse %}
         {% include header.html show=page.show year=page.year dates=sortedDates categories=data.categories pagelayout=page.layout %}
+        {% capture jsyearstofetch %}["{{ page.year }}"]{% endcapture %}
+        {% assign jsnominees = "" | split: ',' %}
+
         <main class="hide">
 
             <div class="pb-5 main-content">
@@ -26,7 +23,7 @@
 
             {% include subheader.html %} 
 
-            {% include mypicks.html %} 
+            {% include mypicks.html show=page.show year=page.year %}  
 
             <div class="row card-columns ml-0 mr-0 clearfix">
           
@@ -43,9 +40,14 @@
                     {% capture nomid %}{% if nom.key %}{{ nom.key }}{% else %}{{ nominee.key }}{% endif %}{% endcapture %}
                     {% assign catid =  cat | slugify %}
                     {% capture nomtitle %}{% if nom.name %}{{ nom.name }}{% endif %}{% if nom.sub %}{% if nom.name %} - {% endif %}{{ nom.sub }}{% endif %}{% endcapture %}
-                    {% assign datatitle = cat | append: " - " | append: nominee.title | append: " - " | append: nomtitle  %}
+                    {% assign datatitle = cat | append: " - " | append: nominee.title | append: " - " | append: nomtitle | replace: '"', '\"' %}
                     {% capture image %}{% if nom.image %}{{ nom.image }}{% else %}{{ nominee.image }}{% endif %}{% endcapture %}
                     {% assign thumb = image | replace: ".jpg", "-thumb.jpg" %}
+
+                    {% capture key %}{{ page.show }}|{{ page.year }}|{{ catid }}|{{ nomid }}{% endcapture %}
+                    {% capture line %}{ key: "{{ key }}", thumb: "{{ thumb }}", title: "{{ datatitle }}" }{% endcapture %}
+                    {% assign jsnominees = jsnominees | push: line %}
+
                     <div class="card mb-3 border-0 animate nom" data-cat="{{ catid }}" data-nom="{{ nomid }}" data-thumb="{{ thumb }}" data-title="{{ datatitle }}" >
                         <div class="row g-0"> 
                             <!-- Poster -->
@@ -106,6 +108,7 @@
             {% include signin.html %}
         </main>
 		{% include footer.html %}
+        {% include jsbridge.html jsnominees=jsnominees jsyearstofetch=jsyearstofetch %}
 		{% include scripts.html %}
 	</body>
 </html>

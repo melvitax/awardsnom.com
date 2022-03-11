@@ -51,8 +51,13 @@ function setUpAuth() {
     if(name) {
       displayUserName(name.givenName + ' ' + name.familyName);
     }
-    getTopRated();
-    getMyPicks();
+    if (typeof show !== 'undefined' && typeof year !== undefined) {
+      getTopRated()
+      getMyPicks()
+    } else if (layout == 'home') {
+      getLatestPicks()
+    }
+    
     // registerForNotifications();
     container
       .whenUserSignsOut()
@@ -106,7 +111,8 @@ function getTopRated(cat) {
       comparator: 'EQUALS', fieldName: 'cat', fieldValue: { value: cat }
     })
   }
-  publicDB.performQuery(query)
+  var options = { desiredKeys: ['cat', 'nom', 'votes'] }
+  publicDB.performQuery(query, options)
     .then(function (response) {
       if(response.hasErrors) {
        console.log("getTopRated error: " + response.errors[0])
@@ -145,7 +151,7 @@ function getMyPicks() {
     }, {
       comparator: 'EQUALS', fieldName: 'year', fieldValue: { value: year }
     }]
-  };
+  }
 
   privateDB.performQuery(query)
     .then(function (response) {
@@ -160,8 +166,10 @@ function getMyPicks() {
           console.log('getMyPicks query: ' + numberOfRecords + ' records');
           records.forEach(function (record) {
             var fields = record.fields;
-            removePickIndicators(fields.cat.value)
-            displayMyPick(fields.cat.value, fields.nom.value)
+            removeFromMyPicks(fields.cat.value)
+            displayMyPicks(fields.show.value, fields.year.value, fields.cat.value, fields.nom.value)
+            removeMyPickBadge(fields.cat.value)
+            displayMyPickBadge(fields.cat.value, fields.nom.value)
           });
         }
       }
@@ -171,10 +179,48 @@ function getMyPicks() {
     });
 }
 
+// Fetch Latest Picks
+function getLatestPicks() {
+  console.log("getLatestPicks()")
+  var container = CloudKit.getDefaultContainer();
+  var privateDB = container.privateCloudDatabase;
+
+  for (let i=0; i < jsyearstofetch.length; i++) {
+    let aYear = jsyearstofetch[i]
+    var query = {
+      recordType: 'Picks',
+      filterBy: [{comparator: 'EQUALS', fieldName: 'year', fieldValue: { value: aYear }}]
+    }
+    privateDB.performQuery(query)
+      .then(function (response) {
+        if(response.hasErrors) {
+         console.log("getLatestPicks error: " + response.errors[0])
+        } else {
+          var records = response.records;
+          var numberOfRecords = records.length;
+          if (numberOfRecords === 0) {
+            console.log('getLatestPicks query: none found')
+          } else {
+            console.log('getLatestPicks query: ' + numberOfRecords + ' records');
+            records.forEach(function (record) {
+              var fields = record.fields;
+              displayMyPicks(fields.show.value, fields.year.value, fields.cat.value, fields.nom.value)
+            });
+          }
+        }
+      })
+      .catch(function(error){
+        console.log("getLatestPicks error: " + error)
+      });
+  }
+  
+}
+
 // Toggle Pick
 function togglePick(cat, nom) {
   console.log("togglePick()")
-  removePickIndicators(cat)
+  removeMyPickBadge(cat)
+  removeFromMyPicks(cat)
   displayLoading()
   var container = CloudKit.getDefaultContainer();
   var privateDB = container.privateCloudDatabase;
@@ -189,7 +235,8 @@ function togglePick(cat, nom) {
       comparator: 'EQUALS', fieldName: 'cat', fieldValue: { value: cat }
     }
   ]
-  };
+  }
+  var options = { desiredKeys: ['cat', 'nom'] }
   // Check if there's a pick already
   privateDB.performQuery(query)
     .then(function (response) {
@@ -204,7 +251,7 @@ function togglePick(cat, nom) {
           // Delete unexpected extra picks
           if (records.length > 1) {
             console.log("togglePick removing " + (records.length-1) + "extra records ")
-            for(i=1; i<records.length; i++) {
+            for (let i=1; i<records.length; i++) {
               var record = records[i]
               privateDB.deleteRecords(record.recordName)
                 .then(function(deleteResponse) {
@@ -241,7 +288,8 @@ function togglePick(cat, nom) {
                     })
                   console.log("togglePick deleted: " + JSON.stringify(deletedRecord))
                 }
-                removePickIndicators(cat)
+                removeMyPickBadge(cat)
+                removeFromMyPicks(cat)
                 hideLoading()
               })
               .catch(function(error){
@@ -259,8 +307,10 @@ function togglePick(cat, nom) {
                   console.log("togglePick update error: " + deleteResponse.errors[0])
                 } else {
                   var updatedRecord = updateResponse.records[0];
-                  removePickIndicators(cat)
-                  displayMyPick(cat, nom)
+                  removeMyPickBadge(cat)
+                  removeFromMyPicks(cat)
+                  displayMyPickBadge(cat, nom)
+                  displayMyPicks(show, year, cat, nom)
                   var votes = [
                     { nom: prevNom, value: -1 }, 
                     { nom: updatedRecord.fields.nom.value, value: 1 }
@@ -295,8 +345,10 @@ function togglePick(cat, nom) {
                   console.log("togglePick save error: " + deleteResponse.errors[0])
                 } else {
                   var updatedRecord = saveResponse.records[0];
-                  removePickIndicators(cat)
-                  displayMyPick(cat, nom)
+                  removeMyPickBadge(cat)
+                  removeFromMyPicks(cat)
+                  displayMyPickBadge(cat, nom)
+                  displayMyPicks(show, year, cat, nom)
                   var votes = [{ nom: updatedRecord.fields.nom.value, value: 1} ]
                   updateVotes(show, year, cat, votes)
                     .then(function() {
@@ -477,7 +529,7 @@ function discoverAllUserIdentities() {
 }
 
 // Accept Share
-function demoAcceptShares(shortGUID) {
+function acceptShares(shortGUID) {
   var container = CloudKit.getDefaultContainer();
   container.acceptShares(shortGUID)
     .then(function(response) {
@@ -608,24 +660,34 @@ function enableTogglePicks() {
   })
 }
 
-// Remove Pick From Category
-function removePickIndicators(cat) {
-  // Update pick label
+// Remove My Pick Badge
+function removeMyPickBadge(cat) {
   $(".nom[data-cat='" + cat + "'] .pick-icon").remove()
-  // Update My Picks list
+}
+
+// Display My Pick Label
+function displayMyPickBadge(cat, nom) {
+  $(".nom[data-cat='" + cat + "'][data-nom='" + nom + "'] .rating").prepend('<span class="pick-icon lh-1 text-warning pt-1 w-auto" ><i class="fa-solid fa-heart"></i> Pick</span>')
+}
+
+// Remove from My Picks
+function removeFromMyPicks(cat) {
   $(".my-picks .img-wrapper[data-cat='" + cat + "']").attr("title", '')
   $(".my-picks .img-wrapper[data-cat='" + cat + "'] img").attr("src", '/assets/blank.gif').hide()
 }
 
 // Display My Picks
-function displayMyPick(cat, nom) {
-  // Update pick label
-  $(".nom[data-cat='" + cat + "'][data-nom='" + nom + "'] .rating").prepend('<span class="pick-icon lh-1 text-warning pt-1 w-auto" ><i class="fa-solid fa-heart"></i> Pick</span>')
-  // Update My Picks list
-  var thumb = $(".nom[data-cat='" + cat + "'][data-nom='" + nom + "']").attr("data-thumb")
-  var title = $(".nom[data-cat='" + cat + "'][data-nom='" + nom + "']").attr("data-title")
-  $(".my-picks .img-wrapper[data-cat='" + cat + "'] img").attr("src", '/'+show+'/'+year+'/images/'+thumb).show()
-  $(".my-picks .img-wrapper[data-cat='" + cat + "']").attr("title", title)
+function displayMyPicks(show, year, cat, nom) {
+  var nomKey = show+'|'+year+'|'+cat+'|'+nom
+  var matches = nominees.filter(nominee => nominee.key == nomKey)
+  console.log("displayMyPicks() nomKey: "+nomKey+" matches: "+JSON.stringify(matches))
+  if (matches.length > 0) {
+    var nomination = matches[0]
+    var thumb = nomination['thumb']
+    var title = nomination['title']
+    $(".my-picks[data-show='" + show + "'][data-year='" + year + "'] .img-wrapper[data-cat='" + cat + "'] img").attr("src", '/'+show+'/'+year+'/images/'+thumb).show()
+    $(".my-picks[data-show='" + show + "'][data-year='" + year + "'] .img-wrapper[data-cat='" + cat + "']").attr("title", title)
+  }
 }
 
 // Display isTop
@@ -698,7 +760,7 @@ function setCookie(c_name, value, exdays) {
 function getCookie(c_name) {
   'use strict';
   var i, x, y, ARRcookies = document.cookie.split(";");
-  for (i = 0; i < ARRcookies.length; i++) {
+  for (let i = 0; i < ARRcookies.length; i++) {
       x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
       y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
       x = x.replace(/^\s+|\s+$/g, "");

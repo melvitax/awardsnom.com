@@ -5,13 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	{% include head.html %}
-	<body class="no-observer">
-        <script>
-            var show = "{{ page.show }}";
-            var year = "{{ page.year }}";
-            var cloudKitApiToken = "{{ site.cloudKitApiToken }}";
-            var cloudKitEnvironment = "{{ site.cloudKitEnvironment }}";
-        </script>
+	<body class="no-observer layout-{{ page.layout }}">
         {% assign data = site.data[page.show][page.year] %}
         {% assign dates = "" | split: ',' %}
         {% for aDate in site.data[page.show] %}
@@ -19,6 +13,8 @@
         {% endfor %}
         {% assign sortedDates = dates | sort | reverse %}
         {% include header.html show=page.show year=page.year dates=sortedDates categories=data.categories pagelayout=page.layout %}
+        {% capture jsyearstofetch %}["{{ page.year }}"]{% endcapture %}
+
         <main class="hide">
 
             <div class="pb-5 main-content">
@@ -104,6 +100,7 @@
             {% include signin.html %}
         </main>
 		{% include footer.html %}
+        {% include jsbridge.html jsnominees=jsnominees jsyearstofetch=jsyearstofetch %}
 		{% include scripts.html %}
 	</body>
 </html>

@@ -1,0 +1,13 @@
+<script>
+    {% if page.show %}
+    var show = "{{ page.show }}";
+    {% endif %}
+    {% if page.year %}
+    var year = "{{ page.year }}";
+    {% endif %}
+    var layout = "{{ page.layout }}";
+    var cloudKitApiToken = "{{ site.cloudKitApiToken }}";
+    var cloudKitEnvironment = "{{ site.cloudKitEnvironment }}";
+    var nominees = [ {{ include.jsnominees | join: ', ' }} ]
+    var jsyearstofetch = {{ include.jsyearstofetch }}
+</script>

@@ -3,7 +3,9 @@
     color-scheme: light dark;
 }
 body {
-    background-color: #f8f9fa;
+    background-color: rgb(18, 17, 17);
+    color: white;
+    height: 100%;
 }
 a:link, a:hover, a:active, a:visited {
     text-decoration: none;
@@ -15,43 +17,43 @@ a:link, a:hover, a:active, a:visited {
     }
 }
 h1.site-title {
-    color: black;
+    color: white;
     font-size: 10.8vw;
 }
 h1.site-title a:link, h1.site-title a:visited {
-    color: black;
+    color: white;
 }
 h1.site-title a:hover, h1.site-title a:active {
     color: #ffc107;
 }
 @include media-breakpoint-up(md) { h1.site-title { font-size: 2.8em; } }
 
-.my-picks .img-wrapper {
+.accordion .img-wrapper {
     position: relative;
     float: left;
     box-shadow: 0.2rem 0 0.5rem rgba(0,0,0,0.15);
     border-radius: .25rem;
-    background: rgb(238,242,246);
-    background: linear-gradient(0deg, rgb(222, 225, 227) 0%, rgb(238, 242, 246) 100%);
+    background: rgb(84,91,97);
+    background: linear-gradient(0deg, rgba(84,91,97,1) 0%, rgba(108,117,125,1) 100%);
     overflow: hidden;
 }
-.my-picks .img-wrapper:hover {
+.accordion .img-wrapper:hover  {
     transition: ease-in-out 0.25s all !important;
     transform: scale(1.2);
     z-index: 999 !important;
     box-shadow: 0 0.5rem 3rem rgba(0,0,0,0.5)
 }
-.my-picks .img-container::before {
+.accordion .img-container::before {
     float: left;
     padding-top: 154.6875%;
     content: '';
   }
-.my-picks .img-container::after {
+.accordion .img-container::after {
     display: block;
     content: '';
     clear: both;
 }
-.my-picks img {
+.accordion img {
     position: absolute;
     top: 0;
     left: 0;
@@ -59,10 +61,12 @@ h1.site-title a:hover, h1.site-title a:active {
     bottom: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover;  
+}
+.my-picks img {
     display: none;
 }
-.my-picks .default {
+.accordion .default {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -73,43 +77,66 @@ h1.site-title a:hover, h1.site-title a:active {
     flex-direction: column;
     font-size: 0.7em;
     text-align: center;
-    color: #c5c8cb;
+    color: rgb(116, 127, 136);
 }
-@include media-breakpoint-down(lg) { .my-picks .default { opacity: 0 } }
+.my-picks h3 {
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+}
+.layout-home .my-picks .default { 
+    opacity: 0 
+}
+.winners {
+    top: -5rem;
+    position: relative;
+}
+.winners h3 {
+    position: absolute;
+    bottom: 0;
+    z-index: 99;
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+}
 
+.border-bottom {
+    border-bottom: 1px solid #252626 !important;
+}
 .cat-title {
     letter-spacing: 0.2em;
 }
 h2.show-title {
-    color: black;
+    color: white;
 }
 .item-title {
-    color: rgb(66, 66, 66);
+    color: rgb(179, 179, 179);
     border-top: 6px solid transparent;
 }
 .nom:hover {
     cursor: pointer;
 }
 .nom:hover .item-title {
-    color: black
+    color: white
 }
 .nom:hover .meta {
-    color: black
+    color: white
 }
 .nominee-title {
-    color: black;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+    color: white;
+    border-bottom: 1px solid rgb(98, 98, 98);
 }
 .header-blur {
-    background-color: #f8f9faa1;
+    background-color: rgba(0, 0, 0, 0.7);
     -webkit-backdrop-filter: blur(10px); 
     backdrop-filter: blur(10px);
     border-bottom: rgba(128, 128, 128, 0.3) 1px solid;
 } 
 .nav .btn-outline-warning:not(.active) {
-    background-color: rgba(255, 255, 255, 0.333);
-    color: rgb(0, 0, 0);
+    background-color: transparent;
+    color: white;
 }
+
 .grow { transition: all .2s ease-in-out; }
 .grow:hover, .grow:active { 
   transform: translateZ(0px) scale(1.05);
@@ -119,7 +146,7 @@ h2.show-title {
 .source-logo svg {
     height: 1em;
     width: auto;
-    fill: #000;
+    fill: #fff;
 }
 .source-logo.appletv svg, .source-logo.appletvplus svg {
     height: 1.1em;
@@ -133,7 +160,7 @@ h2.show-title {
     background-color: transparent;
 }
 .meta {
-    color: rgb(99, 108, 117);
+    color: slategray;
 }
 .nominee-data {
     color: rgb(99, 108, 117);
@@ -150,63 +177,8 @@ iframe {
     width: 100%;
     height: 100%;
 }
-@media (prefers-color-scheme: dark) {
-    body {
-      background-color: rgb(18, 17, 17);
-      color: white;
-      height: 100%;
-    }
-    .border-bottom {
-        border-bottom: 1px solid #252626 !important;
-    }
-    h1.site-title {
-        color: white;
-    }
-    h1.site-title a:link, h1.site-title a:visited {
-        color: white;
-    }
-    h1.site-title a:hover, h1.site-title a:active {
-        color: #ffc107;
-    }
-    .nav .btn-outline-warning:not(.active) {
-        background-color: transparent;
-        color: white;
-    }
-    .my-picks .img-wrapper {
-        background: rgb(84,91,97);
-        background: linear-gradient(0deg, rgba(84,91,97,1) 0%, rgba(108,117,125,1) 100%);
-    }
-    .my-picks .default {
-        color: rgb(116, 127, 136);
-    }
-    .nominee-title {
-        color: white;
-        border-bottom: 1px solid rgb(98, 98, 98);
-    }
-    h2.show-title {
-        color: white;
-    }
-    .item-title {
-        color: rgb(179, 179, 179)
-    }
-    .nom:hover .item-title {
-        color: white
-    }
-    .nom:hover .meta {
-        color: white
-    }
-    .meta {
-        color: slategray;
-    }
-    .header-blur {
-        background-color: rgba(0, 0, 0, 0.7);
-    }
-    .sourceLogo svg {
-        fill: #fff;
-    }
-    footer th {
-        color: white;
-    }
+footer th {
+    color: white;
 }
 
 /***************

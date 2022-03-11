@@ -1,4 +1,5 @@
-title: "2022"
+showName: "Golden Globes"
+year: "2022"
 day: 2022-01-09
 categories:
   - Best Picture Drama
@@ -643,7 +644,7 @@ nominees:
         cat: 'Best Television Actress: Drama Series'
         sub: Michaela Jaé Rodriguez
         key: mjrodriguez
-        image: mj-rodriguez
+        image: mj-rodriguez.jpg
       - winner: false
         cat: 'Best Television Actor: Drama Series'
         sub: Billy Porter
