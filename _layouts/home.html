@@ -46,7 +46,7 @@
                             {% assign jsnominees = jsnominees | push: line %}
                         {% endfor %}
                     {% endfor %}
-                    <div class="col-10 col-sm-5" >
+                    <div class="col-10 col-sm-5" onclick="location.href='/{{ aShow }}/{{ aYear }}';">
                         <h3 class="fw-light text-uppercase text-warning">{{ data.showName }} <span class="float-end text-secondary">{{ data.year }}</span></h3>
                         {% include mypicks.html show=aShow year=aYear %} 
                         {% include winners.html show=aShow year=aYear %} 
