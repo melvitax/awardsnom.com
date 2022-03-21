@@ -87,9 +87,12 @@ h1.site-title a:hover, h1.site-title a:active {
 .layout-home .my-picks .default { 
     opacity: 0 
 }
+.layout-home .my-picks{
+    opacity: 0.5;
+}
 .winners {
-    top: -5rem;
     position: relative;
+
 }
 .winners h3 {
     position: absolute;

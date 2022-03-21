@@ -1,8 +1,10 @@
-<div class="pb-3 winners">
+{% assign data = site.data[include.show][include.year] %}
+{% assign numofcat = data.categories | size | plus: 1 | divided_by: 2.0 %}
+{% assign imgwidth = 100.00 | divided_by: numofcat  %}
+{% assign yoffset = imgwidth | times: 8.3 %}
+
+<div class="pb-3 winners" style="top: -{{ yoffset }}px">
     <h3>Winners</h3>
-    {% assign data = site.data[include.show][include.year] %}
-    {% assign numofcat = data.categories | size | plus: 1 | divided_by: 2.0 %}
-    {% assign imgwidth = 100.00 | divided_by: numofcat  %}
     <div class="accordion position-relative w-100">
         {% for cat in data.categories %}
             {% assign catid =  cat | slugify %}
@@ -11,14 +13,16 @@
             {% assign offset = widthpercent | divided_by: 2.0 %}
             {% capture left %}{% if forloop.index > 1 %}-{{ offset }}%{% else %}0{% endif %}{% endcapture %}
             {% assign zindex = data.categories | size | plus: 1 |  minus: forloop.index %}
-            <div class="img-wrapper" data-cat="{{ catid }}" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-offset="0,20" title="{{ cat }}" style="margin-left: {{ left }}; width: {{ imgwidth }}%;  z-index: {{ zindex }}">
+            
+            <div class="img-wrapper"  style="margin-left: {{ left }}; width: {{ imgwidth }}%;  z-index: {{ zindex }}">
                 <div class="img-container" >
                     {% for nominee in data.nominees %}
                     {% assign noms = nominee.noms | where: "cat", cat %}
                     {% for nom in noms %}
                     {% if nom.winner %}
                         {% capture image %}{% if nom.image %}{{ nom.image }}{% else %}{{ nominee.image }}{% endif %}{% endcapture %}
-                        <img class="card-img w-100 h-100 rounded-5 p-0" src="/{{include.show}}/{{include.year}}/images/{{ image }}" width="230" height="355" alt="{{ alt }}"  />
+                        {% capture nomtitle %}{{ cat }} - {{ nominee.title }}{% if nom.name %} - {{ nom.name }}{% endif %}{% if nom.sub %}{% if nom.name %} - {% endif %}{{ nom.sub }}{% endif %}{% endcapture %}
+                        <img class="card-img w-100 h-100 rounded-5 p-0" src="/{{include.show}}/{{include.year}}/images/{{ image }}" width="230" height="355" alt="{{ alt }}" data-cat="{{ catid }}" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-offset="0,20" title="{{ nomtitle }}" />
                     {% endif %}
                     {% endfor %}
                     {% endfor %}
