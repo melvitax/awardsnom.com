@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	{% include head.html %}
-	<body class="no-observer layout-{{ page.layout }}">
+	<body class="layout-{{ page.layout }}">
         {% assign data = site.data[page.show][page.year] %}
         {% assign dates = "" | split: ',' %}
         {% for aDate in site.data[page.show] %}
@@ -43,7 +43,7 @@
                         <h3 class="col-10 pt-3 pb-2 text-center border-bottom text-warning fw-bold fs-3 cat-title"><span class="source-logo {{service}} align-bottom">{% include icons/{{service}}.svg %}</span><br />{{ numOfNominees }}</h3>
                         {% for nominee in nominees %}
                             <div class="col-5 col-sm-3 col-md-2 pt-4 pb-2" >
-                                <div class="card mb-3 border-0 animate">
+                                <div class="card mb-3 border-0 fadeup">
                                     <div class="row g-0"> 
                                         <!-- Poster -->
                                         <img class="card-img w-100 h-100 rounded-5 p-0" src="/{{page.show}}/{{page.year}}/images/{{ nominee.image }}" width="230" height="355" alt="{{ name }}" />
