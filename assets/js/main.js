@@ -680,7 +680,7 @@ function removeFromMyPicks(cat) {
 function displayMyPicks(show, year, cat, nom) {
   var nomKey = show+'|'+year+'|'+cat+'|'+nom
   var matches = nominees.filter(nominee => nominee.key == nomKey)
-  console.log("displayMyPicks() nomKey: "+nomKey+" matches: "+JSON.stringify(matches))
+  // console.log("displayMyPicks() nomKey: "+nomKey+" matches: "+JSON.stringify(matches))
   if (matches.length > 0) {
     var nomination = matches[0]
     var thumb = nomination['thumb']
