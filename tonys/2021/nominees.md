@@ -4,4 +4,5 @@ layout: nominees
 show: tonys
 year: '2021'
 showname: Tonys
+permalink: /tonys/2021/nominees/
 ---
