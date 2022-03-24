@@ -256,19 +256,17 @@ function togglePick(cat, nom) {
               privateDB.deleteRecords(record.recordName)
                 .then(function(deleteResponse) {
                   if(deleteResponse.hasErrors) {
-                    console.log("togglePick delete error: " + deleteResponse.errors[0])
+                    console.log("togglePick delete extras error: " + deleteResponse.errors[0])
                   } else {
-                    var deletedRecord = deleteResponse.records[0];
-                    var votes = [{ nom: deletedRecord.fields.nom.value, value: -1} ]
-                    updateVotes(show, year, cat, votes)
+                    updateVotes(show, year, cat, record.fields.nom.value, -1)
                       .then(function() {
                         getTopRated()
                       })
-                    console.log("togglePick deleted: " + JSON.stringify(deletedRecord))
+                    console.log("togglePick extras deleted")
                   }
                 })
                 .catch(function(error){
-                  console.log("togglePick delete error: " + error)
+                  console.log("togglePick delete extras error caught: " + error)
                 })
             }
           }
@@ -281,18 +279,18 @@ function togglePick(cat, nom) {
                   console.log("togglePick delete error: " + deleteResponse.errors[0])
                 } else {
                   var deletedRecord = deleteResponse.records[0]
-                  var votes = [{ nom: deletedRecord.fields.nom.value, value: -1 }]
-                  updateVotes(show, year, cat, votes)
+                  console.log("togglePick deleted")
+                  updateVotes(show, year, cat, nom, -1)
                     .then(function() {
                       getTopRated()
                     })
-                  console.log("togglePick deleted: " + JSON.stringify(deletedRecord))
                 }
                 removeMyPickBadge(cat)
                 removeFromMyPicks(cat)
                 hideLoading()
               })
               .catch(function(error){
+                console.log("togglePick delete error caught: " + error)
                 hideLoading()
               })
           }
@@ -311,19 +309,19 @@ function togglePick(cat, nom) {
                   removeFromMyPicks(cat)
                   displayMyPickBadge(cat, nom)
                   displayMyPicks(show, year, cat, nom)
-                  var votes = [
-                    { nom: prevNom, value: -1 }, 
-                    { nom: updatedRecord.fields.nom.value, value: 1 }
-                  ]
-                  updateVotes(show, year, cat, votes)
+                  updateVotes(show, year, cat, prevNom, -1)
                     .then(function() {
-                      getTopRated()
+                      updateVotes(show, year, cat, nom, 1)
+                        .then(function() {
+                          getTopRated()
+                        })
                     })
                   console.log("togglePick updated: " + JSON.stringify(updatedRecord))
                 }
                 hideLoading()
               })
               .catch(function(error){
+                console.log("togglePick update error caught: " + error)
                 hideLoading()
               })
           }
@@ -344,21 +342,21 @@ function togglePick(cat, nom) {
                 if(saveResponse.hasErrors) {
                   console.log("togglePick save error: " + deleteResponse.errors[0])
                 } else {
-                  var updatedRecord = saveResponse.records[0];
                   removeMyPickBadge(cat)
                   removeFromMyPicks(cat)
                   displayMyPickBadge(cat, nom)
                   displayMyPicks(show, year, cat, nom)
-                  var votes = [{ nom: updatedRecord.fields.nom.value, value: 1} ]
-                  updateVotes(show, year, cat, votes)
+                  updateVotes(show, year, cat, nom, 1)
                     .then(function() {
                       getTopRated()
                     })
-                  console.log("togglePick saved: " + JSON.stringify(updatedRecord))
+                  var updatedRecord = saveResponse.records[0];
+                  console.log("togglePick saved: " + cat + ' ' + nom)
                 }
                 hideLoading()
               })
               .catch(function(error){
+                console.log("togglePick save error caught: " + error)
                 hideLoading()
               })
         }
@@ -374,7 +372,7 @@ function togglePick(cat, nom) {
 }
 
 // Update Votes
-function updateVotes(show, year, cat, votes) {
+function updateVotes(show, year, cat, nom, voteChange) {
   console.log("updateVotes()")
   return new Promise(function (fulfilled) {
     var container = CloudKit.getDefaultContainer();
@@ -388,6 +386,8 @@ function updateVotes(show, year, cat, votes) {
         comparator: 'EQUALS', fieldName: 'year', fieldValue: { value: year }
       }, {
         comparator: 'EQUALS', fieldName: 'cat', fieldValue: { value: cat }
+      }, {
+        comparator: 'EQUALS', fieldName: 'nom', fieldValue: { value: nom }
       }]
     };
     // Check if there's an entry first
@@ -398,53 +398,46 @@ function updateVotes(show, year, cat, votes) {
           console.log("updateVotes fetch error: " + response.errors[0])
         } else {
           var recordsToSave = []
-          
+          // Create new vote record
           if (records.length === 0) {
-            console.log('updateVotes query: none found')
-            votes.forEach(function (vote) {
-              var newValue = Math.max(vote.value, 0)
-              var newRecord = {
-                recordType: 'Votes',
-                fields: {
-                  show: { value: show },
-                  year: { value: year },
-                  cat: { value: cat },
-                  nom: { value: vote.nom }, 
-                  votes: { value: newValue }
-                }
+            console.log('updateVotes query: none found for ' + cat + ' ' + nom)
+            var newRecord = {
+              recordType: 'Votes',
+              fields: {
+                show: { value: show },
+                year: { value: year },
+                cat: { value: cat },
+                nom: { value: nom }, 
+                votes: { value: 1 }
               }
-              recordsToSave.push(newRecord)
-            })
-
+            }
+            recordsToSave.push(newRecord)
           } else {
-            console.log('updateVotes query: found ' + records.length)
-            votes.forEach(function (vote) {
-              var isNewRecord = true
-              records.forEach(function (record) {
-                // Update vote
-                if (record.fields.nom.value === vote.nom) {
-                  var currentValue = (record.fields.votes.value === undefined) ? 0 : record.fields.votes.value
-                  var newValue = Math.max((currentValue + vote.value), 0)
-                  record.fields.votes = { value: newValue }
-                  recordsToSave.push(record)
-                  isNewRecord = false
-                }
-              })
-              if (isNewRecord) {
-                var newValue = Math.max(vote.value, 0)
-                var newRecord = {
-                  recordType: 'Votes',
-                  fields: {
-                    show: { value: show },
-                    year: { value: year },
-                    cat: { value: cat },
-                    nom: { value: vote.nom }, 
-                    votes: { value: newValue }
-                  }
-                }
-                recordsToSave.push(newRecord)
+            // Delete unexpected extra vote records
+            if (records.length > 1) {
+              console.log("updateVotes removing " + (records.length-1) + "extra records ")
+              for (let i=1; i<records.length; i++) {
+                var record = records[i]
+                publicDB.deleteRecords(record.recordName)
+                  .then(function(deleteResponse) {
+                    if(deleteResponse.hasErrors) {
+                      console.log("updateVotes delete error: " + deleteResponse.errors[0])
+                    } else {
+                      var deletedRecord = deleteResponse.records[0];
+                      console.log("updateVotes deleted")
+                    }
+                  })
+                  .catch(function(error){
+                    console.log("updateVotes delete error: " + error)
+                  })
               }
-            })
+            }
+            // Update record
+            var record = records[0]
+            var currentValue = (record.fields.votes.value === undefined) ? 0 : record.fields.votes.value
+            var newValue = Math.max((currentValue + voteChange), 0)
+            record.fields.votes = { value: newValue }
+            recordsToSave.push(record)
           }
           publicDB.saveRecords(recordsToSave)
             .then(function(saveResponse) {
@@ -453,11 +446,11 @@ function updateVotes(show, year, cat, votes) {
                 }
                 fulfilled()
             }).catch(function(error){
-              console.log("updateVotes save error: " + error)
+              console.log("updateVotes save error caught: " + error)
             });
         }
       }).catch(function(error){
-        console.log("updateVotes query error: " + error)
+        console.log("updateVotes query error caught: " + error)
       })
     })
 }
