@@ -376,6 +376,8 @@ nominees:
     trailer: https://www.youtube.com/watch?v=Jd9L79koFkA
     key: dune
     streaming:
+      - source: hbomax
+        url: https://play.hbomax.com/page/urn:hbo:page:GYUjdLgBiJp5otAEAAAAJ:type:feature
       - source: appletv
         url: https://tv.apple.com/us/movie/dune/umc.cmc.2l7qj9p33t3jww1roxi8cgiw5
     noms:
