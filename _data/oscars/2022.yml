@@ -770,6 +770,9 @@ nominees:
       - winner: false
         cat: Best Short Film, Live Action
         sub: Tadeusz Łysiak and Maciej Ślesicki
+    streaming: 
+      - source: hbomax
+        url: https://play.hbomax.com/page/urn:hbo:page:GYjJCagQ2Kx-ygQEAAAAC:type:feature
   - title: The Long Goodbye
     image: the-long-goodbye.jpg
     trailer: https://www.youtube.com/watch?v=aM8ZqeYxsJ4
