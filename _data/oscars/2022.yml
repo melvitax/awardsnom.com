@@ -116,6 +116,8 @@ nominees:
     trailer: https://www.youtube.com/watch?v=FIsNbpJIa6k
     key: kingrichard
     streaming:
+      - source: hbomax
+        url: https://play.hbomax.com/page/urn:hbo:page:GYXB0OgEQO5OhegEAAAAl:type:feature
       - source: appletv
         url: https://tv.apple.com/us/movie/king-richard/umc.cmc.11i83ne5iq37usxzghkyicmwk
     noms:
