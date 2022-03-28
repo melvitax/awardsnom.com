@@ -311,7 +311,7 @@ nominees:
       - source: disneyplus
         url: https://www.disneyplus.com/movies/encanto/33q7DY1rtHQH
     noms:
-      - winner: false
+      - winner: true
         cat: Best Animated Feature
         sub: Jared Bush, Byron Howard, Yvett Merino and Clark Spencer
       - winner: false
