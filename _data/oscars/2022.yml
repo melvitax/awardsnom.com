@@ -204,7 +204,7 @@ nominees:
         cat: Best Supporting Actor
         sub: Troy Kotsur
         image: troy-kotsur.jpg
-      - winner: false
+      - winner: true
         cat: Best Picture
         sub: Philippe Rousselet, Fabrice Gianfermi and Patrick Wachsberger, Producers
       - winner: true
