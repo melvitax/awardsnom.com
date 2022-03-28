@@ -75,7 +75,7 @@ nominees:
       - winner: false
         cat: Best Cinematography
         sub: Ari Wegner
-      - winner: false
+      - winner: true
         cat: Best Director
         sub: Jane Campion
       - winner: false
