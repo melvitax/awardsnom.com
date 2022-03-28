@@ -281,7 +281,7 @@ nominees:
       - source: hbomax
         url: https://play.hbomax.com/page/urn:hbo:page:GYf0-iQ1eoRKojgEAAAAC:type:feature
     noms:
-      - winner: false
+      - winner: true
         cat: Best Supporting Actress
         sub: Ariana DeBose
         image: ariana-debose.jpg
