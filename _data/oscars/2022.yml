@@ -528,7 +528,7 @@ nominees:
       - source: disneyplus
         url: https://www.disneyplus.com/movies/summer-of-soul-or-when-the-revolution-could-not-be-televised/kbSrVIU25suX
     noms:
-      - winner: false
+      - winner: true
         cat: Best Documentary, Feature
         sub: Ahmir "Questlove" Thompson, Joseph Patel, Robert Fyvolent and David Dinerstein
   - title: Writing With Fire 
