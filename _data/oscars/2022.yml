@@ -381,7 +381,7 @@ nominees:
       - source: appletv
         url: https://tv.apple.com/us/movie/dune/umc.cmc.2l7qj9p33t3jww1roxi8cgiw5
     noms:
-      - winner: false
+      - winner: true
         cat: Best Cinematography
         sub: Greig Fraser
       - winner: false
@@ -402,7 +402,7 @@ nominees:
       - winner: false
         cat: Best Production Design
         sub: 'Patrice Vermette; Set Decoration: Zsuzsanna Sipos'
-      - winner: false
+      - winner: true
         cat: Best Sound
         sub: Mac Ruth, Mark Mangini, Theo Green, Doug Hemphill and Ron Bartlett
       - winner: false
