@@ -189,7 +189,7 @@ nominees:
       - winner: false
         cat: Best Sound
         sub: Denise Yarde, Simon Chase, James Mather and Niv Adiri
-      - winner: false
+      - winner: true
         cat: Best Original Screenplay
         sub: Kenneth Branagh
   - title: Coda
