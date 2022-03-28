@@ -17,6 +17,7 @@
                         <li><a class="dropdown-item" href="/tonys/2021/{{layoutChoice}}">Tonys</a></li> 
                     </ul>
                 </div>
+                {% if include.pagelayout == "show" or include.pagelayout == "nominees" or include.pagelayout == "streaming" %}
                 <!-- Tab: Year -->
                 <div class="btn-group" role="group">
                     <button type="button" class="btn btn-outline-warning dropdown-toggle dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -44,6 +45,7 @@
                         {% endfor %}
                     </ul>
                 </div>
+                {% endif %}
             </div>
         </div>
     </nav>
