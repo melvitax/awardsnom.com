@@ -200,7 +200,7 @@ nominees:
       - source: appletvplus
         url: https://tv.apple.com/us/movie/coda/umc.cmc.3eh9r5iz32ggdm4ccvw5igiir
     noms:
-      - winner: false
+      - winner: true
         cat: Best Supporting Actor
         sub: Troy Kotsur
         image: troy-kotsur.jpg
