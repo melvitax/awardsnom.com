@@ -682,7 +682,7 @@ nominees:
       - source: appletv
         url: https://tv.apple.com/us/movie/no-time-to-die/umc.cmc.1sk81aco37s8f5grnjp6ydqad
     noms:
-      - winner: false
+      - winner: true
         cat: Best Original Song
         name: No Time To Die
         sub: Billie Eilish and Finneas O'Connell
