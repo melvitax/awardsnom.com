@@ -441,7 +441,7 @@ nominees:
       - source: disneyplus
         url: https://www.disneyplus.com/movies/cruella/2GJTZuO8I01c
     noms:
-      - winner: false
+      - winner: true
         cat: Best Costume Design
         sub: Jenny Beavan
       - winner: false
