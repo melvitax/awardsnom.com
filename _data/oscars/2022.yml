@@ -466,7 +466,7 @@ nominees:
       - winner: false
         cat: Best Director
         sub: Ryusuke Hamaguchi
-      - winner: false
+      - winner: true
         cat: Best International Feature Film
         sub: Japan
       - winner: false
