@@ -207,7 +207,7 @@ nominees:
       - winner: false
         cat: Best Picture
         sub: Philippe Rousselet, Fabrice Gianfermi and Patrick Wachsberger, Producers
-      - winner: false
+      - winner: true
         cat: Best Adapted Screenplay
         sub: Siân Heder
   - title: The Eyes of Tammy Faye
