@@ -121,7 +121,7 @@ nominees:
       - source: appletv
         url: https://tv.apple.com/us/movie/king-richard/umc.cmc.11i83ne5iq37usxzghkyicmwk
     noms:
-      - winner: false
+      - winner: true
         cat: Best Actor
         sub: Will Smith
         image: will-smith.jpg
