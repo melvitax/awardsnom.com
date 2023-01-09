@@ -43,7 +43,7 @@ nominees:
         winner: false
   - title: "Elvis"
     image: elvis.jpg
-    key: avatarthewayofwater
+    key: elvis
     trailer: https://www.youtube.com/watch?v=wBDLRvjHVOY
     streaming:
       - source: hbomax
