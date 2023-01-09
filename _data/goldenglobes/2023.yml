@@ -1,0 +1,1032 @@
+showName: "Golden Globes"
+year: "2023"
+day: 2023-01-10
+categories:
+  - Best Picture Drama
+  - 'Best Picture: Musical/Comedy'
+  - 'Best Actress: Motion Picture Drama'
+  - 'Best Actor: Motion Picture Drama'
+  - 'Best Actress: Motion Picture - Musical/Comedy'
+  - 'Best Actor: Motion Picture - Musical/Comedy'
+  - 'Best Supporting Actress: Any Motion Picture'
+  - 'Best Supporting Actor: Any Motion Picture'
+  - Best Director Motion Picture
+  - Best Screenplay Motion Picture
+  - 'Best Picture: Animated'
+  - 'Best Picture: Non-English Language'
+  - Best Score Motion Picture
+  - Best Original Song Motion Picture
+  - Best Drama Series
+  - Best Musical/Comedy Series
+  - 'Best Television: Limited/Anthology Series or Motion Picture'
+  - 'Best Actress: Limited/Anthology Series or Motion Picture'
+  - 'Best Actor: Limited/Anthology Series or Motion Picture'
+  - 'Best Television Actress: Drama Series'
+  - 'Best Television Actor: Drama Series'
+  - 'Best Television Actress: Musical/Comedy Series'
+  - 'Best Television Actor: Musical/Comedy Series'
+  - 'Best Supporting Actress: Limited/Anthology Series or Motion Picture'
+  - 'Best Supporting Actor: Limited/Anthology Series or Motion Picture'
+  - 'Best Supporting Actress: Musical/Comedy/Drama Series'
+  - 'Best Supporting Actor: Musical/Comedy/Drama Series'
+
+nominees:
+  - title: "Avatar: The Way of Water"
+    image: avatar-the-way-of-water.jpg
+    key: avatarthewayofwater
+    trailer: https://www.youtube.com/watch?v=d9MyW72ELq0
+    noms:
+      - cat: Best Picture Drama
+        winner: false
+      - cat: Best Director Motion Picture
+        sub: James Cameron
+        winner: false
+  - title: "Elvis"
+    image: elvis.jpg
+    key: avatarthewayofwater
+    trailer: https://www.youtube.com/watch?v=wBDLRvjHVOY
+    streaming:
+      - source: hbomax
+        url: https://play.hbomax.com/page/urn:hbo:page:GYuwmqAnwQZa8kAEAAAE-:type:feature
+    noms:
+      - cat: Best Picture Drama
+        winner: false
+      - cat: 'Best Actor: Motion Picture Drama'
+        sub: Austin Butler
+        key: austinbutler
+        image: austin-butler.jpg
+        winner: false
+      - cat: Best Director Motion Picture
+        sub: Baz Luhrmann
+        winner: false
+  - title: "The Fabelmans"
+    image: the-fabelmans.jpg
+    key: thefabelmans
+    trailer: https://www.youtube.com/watch?v=D1G2iLSzOe8
+    noms:
+      - cat: Best Picture Drama
+        winner: false
+      - cat: Best Director Motion Picture
+        sub: Steven Spielberg
+        winner: false
+      - cat: 'Best Actress: Motion Picture Drama'
+        sub: Michelle Williams
+        key: michellewilliams
+        image: michelle-williams.jpg
+        winner: false
+      - cat: Best Screenplay Motion Picture
+        sub: Tony Kushner, Steven Spielberg
+        winner: false
+      - cat: Best Score Motion Picture
+        sub: John Williams
+        winner: false
+  - title: "TÁR"
+    image: tar.jpg
+    key: tar
+    trailer: https://www.youtube.com/watch?v=O3JIVY6ySkE
+    noms:
+      - cat: Best Picture Drama
+        winner: false
+      - cat: 'Best Actress: Motion Picture Drama'
+        sub: Cate Blanchett
+        key: cateblanchett
+        image: cate-blanchett.jpg
+        winner: false
+      - cat: 'Best Screenplay Motion Picture'
+        sub: Todd Field
+        winner: false
+  - title: "Top Gun: Maverick"
+    image: top-gun-maverick.jpg
+    key: topgunmaverick
+    trailer: https://www.youtube.com/watch?v=O3JIVY6ySkE
+    streaming: 
+      - source: paramountplus
+        url: https://www.paramountplus.com/movies/video/Alcn0hcGx0HosdhcawKteH8DXh3RiOF7
+    noms:
+      - cat: Best Picture Drama
+        winner: false
+      - cat: Best Original Song Motion Picture
+        name: Hold My Hand
+        sub: Benjamin Rice, BloodPop, Lady Gaga
+        winner: false
+  - title: "Babylon"
+    image: babylon.jpg
+    key: babylon
+    trailer: https://www.youtube.com/watch?v=5muQK7CuFtY
+    noms:
+      - cat: 'Best Picture: Musical/Comedy'
+        winner: false
+      - cat: 'Best Actress: Motion Picture - Musical/Comedy'
+        sub: Margot Robbie
+        key: margotrobbie
+        image: margot-robbie.jpg
+        winner: false
+      - cat: 'Best Actor: Motion Picture - Musical/Comedy'
+        sub: Diego Calva
+        key: diegocalva
+        image: diego-calva.jpg
+        winner: false
+      - cat: 'Best Supporting Actor: Any Motion Picture'
+        sub: Brad Pitt
+        key: bradpitt
+        image: brad-pitt.jpg
+        winner: false
+      - cat: Best Score Motion Picture
+        sub: Justin Hurwitz
+        winner: false
+  - title: "The Banshees of Inisherin"
+    image: the-banshees-of-inisherin.jpg
+    key: thebansheesofinisherin
+    trailer: https://www.youtube.com/watch?v=uRu3zLOJN2c
+    streaming:
+      - source: hbomax
+        url: https://play.hbomax.com/page/urn:hbo:page:GY3vttQpXywnCZwEAAAFm:type:feature
+    noms:
+      - cat: 'Best Picture: Musical/Comedy'
+        winner: false
+      - cat: 'Best Actor: Motion Picture - Musical/Comedy'
+        sub: Colin Farrell
+        key: colinfarrell
+        image: colin-farrell.jpg
+        winner: false
+      - cat: 'Best Supporting Actress: Any Motion Picture'
+        sub: Kerry Condon
+        key: kerrycondon
+        image: kerry-condon.jpg
+        winner: false
+      - cat: 'Best Supporting Actor: Any Motion Picture'
+        sub: Brendan Gleeson
+        key: brendangleeson
+        image: brendan-gleeson.jpg
+        winner: false
+      - cat: 'Best Supporting Actor: Any Motion Picture'
+        sub: Barry Keoghan
+        key: barrykeoghan
+        image: barry-keoghan.jpg
+        winner: false
+      - cat: Best Director Motion Picture
+        sub: Martin McDonagh
+      - cat: Best Screenplay Motion Picture
+        sub: Martin McDonagh
+      - cat: Best Score Motion Picture
+        sub: Carter Burwell
+  - title: Everything Everywhere All at Once
+    image: everything-everywhere-all-at-once.jpg
+    key: everythingeverywhereallatonce
+    trailer: https://www.youtube.com/watch?v=5Nzbp4lkj2Y
+    noms:
+      - cat: 'Best Picture: Musical/Comedy'
+        winner: false
+      - cat: 'Best Actress: Motion Picture - Musical/Comedy'
+        sub: Michelle Yeoh
+        key: michelleyeoh
+        image: michelle-yeoh.jpg
+        winner: false
+      - cat: 'Best Supporting Actress: Any Motion Picture'
+        sub: Jamie Lee Curtis
+        key: jamieleecurtis
+        image: jamie-lee-curtis.jpg
+        winner: false
+      - cat: 'Best Supporting Actor: Any Motion Picture'
+        sub: Ke Huy Quan
+        key: kehuyquan
+        image: ke-huy-quan.jpg
+        winner: false
+      - cat: Best Director Motion Picture
+        sub: Daniel Scheinert, Daniel Kwan
+      - cat: Best Screenplay Motion Picture
+        sub: Daniel Scheinert, Daniel Kwan
+  - title: 'Glass Onion: A Knives Out Mystery'
+    image: glass-onion.jpg
+    key: glassonion
+    trailer: https://www.youtube.com/watch?v=YiTQBGGiAa8
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81458416
+    noms:
+      - cat: 'Best Picture: Musical/Comedy'
+        winner: false
+      - cat: 'Best Actor: Motion Picture - Musical/Comedy'
+        sub: Daniel Craig
+        key: danielcraig
+        image: daniel-craig.jpg
+        winner: false
+  - title: Triangle of Sadness
+    image: triangle-of-sadness.jpg
+    key: triangleofsadness
+    trailer: https://www.youtube.com/watch?v=VDvfFIZQIuQ
+    noms:
+      - cat: 'Best Picture: Musical/Comedy'
+        winner: false
+      - cat: 'Best Supporting Actress: Any Motion Picture'
+        sub: Dolly de Leon
+        key: dollydeleon
+        image: dolly-de-leon.jpg
+        winner: false
+  - title: Empire of Light
+    image: empire-of-light.jpg
+    key: empireoflight
+    trailer: https://www.youtube.com/watch?v=3JA3bD5xs-Q
+    noms:
+      - cat: 'Best Actress: Motion Picture Drama'
+        sub: Olivia Colman
+        key: oliviacolman
+        image: olivia-colman.jpg
+        winner: false
+  - title: The Woman King
+    image: the-woman-king.jpg
+    key: thewomanking
+    trailer: https://www.youtube.com/watch?v=3RDaPV_rJ1Y
+    noms:
+      - cat: 'Best Actress: Motion Picture Drama'
+        sub: Viola Davis
+        key: violadavis
+        image: viola-davis.jpg
+        winner: false
+  - title: Blonde
+    image: blonde.jpg
+    key: blonde
+    trailer: https://www.youtube.com/watch?v=aIsFywuZPoQ
+    noms:
+      - cat: 'Best Actress: Motion Picture Drama'
+        sub: Ana de Armas
+        key: anadearmas
+        image: ana-de-armas.jpg
+        winner: false
+  - title: The Whale
+    image: the-whale.jpg
+    key: thewhale
+    trailer: https://www.youtube.com/watch?v=nWiQodhMvz4
+    noms:
+      - cat: 'Best Actor: Motion Picture Drama'
+        sub: Brendan Fraser
+        key: brendanfraser
+        image: brendan-fraser.jpg
+        winner: false
+  - title: The Son
+    image: the-son.jpg
+    key: theson
+    trailer: https://www.youtube.com/watch?v=SJWRY4DzoAQ
+    noms:
+      - cat: 'Best Actor: Motion Picture Drama'
+        sub: Hugh Jackman
+        key: hughjackman
+        image: hugh-jackman.jpg
+        winner: false
+  - title: Living
+    image: living.jpg
+    key: living
+    trailer: https://www.youtube.com/watch?v=uEFSWt-gU-E
+    noms:
+      - cat: 'Best Actor: Motion Picture Drama'
+        sub: Bill Nighy
+        key: billnighy
+        image: bill-nighy.jpg
+        winner: false
+  - title: The Inspection
+    image: the-inspection.jpg
+    key: theinspection
+    trailer: https://www.youtube.com/watch?v=wSeprzQM6gk
+    noms:
+      - cat: 'Best Actor: Motion Picture Drama'
+        sub: Jeremy Pope
+        key: jeremypope
+        image: jeremy-pope.jpg
+        winner: false
+  - title: Mrs. Harris Goes to Paris
+    image: mrs-harris-goes-to-paris.jpg
+    key: mrsharrisgoestoparis
+    trailer: https://www.youtube.com/watch?v=iO9JcPbbmAA
+    streaming:
+      - source: peacock
+        url: https://www.peacocktv.com/watch/asset/movies/mrs.-harris-goes-to-paris/e2ee9073-eb4b-3650-8d87-d7290196949f
+    noms:
+      - cat: 'Best Actress: Motion Picture - Musical/Comedy'
+        sub: Lesley Manville
+        key: lesleymanville
+        image: lesley-manville.jpg
+        winner: false
+  - title: The Menu
+    image: the-menu.jpg
+    key: themenu
+    trailer: https://www.youtube.com/watch?v=C_uTkUGcHv4
+    streaming:
+      - source: hbomax
+        url: https://play.hbomax.com/page/urn:hbo:page:GY6HeoQwl0MPCLwEAAAgW:type:feature
+    noms:
+      - cat: 'Best Actress: Motion Picture - Musical/Comedy'
+        sub: Anya Taylor-Joy
+        key: anyataylorjoy
+        image: anya-taylor-joy.jpg
+        winner: false
+      - cat: 'Best Actor: Motion Picture - Musical/Comedy'
+        sub: Ralph Fiennes
+        key: ralphfiennes
+        image: ralph-fiennes.jpg
+        winner: false
+  - title: Good Luck To You, Leo Grande
+    image: good-luck-to-you-leo-grande.jpg
+    key: goodlucktoyouleogrande
+    trailer: https://www.youtube.com/watch?v=TJcbZoJFLTU
+    streaming:
+      - source: hulu
+        url: https://www.hulu.com/movie/good-luck-to-you-leo-grande-b0243a6c-8add-4d53-a234-05a255c8989f
+    noms:
+      - cat: 'Best Actress: Motion Picture - Musical/Comedy'
+        sub: Emma Thompson
+        key: emmathompson
+        image: emma-thompson.jpg
+        winner: false
+  - title: White Noise
+    image: white-noise.jpg
+    key: whitenoise
+    trailer: https://www.youtube.com/watch?v=SgwKZAMx_gM
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81317320
+    noms:
+      - cat: 'Best Actor: Motion Picture - Musical/Comedy'
+        sub: Adam Driver
+        key: adamdriver
+        image: adam-driver.jpg
+        winner: false
+  - title: 'Black Panther: Wakanda Forever'
+    image: wakanda-forever.jpg
+    key: wakandaforever
+    trailer: https://www.youtube.com/watch?v=RlOB3UALvrQ
+    noms:
+      - cat: 'Best Supporting Actress: Any Motion Picture'
+        sub: Angela Bassett
+        key: angelabassett
+        image: angela-bassett.jpg
+        winner: false
+      - cat: Best Original Song Motion Picture
+        name: Lift Me Up
+        sub: Rihanna, Ludwig Göransson, Ryan Coogler, Tems
+        winner: false
+  - title: She Said
+    image: she-said.jpg
+    key: shesaid
+    trailer: https://www.youtube.com/watch?v=Hk6iebCV9Ak
+    streaming:
+      - source: peacock
+        url: https://www.peacocktv.com/watch/asset/movies/she-said/0125a49c-3d1f-356a-92d4-a8f0d49a79f7
+    noms:
+      - cat: 'Best Supporting Actress: Any Motion Picture'
+        sub: Carey Mulligan
+        key: careymulligan
+        image: carey-mulligan.jpg
+        winner: false
+  - title: The Good Nurse
+    image: the-good-nurse.jpg
+    key: thegoodnurse
+    trailer: https://www.youtube.com/watch?v=e0DQevX-GZs
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81260083
+    noms:
+      - cat: 'Best Supporting Actor: Any Motion Picture'
+        sub: Eddie Redmayne
+        key: eddieredmayne
+        image: eddie-redmayne.jpg
+        winner: false
+  - title: Women Talking
+    image: women-talking.jpg
+    key: womentalking
+    trailer: https://www.youtube.com/watch?v=pD0mFhMqDCE
+    noms:
+      - cat: Best Screenplay Motion Picture
+        sub: Sarah Polley
+        winner: false
+      - cat: Best Score Motion Picture
+        sub: Hildur Guðnadóttir
+        winner: false
+  - title: Guillermo del Toro's Pinocchio
+    image: pinocchio.jpg
+    key: pinocchio
+    trailer: https://www.youtube.com/watch?v=Od2NW1sfRdA
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/80218455
+    noms:
+      - cat: 'Best Picture: Animated'
+        winner: false
+      - cat: Best Score Motion Picture
+        sub: Alexandre Desplat
+        winner: false
+      - cat: Best Original Song Motion Picture
+        name: CarolinCiao Papaa
+        sub: Roeban Katz, Alexandre Desplat
+        winner: false
+  - title: Inu-Oh
+    image: inu-oh.jpg
+    key: inuoh
+    trailer: https://www.youtube.com/watch?v=iGL4ETxVKd8
+    noms:
+      - cat: 'Best Picture: Animated'
+        winner: false
+  - title: Marcel the Shell With Shoes On
+    image: marcel.jpg
+    key: marcel
+    trailer: https://www.youtube.com/watch?v=4lB6Jf0Nq20
+    noms:
+      - cat: 'Best Picture: Animated'
+        winner: false
+  - title: 'Puss in Boots: The Last Wish'
+    image: puss-in-boots-the-last-wish.jpg
+    key: pussinbootsthelastwish
+    trailer: https://www.youtube.com/watch?v=xgZLXyqbYOc
+    noms:
+      - cat: 'Best Picture: Animated'
+        winner: false
+  - title: Turning Red
+    image: turning-red.jpg
+    key: turningred
+    trailer: https://www.youtube.com/watch?v=XdKzUbAiswE
+    streaming:
+      - source: disneyplus
+        url: https://www.disneyplus.com/movies/turning-red/4mFPCXJi7N2m
+    noms:
+      - cat: 'Best Picture: Animated'
+        winner: false
+  - title: All Ouiet on the Western Front
+    image: all-quiet-on-the-western-front.jpg
+    key: allquietonthewesternfront
+    trailer: https://www.youtube.com/watch?v=hf8EYbVxtCY
+    streaming: 
+      - source: netflix
+        url: https://www.netflix.com/title/81260280
+    noms:
+      - cat: 'Best Picture: Non-English Language'
+        winner: false
+  - title: Argentina, 1985
+    image: argentina-1985.jpg
+    key: argentina1985
+    trailer: https://www.youtube.com/watch?v=cDVL9hWURcU
+    streaming: 
+      - source: primevideo
+        url: https://www.amazon.com/gp/video/detail/0HM2CPRAN241K811SGWRRH09BF/ref=atv_dl_rdr
+    noms:
+      - cat: 'Best Picture: Non-English Language'
+        winner: false
+  - title: Close
+    image: close.jpg
+    key: close
+    trailer: https://www.youtube.com/watch?v=pWVDDWvT878
+    noms:
+      - cat: 'Best Picture: Non-English Language'
+        winner: false
+  - title: Decision to Leave
+    image: decision-to-leave.jpg
+    key: decisiontoleave
+    trailer: https://www.youtube.com/watch?v=d9BR3Z_-Hh8
+    noms:
+      - cat: 'Best Picture: Non-English Language'
+        winner: false
+  - title: RRR
+    image: rrr.jpg
+    key: rrr
+    trailer: https://www.youtube.com/watch?v=f_vbAtFSEc0
+    streaming: 
+      - source: netflix
+        url: https://www.netflix.com/title/81476453
+    noms:
+      - cat: 'Best Picture: Non-English Language'
+        winner: false
+      - cat: Best Original Song Motion Picture
+        name: Naatu Naatu
+        sub: Chandrabose, M.M. Keeravaani
+        winner: false
+  - title: Where the Crawdads Sing
+    image: where-the-crawdads-sing.jpg
+    key: wherethecrawdadssing
+    trailer: https://www.youtube.com/watch?v=PY3808Iq0Tg
+    streaming: 
+      - source: netflix
+        url: https://www.netflix.com/title/81564396
+    noms:
+      - cat: Best Original Song Motion Picture
+        name: Carolina
+        sub: Taylor Swift
+        winner: false
+  - title: Better Call Saul
+    image: better-call-saul.jpg
+    key: bettercallsaul
+    trailer: https://www.youtube.com/watch?v=Fom0SPjqwGA
+    streaming: 
+      - source: netflix
+        url: https://www.netflix.com/title/80021955
+    noms:
+      - cat: Best Drama Series
+        winner: false
+      - cat: 'Best Television Actor: Drama Series'
+        sub: Bob Odenkirk
+        key: bobodenkirk
+        image: bob-odenkirk.jpg
+        winner: false
+  - title: The Crown
+    image: the-crown.jpg
+    key: thecrown
+    trailer: https://www.youtube.com/watch?v=Ej0vb8xhvbw
+    streaming: 
+      - source: netflix
+        url: https://www.netflix.com/title/80025678
+    noms:
+      - cat: Best Drama Series
+        winner: false
+      - cat: 'Best Television Actress: Drama Series'
+        sub: Imelda Staunton
+        key: imeldastaunton
+        image: imelda-staunton.jpg
+        winner: false
+      - cat: 'Best Supporting Actress: Musical/Comedy/Drama Series'
+        sub: Elizabeth Debicki
+        key: elizabethdebicki
+        image: elizabeth-debicki.jpg
+        winner: false
+      - cat: 'Best Supporting Actor: Musical/Comedy/Drama Series'
+        sub: Jonathan Pryce
+        key: jonathanpryce
+        image: jonathan-pryce.jpg
+        winner: false
+  - title: House of the Dragon
+    image: house-of-the-dragon.jpg
+    key: houseofthedragon
+    trailer: https://www.youtube.com/watch?v=DotnJ7tTA34
+    streaming: 
+      - source: hbomax
+        url: https://play.hbomax.com/page/urn:hbo:page:GYsYeoAxKH8LCwgEAAAOR:type:series
+    noms:
+      - cat: Best Drama Series
+        winner: false
+      - cat: 'Best Television Actress: Drama Series'
+        sub: Emma D'Arcy
+        key: emmadarcy
+        image: emma-d-arcy.jpg
+        winner: false
+  - title: Ozark
+    image: ozark.jpg
+    key: ozark
+    trailer: https://www.youtube.com/watch?v=SB3xj2BKgHs
+    streaming: 
+      - source: netflix
+        url: https://www.netflix.com/title/80117552
+    noms:
+      - cat: Best Drama Series
+        winner: false
+      - cat: 'Best Television Actress: Drama Series'
+        sub: Laura Linney
+        key: lauralinney
+        image: laura-linney.jpg
+        winner: false
+      - cat: 'Best Supporting Actress: Musical/Comedy/Drama Series'
+        sub: Julia Garner
+        key: juliagarnerozark
+        image: julia-garner-ozark.jpg
+        winner: false
+  - title: Severance
+    image: severance.jpg
+    key: severance
+    trailer: https://www.youtube.com/watch?v=xEQP4VVuyrY
+    streaming: 
+      - source: appletvplus
+        url: https://tv.apple.com/us/episode/half-loop/umc.cmc.23qox5n6larygqgg6u74fvyj?showId=umc.cmc.1srk2goyh2q2zdxcx605w8vtx
+    noms:
+      - cat: Best Drama Series
+        winner: false
+      - cat: 'Best Television Actor: Drama Series'
+        sub: Adam Scott
+        key: adamscott
+        image: adam-scott.jpg
+        winner: false
+      - cat: 'Best Supporting Actor: Musical/Comedy/Drama Series'
+        sub: John Turturro
+        key: johnturturro
+        image: john-turturro.jpg
+        winner: false
+  - title: Abbott Elementary
+    image: abbott-elementary.jpg
+    key: seveabbottelementaryrance
+    trailer: https://www.youtube.com/watch?v=LP9sLZKjlJo
+    streaming: 
+      - source: hulu
+        url: https://www.hulu.com/series/abbott-elementary-7c33eeb2-5d16-4a10-ad9e-ee31f9fff15c
+    noms:
+      - cat: Best Musical/Comedy Series
+        winner: false
+      - cat: 'Best Television Actress: Musical/Comedy Series'
+        sub: Quinta Brunson
+        key: quintabrunson
+        image: quinta-brunson.jpg
+        winner: false
+      - cat: 'Best Supporting Actress: Musical/Comedy/Drama Series'
+        sub: Janelle James
+        key: janellejames
+        image: janelle-james.jpg
+        winner: false
+      - cat: 'Best Supporting Actress: Musical/Comedy/Drama Series'
+        sub: Sheryl Lee Ralph
+        key: sherylleeralph
+        image: sheryl-lee-ralph.jpg
+        winner: false
+      - cat: 'Best Supporting Actor: Musical/Comedy/Drama Series'
+        sub: Tyler James Williams
+        key: tylerjameswilliams
+        image: tyler-james-williams.jpg
+        winner: false
+  - title: The Bear
+    image: the-bear.jpg
+    key: thebear
+    trailer: https://www.youtube.com/watch?v=gBmkI4jlaIo
+    streaming: 
+      - source: hulu
+        url: https://www.hulu.com/series/the-bear-05eb6a8e-90ed-4947-8c0b-e6536cbddd5f
+    noms:
+      - cat: Best Musical/Comedy Series
+        winner: false
+      - cat: 'Best Television Actor: Musical/Comedy Series'
+        sub: Jeremy Allen White
+        key: jeremyallenwhite
+        image: jeremy-allen-white.jpg
+        winner: false
+  - title: Hacks
+    image: hacks.jpg
+    key: hacks
+    trailer: https://www.youtube.com/watch?v=E_vejwSYhpk
+    streaming: 
+      - source: hbomax
+        url: https://play.hbomax.com/page/urn:hbo:page:GYIBToQrPdotpNQEAAAEa:type:series
+    noms:
+      - cat: Best Musical/Comedy Series
+        winner: false
+      - cat: 'Best Television Actress: Musical/Comedy Series'
+        sub: Jean Smart
+        key: jeansmart
+        image: jean-smart.jpg
+        winner: false
+      - cat: 'Best Supporting Actress: Musical/Comedy/Drama Series'
+        sub: Hannah Einbinder
+        key: hannaheinbinder
+        image: hanna-heinbinder.jpg
+        winner: false
+  - title: Only Murders in the Building
+    image: only-murders-in-the-building.jpg
+    key: onlymurdersinthebuilding
+    trailer: https://www.youtube.com/watch?v=z4d7y7GDhDE
+    streaming: 
+      - source: hulu
+        url: https://www.hulu.com/series/only-murders-in-the-building-ef31c7e1-cd0f-4e07-848d-1cbfedb50ddf
+    noms:
+      - cat: Best Musical/Comedy Series
+        winner: false
+      - cat: 'Best Television Actress: Musical/Comedy Series'
+        sub: Selena Gomez
+        key: selenagomez
+        image: selena-gomez.jpg
+        winner: false
+      - cat: 'Best Television Actor: Musical/Comedy Series'
+        sub: Steve Martin
+        key: stevemartin
+        image: steve-martin.jpg
+        winner: false
+      - cat: 'Best Television Actor: Musical/Comedy Series'
+        sub: Martin Short
+        key: martinshort
+        image: martin-short.jpg
+        winner: false
+  - title: Wednesday
+    image: wednesday.jpg
+    key: wednesday
+    trailer: https://www.youtube.com/watch?v=Di310WS8zLk
+    streaming: 
+      - source: netflix
+        url: https://www.netflix.com/title/81231974
+    noms:
+      - cat: Best Musical/Comedy Series
+        winner: false
+      - cat: 'Best Television Actress: Musical/Comedy Series'
+        sub: Jenna Ortega
+        key: jennaortega
+        image: jenna-ortega.jpg
+        winner: false
+  - title: Alaska Daily
+    image: alaska-daily.jpg
+    key: alaskadaily
+    trailer: https://www.youtube.com/watch?v=XZwXyak-U2s
+    streaming: 
+      - source: hulu
+        url: https://www.hulu.com/series/alaska-daily-bf5ed554-2be0-4eb9-bc50-f217d1582116
+    noms:
+      - cat: 'Best Television Actress: Drama Series'
+        sub: Hilary Swank
+        key: hilaryswank
+        image: hilary-swank.jpg
+        winner: false
+  - title: Euphoria
+    image: euphoria.jpg
+    key: euphoria
+    trailer: https://www.youtube.com/watch?v=WRvEtFB7uTE
+    streaming: 
+      - source: hbomax
+        url: https://play.hbomax.com/page/urn:hbo:page:GXKN_xQX5csPDwwEAAABj:type:series
+    noms:
+      - cat: 'Best Television Actress: Drama Series'
+        sub: Zendaya
+        key: zendaya
+        image: zendaya.jpg
+        winner: false
+  - title: The Old Man
+    image: the-old-man.jpg
+    key: theoldman
+    trailer: https://www.youtube.com/watch?v=xDu1Q9r6HDo
+    streaming: 
+      - source: hulu
+        url: https://www.hulu.com/series/the-old-man-15d6075d-dc33-438b-851f-0d504405c91a
+    noms:
+      - cat: 'Best Television Actor: Drama Series'
+        sub: Jeff Bridges
+        key: jeffbridges
+        image: jeff-bridges.jpg
+        winner: false
+      - cat: 'Best Supporting Actor: Musical/Comedy/Drama Series'
+        sub: John Lithgow
+        key: johnlithgow
+        image: john-lithgow.jpg
+        winner: false
+  - title: Yellowstone
+    image: yellowstone.jpg
+    key: yellowstone
+    trailer: https://www.youtube.com/watch?v=XkQmKIKt1zk
+    streaming: 
+      - source: peacock
+        url: https://www.peacocktv.com/watch/asset/tv/yellowstone/7034893369976297112
+    noms:
+      - cat: 'Best Television Actor: Drama Series'
+        sub: Kevin Costner
+        key: kevincostner
+        image: kevin-costner.jpg
+        winner: false
+  - title: Andor
+    image: andor.jpg
+    key: andor
+    trailer: https://www.youtube.com/watch?v=PboKpnin_Wg
+    streaming: 
+      - source: peacock
+        url: https://www.peacocktv.com/watch/asset/tv/yellowstone/7034893369976297112
+    noms:
+      - cat: 'Best Television Actor: Drama Series'
+        sub: Diego Luna
+        key: diegoluna
+        image: diego-luna.jpg
+        winner: false
+  - title: The Flight Attendant
+    image: the-flight-attendant.jpg
+    key: theflightattendant
+    trailer: https://www.youtube.com/watch?v=bfZC6zKhimY
+    streaming: 
+      - source: hbomax
+        url: https://play.hbomax.com/page/urn:hbo:page:GX5MHsQzwwIuLwgEAAACp:type:series
+    noms:
+      - cat: 'Best Television Actress: Musical/Comedy Series'
+        sub: Kaley Cuoco
+        key: kaleycuoco
+        image: kaley-cuoco.jpg
+        winner: false
+  - title: Atlanta
+    image: atlanta.jpg
+    key: atlanta
+    trailer: https://www.youtube.com/watch?v=z1T6ErjRrv4
+    streaming: 
+      - source: hulu
+        url: https://www.hulu.com/series/atlanta-3529d0f1-acaf-476d-8be3-66cd6bf12530
+    noms:
+      - cat: 'Best Television Actor: Musical/Comedy Series'
+        sub: Donald Glover
+        key: donaldglover
+        image: donald-glover.jpg
+        winner: false
+  - title: Barry
+    image: barry.jpg
+    key: barry
+    trailer: https://www.youtube.com/watch?v=_BrwKUDMd8s
+    streaming: 
+      - source: hbomax
+        url: https://play.hbomax.com/page/urn:hbo:page:GWmKDEwGrA8JInwEAAAL6:type:series
+    noms:
+      - cat: 'Best Television Actor: Musical/Comedy Series'
+        sub: Bill Hader
+        key: billhader
+        image: bill-hader.jpg
+        winner: false
+      - cat: 'Best Supporting Actor: Musical/Comedy/Drama Series'
+        sub: Henry Winkler
+        key: henrywinkler
+        image: henry-winkler.jpg
+        winner: false
+  - title: Black Bird
+    image: black-bird.jpg
+    key: blackbird
+    trailer: https://www.youtube.com/watch?v=aH1FOkJys3Y
+    streaming: 
+      - source: appletvplus
+        url: https://tv.apple.com/us/show/black-bird/umc.cmc.30gx1y8nwthydkrvhqu156p3
+    noms:
+      - cat: 'Best Television: Limited/Anthology Series or Motion Picture'
+        winner: false
+      - cat: 'Best Actor: Limited/Anthology Series or Motion Picture'
+        sub: Taron Egerton
+        key: taronegerton
+        image: taron-egerton.jpg
+        winner: false
+      - cat: 'Best Supporting Actor: Limited/Anthology Series or Motion Picture'
+        sub: Paul Walter Hauser
+        key: paulwalterhauser
+        image: paul-walter-hauser.jpg
+        winner: false
+  - title: 'Dahmer - Monster: The Jeffrey Dahmer Story'
+    image: dahmer.jpg
+    key: dahmer
+    trailer: https://www.youtube.com/watch?v=NVHHs-xllqo
+    streaming: 
+      - source: netflix
+        url: https://www.netflix.com/title/81287562
+    noms:
+      - cat: 'Best Television: Limited/Anthology Series or Motion Picture'
+        winner: false
+      - cat: 'Best Actor: Limited/Anthology Series or Motion Picture'
+        sub: Evan Peters
+        key: evanpeters
+        image: evan-peters.jpg
+        winner: false
+      - cat: 'Best Supporting Actress: Limited/Anthology Series or Motion Picture'
+        sub: Niecy Nash
+        key: niecynash
+        image: niecy-nash.jpg
+        winner: false
+      - cat: 'Best Supporting Actor: Limited/Anthology Series or Motion Picture'
+        sub: Richard Jenkins
+        key: richardjenkins
+        image: richard-jenkins.jpg
+        winner: false
+  - title: The Dropout
+    image: the-dropout.jpg
+    key: thedropout
+    trailer: https://www.youtube.com/watch?v=W7rlZLw9m10
+    streaming: 
+      - source: hulu
+        url: https://www.hulu.com/series/the-dropout-13988f84-f1c8-40dd-a73c-4e71ab4bbe63
+    noms:
+      - cat: 'Best Television: Limited/Anthology Series or Motion Picture'
+        winner: false
+      - cat: 'Best Actress: Limited/Anthology Series or Motion Picture'
+        sub: Amanda Seyfried
+        key: amandaseyfried
+        image: amanda-seyfried.jpg
+        winner: false
+  - title: Pam & Tommy
+    image: pam-and-tommy.jpg
+    key: pamaandtommy
+    trailer: https://www.youtube.com/watch?v=MDXH_X-YbpM
+    streaming: 
+      - source: hulu
+        url: https://www.hulu.com/series/pam-tommy-78839250-a41a-4899-b8da-500ca59a4196
+    noms:
+      - cat: 'Best Television: Limited/Anthology Series or Motion Picture'
+        winner: false
+      - cat: 'Best Actress: Limited/Anthology Series or Motion Picture'
+        sub: Lily James
+        key: lilyjames
+        image: lily-james.jpg
+        winner: false
+      - cat: 'Best Actor: Limited/Anthology Series or Motion Picture'
+        sub: Sebastian Stan
+        key: sebastianstan
+        image: sebastian-stan.jpg
+        winner: false
+      - cat: 'Best Supporting Actor: Limited/Anthology Series or Motion Picture'
+        sub: Seth Rogen
+        key: sethrogen
+        image: seth-rogen.jpg
+        winner: false
+  - title: The White Lotus
+    image: the-white-lotus.jpg
+    key: thewhitelotus
+    trailer: https://www.youtube.com/watch?v=Baflc_0XVfY
+    streaming: 
+      - source: hbomax
+        url: https://play.hbomax.com/page/urn:hbo:page:GYLD3_ArixL1sggEAAAHk:type:series
+    noms:
+      - cat: 'Best Television: Limited/Anthology Series or Motion Picture'
+        winner: false
+      - cat: 'Best Supporting Actress: Limited/Anthology Series or Motion Picture'
+        sub: Jennifer Coolidge
+        key: jennifercoolidge
+        image: jennifer-coolidge.jpg
+        winner: false
+      - cat: 'Best Supporting Actress: Limited/Anthology Series or Motion Picture'
+        sub: Aubrey Plaza
+        key: aubreyplaza
+        image: aubrey-plaza.jpg
+        winner: false
+      - cat: 'Best Supporting Actor: Limited/Anthology Series or Motion Picture'
+        sub: F. Murray Abraham
+        key: fmurrayabraham
+        image: f-murray-abraham.jpg
+        winner: false
+  - title: George and Tammy
+    image: george-and-tammy.jpg
+    key: georgeandtammy
+    trailer: https://www.youtube.com/watch?v=DjrEeuQ5838
+    streaming: 
+      - source: showtime
+        url: https://www.showtime.com/episode/3520820
+    noms:
+      - cat: 'Best Actress: Limited/Anthology Series or Motion Picture'
+        sub: Jessica Chastain
+        key: jessicachastain
+        image: jessica-chastain.jpg
+        winner: false
+  - title: Inventing Anna
+    image: inventing-anna.jpg
+    key: inventinganna
+    trailer: https://www.youtube.com/watch?v=65xa8TG2G8o
+    streaming: 
+      - source: netflix
+        url: https://www.netflix.com/title/81008305
+    noms:
+      - cat: 'Best Actress: Limited/Anthology Series or Motion Picture'
+        sub: Julia Garner
+        key: juliagarner
+        image: julia-garner.jpg
+        winner: false
+  - title: Gaslit
+    image: gaslit.jpg
+    key: gaslit
+    trailer: https://www.youtube.com/watch?v=5SxnbpGngtI
+    streaming: 
+      - source: primevideo
+        url: https://www.amazon.com/gp/video/detail/0HGGI9EX7IPSB39N8O86OXWSOD
+    noms:
+      - cat: 'Best Actress: Limited/Anthology Series or Motion Picture'
+        sub: Julia Roberts
+        key: juliaroberts
+        image: julia-roberts.jpg
+        winner: false
+  - title: The Staircase
+    image: the-staircase.jpg
+    key: thestaircase
+    trailer: https://www.youtube.com/watch?v=TftAFQflBy8
+    streaming: 
+      - source: hbomax
+        url: https://play.hbomax.com/page/urn:hbo:page:GYk93MwWuH4BJoAEAAABu:type:series
+    noms:
+      - cat: 'Best Actor: Limited/Anthology Series or Motion Picture'
+        sub: Colin Firth
+        key: colinfirth
+        image: colin-firth.jpg
+        winner: false
+  - title: Under the Banner of Heaven
+    image: under-the-banner-of-heaven.jpg
+    key: underthebannerofheaven
+    trailer: https://www.youtube.com/watch?v=MzdryYJgwtg
+    streaming: 
+      - source: hulu
+        url: https://www.hulu.com/series/under-the-banner-of-heaven-9c4ae394-e9c4-4a6d-985e-314270602c6b
+    noms:
+      - cat: 'Best Actor: Limited/Anthology Series or Motion Picture'
+        sub: Andrew Garfield
+        key: andrewgarfield
+        image: andrew-garfield.jpg
+        winner: false
+      - cat: 'Best Supporting Actress: Limited/Anthology Series or Motion Picture'
+        sub: Daisy Edgar-Jones
+        key: daisyedgarjones
+        image: daisy-edgar-jones.jpg
+        winner: false
+  - title: Fleishman Is In Trouble
+    image: fleishman-is-in-trouble.jpg
+    key: fleishmanisintrouble
+    trailer: https://www.youtube.com/watch?v=2jyBu4xGeH4
+    streaming: 
+      - source: hulu
+        url: https://www.hulu.com/series/fleishman-is-in-trouble-710e51f8-3387-404d-8b07-e7c9b766d11c
+    noms:
+      - cat: 'Best Supporting Actress: Limited/Anthology Series or Motion Picture'
+        sub: Claire Danes
+        key: clairedanes
+        image: claire-danes.jpg
+        winner: false
+  - title: The Patient
+    image: the-patient.jpg
+    key: thepatient
+    trailer: https://www.youtube.com/watch?v=QWhNaHxl04M
+    streaming: 
+      - source: hulu
+        url: https://www.hulu.com/series/the-patient-4d9ad5b3-6925-4e94-9b0b-49b9f8cf81f2
+    noms:
+      - cat: 'Best Supporting Actor: Limited/Anthology Series or Motion Picture'
+        sub: Domhnall Gleeson
+        key: domhnallgleeson
+        image: domhnall-gleeson.jpg
+        winner: false
+        
