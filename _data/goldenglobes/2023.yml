@@ -247,6 +247,9 @@ nominees:
     image: blonde.jpg
     key: blonde
     trailer: https://www.youtube.com/watch?v=aIsFywuZPoQ
+    streaming: 
+      - source: netflix
+        url: https://www.netflix.com/title/80174263
     noms:
       - cat: 'Best Actress: Motion Picture Drama'
         sub: Ana de Armas
