@@ -65,7 +65,7 @@ nominees:
     trailer: https://www.youtube.com/watch?v=D1G2iLSzOe8
     noms:
       - cat: Best Picture Drama
-        winner: false
+        winner: true
       - cat: Best Director Motion Picture
         sub: Steven Spielberg
         winner: true
