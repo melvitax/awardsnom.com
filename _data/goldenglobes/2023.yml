@@ -654,7 +654,7 @@ nominees:
         sub: Jeremy Allen White
         key: jeremyallenwhite
         image: jeremy-allen-white.jpg
-        winner: false
+        winner: true
   - title: Hacks
     image: hacks.jpg
     key: hacks
