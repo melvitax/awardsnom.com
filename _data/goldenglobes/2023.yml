@@ -924,7 +924,7 @@ nominees:
         url: https://play.hbomax.com/page/urn:hbo:page:GYLD3_ArixL1sggEAAAHk:type:series
     noms:
       - cat: 'Best Television: Limited/Anthology Series or Motion Picture'
-        winner: false
+        winner: true
       - cat: 'Best Supporting Actress: Limited/Anthology Series or Motion Picture'
         sub: Jennifer Coolidge
         key: jennifercoolidge
