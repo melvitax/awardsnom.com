@@ -624,7 +624,7 @@ nominees:
         sub: Quinta Brunson
         key: quintabrunson
         image: quinta-brunson.jpg
-        winner: false
+        winner: true
       - cat: 'Best Supporting Actress: Musical/Comedy/Drama Series'
         sub: Janelle James
         key: janellejames
