@@ -849,7 +849,7 @@ nominees:
         sub: Paul Walter Hauser
         key: paulwalterhauser
         image: paul-walter-hauser.jpg
-        winner: false
+        winner: true
   - title: 'Dahmer - Monster: The Jeffrey Dahmer Story'
     image: dahmer.jpg
     key: dahmer
