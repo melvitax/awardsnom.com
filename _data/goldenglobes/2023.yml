@@ -929,7 +929,7 @@ nominees:
         sub: Jennifer Coolidge
         key: jennifercoolidge
         image: jennifer-coolidge.jpg
-        winner: false
+        winner: true
       - cat: 'Best Supporting Actress: Limited/Anthology Series or Motion Picture'
         sub: Aubrey Plaza
         key: aubreyplaza
