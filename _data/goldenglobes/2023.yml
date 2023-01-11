@@ -741,7 +741,7 @@ nominees:
         sub: Zendaya
         key: zendaya
         image: zendaya.jpg
-        winner: false
+        winner: true
   - title: The Old Man
     image: the-old-man.jpg
     key: theoldman
