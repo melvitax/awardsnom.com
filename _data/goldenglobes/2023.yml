@@ -474,7 +474,7 @@ nominees:
         url: https://www.amazon.com/gp/video/detail/0HM2CPRAN241K811SGWRRH09BF/ref=atv_dl_rdr
     noms:
       - cat: 'Best Picture: Non-English Language'
-        winner: false
+        winner: true
   - title: Close
     image: close.jpg
     key: close
