@@ -133,7 +133,7 @@ nominees:
         winner: false
       - cat: Best Score Motion Picture
         sub: Justin Hurwitz
-        winner: false
+        winner: true
   - title: "The Banshees of Inisherin"
     image: the-banshees-of-inisherin.jpg
     key: thebansheesofinisherin
