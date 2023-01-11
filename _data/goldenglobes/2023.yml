@@ -143,7 +143,7 @@ nominees:
         url: https://play.hbomax.com/page/urn:hbo:page:GY3vttQpXywnCZwEAAAFm:type:feature
     noms:
       - cat: 'Best Picture: Musical/Comedy'
-        winner: false
+        winner: true
       - cat: 'Best Actor: Motion Picture - Musical/Comedy'
         sub: Colin Farrell
         key: colinfarrell
