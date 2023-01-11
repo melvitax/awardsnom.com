@@ -889,7 +889,7 @@ nominees:
         sub: Amanda Seyfried
         key: amandaseyfried
         image: amanda-seyfried.jpg
-        winner: false
+        winner: true
   - title: Pam & Tommy
     image: pam-and-tommy.jpg
     key: pamaandtommy
