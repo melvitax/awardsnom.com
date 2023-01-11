@@ -55,7 +55,7 @@ nominees:
         sub: Austin Butler
         key: austinbutler
         image: austin-butler.jpg
-        winner: false
+        winner: true
       - cat: Best Director Motion Picture
         sub: Baz Luhrmann
         winner: false
@@ -416,7 +416,7 @@ nominees:
         url: https://www.netflix.com/title/80218455
     noms:
       - cat: 'Best Picture: Animated'
-        winner: false
+        winner: true
       - cat: Best Score Motion Picture
         sub: Alexandre Desplat
         winner: false
@@ -502,7 +502,7 @@ nominees:
       - cat: Best Original Song Motion Picture
         name: Naatu Naatu
         sub: Chandrabose, M.M. Keeravaani
-        winner: false
+        winner: true
   - title: Where the Crawdads Sing
     image: where-the-crawdads-sing.jpg
     key: wherethecrawdadssing
@@ -589,7 +589,7 @@ nominees:
         sub: Julia Garner
         key: juliagarnerozark
         image: julia-garner-ozark.jpg
-        winner: false
+        winner: true
   - title: Severance
     image: severance.jpg
     key: severance
