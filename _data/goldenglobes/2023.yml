@@ -565,9 +565,9 @@ nominees:
         url: https://play.hbomax.com/page/urn:hbo:page:GYsYeoAxKH8LCwgEAAAOR:type:series
     noms:
       - cat: Best Drama Series
-        winner: false
+        winner: true
       - cat: 'Best Television Actress: Drama Series'
-        sub: Emma D'Arcy
+        sub: "Emma D'Arcy"
         key: emmadarcy
         image: emma-d-arcy.jpg
         winner: false
