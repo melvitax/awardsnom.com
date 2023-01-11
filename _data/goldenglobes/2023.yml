@@ -184,7 +184,7 @@ nominees:
         sub: Michelle Yeoh
         key: michelleyeoh
         image: michelle-yeoh.jpg
-        winner: false
+        winner: true
       - cat: 'Best Supporting Actress: Any Motion Picture'
         sub: Jamie Lee Curtis
         key: jamieleecurtis
