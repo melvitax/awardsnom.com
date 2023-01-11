@@ -194,7 +194,7 @@ nominees:
         sub: Ke Huy Quan
         key: kehuyquan
         image: ke-huy-quan.jpg
-        winner: false
+        winner: true
       - cat: Best Director Motion Picture
         sub: Daniel Scheinert, Daniel Kwan
       - cat: Best Screenplay Motion Picture
@@ -365,7 +365,7 @@ nominees:
         sub: Angela Bassett
         key: angelabassett
         image: angela-bassett.jpg
-        winner: false
+        winner: true
       - cat: Best Original Song Motion Picture
         name: Lift Me Up
         sub: Rihanna, Ludwig Göransson, Ryan Coogler, Tems
@@ -639,7 +639,7 @@ nominees:
         sub: Tyler James Williams
         key: tylerjameswilliams
         image: tyler-james-williams.jpg
-        winner: false
+        winner: true
   - title: The Bear
     image: the-bear.jpg
     key: thebear
