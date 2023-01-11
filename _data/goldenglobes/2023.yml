@@ -772,7 +772,7 @@ nominees:
         sub: Kevin Costner
         key: kevincostner
         image: kevin-costner.jpg
-        winner: false
+        winner: true
   - title: Andor
     image: andor.jpg
     key: andor
