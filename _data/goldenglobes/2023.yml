@@ -864,7 +864,7 @@ nominees:
         sub: Evan Peters
         key: evanpeters
         image: evan-peters.jpg
-        winner: false
+        winner: true
       - cat: 'Best Supporting Actress: Limited/Anthology Series or Motion Picture'
         sub: Niecy Nash
         key: niecynash
