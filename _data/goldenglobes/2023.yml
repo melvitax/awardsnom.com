@@ -620,7 +620,7 @@ nominees:
         url: https://www.hulu.com/series/abbott-elementary-7c33eeb2-5d16-4a10-ad9e-ee31f9fff15c
     noms:
       - cat: Best Musical/Comedy Series
-        winner: false
+        winner: true
       - cat: 'Best Television Actress: Musical/Comedy Series'
         sub: Quinta Brunson
         key: quintabrunson
