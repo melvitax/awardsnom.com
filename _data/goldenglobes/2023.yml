@@ -91,7 +91,7 @@ nominees:
         sub: Cate Blanchett
         key: cateblanchett
         image: cate-blanchett.jpg
-        winner: false
+        winner: true
       - cat: 'Best Screenplay Motion Picture'
         sub: Todd Field
         winner: false
