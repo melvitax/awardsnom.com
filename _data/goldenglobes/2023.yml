@@ -148,7 +148,7 @@ nominees:
         sub: Colin Farrell
         key: colinfarrell
         image: colin-farrell.jpg
-        winner: false
+        winner: true
       - cat: 'Best Supporting Actress: Any Motion Picture'
         sub: Kerry Condon
         key: kerrycondon
