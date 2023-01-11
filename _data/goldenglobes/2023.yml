@@ -68,7 +68,7 @@ nominees:
         winner: false
       - cat: Best Director Motion Picture
         sub: Steven Spielberg
-        winner: false
+        winner: true
       - cat: 'Best Actress: Motion Picture Drama'
         sub: Michelle Williams
         key: michellewilliams
