@@ -168,6 +168,7 @@ nominees:
         sub: Martin McDonagh
       - cat: Best Screenplay Motion Picture
         sub: Martin McDonagh
+        winner: true
       - cat: Best Score Motion Picture
         sub: Carter Burwell
   - title: Everything Everywhere All at Once
