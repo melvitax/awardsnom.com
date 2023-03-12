@@ -13,3 +13,27 @@
 <script async src="/assets/js/main.js"></script>
 <!-- CloudKit-->
 <script src="/assets/js/cloudkit.js" async></script>
+<!-- Firebase-->
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAZyIceDwjUmee_C9nFenG5VQ4HB0Rg7fA",
+      authDomain: "awardsnom.firebaseapp.com",
+      projectId: "awardsnom",
+      storageBucket: "awardsnom.appspot.com",
+      messagingSenderId: "90923688800",
+      appId: "1:90923688800:web:3847376053dcb4d8c47405",
+      measurementId: "G-J56BDH7LV0"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>

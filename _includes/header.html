@@ -14,7 +14,6 @@
                         <li><a class="dropdown-item" href="/goldenglobes/2022/{{layoutChoice}}">Golden Globes</a></li>
                         <li><a class="dropdown-item" href="/emmys/2021/{{layoutChoice}}">Emmys</a></li>
                         <li><a class="dropdown-item" href="/sag/2022/{{layoutChoice}}">SAG Awards</a></li>
-                        <li><a class="dropdown-item" href="/tonys/2021/{{layoutChoice}}">Tonys</a></li> 
                     </ul>
                 </div>
                 {% if include.pagelayout == "show" or include.pagelayout == "nominees" or include.pagelayout == "streaming" %}
@@ -31,8 +30,6 @@
                 </div>
                 <!-- Tab: Nominees -->
                 <a class="btn btn-outline-warning {% if include.pagelayout == "nominees" %}active{% endif %} nominees" href="/{{include.show}}/{{include.year}}/nominees/" style="width: 2.8rem"><i class="fa-solid fa-list-ul"></i></a>
-                <!-- Tab: Streaming -->
-                <a class="btn btn-outline-warning {% if include.pagelayout == "streaming" %}active{% endif %} streaming" href="/{{include.show}}/{{include.year}}/streaming/" style="width: 2.8rem"><i class="fa-solid fa-cloud"></i></a>
                 <!-- Tab: Categories -->
                 <a class="btn btn-outline-warning {% if include.pagelayout == "show" %}active{% endif %} categories" href="/{{include.show}}/{{include.year}}/" style="width: 2.8rem"><i class="fa-solid fa-grip" style="font-size: 1.1rem"></i></a>
                 <div class="btn-group" role="group">

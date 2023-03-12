@@ -297,12 +297,12 @@ function togglePick(cat, nom) {
           // Update Pick
           else {
             var prevNom = record.fields.nom.value
-            record.fields.nom = { value: nom }
+            record.fields.nom = { value: nom.toString() }
             console.log("togglePick update: " + record.fields.nom.value)
             privateDB.saveRecords(record)
               .then(function(updateResponse) {
                 if(updateResponse.hasErrors) {
-                  console.log("togglePick update error: " + deleteResponse.errors[0])
+                  console.log("togglePick update error: " + updateResponse.errors[0])
                 } else {
                   var updatedRecord = updateResponse.records[0];
                   removeMyPickBadge(cat)
@@ -334,13 +334,13 @@ function togglePick(cat, nom) {
               show: { value: show },
               year: { value: year },
               cat: { value: cat },
-              nom: { value: nom }
+              nom: { value: nom.toString() }
             }
           };
           privateDB.saveRecords(record)
               .then(function(saveResponse) {
                 if(saveResponse.hasErrors) {
-                  console.log("togglePick save error: " + deleteResponse.errors[0])
+                  console.log("togglePick save error: " + saveResponse.errors[0])
                 } else {
                   removeMyPickBadge(cat)
                   removeFromMyPicks(cat)
@@ -672,7 +672,7 @@ function removeFromMyPicks(cat) {
 // Display My Picks
 function displayMyPicks(show, year, cat, nom) {
   var nomKey = show+'|'+year+'|'+cat+'|'+nom
-  var matches = nominees.filter(nominee => nominee.key == nomKey)
+  var matches = nominees.filter(nominee => nominee.id == nomKey)
   // console.log("displayMyPicks() nomKey: "+nomKey+" matches: "+JSON.stringify(matches))
   if (matches.length > 0) {
     var nomination = matches[0]

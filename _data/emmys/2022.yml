@@ -1,0 +1,47 @@
+showName: "Emmys"
+year: "2021"
+day: 2021-09-19
+categories:
+  - Drama Series
+  - Comedy Series
+  - Limited or Anthology Series
+  - Television Movie
+  - "Lead Actor: Drama"
+  - "Lead Actor: Comedy"
+  - "Lead Actress: Drama"
+  - "Lead Actress: Comedy"
+  - "Lead Actor: Limited or Anthology Series or Movie"
+  - "Lead Actress: Limited or Anthology Series or Movie"
+  - "Supporting Actor: Drama"
+  - "Supporting Actor: Comedy"
+  - "Supporting Actress: Drama"
+  - "Supporting Actress: Comedy"
+  - "Supporting Actor: Limited or Anthology Series or Movie"
+  - "Supporting Actress: Limited or Anthology Series or Movie"
+  - Variety Talk Series
+  - Variety Sketch Series
+  - "Reality TV: Competition"
+  - "Directing: Drama Series"
+  - "Directing: Comedy Series"
+  - "Directing: Limited or Anthology series or Movie"
+  - "Directing: Variety Series"
+  - "Writing: Drama Series"
+  - "Writing: Comedy Series"
+  - "Writing: Limited or Anthology Series or Movie"
+  - "Writing: Variety Series"
+nominees:
+  - id: 97546
+    title: Ted Lasso
+    noms:
+      - cat: Comedy Series
+        name: Apple TV+
+  - id: 73107
+    title: Barry
+    noms:
+      - cat: Comedy Series
+        name: Apple TV+
+  - id: 4546
+    title: Curb Your Enthusiasm
+    noms:
+      - cat: Comedy Series
+        name: Apple TV+

@@ -20,9 +20,9 @@
                     {% assign noms = nominee.noms | where: "cat", cat %}
                     {% for nom in noms %}
                     {% if nom.winner %}
-                        {% capture image %}{% if nom.image %}{{ nom.image }}{% else %}{{ nominee.image }}{% endif %}{% endcapture %}
+                        {% capture image %}{% if nom.id %}{{ nom.id }}{% else %}{{ nominee.id }}{% endif %}{% endcapture %}
                         {% capture nomtitle %}{{ cat }} - {{ nominee.title }}{% if nom.name %} - {{ nom.name }}{% endif %}{% if nom.sub %}{% if nom.name %} - {% endif %}{{ nom.sub }}{% endif %}{% endcapture %}
-                        <img class="card-img w-100 h-100 rounded-5 p-0" src="/{{include.show}}/{{include.year}}/images/{{ image }}" width="230" height="355" alt="{{ alt }}" data-cat="{{ catid }}" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-offset="0,20" title="{{ nomtitle }}" />
+                        <img class="card-img w-100 h-100 rounded-5 p-0" src="/{{include.show}}/{{include.year}}/images/{{ image }}-t.jpg" width="230" height="355" alt="{{ alt }}" data-cat="{{ catid }}" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-offset="0,20" title="{{ nomtitle }}" />
                     {% endif %}
                     {% endfor %}
                     {% endfor %}

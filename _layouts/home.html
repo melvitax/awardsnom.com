@@ -25,7 +25,7 @@
             <div class="row card-columns ml-0 mr-0 ">
 
                 {% assign jsyearstofetch = '["2021", "2022", "2023"]' %}
-                {% assign homeshows = "goldenglobes-2023,oscars-2022,sag-2022,emmys-2021,tonys-2021"  | split: ',' %}
+                {% assign homeshows = "oscars-2023,goldenglobes-2023,sag-2022,emmys-2021,tonys-2021"  | split: ',' %}
                 {% assign jsnominees = "" | split: ',' %}
                 {% for showyear in homeshows %}
                     {% assign parts = showyear | split: '-' %}
@@ -35,12 +35,12 @@
                     {% for nominee in data.nominees %}
                         {% assign noms = nominee.noms %}
                         {% for nom in noms %}
-                            {% capture nomid %}{% if nom.key %}{{ nom.key }}{% else %}{{ nominee.key }}{% endif %}{% endcapture %}
+                            {% capture nomid %}{% if nom.id %}{{ nom.id }}{% else %}{{ nominee.id }}{% endif %}{% endcapture %}
                             {% assign catid =  nom.cat | slugify %}
-                            {% capture nomtitle %}{% if nom.name %}{{ nom.name }}{% endif %}{% if nom.sub %}{% if nom.name %} - {% endif %}{{ nom.sub }}{% endif %}{% endcapture %}
+                            {% capture nomtitle %}{% if nom.name %}{{ nom.name }}{% endif %}{% if nom.by %}{% if nom.name %} - {% endif %}{{ nom.by }}{% endif %}{% endcapture %}
                             {% assign datatitle = nom.cat | append: " - " | append: nominee.title | append: " - " | append: nomtitle | replace: '"', '\"' %}
-                            {% capture image %}{% if nom.image %}{{ nom.image }}{% else %}{{ nominee.image }}{% endif %}{% endcapture %}
-                            {% assign thumb = image | replace: ".jpg", "-thumb.jpg" %}
+                            {% capture image %}{% if nom.id %}{{ nom.id }}{% else %}{{ nominee.id }}{% endif %}{% endcapture %}
+                            {% assign thumb = image | append: "-t.jpg" %}
                             {% capture key %}{{ aShow }}|{{ aYear }}|{{ catid }}|{{ nomid }}{% endcapture %}
                             {% capture line %}{ key: "{{ key }}", thumb: "{{ thumb }}", title: "{{ datatitle }}" }{% endcapture %}
                             {% assign jsnominees = jsnominees | push: line %}

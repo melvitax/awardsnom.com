@@ -39,7 +39,7 @@
 
                         <!-- Poster -->
                         <a class="poster" >
-                            <img class="card-img w-100 h-100 rounded-5 p-0" src="/{{page.show}}/{{page.year}}/images/{{ nominee.image }}" width="230" height="355" alt="{{ name }}" data-cat="{{ catid }}" data-nom="{{ nomid }}" />
+                            <img class="card-img w-100 h-100 rounded-5 p-0" src="/{{page.show}}/{{page.year}}/images/{{ nominee.id }}.jpg" width="230" height="355" alt="{{ name }}" data-cat="{{ catid }}" data-nom="{{ nomid }}" />
                         </a>
                             
                         <!-- Buttons -->
@@ -82,12 +82,12 @@
 
                         {% for nom in nominee.noms %}
 
-                        {% capture nomid %}{% if nom.key %}{{ nom.key }}{% else %}{{ nominee.key }}{% endif %}{% endcapture %}
+                        {% capture nomid %}{% if nom.id %}{{ nom.id }}{% else %}{{ nominee.id }}{% endif %}{% endcapture %}
                         {% assign catid =  nom.cat | slugify %}
-                        {% capture nomtitle %}{% if nom.name %}{{ nom.name }}{% endif %}{% if nom.sub %}{% if nom.name %} - {% endif %}{{ nom.sub }}{% endif %}{% endcapture %}
+                        {% capture nomtitle %}{% if nom.name %}{{ nom.name }}{% endif %}{% if nom.by %}{% if nom.name %} - {% endif %}{{ nom.by }}{% endif %}{% endcapture %}
                         {% assign datatitle = cat | append: " - " | append: nominee.title | append: " - " | append: nomtitle | replace: '"', '\"' %}
                         {% capture image %}{% if nom.image %}{{ nom.image }}{% else %}{{ nominee.image }}{% endif %}{% endcapture %}
-                        {% assign thumb = image | replace: ".jpg", "-thumb.jpg" %}
+                        {% assign thumb = image | replace: ".jpg", "-t.jpg" %}
 
                         {% capture key %}{{ page.show }}|{{ page.year }}|{{ catid }}|{{ nomid }}{% endcapture %}
                         {% capture line %}{ key: "{{ key }}", thumb: "{{ thumb }}", title: "{{ datatitle }}" }{% endcapture %}
@@ -102,7 +102,7 @@
 
                             <!-- Meta -->
                             <div class="meta w-100">
-                                {% if nom.name %}{{ nom.name }}{% endif %}{% if nom.sub %}{% if nom.name %} -{% endif %} {{ nom.sub }}{% endif %}
+                                {% if nom.name %}{{ nom.name }}{% endif %}{% if nom.by %}{% if nom.name %} -{% endif %} {{ nom.by }}{% endif %}
                             </div>
 
                             {% if nom.winner %}

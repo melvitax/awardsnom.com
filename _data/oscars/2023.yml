@@ -1,0 +1,508 @@
+showName: "Oscars"
+year: "2023"
+day: 2023-03-12
+categories:
+  - Best Picture
+  - Best Director
+  - Best International Feature Film
+  - Best Actress
+  - Best Actor
+  - Best Supporting Actress
+  - Best Supporting Actor
+  - Best Original Screenplay
+  - Best Adapted Screenplay
+  - Best Animated Feature
+  - Best Original Song
+  - Best Original Score
+  - Best Documentary, Feature
+  - Best Documentary, Short
+  - Best Short Film, Live Action
+  - Best Makeup and Hairstyling
+  - Best Film Editing
+  - Best Visual Effects
+  - Best Short Film, Animated
+  - Best Production Design
+  - Best Cinematography
+  - Best Costume Design
+  - Best Sound
+nominees:
+  - id: 614934
+    title: Elvis
+    trailer: https://www.youtube.com/watch?v=wBDLRvjHVOY
+    noms:
+      - cat: Best Actor
+        id: austin-butler
+        name: Austin Butler
+      - cat: Best Cinematography
+        name: Mandy Walker
+      - cat: Best Costume Design
+        name: Catherine Martin
+      - cat: Best Film Editing
+        name: Matt Villa and Jonathan Redmond
+      - cat: Best Makeup and Hairstyling
+        name: Mark Coulier, Jason Baird and Aldo Signoretti
+      - cat: Best Picture
+        name: Baz Luhrmann, Catherine Martin, Gail Berman, Patrick McCormick and Schuyler Weiss, Producers
+      - cat: Best Production Design
+        name: "Production Design: Catherine Martin and Karen Murphy; Set Decoration: Bev Dunn"
+      - cat: Best Sound
+        name: David Lee, Wayne Pashley, Andy Nelson and Michael Keller
+  - id: 674324
+    title: The Banshees of Inisherin
+    trailer: https://www.youtube.com/watch?v=uRu3zLOJN2c
+    noms:
+      - cat: Best Actor
+        id: colin-farrell
+        name: colin Farrell
+      - cat: Best Supporting Actor
+        id: brendan-gleeson
+        name: Brendan Gleeson
+      - cat: Best Supporting Actor
+        id: barry-keoghan
+        name: Barry Keoghan
+      - cat: Best Supporting Actress
+        id: kerry-condon
+        name: Kerry Condon
+      - cat: Best Director
+        name: Martin McDonagh
+      - cat: Best Film Editing
+        name: Mikkel E.G. Nielsen
+      - cat: Best Original Score
+        name: Carter Burwell
+      - cat: Best Picture
+        name: Graham Broadbent, Pete Czernin and Martin McDonagh, Producers
+      - cat: Best Original Screenplay
+        name: Written by Martin McDonagh
+  - id: 785084
+    title: The Whale
+    trailer: https://www.youtube.com/watch?v=D30r0CwtIKc
+    noms:
+      - cat: Best Actor
+        id: brendan-fraser
+        name: Brendan Fraser
+      - cat: Best Supporting Actress
+        id: hong-chau
+        name: Hong Chau
+      - cat: Best Makeup and Hairstyling
+        name: Adrien Morot, Judy Chin and Annemarie Bradley
+  - id: 965150
+    title: Aftersun
+    trailer: https://www.youtube.com/watch?v=G9jOaggGPKQ
+    noms:
+      - cat: Best Actor
+        id: paul-mescal
+        name: Paul Mescal
+  - id: 760099
+    title: Living
+    trailer: https://www.youtube.com/watch?v=w1IYxAIGZ_A
+    noms:
+      - cat: Best Actor
+        id: bill-nighy
+        name: BILL Nighy
+      - cat: Best Adapted Screenplay
+        name: Written by Kazuo Ishiguro
+  - id: 595586
+    title: Causeway
+    trailer: https://www.youtube.com/watch?v=j307q8zMD3Y
+    noms:
+      - cat: Best Supporting Actor
+        id: brian-tyree-henry
+        name: Brian Tyree Henry
+  - id: 804095
+    title: The Fabelmans
+    trailer: https://www.youtube.com/watch?v=D1G2iLSzOe8
+    noms:
+      - cat: Best Supporting Actor
+        id: judd-hirsch
+        name: Judd Hirsch
+      - cat: Best Actress
+        id: michelle-williams
+        name: Michelle Williams
+      - cat: Best Director
+        name: Steven Spielberg
+      - cat: Best Original Score
+        name: John Williams
+      - cat: Best Picture
+        name: Kristie Macosko Krieger, Steven Spielberg and Tony Kushner, Producers
+      - cat: Best Production Design
+        name: "Production Design: Rick Carter; Set Decoration: Karen O'Hara"
+      - cat: Best Original Screenplay
+        name: Written by Steven Spielberg & Tony Kushner
+  - id: 545611
+    title: Everything Everywhere All at Once
+    trailer: https://www.youtube.com/watch?v=wxN1T1uxQ2g
+    noms:
+      - cat: Best Supporting Actor
+        id: ke-huy-quan
+        name: Ke Huy Quan
+      - cat: Best Actress
+        id: michelle-yeoh
+        name: Michelle Yeoh
+      - cat: Best Supporting Actress
+        id: jamie-lee-curtis
+        name: Jamie Lee Curtis
+      - cat: Best Supporting Actress
+        id: stephanie-hsu
+        name: Stephanie Hsu
+      - cat: Best Costume Design
+        name: Shirley Kurata
+      - cat: Best Director
+        name: Daniel Kwan and Daniel Scheinert
+      - cat: Best Film Editing
+        name: Paul Rogers
+      - cat: Best Original Score
+        name: Son Lux
+      - cat: Best Original Song
+        name: This Is A Life
+        by: Music by Ryan Lott, David Byrne and Mitski; Lyric by Ryan Lott and David Byrne
+      - cat: Best Picture
+        name: Daniel Kwan, Daniel Scheinert and Jonathan Wang, Producers
+      - cat: Best Original Screenplay
+        name: Written by Daniel Kwan & Daniel Scheinert
+  - id: 817758
+    title: Tár
+    trailer: https://www.youtube.com/watch?v=Na6gA1RehsU
+    noms:
+      - cat: Best Actress
+        id: cate-blanchett
+        name: Cate Blanchett
+      - cat: Best Cinematography
+        name: Florian Hoffmeister
+      - cat: Best Director
+        name: Todd Field
+      - cat: Best Film Editing
+        name: Monika Willi
+      - cat: Best Picture
+        name: Todd Field, Alexandra Milchan and Scott Lambert, Producers
+      - cat: Best Original Screenplay
+        name: Written by Todd Field
+  - id: 301502
+    title: Blonde
+    trailer: https://www.youtube.com/watch?v=aIsFywuZPoQ
+    noms:
+      - cat: Best Actress
+        id: ana-de-armas
+        name: Ana De Armas
+  - id: 823147
+    title: To Leslie
+    trailer: https://www.youtube.com/watch?v=D_k63vvm3mU
+    noms:
+      - cat: Best Actress
+        id: andrea-riseborough
+        name: Andrea Riseborough
+  - id: 505642
+    title: "Black Panther: Wakanda Forever"
+    trailer: https://www.youtube.com/watch?v=RlOB3UALvrQ
+    noms:
+      - cat: Best Supporting Actress
+        id: angela-bassett
+        name: Angela Bassett
+      - cat: Best Costume Design
+        name: Ruth Carter
+      - cat: Best Makeup and Hairstyling
+        name: Camille Friend and Joel Harlow
+      - cat: Best Original Song
+        name: Lift Me Up
+        by: Music by Tems, Rihanna, Ryan Coogler and Ludwig Goransson; Lyric by Tems and Ryan Coogler
+      - cat: Best Visual Effects
+        name: Geoffrey Baumann, Craig Hammack, R. Christopher White and Dan Sudick
+  - id: 555604
+    title: Guillermo del Toro's Pinocchio
+    trailer: https://www.youtube.com/watch?v=Od2NW1sfRdA
+    noms:
+      - cat: Best Animated Feature
+        name: Guillermo del Toro, Mark Gustafson, Gary Ungar and Alex Bulkley
+  - id: 869626
+    title: Marcel the Shell with Shoes On
+    trailer: https://www.youtube.com/watch?v=k98Afd7Nf3Y
+    noms:
+      - cat: Best Animated Feature
+        name: Dean Fleischer Camp, Elisabeth Holm, Andrew Goldman, Caroline Kaplan and Paul Mezey
+  - id: 315162
+    title: "Puss in Boots: The Last Wish"
+    trailer: https://www.youtube.com/watch?v=xgZLXyqbYOc
+    noms:
+      - cat: Best Animated Feature
+        name: Joel Crawford and Mark Swift
+  - id: 560057
+    title: The Sea Beast
+    trailer: https://www.youtube.com/watch?v=P-E-IGQCsPo
+    noms:
+      - cat: Best Animated Feature
+        name: Chris Williams and Jed Schlanger
+  - id: 508947
+    title: Turning Red
+    trailer: https://www.youtube.com/watch?v=XdKzUbAiswE
+    noms:
+      - cat: Best Animated Feature
+        name: Domee Shi and Lindsey Collins
+  - id: 49046
+    title: All Quiet on the Western Front
+    trailer: https://www.youtube.com/watch?v=hf8EYbVxtCY
+    noms:
+      - cat: Best Cinematography
+        name: James Friend
+      - cat: Best International Feature Film
+        name: Germany
+      - cat: Best Makeup and Hairstyling
+        name: Heike Merker and Linda Eisenhamerová
+      - cat: Best Original Score
+        name: Volker Bertelmann
+      - cat: Best Picture
+        name: Malte Grunert, Producer
+      - cat: Best Production Design
+        name: "Production Design: Christian M. Goldbeck; Set Decoration: Ernestine Hipper"
+      - cat: Best Sound
+        name: Viktor Prášil, Frank Kruse, Markus Stemler, Lars Ginzel and Stefan Korte
+      - cat: Best Visual Effects
+        name: Frank Petzold, Viktor Müller, Markus Frank and Kamil Jafar
+      - cat: Best Adapted Screenplay
+        name: Screenplay - Edward Berger, Lesley Paterson & Ian Stokell
+  - id: 685691
+    title: Bardo, False Chronicle Of A Handful Of Truths
+    trailer: https://www.youtube.com/watch?v=lCQimQfDuTs
+    noms:
+      - cat: Best Cinematography
+        name: Darius Khondji
+  - id: 814757
+    title: Empire of Light
+    trailer: https://www.youtube.com/watch?v=3JA3bD5xs-Q
+    noms:
+      - cat: Best Cinematography
+        name: Roger Deakins
+  - id: 615777
+    title: Babylon
+    trailer: https://www.youtube.com/watch?v=t7HT83wkVss
+    noms:
+      - cat: Best Costume Design
+        name: Mary Zophres
+      - cat: Best Original Score
+        name: Justin Hurwitz
+      - cat: Best Production Design
+        name: "Production Design: Florencia Martin; Set Decoration: Anthony Carlino"
+  - id: 754609
+    title: Mrs. Harris Goes to Paris
+    trailer: https://www.youtube.com/watch?v=iO9JcPbbmAA
+    noms:
+      - cat: Best Costume Design
+        name: Jenny Beavan
+  - id: 497828
+    title: Triangle of Sadness
+    trailer: https://www.youtube.com/watch?v=VDvfFIZQIuQ
+    noms:
+      - cat: Best Director
+        name: Ruben Östlund
+      - cat: Best Picture
+        name: Erik Hemmendorff and Philippe Bober, Producers
+      - cat: Best Original Screenplay
+        name: Written by Ruben Östlund
+  - id: 913838
+    title: All That Breathes
+    trailer: https://www.youtube.com/watch?v=DdjH0tfjbkQ
+    noms:
+      - cat: Best Documentary, Feature
+        name: Shaunak Sen, Aman Mann and Teddy Leifer
+  - id: 1004663
+    title: All the Beauty and the Bloodshed
+    trailer: https://www.youtube.com/watch?v=kTKL5P_69e8
+    noms:
+      - cat: Best Documentary, Feature
+        name: Laura Poitras, Howard Gertler, John Lyons, Nan Goldin and Yoni Golijov
+  - id: 913823
+    title: Fire of Love
+    trailer: https://www.youtube.com/watch?v=-_7XADmKVL0
+    noms:
+      - cat: Best Documentary, Feature
+        name: Sara Dosa, Shane Boris and Ina Fichman
+  - id: 913743
+    title: A House Made of Splinters
+    trailer: https://www.youtube.com/watch?v=2T6Kc0XPMoM
+    noms:
+      - cat: Best Documentary, Feature
+        name: Simon Lereng Wilmont and Monica Hellström
+  - id: 926676
+    title: Navalny
+    trailer: https://www.youtube.com/watch?v=ZF_HsKCWEHw
+    noms:
+      - cat: Best Documentary, Feature
+        name: Daniel Roher, Odessa Rae, Diane Becker, Melanie Miller and Shane Boris
+  - id: 1041580
+    title: The Elephant Whisperers
+    trailer: https://www.youtube.com/watch?v=a0J0b_OVa9w
+    noms:
+      - cat: Best Documentary, Short
+        name: Kartiki Gonsalves and Guneet Monga
+  - id: 926993
+    title: Haulout
+    trailer: https://www.youtube.com/watch?v=uIBmhWsgYnA
+    noms:
+      - cat: Best Documentary, Short
+        name: Evgenia Arbugaeva and Maxim Arbugaev
+  - id: 846854
+    title: How Do You Measure a Year? 
+    trailer: https://www.youtube.com/watch?v=aQdIt3lDD6Q
+    noms:
+      - cat: Best Documentary, Short
+        name: Jay Rosenblatt
+  - id: 914268
+    title: The Martha Mitchell Effect
+    trailer: https://www.youtube.com/watch?v=0SYWxQ62AUM
+    noms:
+      - cat: Best Documentary, Short
+        name: Anne Alvergue and Beth Levison
+  - id: 964789
+    title: Stranger at the Gate
+    trailer: https://www.youtube.com/watch?v=Putmo96seFI
+    noms:
+      - cat: Best Documentary, Short
+        name: Joshua Seftel and Conall Jones
+  - id: 361743
+    title: "Top Gun: Maverick"
+    trailer: https://www.youtube.com/watch?v=qSqVVswa420
+    noms:
+      - cat: Best Film Editing
+        name: Eddie Hamilton
+      - cat: Best Original Song
+        name: Hold My Hand
+        by: Music and Lyric by Lady Gaga and BloodPop
+      - cat: Best Picture
+        name: Tom Cruise, Christopher McQuarrie, David Ellison and Jerry Bruckheimer, Producers
+      - cat: Best Sound
+        name: Mark Weingarten, James H. Mather, Al Nelson, Chris Burdon and Mark Taylor
+      - cat: Best Visual Effects
+        name: Ryan Tudhope, Seth Hill, Bryan Litson and Scott R. Fisher
+      - cat: Best Adapted Screenplay
+        name: Screenplay by Ehren Kruger and Eric Warren Singer and Christopher McQuarrie; Story by Peter Craig and Justin Marks
+  - id: 714888
+    title: Argentina, 1985
+    trailer: https://www.youtube.com/watch?v=a4iiyPOM6rA
+    noms:
+      - cat: Best International Feature Film
+        name: Argentina
+  - id: 901563
+    title: Close
+    trailer: https://www.youtube.com/watch?v=6EJGnU2AmV4
+    noms:
+      - cat: Best International Feature Film
+        name: Belgium
+  - id: 785398
+    title: EO
+    trailer: https://www.youtube.com/watch?v=rrBeSQbdXmw
+    noms:
+      - cat: Best International Feature Film
+        name: Poland
+  - id: 916405
+    title: The Quiet Girl 
+    trailer: https://www.youtube.com/watch?v=q9Y3jvMfHT0
+    noms:
+      - cat: Best International Feature Film
+        name: Ireland
+  - id: 414906
+    title: The Batman
+    trailer: https://www.youtube.com/watch?v=mqqft2x_Aa4
+    noms:
+      - cat: Best Makeup and Hairstyling
+        name: Naomi Donne, Mike Marino and Mike Fontaine
+      - cat: Best Sound
+        name: Stuart Wilson, William Files, Douglas Murray and Andy Nelson
+      - cat: Best Visual Effects
+        name: Dan Lemmon, Russell Earl, Anders Langlands and Dominic Tuohy
+  - id: 822124
+    title: Tell It Like a Woman
+    trailer: https://www.youtube.com/watch?v=aariSQlekQ0
+    noms:
+      - cat: Best Original Song
+        name: Applause
+        by: Music and Lyric by Diane Warren
+  - id: 579974
+    title: RRR
+    trailer: https://www.youtube.com/watch?v=BwrZfGq1HlQ&t=1s
+    noms:
+      - cat: Best Original Song
+        name: Naatu Naatu
+        by: Music by M.M. Keeravaani; Lyric by Chandrabose
+  - id: 76600
+    title: "Avatar: The Way of Water"
+    trailer: https://www.youtube.com/watch?v=d9MyW72ELq0
+    noms:
+      - cat: Best Picture
+        name: James Cameron and Jon Landau, Producers
+      - cat: Best Production Design
+        name: "Production Design: Dylan Cole and Ben Procter; Set Decoration: Vanessa Cole"
+      - cat: Best Sound
+        name: Julian Howarth, Gwendolyn Yates Whittle, Dick Bernstein, Christopher Boyes, Gary Summers and Michael Hedges
+      - cat: Best Visual Effects
+        name: Joe Letteri, Richard Baneham, Eric Saindon and Daniel Barrett
+  - id: 777245
+    title: Women Talking
+    trailer: https://www.youtube.com/watch?v=pD0mFhMqDCE
+    noms:
+      - cat: Best Picture
+        name: Dede Gardner, Jeremy Kleiner and Frances McDormand, Producers
+      - cat: Best Adapted Screenplay
+        name: Screenplay by Sarah Polley
+  - id: 995133
+    title: The Boy, the Mole, the Fox and the Horse
+    trailer: https://www.youtube.com/watch?v=Fbdem4g_LEc
+    noms:
+      - cat: Best Short Film, Animated
+        name: Charlie Mackesy and Matthew Freud
+  - id: 742872
+    title: The Flying Sailor
+    trailer: https://www.youtube.com/watch?v=fB_0LwDovk4
+    noms:
+      - cat: Best Short Film, Animated
+        name: Amanda Forbis and Wendy Tilby
+  - id: 965171
+    title: Ice Merchants
+    trailer: https://www.youtube.com/watch?v=e7pKK4uFjHI
+    noms:
+      - cat: Best Short Film, Animated
+        name: João Gonzalez and Bruno Caetano
+  - id: 971188
+    title: My Year of Dicks
+    trailer: https://www.youtube.com/watch?v=-kPlGwILJok
+    noms:
+      - cat: Best Short Film, Animated
+        name: Sara Gunnarsdóttir and Pamela Ribon
+  - id: 943776
+    title: An Ostrich Told Me the World Is Fake and I Think I Believe It
+    trailer: https://www.youtube.com/watch?v=0CuuCc8QdLQ
+    noms:
+      - cat: Best Short Film, Animated
+        name: Lachlan Pendragon
+  - id: 889598
+    title: An Irish Goodbye
+    trailer: https://www.youtube.com/watch?v=T0YVueR5ho0
+    noms:
+      - cat: Best Short Film, Live Action
+        name: Tom Berkeley and Ross White
+  - id: 1042171
+    title: Ivalu
+    trailer: https://www.youtube.com/watch?v=XXpKaQbeznM
+    noms:
+      - cat: Best Short Film, Live Action
+        name: Anders Walter and Rebecca Pruzan
+  - id: 974586
+    title: Le Pupille
+    trailer: https://www.youtube.com/watch?v=3_LsYqN7-qU
+    noms:
+      - cat: Best Short Film, Live Action
+        name: Alice Rohrwacher and Alfonso Cuarón
+  - id: 715714
+    title: Night Ride
+    noms:
+      - cat: Best Short Film, Live Action
+        name: Eirik Tveiten and Gaute Lid Larssen
+  - id: 1032734
+    title: The Red Suitcase
+    trailer: https://www.youtube.com/watch?v=6w-ioMn3vf0
+    noms:
+      - cat: Best Short Film, Live Action
+        name: Cyrus Neshvad
+  - id: 661374
+    title: "Glass Onion: A Knives Out Mystery"
+    trailer: https://www.youtube.com/watch?v=-xR_lBtEvSc
+    noms:
+      - cat: Best Adapted Screenplay
+        name: Written by Rian Johnson
