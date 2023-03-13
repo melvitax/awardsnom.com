@@ -456,6 +456,7 @@ nominees:
     noms:
       - cat: Best Short Film, Animated
         name: Charlie Mackesy and Matthew Freud
+        winner: true
   - id: 742872
     title: The Flying Sailor
     trailer: https://www.youtube.com/watch?v=fB_0LwDovk4
