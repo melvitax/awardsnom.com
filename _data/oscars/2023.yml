@@ -153,6 +153,7 @@ nominees:
         name: Daniel Kwan and Daniel Scheinert
       - cat: Best Film Editing
         name: Paul Rogers
+        winner: true
       - cat: Best Original Score
         name: Son Lux
       - cat: Best Original Song
