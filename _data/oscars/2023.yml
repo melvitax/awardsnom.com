@@ -444,6 +444,7 @@ nominees:
         name: Julian Howarth, Gwendolyn Yates Whittle, Dick Bernstein, Christopher Boyes, Gary Summers and Michael Hedges
       - cat: Best Visual Effects
         name: Joe Letteri, Richard Baneham, Eric Saindon and Daniel Barrett
+        winner: true
   - id: 777245
     title: Women Talking
     trailer: https://www.youtube.com/watch?v=pD0mFhMqDCE
