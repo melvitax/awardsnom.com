@@ -162,6 +162,7 @@ nominees:
         name: Daniel Kwan, Daniel Scheinert and Jonathan Wang, Producers
       - cat: Best Original Screenplay
         name: Written by Daniel Kwan & Daniel Scheinert
+        winner: true
   - id: 817758
     title: Tár
     trailer: https://www.youtube.com/watch?v=Na6gA1RehsU
