@@ -135,12 +135,14 @@ nominees:
       - cat: Best Supporting Actor
         id: ke-huy-quan
         name: Ke Huy Quan
+        winner: true
       - cat: Best Actress
         id: michelle-yeoh
         name: Michelle Yeoh
       - cat: Best Supporting Actress
         id: jamie-lee-curtis
         name: Jamie Lee Curtis
+        winner: true
       - cat: Best Supporting Actress
         id: stephanie-hsu
         name: Stephanie Hsu
@@ -212,6 +214,7 @@ nominees:
     noms:
       - cat: Best Animated Feature
         name: Guillermo del Toro, Mark Gustafson, Gary Ungar and Alex Bulkley
+        winner: true
   - id: 869626
     title: Marcel the Shell with Shoes On
     trailer: https://www.youtube.com/watch?v=k98Afd7Nf3Y
@@ -326,6 +329,7 @@ nominees:
     noms:
       - cat: Best Documentary, Feature
         name: Daniel Roher, Odessa Rae, Diane Becker, Melanie Miller and Shane Boris
+        winner: true
   - id: 1041580
     title: The Elephant Whisperers
     trailer: https://www.youtube.com/watch?v=a0J0b_OVa9w
@@ -477,6 +481,7 @@ nominees:
     noms:
       - cat: Best Short Film, Live Action
         name: Tom Berkeley and Ross White
+        winner: true
   - id: 1042171
     title: Ivalu
     trailer: https://www.youtube.com/watch?v=XXpKaQbeznM
