@@ -250,6 +250,7 @@ nominees:
         winner: true
       - cat: Best International Feature Film
         name: Germany
+        winner: true
       - cat: Best Makeup and Hairstyling
         name: Heike Merker and Linda Eisenhamerová
       - cat: Best Original Score
