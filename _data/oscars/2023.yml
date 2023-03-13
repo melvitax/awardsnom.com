@@ -454,6 +454,7 @@ nominees:
         name: Dede Gardner, Jeremy Kleiner and Frances McDormand, Producers
       - cat: Best Adapted Screenplay
         name: Screenplay by Sarah Polley
+        winner: true
   - id: 995133
     title: The Boy, the Mole, the Fox and the Horse
     trailer: https://www.youtube.com/watch?v=Fbdem4g_LEc
