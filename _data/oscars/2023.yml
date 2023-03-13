@@ -259,6 +259,7 @@ nominees:
         name: Malte Grunert, Producer
       - cat: Best Production Design
         name: "Production Design: Christian M. Goldbeck; Set Decoration: Ernestine Hipper"
+        winner: true
       - cat: Best Sound
         name: Viktor Prášil, Frank Kruse, Markus Stemler, Lars Ginzel and Stefan Korte
       - cat: Best Visual Effects
