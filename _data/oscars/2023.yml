@@ -245,6 +245,7 @@ nominees:
     noms:
       - cat: Best Cinematography
         name: James Friend
+        winner: true
       - cat: Best International Feature Film
         name: Germany
       - cat: Best Makeup and Hairstyling
