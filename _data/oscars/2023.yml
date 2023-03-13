@@ -164,6 +164,7 @@ nominees:
         by: Music by Ryan Lott, David Byrne and Mitski; Lyric by Ryan Lott and David Byrne
       - cat: Best Picture
         name: Daniel Kwan, Daniel Scheinert and Jonathan Wang, Producers
+        winner: true
       - cat: Best Original Screenplay
         name: Written by Daniel Kwan & Daniel Scheinert
         winner: true
