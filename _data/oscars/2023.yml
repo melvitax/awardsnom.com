@@ -80,6 +80,7 @@ nominees:
       - cat: Best Actor
         id: brendan-fraser
         name: Brendan Fraser
+        winner: true
       - cat: Best Supporting Actress
         id: hong-chau
         name: Hong Chau
