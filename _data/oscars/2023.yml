@@ -85,6 +85,7 @@ nominees:
         name: Hong Chau
       - cat: Best Makeup and Hairstyling
         name: Adrien Morot, Judy Chin and Annemarie Bradley
+        winner: true
   - id: 965150
     title: Aftersun
     trailer: https://www.youtube.com/watch?v=G9jOaggGPKQ
