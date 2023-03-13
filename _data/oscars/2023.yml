@@ -151,6 +151,7 @@ nominees:
         name: Shirley Kurata
       - cat: Best Director
         name: Daniel Kwan and Daniel Scheinert
+        winner: true
       - cat: Best Film Editing
         name: Paul Rogers
         winner: true
