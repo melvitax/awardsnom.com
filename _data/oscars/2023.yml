@@ -141,6 +141,7 @@ nominees:
       - cat: Best Actress
         id: michelle-yeoh
         name: Michelle Yeoh
+        winner: true
       - cat: Best Supporting Actress
         id: jamie-lee-curtis
         name: Jamie Lee Curtis
