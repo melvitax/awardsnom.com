@@ -434,6 +434,7 @@ nominees:
       - cat: Best Original Song
         name: Naatu Naatu
         by: Music by M.M. Keeravaani; Lyric by Chandrabose
+        winner: true
   - id: 76600
     title: "Avatar: The Way of Water"
     trailer: https://www.youtube.com/watch?v=d9MyW72ELq0
