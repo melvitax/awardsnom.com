@@ -381,6 +381,7 @@ nominees:
         name: Tom Cruise, Christopher McQuarrie, David Ellison and Jerry Bruckheimer, Producers
       - cat: Best Sound
         name: Mark Weingarten, James H. Mather, Al Nelson, Chris Burdon and Mark Taylor
+        winner: true
       - cat: Best Visual Effects
         name: Ryan Tudhope, Seth Hill, Bryan Litson and Scott R. Fisher
       - cat: Best Adapted Screenplay
