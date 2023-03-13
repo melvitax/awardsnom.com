@@ -255,6 +255,7 @@ nominees:
         name: Heike Merker and Linda Eisenhamerová
       - cat: Best Original Score
         name: Volker Bertelmann
+        winner: true
       - cat: Best Picture
         name: Malte Grunert, Producer
       - cat: Best Production Design
