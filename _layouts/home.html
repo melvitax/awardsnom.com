@@ -24,8 +24,8 @@
 
             <div class="row card-columns ml-0 mr-0 ">
 
-                {% assign jsyearstofetch = '["2021", "2022", "2023"]' %}
-                {% assign homeshows = "oscars-2023,goldenglobes-2023,sag-2022,emmys-2021,tonys-2021"  | split: ',' %}
+                {% assign jsyearstofetch = '["2021", "2022", "2023", "2024"]' %}
+                {% assign homeshows = "oscars-2024,goldenglobes-2023,sag-2022,emmys-2021,tonys-2021"  | split: ',' %}
                 {% assign jsnominees = "" | split: ',' %}
                 {% for showyear in homeshows %}
                     {% assign parts = showyear | split: '-' %}

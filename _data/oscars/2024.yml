@@ -1,0 +1,505 @@
+showName: "Oscars"
+year: "2024"
+day: 2024-03-10
+categories:
+  - Best Picture
+  - Best Director
+  - Best International Feature Film
+  - Best Actress
+  - Best Actor
+  - Best Supporting Actress
+  - Best Supporting Actor
+  - Best Original Screenplay
+  - Best Adapted Screenplay
+  - Best Animated Feature
+  - Best Original Song
+  - Best Original Score
+  - Best Documentary, Feature
+  - Best Documentary, Short
+  - Best Short Film, Live Action
+  - Best Makeup and Hairstyling
+  - Best Film Editing
+  - Best Visual Effects
+  - Best Short Film, Animated
+  - Best Production Design
+  - Best Cinematography
+  - Best Costume Design
+  - Best Sound
+nominees:
+  - id: 73826
+    title: Maestro
+    trailer: https://www.youtube.com/watch?v=gJP2QblqLA0
+    noms:
+      - cat: Best Actor
+        id: bradley-cooper
+        name: Bradley Cooper
+      - cat: Best Actress
+        id: carey-mulligan
+        name: Carey Mulligan
+      - cat: Best Cinematography
+        name: Matthew Libatique
+      - cat: Best Makeup and Hairstyling
+        name: Kazu Hiro, Kay Georgiou and Lori McCoy-Bell
+      - cat: Best Picture
+        name: Bradley Cooper, Steven Spielberg, Fred Berner, Amy Durning and Kristie Macosko Krieger, Producers
+      - cat: Best Sound
+        name: Steven A. Morrow, Richard King, Jason Ruder, Tom Ozanich and Dean Zupancic
+      - cat: Best Original Screenplay
+        name: Written by Bradley Cooper & Josh Singer
+  - id: 332795
+    title: Rustin
+    trailer: https://www.youtube.com/watch?v=EuZ-UONInl4
+    noms: 
+      - cat: Best Actor
+        id: colman-domingo
+        name: Colman Domingo
+  - id: 348121
+    title: The Holdovers
+    trailer: https://www.youtube.com/watch?v=AhKLpJmHhIg
+    noms: 
+      - cat: Best Actor
+        id: paul-giamatti
+        name: Paul Giamatti
+      - cat: Best Supporting Actress
+        id: da-vine-joy-randolph
+        name: Da'Vine Joy Randolph
+      - cat: Best Film Editing
+        name: Kevin Tent
+      - cat: Best Picture
+        name: Mark Johnson, Producer
+      - cat: Best Original Screenplay
+        name: Written by David Hemingson
+  - id: 287533
+    title: Oppenheimer
+    trailer: https://www.youtube.com/watch?v=uYPbbksJxIg
+    noms: 
+      - cat: Best Actor
+        id: cillian-murphy
+        name: Cillian Murphy
+      - cat: Best Supporting Actor
+        id: robert-downey-jr
+        name: Robert Downey Jr.
+      - cat: Best Supporting Actress
+        id: emily-blunt
+        name: Emily Blunt
+      - cat: Best Cinematography
+        name: Hoyte van Hoytema
+      - cat: Best Costume Design
+        name: Ellen Mirojnick
+      - cat: Best Director
+        name: Christopher Nolan
+      - cat: Best Film Editing
+        name: Jennifer Lame
+      - cat: Best Makeup and Hairstyling
+        name: Luisa Abel
+      - cat: Best Original Score
+        name: Ludwig Göransson
+      - cat: Best Picture
+        name: Emma Thomas, Charles Roven and Christopher Nolan, Producers
+      - cat: Best Production Design
+        name: "Production Design: Ruth De Jong; Set Decoration: Claire Kaufman"
+      - cat: Best Sound
+        name: Willie Burton, Richard King, Gary A. Rizzo and Kevin O'Connell
+      - cat: Best Adapted Screenplay
+        name: Written for the screen by Christopher Nolan
+  - id: 350612
+    title: American Fiction
+    trailer: https://www.youtube.com/watch?v=5_4RlHpqVWM
+    noms: 
+      - cat: Best Actor
+        id: jeffrey-wright
+        name: Jeffrey Wright
+      - cat: Best Supporting Actor
+        id: sterling-k-brown
+        name: Sterling K. Brown
+      - cat: Best Original Score
+        name: Laura Karpman
+      - cat: Best Picture
+        name: Ben LeClair, Nikos Karamigios, Cord Jefferson and Jermaine Johnson, Producers
+      - cat: Best Adapted Screenplay
+        name: Written for the screen by Cord Jefferson
+  - id: 135852
+    title: Killers of the Flower Moon
+    trailer: https://www.youtube.com/watch?v=1oZUCkJEuvo
+    noms: 
+      - cat: Best Supporting Actor
+        id: robert-de-niro
+        name: Robert De Niro
+      - cat: Best Actress
+        id: lily-gladstone
+        name: Lily Gladstone
+      - cat: Best Cinematography
+        name: Rodrigo Prieto
+      - cat: Best Costume Design
+        name: Jacqueline West
+      - cat: Best Director
+        name: Martin Scorsese
+      - cat: Best Film Editing
+        name: Thelma Schoonmaker
+      - cat: Best Original Score
+        name: Robbie Robertson
+      - cat: Best Original Song
+        name: Wahzhazhe (A SONG FOR MY PEOPLE)
+        by: Music and Lyric by Scott George
+      - cat: Best Picture
+        name: Dan Friedkin, Bradley Thomas, Martin Scorsese and Daniel Lupi, Producers
+      - cat: Best Production Design
+        name: "Production Design: Jack Fisk; Set Decoration: Adam Willis"
+  - id: 16612
+    title: Barbie
+    trailer: https://www.youtube.com/watch?v=pBk4NYhWNMM
+    noms: 
+      - cat: Best Supporting Actor
+        id: ryan-gosling
+        name: Ryan Gosling
+      - cat: Best Supporting Actress
+        id: america-ferrera
+        name: America Ferrera
+      - cat: Best Costume Design
+        name: Jacqueline Durran
+      - cat: Best Original Song
+        name: I'm Just Ken
+        by: Music and Lyric by Mark Ronson and Andrew Wyatt
+      - cat: Best Original Song
+        name: What Was I Made For?
+        by: Music and Lyric by Billie Eilish and Finneas O'Connell
+      - cat: Best Picture
+        name: David Heyman, Margot Robbie, Tom Ackerley and Robbie Brenner, Producers
+      - cat: Best Production Design
+        name: "Production Design: Sarah Greenwood; Set Decoration: Katie Spencer"
+      - cat: Best Adapted Screenplay
+        name: Written by Greta Gerwig & Noah Baumbach
+  - id: 158867
+    title: Poor Things
+    trailer: https://www.youtube.com/watch?v=-EfYJWRw2FM
+    noms: 
+      - cat: Best Supporting Actor
+        id: mark-ruffalo
+        name: Mark Ruffalo
+      - cat: Best Actress
+        id: emma-stone
+        name: Emma Stone
+      - cat: Best Cinematography
+        name: Robbie Ryan
+      - cat: Best Costume Design
+        name: Holly Waddington
+      - cat: Best Director
+        name: Yorgos Lanthimos
+      - cat: Best Film Editing
+        name: Yorgos Mavropsaridis
+      - cat: Best Makeup and Hairstyling
+        name: Nadia Stacey, Mark Coulier and Josh Weston
+      - cat: Best Original Score
+        name: Jerskin Fendrix
+      - cat: Best Picture
+        name: Ed Guiney, Andrew Lowe, Yorgos Lanthimos and Emma Stone, Producers
+      - cat: Best Production Design
+        name: "Production Design: James Price and Shona Heath; Set Decoration: Zsuzsa Mihalek"
+      - cat: Best Adapted Screenplay
+        name: Screenplay by Tony McNamara
+  - id: 349564
+    title: Nyad
+    trailer: https://www.youtube.com/watch?v=3anCgVSQb3Q
+    noms: 
+      - cat: Best Actress
+        id: annette-bening
+        name: Annette Bening
+      - cat: Best Supporting Actress
+        id: jodie-foster
+        name: Jodie Foster
+  - id: 345695
+    title: Anatomy of a Fall
+    trailer: https://www.youtube.com/watch?v=FUXawkH-ONM
+    noms: 
+      - cat: Best Actress
+        id: sandra-huller
+        name: Sandra Hüller
+      - cat: Best Director
+        name: Justine Triet
+      - cat: Best Film Editing
+        name: Laurent Sénéchal
+      - cat: Best Picture
+        name: Marie-Ange Luciani and David Thion, Producers
+      - cat: Best Original Screenplay
+        name: Screenplay - Justine Triet and Arthur Harari
+  - id: 346853
+    title: The Color Purple
+    trailer: https://www.youtube.com/watch?v=wPwzBUui1GA
+    noms: 
+      - cat: Best Supporting Actress
+        id: danielle-brooks
+        name: Danielle Brooks
+  - id: 295917
+    title: The Boy and the Heron
+    trailer: https://www.youtube.com/watch?v=t5khm-VjEu4
+    noms: 
+      - cat: Best Animated Feature
+        name: Hayao Miyazaki and Toshio Suzuki
+  - id: 337156
+    title: Elemental
+    trailer: https://www.youtube.com/watch?v=hXzcyx9V0xw
+    noms: 
+      - cat: Best Animated Feature
+        name: Peter Sohn and Denise Ream
+  - id: 111150
+    title: Nimona
+    trailer: https://www.youtube.com/watch?v=f_fuHRyQbOc
+    noms: 
+      - cat: Best Animated Feature
+        name: Nick Bruno, Troy Quane, Karen Ryan and Julie Zackary
+  - id: 351505
+    title: Robot Dreams
+    trailer: https://www.youtube.com/watch?v=qrEsApQ1Boc
+    noms: 
+      - cat: Best Animated Feature
+        name: Pablo Berger, Ibon Cormenzana, Ignasi Estapé and Sandra Tapia Díaz
+  - id: 132814
+    title: "Spider-Man: Across the Spider-Verse"
+    trailer: https://www.youtube.com/watch?v=shW9i6k8cB0
+    noms: 
+      - cat: Best Animated Feature
+        name: Kemp Powers, Justin K. Thompson, Phil Lord, Christopher Miller and Amy Pascal
+  - id: 348991
+    title: El Conde
+    trailer: https://www.youtube.com/watch?v=YGvX7ma7Xnk
+    noms: 
+      - cat: Best Cinematography
+        name: Edward Lachman
+  - id: 332434
+    title: Napoleon
+    trailer: https://www.youtube.com/watch?v=LIsfMO5Jd_w
+    noms: 
+      - cat: Best Costume Design
+        name: Janty Yates and Dave Crossman
+      - cat: Best Production Design
+        name: "Production Design: Arthur Max; Set Decoration: Elli Griff"
+      - cat: Best Visual Effects
+        name: Charley Henley, Luc-Ewen Martin-Fenouillet, Simone Coco and Neil Corbould
+  - id: 336494
+    title: The Zone of Interest
+    trailer: https://www.youtube.com/watch?v=GFNtVaAuVYY
+    noms: 
+      - cat: Best Director
+        name: Jonathan Glazer
+      - cat: Best International Feature Film
+        name: United Kingdom
+      - cat: Best Picture
+        name: James Wilson, Producer
+      - cat: Best Sound
+        name: Tarn Willers and Johnnie Burn
+      - cat: Best Adapted Screenplay
+        name: Written by Jonathan Glazer
+  - id: 350137
+    title: "Bobi Wine: The People's President"
+    trailer: https://www.youtube.com/watch?v=Leqt5JhRa5A
+    noms: 
+      - cat: Best Documentary, Feature
+        name: Moses Bwayo, Christopher Sharp and John Battsek
+  - id: 349371
+    title: The Eternal Memory
+    trailer: https://www.youtube.com/watch?v=v-hxO7_oEZw
+    noms: 
+      - cat: Best Documentary, Feature
+        name: 
+  - id: 346099
+    title: Four Daughters
+    trailer: https://www.youtube.com/watch?v=OUsu78a5phM
+    noms: 
+      - cat: Best Documentary, Feature
+        name: Kaouther Ben Hania and Nadim Cheikhrouha
+  - id: 353361
+    title: To Kill A Tiger
+    trailer: https://www.youtube.com/watch?v=mC6-igJ_WWM
+    noms: 
+      - cat: Best Documentary, Feature
+        name: Nisha Pahuja, Cornelia Principe and David Oppenheim
+  - id: 347973
+    title: 20 Days In Mariupol
+    trailer: https://www.youtube.com/watch?v=9H_Fg_5x4ME
+    noms: 
+      - cat: Best Documentary, Feature
+        name: Mstyslav Chernov, Michelle Mizner and Raney Aronson-Rath
+  - id: 350904
+    title: The ABCs of Book Banning
+    trailer: https://www.youtube.com/watch?v=sMaZ2bLwaeA
+    noms: 
+      - cat: Best Documentary, Short
+        name: Sheila Nevins and Trish Adlesic
+  - id: 353316
+    title: The Barber Of Little Rock
+    trailer: https://www.youtube.com/watch?v=LRDems-XacU
+    noms: 
+      - cat: Best Documentary, Short
+        name: John Hoffman and Christine Turner
+  - id: 353318
+    title: Island in Between
+    trailer: https://www.youtube.com/watch?v=vQzMHWnJ9FQ
+    noms: 
+      - cat: Best Documentary, Short
+        name: S. Leo Chiang and Jean Tsien
+  - id: 352710
+    title: The Last Repair Shop
+    trailer: https://www.youtube.com/watch?v=HSLeqTWasO8
+    noms: 
+      - cat: Best Documentary, Short
+        name: Ben Proudfoot and Kris Bowers
+  - id: 353360
+    title: Nai Nai & Wài Pó
+    trailer: https://www.youtube.com/watch?v=JlyYimV6Qqw
+    noms: 
+      - cat: Best Documentary, Short
+        name: Sean Wang and Sam Davis
+  - id: 349495
+    title: Io capitano
+    trailer: https://www.youtube.com/watch?v=5Mg_AiPGw-0
+    noms: 
+      - cat: Best International Feature Film
+        name: Italy
+  - id: 346126
+    title: Perfect Days
+    trailer: https://www.youtube.com/watch?v=Iv8YO5BXCAQ
+    noms: 
+      - cat: Best International Feature Film
+        name: Japan
+  - id: 349161
+    title: Society of the Snow
+    trailer: https://www.youtube.com/watch?v=pDak4qLyF4Q
+    noms: 
+      - cat: Best International Feature Film
+        name: Spain
+      - cat: Best Makeup and Hairstyling
+        name: Ana López-Puigcerver, David Martí and Montse Ribé
+  - id: 351366
+    title: "The Teachers' Lounge"
+    trailer: https://www.youtube.com/watch?v=kbUaACY8wRQ
+    noms: 
+      - cat: Best International Feature Film
+        name: Germany
+  - id: 348487
+    title: Golda
+    trailer: https://www.youtube.com/watch?v=7eDU96K_VXE
+    noms: 
+      - cat: Best Makeup and Hairstyling
+        name: Karen Hartley Thomas, Suzi Battersby and Ashra Kelly-Blue
+  - id: 134846
+    title: Indiana Jones and the Dial of Destiny
+    trailer: hhttps://www.youtube.com/watch?v=ZfVYgWYaHmE
+    noms: 
+      - cat: Best Original Score
+        name: John Williams
+  - id: 308854
+    title: Flamin' Hot
+    trailer: https://www.youtube.com/watch?v=it7sNRloq-A
+    noms: 
+      - cat: Best Original Song
+        name: The Fire Inside
+        by: Music and Lyric by Diane Warren
+  - id: 350892
+    title: American Symphony
+    trailer: https://www.youtube.com/watch?v=wKSMsdq8ONs
+    noms: 
+      - cat: Best Original Song
+        name: It Never Went Away
+        by: Music and Lyric by Jon Batiste and Dan Wilson
+  - id: 343586
+    title: Past Lives
+    trailer: https://www.youtube.com/watch?v=kA244xewjcI
+    noms: 
+      - cat: Best Picture
+        name: "David Hinojosa, Christine Vachon and Pamela Koffler, Producers"
+      - cat: Best Original Screenplay
+        name: Written by Celine Song
+  - id: 353315
+    title: Letter to a Pig
+    trailer: https://www.youtube.com/watch?v=Cp3f92WYxv0
+    noms: 
+      - cat: Best Short Film, Animated
+        name: Tal Kantor and Amit R. Gicelter
+  - id: 353330
+    title: Ninety-Five Senses
+    trailer: https://www.youtube.com/watch?v=PFajvoKMdI0
+    noms: 
+      - cat: Best Short Film, Animated
+        name: Jerusha Hess and Jared Hess
+  - id: 353386
+    title: Our Uniform
+    trailer: https://www.youtube.com/watch?v=6rgF6G9Yyjc
+    noms: 
+      - cat: Best Short Film, Animated
+        name: Yegane Moghaddam
+  - id: 353313
+    title: Pachyderme
+    trailer: https://www.youtube.com/watch?v=bdSxBJzYJ94
+    noms: 
+      - cat: Best Short Film, Animated
+        name: Stéphanie Clément and Marc Rius
+  - id: 353359
+    title: WAR IS OVER! Inspired by the Music of John and Yoko
+    trailer: https://www.youtube.com/watch?v=OrcilSXWa8M
+    noms: 
+      - cat: Best Short Film, Animated
+        name: Dave Mullins and Brad Booker
+  - id: 350856
+    title: The After
+    trailer: https://www.youtube.com/watch?v=fV8kGLfv_nc
+    noms: 
+      - cat: Best Short Film, Live Action
+        name: Misan Harriman and Nicky Bentham
+  - id: 353387
+    title: Invincible
+    trailer: https://www.youtube.com/watch?v=uXpJM6bgV4Y
+    noms: 
+      - cat: Best Short Film, Live Action
+        name: Vincent René-Lortie and Samuel Caron
+  - id: 353314
+    title: Knight of Fortune
+    trailer: https://www.youtube.com/watch?v=o3j4OwOnQEs
+    noms: 
+      - cat: Best Short Film, Live Action
+        name: Lasse Lyskjær Noer and Christian Norlyk
+  - id: 353317
+    title: Red, White and Blue
+    trailer: https://www.youtube.com/watch?v=_kMGfKPQsdU
+    noms: 
+      - cat: Best Short Film, Live Action
+        name: Nazrin Choudhury and Sara McFarlane
+  - id: 336624
+    title: The Wonderful Story of Henry Sugar
+    trailer: https://www.youtube.com/watch?v=4RdncisZ_QA
+    noms: 
+      - cat: Best Short Film, Live Action
+        name: Wes Anderson and Steven Rales
+  - id: 346573
+    title: The Creator
+    trailer: https://www.youtube.com/watch?v=573GCxqkYEg
+    noms: 
+      - cat: Best Sound
+        name: Ian Voigt, Erik Aadahl, Ethan Van der Ryn, Tom Ozanich and Dean Zupancic
+      - cat: Best Visual Effects
+        name: Jay Cooper, Ian Comley, Andrew Roberts and Neil Corbould
+  - id: 30294
+    title: "Mission: Impossible - Dead Reckoning Part 1"
+    trailer: https://www.youtube.com/watch?v=avz06PDqDbM
+    noms: 
+      - cat: Best Sound
+        name: Chris Munro, James H. Mather, Chris Burdon and Mark Taylor
+      - cat: Best Visual Effects
+        name: Alex Wuttke, Simone Coco, Jeff Sutherland and Neil Corbould
+  - id: 348155
+    title: Godzilla Minus One
+    trailer: https://www.youtube.com/watch?v=VvSrHIX5a-0
+    noms: 
+      - cat: Best Visual Effects
+        name: Takashi Yamazaki, Kiyoko Shibuya, Masaki Takahashi and Tatsuji Nojima
+  - id: 11716
+    title: Guardians of the Galaxy Vol. 3
+    trailer: https://www.youtube.com/watch?v=u3V5KDHRQvk
+    noms: 
+      - cat: Best Visual Effects
+        name: Stephane Ceretti, Alexis Wajsbrot, Guy Williams and Theo Bialek
+  - id: 346178
+    title: May December
+    trailer: https://www.youtube.com/watch?v=wOwP6JHqag0
+    noms: 
+      - cat: Best Original Screenplay
+        name: Screenplay by Samy Burch; Story by Samy Burch & Alex Mechanik

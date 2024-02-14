@@ -1,6 +1,6 @@
 ---
 title: AwardsNom
-redirect: 2022
+redirect: 2024
 layout: redirect
 permalink: /oscars/
 ---
