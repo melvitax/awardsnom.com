@@ -96,6 +96,9 @@ nominees:
         by: War
         id:  the-crown-war
         winner: true
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/80025678
   - id: 69478
     title: The Handmaid's Tale
     noms:
@@ -173,6 +176,7 @@ nominees:
         name: Jon Favreau
         by: "Chapter 13: The Jedi"
         id:  mandalorian-13
+        
   - id: 79084
     title: Pose
     noms:

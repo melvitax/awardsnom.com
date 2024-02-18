@@ -31,7 +31,7 @@
             <div class="row card-columns ml-0 mr-0">
           
                 {% for cat in data.categories %}
-                {% assign cat_split = cat | split: ":" %}
+                {% assign cat_split = cat.title | split: ":" %}
                 <h3 class="col-10 pt-3 pb-2 text-center border-bottom text-warning fw-light fs-5 cat-title" id="{{ cat | slugify }}">{{ cat_split[0] | upcase }}{% if cat_split[1] %}<br /><small class="fs-5 text-warning">{{ cat_split[1] | upcase}}</small>{% endif %}</h3>
                 {% for nominee in data.nominees %}
                 {% assign noms = nominee.noms | where: "cat", cat %}
@@ -48,7 +48,7 @@
                     {% capture key %}{{ page.show }}|{{ page.year }}|{{ catid }}|{{ nomid }}{% endcapture %}
                     {% capture line %}{ key: "{{ key }}", thumb: "{{ thumb }}", title: "{{ datatitle }}" }{% endcapture %}
                     {% assign jsnominees = jsnominees | push: line %}
-                    
+
                     <div class="card mb-3 border-0 fadeup nom" data-cat="{{ catid }}" data-nom="{{ nomid }}">
                         <div class="row g-0"> 
                             <!-- Poster -->
@@ -111,7 +111,7 @@
             {% include signin.html %}
         </main>
 		{% include footer.html %}
-        {% include jsbridge.html jsnominees=jsnominees jsyearstofetch=jsyearstofetch %}
+        {% include jsbridge.html jsnominees=jsnominees  jsyearstofetch=jsyearstofetch %}
 		{% include scripts.html %}
 	</body>
 </html>

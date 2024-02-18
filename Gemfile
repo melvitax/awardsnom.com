@@ -25,6 +25,7 @@ gem "webrick"
 platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo", "~> 2.0.4"
   gem "tzinfo-data"
+  gem "jekyll-get-json", "~> 1.0"
 end
 
 # Performance-booster for watching directories on Windows

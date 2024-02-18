@@ -54,8 +54,6 @@ function setUpAuth() {
     if (typeof show !== 'undefined' && typeof year !== undefined) {
       getTopRated()
       getMyPicks()
-    } else if (layout == 'home') {
-      getLatestPicks()
     }
     
     // registerForNotifications();
@@ -94,7 +92,7 @@ function setUpAuth() {
 
 // Fetch Top Rated
 function getTopRated(cat) {
-  console.log("getTopRated()")
+  console.log("getTopRated("+cat+")")
   var container = CloudKit.getDefaultContainer();
   var publicDB = container.publicCloudDatabase;
 
@@ -128,6 +126,11 @@ function getTopRated(cat) {
                 return a.fields.votes.value < b.fields.votes.value
               })
             var topPick = sorted[0]
+            console.log('getTopRated sorted: '+JSON.stringify(sorted.length))
+            sorted.forEach(function (nom) {
+              var isTopVotes = nom.fields.cat.value == topPick.fields.cat.value && nom.fields.nom.value == topPick.fields.nom.value
+              displayVoteCount(nom.fields.cat.value, nom.fields.nom.value, nom.fields.votes.value, isTopVotes)
+            })
             displayTopVote(topPick.fields.cat.value, topPick.fields.nom.value)
           })
         }
@@ -166,10 +169,11 @@ function getMyPicks() {
           console.log('getMyPicks query: ' + numberOfRecords + ' records');
           records.forEach(function (record) {
             var fields = record.fields;
-            removeFromMyPicks(fields.cat.value)
-            displayMyPicks(fields.show.value, fields.year.value, fields.cat.value, fields.nom.value)
-            removeMyPickBadge(fields.cat.value)
-            displayMyPickBadge(fields.cat.value, fields.nom.value)
+            removeFromScoreCardUI(fields.cat.value)
+            updateScoreCardUI(fields.show.value, fields.year.value, fields.cat.value, fields.nom.value)
+            removeMyPickUI(fields.cat.value)
+            updateMyPickUI(fields.cat.value, fields.nom.value)
+            console.log("my pick cat: " + fields.cat.value + " = " +fields.nom.value)
           });
         }
       }
@@ -179,48 +183,11 @@ function getMyPicks() {
     });
 }
 
-// Fetch Latest Picks
-function getLatestPicks() {
-  console.log("getLatestPicks()")
-  var container = CloudKit.getDefaultContainer();
-  var privateDB = container.privateCloudDatabase;
-
-  for (let i=0; i < jsyearstofetch.length; i++) {
-    let aYear = jsyearstofetch[i]
-    var query = {
-      recordType: 'Picks',
-      filterBy: [{comparator: 'EQUALS', fieldName: 'year', fieldValue: { value: aYear }}]
-    }
-    privateDB.performQuery(query)
-      .then(function (response) {
-        if(response.hasErrors) {
-         console.log("getLatestPicks error: " + response.errors[0])
-        } else {
-          var records = response.records;
-          var numberOfRecords = records.length;
-          if (numberOfRecords === 0) {
-            console.log('getLatestPicks query: none found')
-          } else {
-            console.log('getLatestPicks query: ' + numberOfRecords + ' records');
-            records.forEach(function (record) {
-              var fields = record.fields;
-              displayMyPicks(fields.show.value, fields.year.value, fields.cat.value, fields.nom.value)
-            });
-          }
-        }
-      })
-      .catch(function(error){
-        console.log("getLatestPicks error: " + error)
-      });
-  }
-  
-}
-
 // Toggle Pick
 function togglePick(cat, nom) {
   console.log("togglePick()")
-  removeMyPickBadge(cat)
-  removeFromMyPicks(cat)
+  removeMyPickUI(cat)
+  removeFromScoreCardUI(cat)
   displayLoading()
   var container = CloudKit.getDefaultContainer();
   var privateDB = container.privateCloudDatabase;
@@ -253,15 +220,13 @@ function togglePick(cat, nom) {
             console.log("togglePick removing " + (records.length-1) + "extra records ")
             for (let i=1; i<records.length; i++) {
               var record = records[i]
+              updateVoteCountUI(cat, record.fields.nom.value, -1)
               privateDB.deleteRecords(record.recordName)
                 .then(function(deleteResponse) {
                   if(deleteResponse.hasErrors) {
                     console.log("togglePick delete extras error: " + deleteResponse.errors[0])
                   } else {
                     updateVotes(show, year, cat, record.fields.nom.value, -1)
-                      .then(function() {
-                        getTopRated()
-                      })
                     console.log("togglePick extras deleted")
                   }
                 })
@@ -273,20 +238,15 @@ function togglePick(cat, nom) {
           // Delete Pick
           if (nom == record.fields.nom.value) {
             console.log("togglePick delete: " + record.fields.nom.value)
+            updateVoteCountUI(cat, record.fields.nom.value, -1)
             privateDB.deleteRecords(record.recordName)
               .then(function(deleteResponse) {
                 if(deleteResponse.hasErrors) {
                   console.log("togglePick delete error: " + deleteResponse.errors[0])
                 } else {
-                  var deletedRecord = deleteResponse.records[0]
                   console.log("togglePick deleted")
                   updateVotes(show, year, cat, nom, -1)
-                    .then(function() {
-                      getTopRated()
-                    })
                 }
-                removeMyPickBadge(cat)
-                removeFromMyPicks(cat)
                 hideLoading()
               })
               .catch(function(error){
@@ -297,26 +257,20 @@ function togglePick(cat, nom) {
           // Update Pick
           else {
             var prevNom = record.fields.nom.value
+            updateMyPickUI(cat, nom)
+            updateScoreCardUI(show, year, cat, nom)
+            updateVoteCountUI(cat, prevNom, -1)
+            updateVoteCountUI(cat, nom, 1)
             record.fields.nom = { value: nom.toString() }
-            console.log("togglePick update: " + record.fields.nom.value)
             privateDB.saveRecords(record)
               .then(function(updateResponse) {
                 if(updateResponse.hasErrors) {
                   console.log("togglePick update error: " + updateResponse.errors[0])
                 } else {
-                  var updatedRecord = updateResponse.records[0];
-                  removeMyPickBadge(cat)
-                  removeFromMyPicks(cat)
-                  displayMyPickBadge(cat, nom)
-                  displayMyPicks(show, year, cat, nom)
                   updateVotes(show, year, cat, prevNom, -1)
                     .then(function() {
                       updateVotes(show, year, cat, nom, 1)
-                        .then(function() {
-                          getTopRated()
-                        })
                     })
-                  console.log("togglePick updated: " + JSON.stringify(updatedRecord))
                 }
                 hideLoading()
               })
@@ -337,21 +291,15 @@ function togglePick(cat, nom) {
               nom: { value: nom.toString() }
             }
           };
+          updateVoteCountUI(cat, record.fields.nom.value, 1)
+          updateMyPickUI(cat, nom)
+          updateScoreCardUI(show, year, cat, nom)
           privateDB.saveRecords(record)
               .then(function(saveResponse) {
                 if(saveResponse.hasErrors) {
                   console.log("togglePick save error: " + saveResponse.errors[0])
                 } else {
-                  removeMyPickBadge(cat)
-                  removeFromMyPicks(cat)
-                  displayMyPickBadge(cat, nom)
-                  displayMyPicks(show, year, cat, nom)
                   updateVotes(show, year, cat, nom, 1)
-                    .then(function() {
-                      getTopRated()
-                    })
-                  var updatedRecord = saveResponse.records[0];
-                  console.log("togglePick saved: " + cat + ' ' + nom)
                 }
                 hideLoading()
               })
@@ -373,7 +321,7 @@ function togglePick(cat, nom) {
 
 // Update Votes
 function updateVotes(show, year, cat, nom, voteChange) {
-  console.log("updateVotes()")
+  console.log("updateVotes() "+show+":"+year+":"+cat+":"+nom+" change:"+voteChange)
   return new Promise(function (fulfilled) {
     var container = CloudKit.getDefaultContainer();
     var publicDB = container.publicCloudDatabase;
@@ -444,6 +392,8 @@ function updateVotes(show, year, cat, nom, voteChange) {
                 if(saveResponse.hasErrors) {
                   console.log("updateVotes save error: " + saveResponse.errors[0])
                 }
+                var updatedRecord = saveResponse.records[0];
+                console.log("updateVotes saved: " + cat + ' ' + nom + ' = ' + JSON.stringify(updatedRecord))
                 fulfilled()
             }).catch(function(error){
               console.log("updateVotes save error caught: " + error)
@@ -593,35 +543,14 @@ function displayUserName(name) {
 
 // Display Loading
 function displayLoading() {
-  var modelEl = document.querySelector('#loading')
-  var modal = bootstrap.Modal.getOrCreateInstance(modelEl, {
-    keyboard: false, backdrop: 'static'
-  })
-  modelEl.addEventListener('show.bs.modal', function (event) {
-    var modalBody = modelEl.querySelector('.modal-body')
-    modalBody.innerHTML = '<div class="spinner-border text-light" style="width: 3rem; height: 3rem;" role="status"><span class="visually-hidden">Loading...</span></div>'
-  })
-  modal.show()
+  $('.spinner').addClass('loading')
 }
 
 // Hide Loading
 function hideLoading() {
-  var modelEl = document.querySelector('#loading')
-  modelEl.addEventListener('shown.bs.modal', function (event) {
-    modal.hide()
-  })
-  var modal = bootstrap.Modal.getOrCreateInstance(modelEl, {
-    keyboard: false, backdrop: 'static'
-  })
-  modal.hide()
+  $('.spinner').removeClass('loading')
 }
 
-// Enable discover users
-function enableDiscoverAllUserIdentities() {
-  $('.discover-users').on( "click", function() {
-    discoverAllUserIdentities()
-  })
-}
 
 // Enable fetch current user identity
 function enableFetchCurrentUserIdentity() {
@@ -654,39 +583,88 @@ function enableTogglePicks() {
 }
 
 // Remove My Pick Badge
-function removeMyPickBadge(cat) {
-  $(".nom[data-cat='" + cat + "'] .pick-icon").remove()
+function removeMyPickUI(cat) {
+  $(".nom[data-cat='" + cat + "']").removeClass('selected')
 }
 
-// Display My Pick Label
-function displayMyPickBadge(cat, nom) {
-  $(".nom[data-cat='" + cat + "'][data-nom='" + nom + "'] .rating").prepend('<span class="pick-icon lh-1 text-warning pt-1 w-auto" ><i class="fa-solid fa-heart"></i> Pick</span>')
+// Display My Pick Badge
+function updateMyPickUI(cat, nom) {
+  $(".nom[data-cat='" + cat + "'][data-nom='" + nom + "']").addClass('selected')
 }
 
-// Remove from My Picks
-function removeFromMyPicks(cat) {
-  $(".my-picks .img-wrapper[data-cat='" + cat + "']").attr("title", '')
-  $(".my-picks .img-wrapper[data-cat='" + cat + "'] img").attr("src", '/assets/images/blank.gif').hide()
+// Remove from Score Card
+function removeFromScoreCardUI(cat) {
+  $(".score-card .pill[data-cat='" + cat + "']")
+    .removeClass('bg-warning')
+    .removeClass('bg-success')
+    .removeClass('bg-danger')
+    .addClass('bg-dark')
 }
 
-// Display My Picks
-function displayMyPicks(show, year, cat, nom) {
-  var nomKey = show+'|'+year+'|'+cat+'|'+nom
-  var matches = nominees.filter(nominee => nominee.key == nomKey)
-  // console.log("displayMyPicks() nomKey: "+nomKey+" matches: "+JSON.stringify(matches))
-  if (matches.length > 0) {
-    var nomination = matches[0]
-    var thumb = nomination['thumb']
-    var title = nomination['title']
-    $(".my-picks[data-show='" + show + "'][data-year='" + year + "'] .img-wrapper[data-cat='" + cat + "'] img").attr("src", '/'+show+'/'+year+'/images/'+thumb).show()
-    $(".my-picks[data-show='" + show + "'][data-year='" + year + "'] .img-wrapper[data-cat='" + cat + "']").attr("title", title)
+// Update Score Card UI
+function updateScoreCardUI(show, year, cat, nom) {
+  removeFromScoreCardUI(cat)
+  var winner = nominees.filter(nominee => nominee.catid == cat && nominee.winner == "true")
+  if (nom) {
+    if (winner.length > 0) {
+      if (cat == winner[0].catid && nom == winner[0].nomid) {
+        $(".score-card .pill[data-cat='" + cat + "']")
+          .removeClass('bg-dark')
+          .addClass('bg-success')
+      } else {
+        $(".score-card .pill[data-cat='" + cat + "']")
+          .removeClass('bg-dark')
+          .addClass('bg-danger')
+      }
+    } else {
+      $(".score-card .pill[data-cat='" + cat + "']")
+        .removeClass('bg-dark')
+        .addClass('bg-warning')
+        .attr('title', 'Picked: ')
+    } 
   }
+  
+  console.log(" cat:"+cat)
+  //console.log("nominees: " + JSON.stringify(nominees))
+  // var nomKey = show+'|'+year+'|'+cat+'|'+nom
+  // var matches = nominees.filter(nominee => nominee.key == nomKey)
+  // // console.log("updateScoreCardUI() nomKey: "+nomKey+" matches: "+JSON.stringify(matches))
+  // console.log("nominees: " + JSON.stringify(nominees))
+  // if (matches.length > 0) {
+  //   var nomination = matches[0]
+  //   var thumb = nomination['thumb']
+  //   var title = nomination['title']
+    
+  //   removeFromScoreCardUI(cat)
+  //   // is there a winner?
+
+    
+  //   // $(".score-card .pill[data-cat='" + cat + "']")
+  //   //   .removeClass('bg-dark')
+
+  //   //   .removeClass('bg-success')
+  //   //   .removeClass('bg-danger')
+  //   //   .addClass('bg-warning')
+  // }
 }
 
 // Display isTop
 function displayTopVote(cat, nom) {
   $(".nom[data-cat='" + cat + "'] .top-icon").remove()
   $(".nom[data-cat='" + cat + "'][data-nom='" + nom + "'] .rating").append('<span class="top-icon lh-1 text-info pt-1 w-auto float-end"><i class="fa-solid fa-star"></i> Top</span>')
+}
+
+function displayVoteCount(cat, nom, amount, isTopVotes) {
+  let voteLabel = amount == 1 ? "vote" : "votes"
+  $(".nom[data-cat='" + cat + "'][data-nom='" + nom + "'] .votes")
+    .text(amount + " " + voteLabel)
+    .attr("data-votes", amount)
+}
+
+function updateVoteCountUI(cat, nom, offset) {
+  let currentAmount = $(".nom[data-cat='" + cat + "'][data-nom='" + nom + "'] .votes").attr("data-votes")
+  let amount = Number(currentAmount) + Number(offset)
+  displayVoteCount(cat, nom, amount)
 }
 
 // Enable tool tips in My Picks

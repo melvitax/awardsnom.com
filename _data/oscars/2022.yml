@@ -72,6 +72,9 @@ nominees:
         name: "Richard Flynn, Robert Mackenzie and Tara Webb"
       - cat: Best Adapted Screenplay
         name: Jane Campion
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81127997
   - id: 537116
     title: tick, tick...BOOM!
     trailer: https://www.youtube.com/watch?v=YJserno8tyU
@@ -81,6 +84,9 @@ nominees:
         name: Andrew Garfield
       - cat: Best Film Editing
         name: Myron Kerstein and Andrew Weisblum
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81149184
   - id: 614917
     title: King Richard
     trailer: https://www.youtube.com/watch?v=FIsNbpJIa6k
@@ -171,6 +177,9 @@ nominees:
         name: Jessie Buckley
       - cat: Best Adapted Screenplay
         name: Maggie Gyllenhaal
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81478910
   - id: 766798
     title: Parallel Mothers
     trailer: https://www.youtube.com/watch?v=cL6JDYkRa2g
@@ -219,6 +228,9 @@ nominees:
       - cat: Best Original Song
         name: Dos Oruguitas
         by: Lin-Manuel Miranda
+    streaming:
+      - source: disneyplus
+        url: https://www.disneyplus.com/movies/encanto/33q7DY1rtHQH
   - id: 680813
     title: Flee
     trailer: https://www.youtube.com/watch?v=wgj7DUEtfg0
@@ -239,8 +251,11 @@ nominees:
     title: The Mitchells vs. The Machines
     trailer: https://www.youtube.com/watch?v=yyjsyedJtZs
     noms:
-        - cat: Best Animated Feature
-          name: Mike Rianda, Phil Lord, Christopher Miller and Kurt Albrecht
+      - cat: Best Animated Feature
+        name: Mike Rianda, Phil Lord, Christopher Miller and Kurt Albrecht
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81399614
   - id: 527774
     title: Raya and the Last Dragon
     trailer: https://www.youtube.com/watch?v=3UFWsEY8Hdc
@@ -359,12 +374,18 @@ nominees:
     noms:
       - cat: Best Documentary, Short
         name: Matt Ogens and Geoff McLean
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/80219704
   - id: 869602
     title: Lead Me Home 
     trailer: https://www.youtube.com/watch?v=moekzAxXe0o
     noms:
       - cat: Best Documentary, Short
         name: Pedro Kos and Jon Shenk
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81240756
   - id: 822582
     title: The Queen of Basketball 
     trailer: https://www.youtube.com/watch?v=nRGsgb4WOzw
@@ -378,6 +399,9 @@ nominees:
     noms:
       - cat: Best Documentary, Short
         name: Elizabeth Mirzaei and Gulistan Mirzaei
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81562326
   - id: 776769
     title: When We Were Bullies 
     trailer: https://www.youtube.com/watch?v=hyt5Q1-u7_Q
@@ -396,12 +420,18 @@ nominees:
         name: Adam McKay and Kevin Messick, Producers
       - cat: Best Original Screenplay
         name: 'Screenplay by Adam McKay; Story by Adam McKay & David Sirota'
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81252357
   - id: 722778
     title: The Hand Of God 
     trailer: https://www.youtube.com/watch?v=i_1VW_0i6vo
     noms:
       - cat: Best International Feature Film
         name: Italy
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81156325
   - id: 627087
     title: 'Lunana: A Yak in the Classroom'
     trailer: https://www.youtube.com/watch?v=5nZqpBCjVrY
@@ -471,6 +501,9 @@ nominees:
     noms:
       - cat: Best Short Film, Animated
         name: Dan Ojari and Mikey Please
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81058433
   - id: 601329
     title: The Windshield Wiper
     trailer: https://www.youtube.com/watch?v=s36kOHSyjQ8

@@ -38,12 +38,18 @@ nominees:
     noms:
       - cat: Best Documentary, Short
         name: Sophia Nahli Allison & Janice Duncan
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81304985
   - id: 422803
     title: "A Shaun the Sheep Movie: Farmageddon"
     trailer: https://www.youtube.com/watch?v=YlYN4UjMXA0
     noms:
       - cat: Best Animated Feature
         name: Richard Phelan, Will Becher & Paul Kewley
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/80242602
   - id: 580175
     title: Another Round
     trailer: https://www.youtube.com/watch?v=40X5EX6Us7c
@@ -96,12 +102,18 @@ nominees:
     noms:
       - cat: Best Documentary, Feature
         name: Nicole Newnham, Jim LeBrecht & Sara Bolder
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81001496
   - id: 581859
     title: Da 5 Bloods
-    trailer: https://www.youtube.com/watch?v=D5RDTPfsLAI
+    trailer: https://www.netflix.com/title/81045635
     noms:
       - cat: Best Original Score
         name: Terence Blanchard
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81045635
   - id: 655154
     title: Do Not Split
     trailer: https://vimeo.com/393764663
@@ -122,6 +134,9 @@ nominees:
     noms:
       - cat: Best Original Song
         name: Savan Kotecha, Fat Max Gsus & Rickard Göransson
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/80244088
   - id: 689676
     title: Feeling Through
     trailer: https://www.youtube.com/watch?v=EXTvNfN4ayY
@@ -149,6 +164,9 @@ nominees:
         id: glenn-close
       - cat: Best Makeup and Hairstyling
         name: Eryn Krueger Mekash, Matthew Mungle & Patricia Dehaney
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81071970
   - id: 757697
     title: Hunger Ward
     trailer: https://www.youtube.com/watch?v=QvI77NPYLqs
@@ -162,6 +180,9 @@ nominees:
       - cat: Best Short Film, Animated
         name: Will McCormack & Michael Govier
         winner: true
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81349306
   - id: 583406
     title: Judas and the Black Messiah
     trailer: https://www.youtube.com/watch?v=sSjtGqRXQ9Y
@@ -207,6 +228,9 @@ nominees:
       - cat: Best Costume Design
         name: Ann Roth
         winner: true
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81100780
   - id: 614560
     title: Mank
     trailer: https://www.youtube.com/watch?v=aSfX-nrg-lI
@@ -235,6 +259,9 @@ nominees:
         name: Trish Summerville
       - cat: Best Sound
         name: Ren Klyce, Jeremy Molod, David Parker, Nathan Nance & Drew Kunin
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81117189
   - id: 615643
     title: Minari
     trailer: https://www.youtube.com/watch?v=KQ0gFidlro8
@@ -269,6 +296,9 @@ nominees:
       - cat: Best Documentary, Feature
         name: Pippa Ehrlich, James Reed & Craig Foster
         winner: true
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81045007
   - id: 581032
     title: News of the World
     trailer: https://www.youtube.com/watch?v=zTZDb_iKooI
@@ -331,6 +361,9 @@ nominees:
     noms:
       - cat: Best Animated Feature
         name: Glen Keane, Gennie Rim & Peilin Chou
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/80214236
   - id: 641662
     title: Pieces of a Woman
     trailer: https://www.youtube.com/watch?v=1zLKbMAZNGI
@@ -338,6 +371,9 @@ nominees:
       - cat: Best Actress
         name: Vanessa Kirby
         id: vanessa-kirby
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81128745
   - id: 532639
     title: Pinocchio
     trailer: https://www.youtube.com/watch?v=H4YgkUDVDhE
@@ -443,6 +479,9 @@ nominees:
       - cat: Best Original Song
         name: Io Sì (Seen)
         by: Diane Warren & Laura Pausini
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81046378
   - id: 669363
     title: The Man Who Sold His Skin
     trailer: https://www.youtube.com/watch?v=cY4THtbaklE
@@ -455,6 +494,9 @@ nominees:
     noms:
       - cat: Best Visual Effects
         name: Matthew Kasmir, Christopher Lawrence, Max Solomon & David Watkins
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/80244645
   - id: 653756
     title: The Mole Agent
     trailer: https://www.youtube.com/watch?v=rTD-B3wZORg
@@ -491,6 +533,9 @@ nominees:
         name: Alan Baumgarten
       - cat: Best Cinematography
         name: Phedon Papamichael
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81043755
   - id: 566076
     title: The United States vs. Billie Holiday
     trailer: https://www.youtube.com/watch?v=USi-ppCfxEA
@@ -504,6 +549,9 @@ nominees:
     noms:
       - cat: Best Adapted Screenplay
         name: Ramin Bahrani
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/80202877
   - id: 653729
     title: Time
     trailer: https://www.youtube.com/watch?v=kq6Hh07oLvs
@@ -517,6 +565,9 @@ nominees:
       - cat: Best Short Film, Live Action
         name: Travon Free & Martin Desmond Roe
         winner: true
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81447229
   - id: 675235
     title: White Eye
     trailer: https://www.youtube.com/watch?v=k2Jc-UvppFo

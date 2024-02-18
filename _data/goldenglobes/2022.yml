@@ -51,6 +51,9 @@ nominees:
         name: Jane Campion
       - cat: Best Score Motion Picture
         name: Jonny Greenwood
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81127997
   - id: 777270
     title: Belfast
     trailer: https://www.youtube.com/watch?v=Ja3PPOnJQ2k
@@ -127,6 +130,9 @@ nominees:
         id: leonardo-dicaprio
       - cat: Best Screenplay Motion Picture
         name: Adam McKay
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81252357
   - id: 718032
     title: Licorice Pizza
     trailer: https://www.youtube.com/watch?v=o_hRNmlk80g
@@ -165,6 +171,9 @@ nominees:
         name: Andrew Garfield
         id: andrew-garfield
         winner: true
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81149184
   - id: 517088
     title: Being the Ricardos
     trailer: https://www.youtube.com/watch?v=WvrjCdtB0zM
@@ -194,6 +203,9 @@ nominees:
         id: olivia-colman
       - cat: Best Director Motion Picture
         name: Maggie Gyllenhaal
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81478910
   - id: 644495
     title: House of Gucci
     trailer: https://www.youtube.com/watch?v=pGi3Bgn7U5U
@@ -268,6 +280,9 @@ nominees:
       - cat: Best Song Motion Picture
         name: Dos Oruguitas
         by: Lin-Manuel Miranda
+    streaming:
+      - source: disneyplus
+        url: https://www.disneyplus.com/movies/encanto/33q7DY1rtHQH
   - id: 680813
     title: Flee
     trailer: https://www.youtube.com/watch?v=wgj7DUEtfg0
@@ -301,6 +316,9 @@ nominees:
     noms:
       - cat: 'Best Picture: Non-English Language'
         name: Italy
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81156325
   - id: 766798
     title: Parallel Mothers
     trailer: https://www.youtube.com/watch?v=cL6JDYkRa2g
@@ -408,6 +426,9 @@ nominees:
         name: Oh Young-soo
         id: oh-young-soo
         winner: true
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81040344
   - id: 124101
     title: Hacks
     trailer: https://www.youtube.com/watch?v=q6ke-bfXSBg

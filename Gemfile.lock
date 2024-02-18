@@ -64,6 +64,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 4.2.2)
+  jekyll-get-json (~> 1.0)
   tzinfo (~> 2.0.4)
   tzinfo-data
   wdm (~> 0.1.1)

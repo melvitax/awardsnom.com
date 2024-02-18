@@ -1,32 +1,80 @@
 showName: "Oscars"
 year: "2024"
-day: 2024-03-10
-categories:
-  - Best Picture
-  - Best Director
-  - Best International Feature Film
-  - Best Actress
-  - Best Actor
-  - Best Supporting Actress
-  - Best Supporting Actor
-  - Best Original Screenplay
-  - Best Adapted Screenplay
-  - Best Animated Feature
-  - Best Original Song
-  - Best Original Score
-  - Best Documentary, Feature
-  - Best Documentary, Short
-  - Best Short Film, Live Action
-  - Best Makeup and Hairstyling
-  - Best Film Editing
-  - Best Visual Effects
-  - Best Short Film, Animated
-  - Best Production Design
-  - Best Cinematography
-  - Best Costume Design
-  - Best Sound
+day: '2024-03-10'
+categories: 
+  - title: Best Picture
+    img_type: poster
+    title_type: movie
+  - title: Best Director
+    img_type: poster
+    title_type: nominee
+  - title: Best Actress
+    img_type: nominee
+    title_type: nominee
+  - title: Best Actor
+    img_type: nominee
+    title_type: nominee
+  - title: Best Supporting Actress
+    img_type: nominee
+    title_type: nominee
+  - title: Best Supporting Actor
+    img_type: nominee
+    title_type: nominee
+  - title: Best Original Screenplay
+    img_type: poster
+    title_type: movie
+  - title: Best Adapted Screenplay
+    img_type: poster
+    title_type: movie
+  - title: Best Documentary, Feature
+    img_type: poster
+    title_type: movie
+  - title: Best International Feature Film
+    img_type: poster
+    title_type: movie
+  - title: Best Animated Feature
+    img_type: poster
+    title_type: movie
+  - title: Best Original Song
+    img_type: poster
+    title_type: nominee
+  - title: Best Original Score
+    img_type: poster
+    title_type: nominee
+  - title: Best Makeup and Hairstyling
+    img_type: poster
+    title_type: nominee
+  - title: Best Film Editing
+    img_type: poster
+    title_type: nominee
+  - title: Best Visual Effects
+    img_type: poster
+    title_type: nominee
+  - title: Best Short Film, Animated
+    img_type: poster
+    title_type: movie
+  - title: Best Production Design
+    img_type: poster
+    title_type: nominee
+  - title: Best Cinematography
+    img_type: poster
+    title_type: nominee
+  - title: Best Costume Design
+    img_type: poster
+    title_type: nominee
+  - title: Best Sound
+    img_type: poster
+    title_type: nominee
+  - title: Best Documentary, Short
+    img_type: poster
+    title_type: movie
+  - title: Best Short Film, Live Action
+    img_type: poster
+    title_type: movie
 nominees:
-  - id: 73826
+  - id: maestro
+    tmdb_id: 73826
+    tmdb_cat: movie
     title: Maestro
     trailer: https://www.youtube.com/watch?v=gJP2QblqLA0
     noms:
@@ -46,14 +94,24 @@ nominees:
         name: Steven A. Morrow, Richard King, Jason Ruder, Tom Ozanich and Dean Zupancic
       - cat: Best Original Screenplay
         name: Written by Bradley Cooper & Josh Singer
-  - id: 332795
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81171868
+  - id: rustin
+    tmdb_id: 332795
+    tmdb_cat: movie
     title: Rustin
     trailer: https://www.youtube.com/watch?v=EuZ-UONInl4
     noms: 
       - cat: Best Actor
         id: colman-domingo
         name: Colman Domingo
-  - id: 348121
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81111528
+  - id: the-holdovers
+    tmdb_id: 348121
+    tmdb_cat: movie
     title: The Holdovers
     trailer: https://www.youtube.com/watch?v=AhKLpJmHhIg
     noms: 
@@ -69,7 +127,12 @@ nominees:
         name: Mark Johnson, Producer
       - cat: Best Original Screenplay
         name: Written by David Hemingson
-  - id: 287533
+    streaming:
+      - source: peacock
+        url: https://www.peacocktv.com/watch/asset/movies/the-holdovers/8da8aad6-9309-3b84-bb5f-d5745f490e62
+  - id: oppenheimer
+    tmdb_id: 287533
+    tmdb_cat: movie
     title: Oppenheimer
     trailer: https://www.youtube.com/watch?v=uYPbbksJxIg
     noms: 
@@ -102,7 +165,12 @@ nominees:
         name: Willie Burton, Richard King, Gary A. Rizzo and Kevin O'Connell
       - cat: Best Adapted Screenplay
         name: Written for the screen by Christopher Nolan
-  - id: 350612
+    streaming:
+      - source: peacock
+        url: https://www.peacocktv.com/watch/asset/movies/oppenheimer/602fd345-3ad6-33fd-a70d-a0e059b8d38a
+  - id: american-fiction
+    tmdb_id: 350612
+    tmdb_cat: movie
     title: American Fiction
     trailer: https://www.youtube.com/watch?v=5_4RlHpqVWM
     noms: 
@@ -118,7 +186,12 @@ nominees:
         name: Ben LeClair, Nikos Karamigios, Cord Jefferson and Jermaine Johnson, Producers
       - cat: Best Adapted Screenplay
         name: Written for the screen by Cord Jefferson
-  - id: 135852
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81728930
+  - id: killers-of-the-flower-moon
+    tmdb_id: 135852
+    tmdb_cat: movie
     title: Killers of the Flower Moon
     trailer: https://www.youtube.com/watch?v=1oZUCkJEuvo
     noms: 
@@ -145,7 +218,12 @@ nominees:
         name: Dan Friedkin, Bradley Thomas, Martin Scorsese and Daniel Lupi, Producers
       - cat: Best Production Design
         name: "Production Design: Jack Fisk; Set Decoration: Adam Willis"
-  - id: 16612
+    streaming:
+      - source: appletvplus
+        url: https://tv.apple.com/us/movie/killers-of-the-flower-moon/umc.cmc.5x1fg9vferlfeutzpq6rra1zf
+  - id: barbie
+    tmdb_id: 16612
+    tmdb_cat: movie
     title: Barbie
     trailer: https://www.youtube.com/watch?v=pBk4NYhWNMM
     noms: 
@@ -158,9 +236,11 @@ nominees:
       - cat: Best Costume Design
         name: Jacqueline Durran
       - cat: Best Original Song
+        id: i-m-just-ken
         name: I'm Just Ken
         by: Music and Lyric by Mark Ronson and Andrew Wyatt
       - cat: Best Original Song
+        id: what-was-i-made-for
         name: What Was I Made For?
         by: Music and Lyric by Billie Eilish and Finneas O'Connell
       - cat: Best Picture
@@ -169,7 +249,12 @@ nominees:
         name: "Production Design: Sarah Greenwood; Set Decoration: Katie Spencer"
       - cat: Best Adapted Screenplay
         name: Written by Greta Gerwig & Noah Baumbach
-  - id: 158867
+    streaming:
+      - source: hbomax
+        url: https://play.max.com/movie/80bc4915-c826-499f-9961-b422b17559b6
+  - id: poor-things
+    tmdb_id: 158867
+    tmdb_cat: movie
     title: Poor Things
     trailer: https://www.youtube.com/watch?v=-EfYJWRw2FM
     noms: 
@@ -197,7 +282,9 @@ nominees:
         name: "Production Design: James Price and Shona Heath; Set Decoration: Zsuzsa Mihalek"
       - cat: Best Adapted Screenplay
         name: Screenplay by Tony McNamara
-  - id: 349564
+  - id: nyad
+    tmdb_id: 349564
+    tmdb_cat: movie
     title: Nyad
     trailer: https://www.youtube.com/watch?v=3anCgVSQb3Q
     noms: 
@@ -207,7 +294,12 @@ nominees:
       - cat: Best Supporting Actress
         id: jodie-foster
         name: Jodie Foster
-  - id: 345695
+    streaming: 
+      - source: netflix
+        url: https://www.netflix.com/title/81447231
+  - id: anatomy-of-a-fall
+    tmdb_id: 345695
+    tmdb_cat: movie
     title: Anatomy of a Fall
     trailer: https://www.youtube.com/watch?v=FUXawkH-ONM
     noms: 
@@ -222,50 +314,81 @@ nominees:
         name: Marie-Ange Luciani and David Thion, Producers
       - cat: Best Original Screenplay
         name: Screenplay - Justine Triet and Arthur Harari
-  - id: 346853
+  - id: the-color-purple
+    tmdb_id: 346853
+    tmdb_cat: movie
     title: The Color Purple
     trailer: https://www.youtube.com/watch?v=wPwzBUui1GA
     noms: 
       - cat: Best Supporting Actress
         id: danielle-brooks
         name: Danielle Brooks
-  - id: 295917
+    streaming:
+      source: hbomax
+      url: https://play.max.com/movie/0bbe998a-23b8-49a2-9729-976d53af74be
+  - id: the-boy-and-the-heron
+    tmdb_id: 295917
+    tmdb_cat: movie
     title: The Boy and the Heron
     trailer: https://www.youtube.com/watch?v=t5khm-VjEu4
     noms: 
       - cat: Best Animated Feature
         name: Hayao Miyazaki and Toshio Suzuki
-  - id: 337156
+  - id: elemental
+    tmdb_id: 337156
+    tmdb_cat: movie
     title: Elemental
     trailer: https://www.youtube.com/watch?v=hXzcyx9V0xw
     noms: 
       - cat: Best Animated Feature
         name: Peter Sohn and Denise Ream
-  - id: 111150
+    streaming:
+      - source: disneyplus
+        url: https://www.disneyplus.com/movies/elemental/1B2ZQ9GF35W5
+  - id: nimona
+    tmdb_id: 111150
+    tmdb_cat: movie
     title: Nimona
     trailer: https://www.youtube.com/watch?v=f_fuHRyQbOc
     noms: 
       - cat: Best Animated Feature
         name: Nick Bruno, Troy Quane, Karen Ryan and Julie Zackary
-  - id: 351505
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81444554
+  - id: robot-dreams
+    tmdb_id: 351505
+    tmdb_cat: movie
     title: Robot Dreams
     trailer: https://www.youtube.com/watch?v=qrEsApQ1Boc
     noms: 
       - cat: Best Animated Feature
         name: Pablo Berger, Ibon Cormenzana, Ignasi Estapé and Sandra Tapia Díaz
-  - id: 132814
+  - id: spider-man-across-the-spider-verse
+    tmdb_id: 132814
+    tmdb_cat: movie
     title: "Spider-Man: Across the Spider-Verse"
     trailer: https://www.youtube.com/watch?v=shW9i6k8cB0
     noms: 
       - cat: Best Animated Feature
         name: Kemp Powers, Justin K. Thompson, Phil Lord, Christopher Miller and Amy Pascal
-  - id: 348991
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/search?q=Spider-Man%3A%20Across%20the%20Spider-Verse&jbv=81594921
+  - id: el-conde
+    tmdb_id: 348991
+    tmdb_cat: movie
     title: El Conde
     trailer: https://www.youtube.com/watch?v=YGvX7ma7Xnk
     noms: 
       - cat: Best Cinematography
         name: Edward Lachman
-  - id: 332434
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81590652
+  - id: napoleon
+    tmdb_id: 332434
+    tmdb_cat: movie
     title: Napoleon
     trailer: https://www.youtube.com/watch?v=LIsfMO5Jd_w
     noms: 
@@ -275,7 +398,12 @@ nominees:
         name: "Production Design: Arthur Max; Set Decoration: Elli Griff"
       - cat: Best Visual Effects
         name: Charley Henley, Luc-Ewen Martin-Fenouillet, Simone Coco and Neil Corbould
-  - id: 336494
+    streaming:
+      - source: appletvplus
+        url: https://tv.apple.com/us/movie/napoleon/umc.cmc.25k80oxl3vo69c8rimk8v81s1
+  - id: the-zone-of-interest
+    tmdb_id: 336494
+    tmdb_cat: movie
     title: The Zone of Interest
     trailer: https://www.youtube.com/watch?v=GFNtVaAuVYY
     noms: 
@@ -289,79 +417,126 @@ nominees:
         name: Tarn Willers and Johnnie Burn
       - cat: Best Adapted Screenplay
         name: Written by Jonathan Glazer
-  - id: 350137
+  - id: bobi-wine-the-people-s-president
+    tmdb_id: 350137
+    tmdb_cat: movie
     title: "Bobi Wine: The People's President"
     trailer: https://www.youtube.com/watch?v=Leqt5JhRa5A
     noms: 
       - cat: Best Documentary, Feature
         name: Moses Bwayo, Christopher Sharp and John Battsek
-  - id: 349371
+    streaming:
+      - source: disneyplus
+        url: https://www.disneyplus.com/movies/bobi-wine-the-peoples-president/4kanVZeQLfkG
+  - id: the-eternal-memory
+    tmdb_id: 349371
+    tmdb_cat: movie
     title: The Eternal Memory
     trailer: https://www.youtube.com/watch?v=v-hxO7_oEZw
     noms: 
       - cat: Best Documentary, Feature
         name: 
-  - id: 346099
+    streaming:
+      - source: paramountplus
+        url: https://www.paramountplus.com/movies/video/M3I0r_mDFUtn6IyuHF7bgtlIqfg2nRpA/
+  - id: four-daughters
+    tmdb_id: 346099
+    tmdb_cat: movie
     title: Four Daughters
     trailer: https://www.youtube.com/watch?v=OUsu78a5phM
     noms: 
       - cat: Best Documentary, Feature
         name: Kaouther Ben Hania and Nadim Cheikhrouha
-  - id: 353361
+  - id: to-kill-a-tiger
+    tmdb_id: 353361
+    tmdb_cat: movie
     title: To Kill A Tiger
     trailer: https://www.youtube.com/watch?v=mC6-igJ_WWM
     noms: 
       - cat: Best Documentary, Feature
         name: Nisha Pahuja, Cornelia Principe and David Oppenheim
-  - id: 347973
+  - id: 20-days-in-mariupol
+    tmdb_id: 347973
+    tmdb_cat: movie
     title: 20 Days In Mariupol
     trailer: https://www.youtube.com/watch?v=9H_Fg_5x4ME
     noms: 
       - cat: Best Documentary, Feature
         name: Mstyslav Chernov, Michelle Mizner and Raney Aronson-Rath
-  - id: 350904
+  - id: the-ab-cs-of-book-banning
+    tmdb_id: 350904
+    tmdb_cat: movie
     title: The ABCs of Book Banning
     trailer: https://www.youtube.com/watch?v=sMaZ2bLwaeA
     noms: 
       - cat: Best Documentary, Short
         name: Sheila Nevins and Trish Adlesic
-  - id: 353316
+    streaming:
+      - source: paramountplus
+        url: https://www.paramountplus.com/movies/video/eT_y9hgSBq68MGsk7qPI_wmBxI4T3G_8
+  - id: the-barber-of-little-rock
+    tmdb_id: 353316
+    tmdb_cat: movie
     title: The Barber Of Little Rock
     trailer: https://www.youtube.com/watch?v=LRDems-XacU
     noms: 
       - cat: Best Documentary, Short
         name: John Hoffman and Christine Turner
-  - id: 353318
+    streaming:
+      - source: youtube
+        url: https://www.youtube.com/watch?v=1amOPUn49aM
+  - id: island-in-between
+    tmdb_id: 353318
+    tmdb_cat: movie
     title: Island in Between
     trailer: https://www.youtube.com/watch?v=vQzMHWnJ9FQ
     noms: 
       - cat: Best Documentary, Short
         name: S. Leo Chiang and Jean Tsien
-  - id: 352710
+    streaming:
+      - source: youtube
+        url: https://www.youtube.com/watch?v=DefVP0mkHZY
+  - id: the-last-repair-shop
+    tmdb_id: 352710
+    tmdb_cat: movie
     title: The Last Repair Shop
     trailer: https://www.youtube.com/watch?v=HSLeqTWasO8
     noms: 
       - cat: Best Documentary, Short
         name: Ben Proudfoot and Kris Bowers
-  - id: 353360
+    streaming:
+      - source: disneyplus
+        url: https://www.disneyplus.com/movies/the-last-repair-shop/7ZcinkMBrmzp
+  - id: nai-nai-and-wai-po
+    tmdb_id: 353360
+    tmdb_cat: movie
     title: Nai Nai & Wài Pó
     trailer: https://www.youtube.com/watch?v=JlyYimV6Qqw
     noms: 
       - cat: Best Documentary, Short
         name: Sean Wang and Sam Davis
-  - id: 349495
+    streaming:
+      - source: disneyplus
+        url: https://www.disneyplus.com/movies/nai-nai-wai-po/6QtZaSyLgcaD
+  - id: io-capitano
+    tmdb_id: 349495
+    tmdb_cat: movie
     title: Io capitano
     trailer: https://www.youtube.com/watch?v=5Mg_AiPGw-0
     noms: 
       - cat: Best International Feature Film
         name: Italy
-  - id: 346126
+  - id: perfect-days
+    tmdb_id: 346126
+    tmdb_cat: movie
     title: Perfect Days
     trailer: https://www.youtube.com/watch?v=Iv8YO5BXCAQ
     noms: 
       - cat: Best International Feature Film
         name: Japan
-  - id: 349161
+  - id: society-of-the-snow
+    tmdb_id: 349161
+    tmdb_cat: movie
     title: Society of the Snow
     trailer: https://www.youtube.com/watch?v=pDak4qLyF4Q
     noms: 
@@ -369,39 +544,66 @@ nominees:
         name: Spain
       - cat: Best Makeup and Hairstyling
         name: Ana López-Puigcerver, David Martí and Montse Ribé
-  - id: 351366
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81268316
+  - id: the-teachers-lounge
+    tmdb_id: 351366
+    tmdb_cat: movie
     title: "The Teachers' Lounge"
     trailer: https://www.youtube.com/watch?v=kbUaACY8wRQ
     noms: 
       - cat: Best International Feature Film
         name: Germany
-  - id: 348487
+  - id: golda
+    tmdb_id: 348487
+    tmdb_cat: movie
     title: Golda
     trailer: https://www.youtube.com/watch?v=7eDU96K_VXE
     noms: 
       - cat: Best Makeup and Hairstyling
         name: Karen Hartley Thomas, Suzi Battersby and Ashra Kelly-Blue
-  - id: 134846
+    streaming:
+      - source: showtime
+        url: 
+  - id: indiana-jones-and-the-dial-of-destiny
+    tmdb_id: 134846
+    tmdb_cat: movie
     title: Indiana Jones and the Dial of Destiny
     trailer: hhttps://www.youtube.com/watch?v=ZfVYgWYaHmE
     noms: 
       - cat: Best Original Score
         name: John Williams
-  - id: 308854
+    streaming:
+      - source: disneyplus
+        url: https://www.disneyplus.com/movies/indiana-jones-and-the-dial-of-destiny/5jJ2qq6DKlf3
+  - id: flamin-hot
+    tmdb_id: 308854
+    tmdb_cat: movie
     title: Flamin' Hot
     trailer: https://www.youtube.com/watch?v=it7sNRloq-A
     noms: 
       - cat: Best Original Song
         name: The Fire Inside
         by: Music and Lyric by Diane Warren
-  - id: 350892
+    streaming:
+      - source: disneyplus
+        url: https://www.disneyplus.com/movies/flamin-hot/PmAiIWRz18HF
+  - id: american-symphony
+    tmdb_id: 350892
+    tmdb_cat: movie
     title: American Symphony
     trailer: https://www.youtube.com/watch?v=wKSMsdq8ONs
     noms: 
       - cat: Best Original Song
         name: It Never Went Away
         by: Music and Lyric by Jon Batiste and Dan Wilson
-  - id: 343586
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81728930
+  - id: past-lives
+    tmdb_id: 343586
+    tmdb_cat: movie
     title: Past Lives
     trailer: https://www.youtube.com/watch?v=kA244xewjcI
     noms: 
@@ -409,67 +611,101 @@ nominees:
         name: "David Hinojosa, Christine Vachon and Pamela Koffler, Producers"
       - cat: Best Original Screenplay
         name: Written by Celine Song
-  - id: 353315
+    streaming:
+      - source: showtime
+        url: 
+  - id: letter-to-a-pig
+    tmdb_id: 353315
+    tmdb_cat: movie
     title: Letter to a Pig
     trailer: https://www.youtube.com/watch?v=Cp3f92WYxv0
     noms: 
       - cat: Best Short Film, Animated
         name: Tal Kantor and Amit R. Gicelter
-  - id: 353330
+  - id: ninety-five-senses
+    tmdb_id: 353330
+    tmdb_cat: movie
     title: Ninety-Five Senses
     trailer: https://www.youtube.com/watch?v=PFajvoKMdI0
     noms: 
       - cat: Best Short Film, Animated
         name: Jerusha Hess and Jared Hess
-  - id: 353386
+  - id: our-uniform
+    tmdb_id: 353386
+    tmdb_cat: movie
     title: Our Uniform
     trailer: https://www.youtube.com/watch?v=6rgF6G9Yyjc
     noms: 
       - cat: Best Short Film, Animated
         name: Yegane Moghaddam
-  - id: 353313
+  - id: pachyderme
+    tmdb_id: 353313
+    tmdb_cat: movie
     title: Pachyderme
     trailer: https://www.youtube.com/watch?v=bdSxBJzYJ94
     noms: 
       - cat: Best Short Film, Animated
         name: Stéphanie Clément and Marc Rius
-  - id: 353359
+  - id: war-is-over-inspired-by-the-music-of-john-and-yoko
+    tmdb_id: 353359
+    tmdb_cat: movie
     title: WAR IS OVER! Inspired by the Music of John and Yoko
     trailer: https://www.youtube.com/watch?v=OrcilSXWa8M
     noms: 
       - cat: Best Short Film, Animated
         name: Dave Mullins and Brad Booker
-  - id: 350856
+  - id: the-after
+    tmdb_id: 350856
+    tmdb_cat: movie
     title: The After
     trailer: https://www.youtube.com/watch?v=fV8kGLfv_nc
     noms: 
       - cat: Best Short Film, Live Action
         name: Misan Harriman and Nicky Bentham
-  - id: 353387
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81460836
+  - id: invincible
+    tmdb_id: 353387
+    tmdb_cat: movie
     title: Invincible
     trailer: https://www.youtube.com/watch?v=uXpJM6bgV4Y
     noms: 
       - cat: Best Short Film, Live Action
         name: Vincent René-Lortie and Samuel Caron
-  - id: 353314
+  - id: knight-of-fortune
+    tmdb_id: 353314
+    tmdb_cat: movie
     title: Knight of Fortune
     trailer: https://www.youtube.com/watch?v=o3j4OwOnQEs
     noms: 
       - cat: Best Short Film, Live Action
         name: Lasse Lyskjær Noer and Christian Norlyk
-  - id: 353317
+    streaming:
+      - source: youtube
+        url: https://www.youtube.com/watch?v=CKJK68VhFZk
+  - id: red-white-and-blue
+    tmdb_id: 353317
+    tmdb_cat: movie
     title: Red, White and Blue
     trailer: https://www.youtube.com/watch?v=_kMGfKPQsdU
     noms: 
       - cat: Best Short Film, Live Action
         name: Nazrin Choudhury and Sara McFarlane
-  - id: 336624
+  - id: the-wonderful-story-of-henry-sugar
+    tmdb_id: 336624
+    tmdb_cat: movie
     title: The Wonderful Story of Henry Sugar
     trailer: https://www.youtube.com/watch?v=4RdncisZ_QA
     noms: 
       - cat: Best Short Film, Live Action
         name: Wes Anderson and Steven Rales
-  - id: 346573
+    streaming: 
+      - source: netflix
+        url: https://www.netflix.com/title/81388090
+  - id: the-creator
+    tmdb_id: 346573
+    tmdb_cat: movie
     title: The Creator
     trailer: https://www.youtube.com/watch?v=573GCxqkYEg
     noms: 
@@ -477,7 +713,12 @@ nominees:
         name: Ian Voigt, Erik Aadahl, Ethan Van der Ryn, Tom Ozanich and Dean Zupancic
       - cat: Best Visual Effects
         name: Jay Cooper, Ian Comley, Andrew Roberts and Neil Corbould
-  - id: 30294
+    streaming:
+      - source: hulu
+        url: https://www.hulu.com/movie/1f7c85b7-8614-404e-aa58-5af8702c1c89
+  - id: mission-impossible-dead-reckoning-part-1
+    tmdb_id: 30294
+    tmdb_cat: movie
     title: "Mission: Impossible - Dead Reckoning Part 1"
     trailer: https://www.youtube.com/watch?v=avz06PDqDbM
     noms: 
@@ -485,21 +726,36 @@ nominees:
         name: Chris Munro, James H. Mather, Chris Burdon and Mark Taylor
       - cat: Best Visual Effects
         name: Alex Wuttke, Simone Coco, Jeff Sutherland and Neil Corbould
-  - id: 348155
+    streaming:
+      - source: paramountplus
+        url: https://www.paramountplus.com/movies/video/sh0UeJexoBbPNr40vL8zV9TpG9qG7_BS
+  - id: godzilla-minus-one
+    tmdb_id: 348155
+    tmdb_cat: movie
     title: Godzilla Minus One
     trailer: https://www.youtube.com/watch?v=VvSrHIX5a-0
     noms: 
       - cat: Best Visual Effects
         name: Takashi Yamazaki, Kiyoko Shibuya, Masaki Takahashi and Tatsuji Nojima
-  - id: 11716
+  - id: guardians-of-the-galaxy-vol-3
+    tmdb_id: 11716
+    tmdb_cat: movie
     title: Guardians of the Galaxy Vol. 3
     trailer: https://www.youtube.com/watch?v=u3V5KDHRQvk
     noms: 
       - cat: Best Visual Effects
         name: Stephane Ceretti, Alexis Wajsbrot, Guy Williams and Theo Bialek
-  - id: 346178
+    streaming:
+      - source: disneyplus
+        url: https://www.disneyplus.com/movies/guardians-of-the-galaxy-vol-3/1tmc3nPw04S2
+  - id: may-december
+    tmdb_id: 346178
+    tmdb_cat: movie
     title: May December
     trailer: https://www.youtube.com/watch?v=wOwP6JHqag0
     noms: 
       - cat: Best Original Screenplay
         name: Screenplay by Samy Burch; Story by Samy Burch & Alex Mechanik
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81702955

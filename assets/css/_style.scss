@@ -10,15 +10,9 @@ body {
 a:link, a:hover, a:active, a:visited {
     text-decoration: none;
 }
-@include media-breakpoint-up(sm) { 
-    .signinout { 
-        float: right; 
-        display: inline;
-    }
-}
 h1.site-title {
     color: white;
-    font-size: 10.8vw;
+    font-size: 7.8vw;
 }
 h1.site-title a:link, h1.site-title a:visited {
     color: white;
@@ -148,6 +142,36 @@ h2.show-title {
   box-shadow: 0 10px 50px rgba(0, 0, 0, .5);
   cursor: pointer;
 }
+.fav .fa-regular { 
+    display: block;
+}
+.fav .fa-solid { 
+    display: none;
+}
+.selected {
+    .card-img  {
+        border: 1px solid #ffc107;
+    }
+    .fav .fa-regular { 
+        display: none;
+    }
+    .fav .fa-solid { 
+        display: block;
+        color: #ffc107;
+    }
+}
+.nom:hover .card-img {
+    border: 1px solid #ffc107;
+}
+.nom:hover .fav {
+    .fa-regular { 
+        display: none;
+    }
+    .fa-solid { 
+        display: block;
+        color: #ffc107;
+    }
+}
 .source-logo svg {
     height: 1em;
     width: auto;
@@ -164,13 +188,31 @@ h2.show-title {
 .card { 
     background-color: transparent;
 }
-.meta {
+.filter-dropdown.dropdown-toggle::after { 
+    content: none; 
+} 
+.spinner {
+    display: none;
+}
+.spinner.loading {
+    display: block;
+}
+.meta, .votes {
     color: slategray;
 }
 .nominee-data {
     color: rgb(99, 108, 117);
 }
-@include media-breakpoint-up(lg) { .nominee-data { padding-left: 1em } }
+.card .info {
+    display: none;
+}
+.card:hover .info {
+    display: block;
+}
+/*@include media-breakpoint-up(lg) { .nominee-data { padding-left: 1em } }*/
+.nominee-data { 
+    padding-left: 1em 
+}
 .video_wrapper {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
@@ -185,6 +227,8 @@ iframe {
 footer th {
     color: white;
 }
+
+
 
 /***************
  *  Effects   *

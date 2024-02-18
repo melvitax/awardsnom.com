@@ -1,48 +1,37 @@
-<header class="header sticky-top header-blur pt-1 pb-2">
+<header class="header sticky-top header-blur pb-4">
     <nav class="nav">
         <div class="container">
-            <h1 class="site-title fw-bold lh-2 d-inline-flex mb-0 pt-1 pe-4 align-middle"><a href="/">{{site.title}}</a></h1>
-            {% capture layoutChoice  %}{% if include.pagelayout == "nominees" %}nominees/{% elsif include.pagelayout == "streaming" %}streaming/{% else %}{% endif %}{% endcapture %}
-            <div class="btn-group pt-1 align-middle">
-                <!-- Tab: Show -->
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-outline-warning dropdown-toggle dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="">{% if page.showname %}{{ page.showname }}{% else %}Show{% endif %}</span>
-                    </button>
-                    <ul class="dropdown-menu" style="max-height: 50vh; max-width: 90vw; overflow-y: scroll">
-                        <li><a class="dropdown-item" href="/oscars/2022/{{layoutChoice}}">Oscars</a></li>
-                        <li><a class="dropdown-item" href="/goldenglobes/2022/{{layoutChoice}}">Golden Globes</a></li>
-                        <li><a class="dropdown-item" href="/emmys/2021/{{layoutChoice}}">Emmys</a></li>
-                        <li><a class="dropdown-item" href="/sag/2022/{{layoutChoice}}">SAG Awards</a></li>
-                    </ul>
-                </div>
-                {% if include.pagelayout == "show" or include.pagelayout == "nominees" or include.pagelayout == "streaming" %}
-                <!-- Tab: Year -->
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-outline-warning dropdown-toggle dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="">{% if include.year %}{{ include.year }}{% else %}Year{% endif %}</span>
-                    </button>
-                    <ul class="dropdown-menu" style="max-height: 50vh; max-width: 90vw; overflow-y: scroll">
-                        {% for aDate in include.dates %}
-                        <li><a class="dropdown-item" href="/{{include.show}}/{{aDate}}/{{layoutChoice}}">{{aDate}}</a></li>
-                        {% endfor %}                            
-                    </ul>
-                </div>
-                <!-- Tab: Nominees -->
-                <a class="btn btn-outline-warning {% if include.pagelayout == "nominees" %}active{% endif %} nominees" href="/{{include.show}}/{{include.year}}/nominees/" style="width: 2.8rem"><i class="fa-solid fa-list-ul"></i></a>
-                <!-- Tab: Categories -->
-                <a class="btn btn-outline-warning {% if include.pagelayout == "show" %}active{% endif %} categories" href="/{{include.show}}/{{include.year}}/" style="width: 2.8rem"><i class="fa-solid fa-grip" style="font-size: 1.1rem"></i></a>
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-outline-warning dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="d-flex flex-wrap align-items-center justify-content-between pt-2">
+                <!-- Site Title -->
+                <div class="d-flex">{{site.title}} <div class="spinner spinner-border text-warning ms-1 " role="status" style="width: 1.3em; height: 1.3em;">
+                    <span class="visually-hidden">Loading...</span>
+                  </div></div>
+                <!-- Browse Categories -->
+                <div class="d-flex">
+                    {% if page.layout == "categories" %}
+                    <div type="button" class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categories
                         <span class="visually-hidden">Toggle Dropdown</span>
-                    </button>
+                    </div>
                     <ul class="dropdown-menu dropdown-menu-end" style="max-height: 50vh; max-width: 90vw; overflow-y: scroll">
                         {% for cat in include.categories %}
-                        <li><a class="dropdown-item" href="/{{include.show}}/{{include.year}}/#{{ cat | slugify  }}">{{ cat }}</a></li>
+                        <li><a class="dropdown-item" href="/{{include.show}}/{{include.year}}/#{{ cat.title | slugify  }}">{{ cat.title }}</a></li>
                         {% endfor %}
                     </ul>
+                    {% endif %}
                 </div>
-                {% endif %}
+            </div>
+            <div class="justify-content-center">
+                <!-- Show Title -->
+                <h1 class="site-title fw-bold col-10 col-md-auto text-center pb-2 m-0">{{ page.title }}</h1>
+            </div>
+            <!-- Score Card-->
+            <div class="d-flex score-card" data-year="{{ include.year }}" data-show="{{ include.show }}" style="gap: 10px; height: 12px;">
+                {% for cat in include.categories %}
+                    {% assign catid =  cat.title | slugify %}
+                    <div class="pill col bg-dark rounded-3" data-cat="{{ catid }}" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-offset="0,20" title="{{ cat.title }}">&nbsp;
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </nav>

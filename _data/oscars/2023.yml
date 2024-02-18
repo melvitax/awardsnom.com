@@ -192,6 +192,9 @@ nominees:
       - cat: Best Actress
         id: ana-de-armas
         name: Ana De Armas
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/80174263
   - id: 823147
     title: To Leslie
     trailer: https://www.youtube.com/watch?v=D_k63vvm3mU
@@ -223,6 +226,9 @@ nominees:
       - cat: Best Animated Feature
         name: Guillermo del Toro, Mark Gustafson, Gary Ungar and Alex Bulkley
         winner: true
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/80218455
   - id: 869626
     title: Marcel the Shell with Shoes On
     trailer: https://www.youtube.com/watch?v=k98Afd7Nf3Y
@@ -241,6 +247,9 @@ nominees:
     noms:
       - cat: Best Animated Feature
         name: Chris Williams and Jed Schlanger
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81018682
   - id: 508947
     title: Turning Red
     trailer: https://www.youtube.com/watch?v=XdKzUbAiswE
@@ -273,12 +282,18 @@ nominees:
         name: Frank Petzold, Viktor Müller, Markus Frank and Kamil Jafar
       - cat: Best Adapted Screenplay
         name: Screenplay - Edward Berger, Lesley Paterson & Ian Stokell
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81260280
   - id: 685691
     title: Bardo, False Chronicle Of A Handful Of Truths
     trailer: https://www.youtube.com/watch?v=lCQimQfDuTs
     noms:
       - cat: Best Cinematography
         name: Darius Khondji
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81249430
   - id: 814757
     title: Empire of Light
     trailer: https://www.youtube.com/watch?v=3JA3bD5xs-Q
@@ -349,6 +364,9 @@ nominees:
       - cat: Best Documentary, Short
         name: Kartiki Gonsalves and Guneet Monga
         winner: true
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81312835
   - id: 926993
     title: Haulout
     trailer: https://www.youtube.com/watch?v=uIBmhWsgYnA
@@ -367,6 +385,9 @@ nominees:
     noms:
       - cat: Best Documentary, Short
         name: Anne Alvergue and Beth Levison
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81488054
   - id: 964789
     title: Stranger at the Gate
     trailer: https://www.youtube.com/watch?v=Putmo96seFI
@@ -440,6 +461,9 @@ nominees:
         name: Naatu Naatu
         by: Music by M.M. Keeravaani; Lyric by Chandrabose
         winner: true
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81476453
   - id: 76600
     title: "Avatar: The Way of Water"
     trailer: https://www.youtube.com/watch?v=d9MyW72ELq0
@@ -529,3 +553,6 @@ nominees:
     noms:
       - cat: Best Adapted Screenplay
         name: Written by Rian Johnson
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81458416

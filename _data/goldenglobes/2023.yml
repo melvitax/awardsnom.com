@@ -155,6 +155,9 @@ nominees:
       - cat: 'Best Actor: Motion Picture - Musical/Comedy'
         name: Daniel Craig
         id: daniel-craig
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81458416
   - id: 497828
     title: Triangle of Sadness
     trailer: https://www.youtube.com/watch?v=VDvfFIZQIuQ
@@ -184,6 +187,9 @@ nominees:
       - cat: 'Best Actress: Motion Picture Drama'
         name: Ana de Armas
         id: ana-de-armas
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/80174263
   - id: 785084
     title: The Whale
     trailer: https://www.youtube.com/watch?v=nWiQodhMvz4
@@ -243,6 +249,9 @@ nominees:
       - cat: 'Best Actor: Motion Picture - Musical/Comedy'
         name: Adam Driver
         id: adam-driver
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81317320
   - id: 505642
     title: 'Black Panther: Wakanda Forever'
     trailer: https://www.youtube.com/watch?v=RlOB3UALvrQ
@@ -268,6 +277,9 @@ nominees:
       - cat: 'Best Supporting Actor: Any Motion Picture'
         name: Eddie Redmayne
         id: eddie-redmayne
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81260083
   - id: 777245
     title: Women Talking
     trailer: https://www.youtube.com/watch?v=pD0mFhMqDCE
@@ -287,6 +299,9 @@ nominees:
       - cat: Best Original Song Motion Picture
         name: CarolinCiao Papaa
         by: Roeban Katz, Alexandre Desplat
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/80218455
   - id: 642538
     title: Inu-Oh
     trailer: https://www.youtube.com/watch?v=iGL4ETxVKd8
@@ -337,6 +352,9 @@ nominees:
         name: Naatu Naatu
         by: Chandrabose, M.M. Keeravaani
         winner: true
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81476453
   - id: 682507
     title: Where the Crawdads Sing
     trailer: https://www.youtube.com/watch?v=PY3808Iq0Tg
@@ -366,6 +384,9 @@ nominees:
       - cat: 'Best Supporting Actor: Musical/Comedy/Drama Series'
         name: Jonathan Pryce
         id: jonathan-pryce
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/80025678
   - id: 94997
     title: House of the Dragon
     trailer: https://www.youtube.com/watch?v=DotnJ7tTA34
@@ -387,6 +408,9 @@ nominees:
         name: Julia Garner
         id: julia-garner-ozark
         winner: true
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/80117552
   - id: 95396
     title: Severance
     trailer: https://www.youtube.com/watch?v=xEQP4VVuyrY
@@ -460,6 +484,9 @@ nominees:
       - cat: 'Best Television Actress: Musical/Comedy Series'
         name: Jenna Ortega
         id: jenna-ortega
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81231974
   - id: 201948
     title: Alaska Daily
     trailer: https://www.youtube.com/watch?v=XZwXyak-U2s
@@ -551,6 +578,9 @@ nominees:
       - cat: 'Best Supporting Actor: Limited/Anthology Series or Motion Picture'
         name: Richard Jenkins
         id: richard-jenkins
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81287562
   - id: 122066
     title: The Dropout
     trailer: https://www.youtube.com/watch?v=W7rlZLw9m10
@@ -604,6 +634,9 @@ nominees:
       - cat: 'Best Actress: Limited/Anthology Series or Motion Picture'
         name: Julia Garner
         id: julia-garner
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81008305
   - id: 107407
     title: Gaslit
     trailer: https://www.youtube.com/watch?v=5SxnbpGngtI

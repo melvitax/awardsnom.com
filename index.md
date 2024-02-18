@@ -1,4 +1,5 @@
 ---
 title: AwardsNom
-layout: home
+redirect: oscars/2024
+layout: redirect
 ---

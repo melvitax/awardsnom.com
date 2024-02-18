@@ -41,6 +41,9 @@ nominees:
       - cat: Female Actor in a Supporting Role
         name: Kirsten Dunst
         id: kirsten-dunst
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81127997
   - id: 537116
     title: tick, tick...BOOM!
     trailer: https://www.youtube.com/watch?v=YJserno8tyU
@@ -48,6 +51,9 @@ nominees:
       - cat: Male Actor in a Leading Role
         name: Andrew Garfield
         id:  andrew-garfield
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81149184
   - id: 614917
     title: King Richard
     trailer: https://www.youtube.com/watch?v=FIsNbpJIa6k
@@ -100,6 +106,9 @@ nominees:
       - cat: Female Actor in a Leading Role
         name: Olivia Colman
         id: olivia-colman
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81478910
   - id: 727293
     title: The Tender Bar
     trailer: https://www.youtube.com/watch?v=5-DS9vtLeEs
@@ -155,6 +164,9 @@ nominees:
     noms:
       - cat: Cast in a Motion Picture
         name: Cate Blanchett - Brie Evantee, Timothée Chalamet - Yule, Leonardo DiCaprio - Dr. Randall Mindy, Ariana Grande - Riley Bina, Jonah Hill - Jason Orlean, Jennifer Lawrence - Kate Dibiasky, Melanie Lynskey - June Mindy, Scott Mescudi - DJ Chello, Rob Morgan - Dr. Teddy Oglethorpe, Himesh Patel - Phillip, Ron Perlman - Benedict Drask, Tyler Perry - Jack Bremmer, Mark Rylance - Peter Isherwell, Meryl Streep - President Orlean
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81252357
   - id: 644495
     title: House of Gucci
     trailer: https://www.youtube.com/watch?v=pGi3Bgn7U5U
@@ -224,6 +236,9 @@ nominees:
         winner: true 
       - cat: Ensemble in a Drama Series
         name: Heo Sung-Tae - Deok-su, Jun Young-Soo - Game Operator Voice, Jung Ho-Yeon - Kang Sae-byeok, Kim Joo-Ryoung - Mi-nyeo, Lee Byung-Hun - Front Man, Lee Jung-Jae - Seong Gi-hun, Oh Young-Soo - Oh Il-nam, Park Hae-Soo - Cho Sang-woo, Anupam Tripathi - Ali, Wi Ha-Jun - Hwang Jun-ho
+    streaming:
+      - source: netflix
+        url: https://www.netflix.com/title/81040344
   - id: 76331
     title: Succession
     trailer: https://www.youtube.com/watch?v=kevqiiYNFrc

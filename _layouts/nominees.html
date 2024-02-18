@@ -24,18 +24,16 @@
                 
             {% include subheader.html %} 
 
-            {% include mypicks.html show=page.show year=page.year %} 
-
             <div class="row card-columns ml-0 mr-0">
 
                 {% assign grouped = data.nominees | group_by_exp: "item", "item.noms | size" | sort: "name" | reverse %}
 
                 {% for group in grouped %}
                 {% for nominee in group.items %}
-                <div class="col-5 pt-4 pb-2" >
+                <div class="col-10 pt-4 pb-2" >
                 <div class="row g-0"> 
                         
-                    <div class="card mb-3 border-0 fadeup col-10 col-lg-4" id="card__{{ id }}">
+                    <div class="card mb-3 border-0 fadeup col-3 col-lg-2" id="card__{{ id }}">
 
                         <!-- Poster -->
                         <a class="poster" >
@@ -67,7 +65,7 @@
 
                     </div>
 
-                    <div class="col-10 col-lg-6 nominee-data">
+                    <div class="col-7 col-lg-8 nominee-data">
 
                         <!-- Nominee Title -->
                         <div class="text-muted">{{ nominee.noms | size }} {% if nominee.noms.size > 1 %}NOMINATIONS{% else %}NOMINATION{% endif %}</div>
@@ -80,6 +78,7 @@
                         {% endif %}
                         <h3 class="nominee-title fs-4 fw-bold pb-2 mb-4">{{ nominee.title }}</h3>
 
+                        <div class="row">
                         {% for nom in nominee.noms %}
 
                         {% capture nomid %}{% if nom.id %}{{ nom.id }}{% else %}{{ nominee.id }}{% endif %}{% endcapture %}
@@ -90,10 +89,11 @@
                         {% assign thumb = image | replace: ".jpg", "-t.jpg" %}
 
                         {% capture key %}{{ page.show }}|{{ page.year }}|{{ catid }}|{{ nomid }}{% endcapture %}
-                        {% capture line %}{ key: "{{ key }}", thumb: "{{ thumb }}", title: "{{ datatitle }}" }{% endcapture %}
+                        {% capture line %}{ catid: "{{ catid }}", nomid: "{{ nomid }}", winner: "{{ nom.winner }}" }{% endcapture %}
+                    {% assign jsnominees = jsnominees | push: line %}
                         {% assign jsnominees = jsnominees | push: line %}
 
-                        <div class="nom nom-selector mb-2" data-cat="{{ catid }}" data-nom="{{ nomid }}" data-thumb="{{ thumb }}" data-title="{{ datatitle }}">
+                        <div class="col-10 col-md-5 col-lg-3 nom nom-selector mb-2" data-cat="{{ catid }}" data-nom="{{ nomid }}" data-thumb="{{ thumb }}" data-title="{{ datatitle }}">
                             
                             <!-- Nomination Title -->
                             <h4 class="item-title fs-6 fw-light mb-0" id="{{ nom.cat | slugify }}">
@@ -105,19 +105,25 @@
                                 {% if nom.name %}{{ nom.name }}{% endif %}{% if nom.by %}{% if nom.name %} -{% endif %} {{ nom.by }}{% endif %}
                             </div>
 
+                            <!-- Favorite -->
+                            <div class="fav">
+                                <i class="fa-regular fa-heart h5"></i>
+                                <i class="fa-solid fa-heart h5"></i>
+                            </div>
+
                             {% if nom.winner %}
                             <!-- Winner -->
                             <div class="badge rounded-pill bg-danger text-white text-monospace align-bottom ms-1">WINNER</div> 
                             {% endif %}
 
-                            <!-- Rating -->
-                            <div class="rating d-inline-flex" style="height: 1.2em">
-                                
-                            </div>
+                            <!-- Votes -->
+                            <div class="votes" data-votes="0">0 votes</div>
 
                         </div>
 
                         {% endfor %}
+
+                        </div>
 
                     </div>
      
@@ -134,7 +140,7 @@
             {% include signin.html %}
         </main>
 		{% include footer.html %}
-        {% include jsbridge.html jsnominees=jsnominees jsyearstofetch=jsyearstofetch %}
+        {% include jsbridge.html jsnominees=jsnominees  jsyearstofetch=jsyearstofetch %}
 		{% include scripts.html %}
 	</body>
 </html>

@@ -1,8 +1,25 @@
-<div class="pt-3 signinout">
+<!-- Filter -->
+<div class="signinout pt-3 float-end">
     <span class="align-middle" id="displayed-username"></span>
     <span class="lh-1 align-middle" id="apple-sign-out-button"></span>
     <span class="lh-1 align-middle" id="apple-sign-in-button"></span>
 </div>
+<div class="btn-group pt-1">
+    <button type="button" class="btn btn-outline-warning filter-dropdown dropdown-toggle mt-3" data-bs-toggle="dropdown" aria-expanded="false">
+        {% if page.layout == "nominees" %}
+        By Film
+        {% elsif page.layout == "streaming"%}
+        By Streaming
+        {% else %}
+        By Category
+        {% endif %} 
+        <i class="fa-solid fa-filter"></i>
+        <span class="visually-hidden">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end" style="max-height: 50vh; max-width: 90vw; overflow-y: scroll">
+        <li><a class="dropdown-item" href="/{{page.show}}/{{page.year}}/" >By Category {% if page.layout == "categories" %}<i class="fa-solid fa-check"></i>{% endif %}</a></li>
+        <li><a class="dropdown-item" href="/{{page.show}}/{{page.year}}/nominees/" > By Film {% if page.layout == "nominees" %}<i class="fa-solid fa-check"></i>{% endif %}</a></li>
+        <li><a class="dropdown-item" href="/{{page.show}}/{{page.year}}/streaming" >By Streaming {% if page.layout == "streaming" %}<i class="fa-solid fa-check"></i>{% endif %}</a></li>
+    </ul>
+</div>
 
-<h2 class="show-title pt-3 pb-2 fw-bold lh-4">{% if page.layout == "home" %}Latest{% else %}{{ page.title }}{% endif %}   <span class="text-muted fw-light">{{ data.day | date: "%b %-d" }}</span>
-</h2>

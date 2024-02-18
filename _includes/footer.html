@@ -1,20 +1,13 @@
-
 <footer class="text-muted w-100 py-5">
     <div class="container">
       <hr />
       <p class="float-end"><a href="#">Back to top</a></p>
-      <h5> Award Shows</h5>
-      <hr />
-      <p>
-        <strong class="text-light">Oscars</strong> <a href="/oscars/2023/">2023</a> | <a href="/oscars/2022/">2022</a> | <a href="/oscars/2021/">2021</a><br />
-        <strong class="text-light">Golden Globes</strong> <a href="/goldenglobes/2023/">2023</a> | <a href="/goldenglobes/2022/">2022</a><br />
-        <strong class="text-light">Emmys</strong> <a href="/emmys/2021/">2021</a><br />
-        <strong class="text-light">SAG Awards</strong> <a href="/sag/2022/">2022</a>
+      <!-- Date -->
+      <p class="show-title pt-3 pb-2 fw-bold lh-4"><span class="text-muted fw-light">{{ data.day | date: "%B %-d, %Y" }}</span>
       </p>
-      <hr />
-      <p>Last Updated: {{ 'now' | date: '%B %d, %Y' }} <br />
-         {{ site.title }} is a project by <a href="http://melvitax.com">Melvin Rivera</a><br />
-        Follow @{{site.twitter}} on <a href="https://twitter.com/{{site.twitter}}"><i class="fab fa-twitter"></i> Twitter</a>
+      <p>
+        Last Updated: {{ 'now' | date: '%B %d, %Y' }} <br />
+         {{ site.title }} is a project by <a href="http://melvitax.com">Melvin Rivera</a>
       </p>
     </div>
   </footer>

@@ -44,6 +44,7 @@
                             {% capture key %}{{ aShow }}|{{ aYear }}|{{ catid }}|{{ nomid }}{% endcapture %}
                             {% capture line %}{ key: "{{ key }}", thumb: "{{ thumb }}", title: "{{ datatitle }}" }{% endcapture %}
                             {% assign jsnominees = jsnominees | push: line %}
+
                         {% endfor %}
                     {% endfor %}
                     <div class="col-10 show-summary" onclick="location.href='/{{ aShow }}/{{ aYear }}';">
@@ -60,7 +61,7 @@
             {% include signin.html %}
         </main>
 		{% include footer.html %}
-        {% include jsbridge.html jsnominees=jsnominees jsyearstofetch=jsyearstofetch %}
+        {% include jsbridge.html jsnominees=jsnominees   jsyearstofetch=jsyearstofetch %}
 		{% include scripts.html %}
 	</body>
 </html>
