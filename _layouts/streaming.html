@@ -51,14 +51,14 @@
 
                 <div class="row border-top border-dark pt-4">
 
-                    <div class="col-10 col-lg-3">
+                    <div class="col-12 col-md-3 col-lg-2">
                         <h3 class="col-10 pt-3 pb-2 text-center text-warning fw-bold fs-3 cat-title"><span class="source-logo {{service}} align-bottom">{% include icons/{{service}}.svg %}</span><br />{{ numOfNominees }}</h3>
                     </div> <!-- streaming service col -->
                 
-                    <div class="col-10 col-lg-7">
+                    <div class="col-12 col-md-9 col-lg-10">
                         <div class="row">
                             {% for nominee in nominees %}
-                            <div class="col-10 col-md-5 col-lg-2">
+                            <div class="col-4 col-md-3 col-lg-2">
                                 <div class="card mb-3 border-0 fadeup nom" >
                                     <!-- Poster -->
                                     <img class="img w-100 h-100 rounded-5 p-0" src="/{{page.show}}/{{page.year}}/images/{{ nominee.id }}.jpg" width="230" height="355" alt="{{ nominee.title }}" title="{{ nominee.title }}" />

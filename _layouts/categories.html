@@ -29,13 +29,13 @@
                 {% for cat in data.categories %}
                 {% assign cat_split = cat.title | split: ":" %}
                 {% assign catid =  cat.title | slugify %}
-                <h3 class="col-10 pt-3 pb-2 text-center border-bottom text-warning fw-light fs-5 cat-title" id="{{ cat.title | slugify }}">{{ cat_split[0] | upcase }}{% if cat_split[1] %}<br /><small class="fs-5 text-warning">{{ cat_split[1] | upcase}}</small>{% endif %}</h3>
+                <h3 class="col-12 pt-3 pb-2 text-center border-bottom text-warning fw-light fs-5 cat-title" id="{{ cat.title | slugify }}">{{ cat_split[0] | upcase }}{% if cat_split[1] %}<br /><small class="fs-5 text-warning">{{ cat_split[1] | upcase}}</small>{% endif %}</h3>
 
                 {% for nominee in data.nominees %}
                 {% assign noms = nominee.noms | where: "cat", cat.title %}
                 {% for nom in noms %}
 
-                <div class="col-5 col-md-2 pt-4 pb-2" >
+                <div class="col-6 col-md-3 col-lg-2 pt-4 pb-2" >
                     {% capture nomid %}{% if nom.id %}{{ nom.id }}{% else %}{{ nominee.id }}{% endif %}{% endcapture %}
                     {% capture nomtitle %}{% if nom.name %}{{ nom.name }}{% endif %}{% if nom.by %}{% if nom.name %} - {% endif %}{{ nom.by }}{% endif %}{% endcapture %}
                     {% assign datatitle = cat.title | append: " - " | append: nominee.title | append: " - " | append: nomtitle | replace: '"', '\"' %}

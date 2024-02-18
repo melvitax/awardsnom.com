@@ -30,10 +30,10 @@
 
                 {% for group in grouped %}
                 {% for nominee in group.items %}
-                <div class="col-10 pt-4 pb-2" >
+                <div class="col-12 pt-4 pb-2" >
                 <div class="row g-0"> 
                         
-                    <div class="card mb-3 border-0 fadeup col-3 col-lg-2" id="card__{{ id }}">
+                    <div class="col-4 col-lg-3 card mb-3 border-0 fadeup" id="card__{{ id }}">
 
                         <!-- Poster -->
                         <a class="poster" >
@@ -65,7 +65,7 @@
 
                     </div>
 
-                    <div class="col-7 col-lg-8 nominee-data">
+                    <div class="col-8 col-lg-9 nominee-data">
 
                         <!-- Nominee Title -->
                         <div class="text-muted">{{ nominee.noms | size }} {% if nominee.noms.size > 1 %}NOMINATIONS{% else %}NOMINATION{% endif %}</div>
@@ -93,7 +93,7 @@
                     {% assign jsnominees = jsnominees | push: line %}
                         {% assign jsnominees = jsnominees | push: line %}
 
-                        <div class="col-10 col-md-5 col-lg-3 nom nom-selector mb-2" data-cat="{{ catid }}" data-nom="{{ nomid }}" data-thumb="{{ thumb }}" data-title="{{ datatitle }}">
+                        <div class="col-12 col-md-6 col-lg-3 nom nom-selector mb-2" data-cat="{{ catid }}" data-nom="{{ nomid }}" data-thumb="{{ thumb }}" data-title="{{ datatitle }}">
                             
                             <!-- Nomination Title -->
                             <h4 class="item-title fs-6 fw-light mb-0" id="{{ nom.cat | slugify }}">
@@ -106,18 +106,20 @@
                             </div>
 
                             <!-- Favorite -->
-                            <div class="fav">
+                            <div class="fav float-start pe-2 pt-1">
                                 <i class="fa-regular fa-heart h5"></i>
                                 <i class="fa-solid fa-heart h5"></i>
                             </div>
+
+                            <!-- Votes -->
+                            <div class="votes" data-votes="0">0 votes</div>
 
                             {% if nom.winner %}
                             <!-- Winner -->
                             <div class="badge rounded-pill bg-danger text-white text-monospace align-bottom ms-1">WINNER</div> 
                             {% endif %}
 
-                            <!-- Votes -->
-                            <div class="votes" data-votes="0">0 votes</div>
+                            
 
                         </div>
 
