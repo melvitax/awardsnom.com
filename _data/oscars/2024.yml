@@ -324,8 +324,8 @@ nominees:
         id: danielle-brooks
         name: Danielle Brooks
     streaming:
-      source: hbomax
-      url: https://play.max.com/movie/0bbe998a-23b8-49a2-9729-976d53af74be
+      - source: hbomax
+        gurl: https://play.max.com/movie/0bbe998a-23b8-49a2-9729-976d53af74be
   - id: the-boy-and-the-heron
     tmdb_id: 295917
     tmdb_cat: movie

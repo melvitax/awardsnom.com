@@ -32,6 +32,8 @@
                 {% endfor %}
             {% endfor %}
 
+            {% assign servicesWithNumOfNominees = "" | split: ',' %}
+
             {% for service in site.data.services %}
                 {% assign nominees = "" | split: ',' %}
                 {% for nominee in data.nominees %}
@@ -48,45 +50,75 @@
                 {% endfor %}
                 {% assign numOfNominees = nominees | size %}
                 {% if numOfNominees > 0 %}
-
-                <div class="row border-top border-dark pt-4">
-
-                    <div class="col-12 col-md-3 col-lg-2">
-                        <h3 class="col-10 pt-3 pb-2 text-center text-warning fw-bold fs-3 cat-title"><span class="source-logo {{service}} align-bottom">{% include icons/{{service}}.svg %}</span><br />{{ numOfNominees }}</h3>
-                    </div> <!-- streaming service col -->
-                
-                    <div class="col-12 col-md-9 col-lg-10">
-                        <div class="row">
-                            {% for nominee in nominees %}
-                            <div class="col-4 col-md-3 col-lg-2">
-                                <div class="card mb-3 border-0 fadeup nom" >
-                                    <!-- Poster -->
-                                    <img class="img w-100 h-100 rounded-5 p-0" src="/{{page.show}}/{{page.year}}/images/{{ nominee.id }}.jpg" width="230" height="355" alt="{{ nominee.title }}" title="{{ nominee.title }}" />
-                                    <!-- Title -->
-                                    <h3 class="w-100 item-title mt-1 fw-bold fs-6 visually-hidden" >{{ nominee.title }}</h3>
-                                    <!-- Winner -->
-                                    {% if nom.winner %}
-                                    <div class="badge rounded-pill bg-danger text-white text-monospace position-absolute top-0 start-50 translate-middle w-auto">WINNER</div> 
-                                    {% endif %}
-                                    <!-- Buttons -->
-                                    <div class="buttons w-100 pt-3">
-                                        {% assign streaming = nominee.streaming | where:"source", service %}
-                                        {% for streamer in streaming %}
-                                            {% if streamer.source %}
-                                            {% capture watchURL %}{% if streamer.url %}{{ streamer.url }}{% else %}#{% endif %}{% endcapture %}
-                                            <a href="{{ watchURL }}" class="btn btn-outline-secondary btn-block mb-2 w-100"><span class="source-logo {{streamer.source}}">{% include icons/{{streamer.source}}.svg %}</span></a>
-                                            {% endif %}
-                                        {% endfor %}
-                                    </div>
-                                </div>
-                            </div> <!-- nominees col > row > col -->
-                            {% endfor %}
-                        </div><!-- nominees col > row -->
-                    </div> <!-- nominees col -->
-                </div> <!-- nom row -->
-
+                    {% capture combined %}{{service}}:{{numOfNominees}}{% endcapture %}
+                    {% assign serviceWithNomineeCount = combined | split: ":" %}
+                    {% if service != "unknown" %}
+                        {% assign servicesWithNumOfNominees =  servicesWithNumOfNominees | push: serviceWithNomineeCount %}
+                    {% endif %}
                 {% endif %} <!-- /if numOfNominees -->
             {% endfor %} <!-- /for services -->
+
+            {% assign grouped = servicesWithNumOfNominees | group_by_exp: "item", "item[1]" | sort: "name" | reverse %}
+
+            {% for group in grouped %}
+                {% for service in group.items %}
+
+                    {% assign serviceName = service[0] %}
+                    {% assign serviceCount = service[1] %}
+
+                    {% assign nominees = "" | split: ',' %}
+                    {% for nominee in data.nominees %}
+                        {% assign numOfStreamers = nominee.streaming | size %}
+                        {% if serviceName == "unknown" and numOfStreamers == 0 %}
+                            {% assign nominees =  nominees | push: nominee %}
+                        {% else %}
+                            {% for streamer in nominee.streaming %}
+                                {% if streamer.source == serviceName %}
+                                    {% assign nominees =  nominees | push: nominee %}
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+
+                    <div class="row border-top border-dark pt-4 mt-4">
+
+                        <div class="col-12 col-md-3 col-lg-2">
+                            <h3 class="col-10 pt-3 pb-2 text-center text-warning fw-bold fs-3 cat-title"><span class="source-logo {{serviceName}} align-bottom">{% include icons/{{serviceName}}.svg %}</span><br />{{ serviceCount }}</h3>
+                        </div> <!-- streaming service col -->
+                    
+                        <div class="col-12 col-md-9 col-lg-10">
+                            <div class="row">
+                                {% for nominee in nominees %}
+                                <div class="col-4 col-md-3 col-lg-2">
+                                    <div class="card mb-3 border-0 fadeup nom" >
+                                        <!-- Poster -->
+                                        <img class="img w-100 h-100 rounded-5 p-0" src="/{{page.show}}/{{page.year}}/images/{{ nominee.id }}.jpg" width="230" height="355" alt="{{ nominee.title }}" title="{{ nominee.title }}" />
+                                        <!-- Title -->
+                                        <h3 class="w-100 item-title mt-1 fw-bold fs-6 visually-hidden" >{{ nominee.title }}</h3>
+                                        <!-- Winner -->
+                                        {% if nom.winner %}
+                                        <div class="badge rounded-pill bg-danger text-white text-monospace position-absolute top-0 start-50 translate-middle w-auto">WINNER</div> 
+                                        {% endif %}
+                                        <!-- Buttons -->
+                                        <div class="buttons w-100 pt-3">
+                                            {% assign streaming = nominee.streaming | where:"source", service %}
+                                            {% for streamer in streaming %}
+                                                {% if streamer.source %}
+                                                {% capture watchURL %}{% if streamer.url %}{{ streamer.url }}{% else %}#{% endif %}{% endcapture %}
+                                                <a href="{{ watchURL }}" class="btn btn-outline-secondary btn-block mb-2 w-100"><span class="source-logo {{streamer.source}}">{% include icons/{{streamer.source}}.svg %}</span></a>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div> <!-- nominees col > row > col -->
+                                {% endfor %}
+                            </div><!-- nominees col > row -->
+                        </div> <!-- nominees col -->
+                    </div> <!-- nom row -->
+
+
+                {% endfor %}
+            {% endfor %}
     
             </div> <!-- /container -->
             </div> <!-- /main-content -->
