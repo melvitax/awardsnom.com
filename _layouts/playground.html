@@ -14,69 +14,77 @@
         {% assign sortedDates = dates | sort | reverse %}
         {% include header.html show=page.show year=page.year dates=sortedDates categories=data.categories pagelayout=page.layout %}
         {% capture jsyearstofetch %}["{{ page.year }}"]{% endcapture %}
+        {% assign jsnominees = "" | split: ',' %}
 
         <main class="hide">
 
             <div class="pb-5 main-content">
             <div class="container">
 
-                <button type="button" class="fetch-current-user-identity btn btn-outline-warning">Fetch Current User ID</button>
-                <button type="button" class="share-picks btn btn-outline-warning">Share Picks</button>
-                <button type="button" class="discover-users btn btn-outline-warning">Discover Users</button>
-
             {% include subheader.html %} 
-            
-            {% include mypicks.html show=page.show year=page.year %} 
 
-            <div class="row card-columns ml-0 mr-0">
+            <button type="button" class="share-picks btn btn-outline-warning">Share Picks</button>
+            <button type="button" class="discover-users btn btn-outline-warning">Discover Users</button>
+
+            <div class="row card-columns ml-0 mr-0 clearfix justify-content-md-center mt-4">
           
+                <!-- Category -->
                 {% for cat in data.categories %}
                 {% assign cat_split = cat.title | split: ":" %}
-                <h3 class="col-10 pt-3 pb-2 text-center border-bottom text-warning fw-light fs-5 cat-title" id="{{ cat | slugify }}">{{ cat_split[0] | upcase }}{% if cat_split[1] %}<br /><small class="fs-5 text-warning">{{ cat_split[1] | upcase}}</small>{% endif %}</h3>
+                {% assign catid =  cat.title | slugify %}
+                <h3 class="col-12 pt-3 pb-2 text-center border-bottom text-warning fw-light fs-5 cat-title" id="{{ cat.title | slugify }}">{{ cat_split[0] | upcase }}{% if cat_split[1] %}<br /><small class="fs-5 text-warning">{{ cat_split[1] | upcase}}</small>{% endif %}</h3>
+
                 {% for nominee in data.nominees %}
-                {% assign noms = nominee.noms | where: "cat", cat %}
+                {% assign noms = nominee.noms | where: "cat", cat.title %}
                 {% for nom in noms %}
-                <div class="col-5 col-sm-3 col-md-2 pt-4 pb-2" >
-                    
+
+                <div class="col-6 col-md-3 col-lg-2 pt-4 pb-2" >
                     {% capture nomid %}{% if nom.id %}{{ nom.id }}{% else %}{{ nominee.id }}{% endif %}{% endcapture %}
-                    {% assign catid =  cat | slugify %}
                     {% capture nomtitle %}{% if nom.name %}{{ nom.name }}{% endif %}{% if nom.by %}{% if nom.name %} - {% endif %}{{ nom.by }}{% endif %}{% endcapture %}
-                    {% assign datatitle = cat | append: " - " | append: nominee.title | append: " - " | append: nomtitle | replace: '"', '\"' %}
-                    {% capture image %}{% if nom.image %}{{ nom.image }}{% else %}{{ nominee.image }}{% endif %}{% endcapture %}
-                    {% assign thumb = image | replace: ".jpg", "-t.jpg" %}
+                    {% assign datatitle = cat.title | append: " - " | append: nominee.title | append: " - " | append: nomtitle | replace: '"', '\"' %}
+                    {% capture image %}{% if cat.img_type == "poster" %}{{ nominee.id }}{% else %}{{ nom.id }}{% endif %}{% endcapture %}
+                    {% assign thumb = image | append: "-t.jpg" %}
 
                     {% capture key %}{{ page.show }}|{{ page.year }}|{{ catid }}|{{ nomid }}{% endcapture %}
-                    {% capture line %}{ key: "{{ key }}", thumb: "{{ thumb }}", title: "{{ datatitle }}" }{% endcapture %}
+
+                    {% capture line %}{ catid: "{{ catid }}", nomid: "{{ nomid }}", winner: "{{ nom.winner }}" }{% endcapture %}
                     {% assign jsnominees = jsnominees | push: line %}
 
-                    <div class="card mb-3 border-0 fadeup nom" data-cat="{{ catid }}" data-nom="{{ nomid }}">
+                    <div class="card mb-3 border-0 fadeup nom" data-cat="{{ catid }}" data-nom="{{ nomid }}" data-thumb="{{ thumb }}" data-title="{{ datatitle }}" >
                         <div class="row g-0"> 
-                            <!-- Poster -->
-                            <a class="grow poster">
-                            {% capture image %}{% if nom.image %}{{ nom.image }}{% else %}{{ nominee.image }}{% endif %}{% endcapture %}
-                            <img class="card-img w-100 h-100 rounded-5 p-0" src="/{{page.show}}/{{page.year}}/images/{{ image }}" width="230" height="355" alt="{{ name }}" data-cat="{{ catid }}" data-nom="{{ nomid }}" />
+                            <a class="grow poster nom-selector link-light position-relative ">
+                                <img class="card-img w-100 h-100 rounded-5 p-0" src="/{{page.show}}/{{page.year}}/images/{{ image }}.jpg" width="230" height="355" alt="{{ nominee.title }}" title="{{ nominee.title }}" /><br />
+                                <!-- Favorite -->
+                                <div class="position-absolute bottom-0 text-center w-100" style="background: #02020200;
+                                background: linear-gradient(0deg, #0000004D, #02020200); text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);"><div class="fav"><i class="fa-regular fa-heart h5"></i><i class="fa-solid fa-heart h5"></i></div>
+                                </div>
                             </a>
+
                             {% if nom.winner %}
                             <!-- Winner -->
                             <div class="badge rounded-pill bg-danger text-white text-monospace position-absolute top-0 start-50 translate-middle w-auto">WINNER</div> 
                             {% endif %}
 
-                            <!-- Rating -->
-                            <div class="rating">
-                                &nbsp;
-                            </div>
+                            <!-- Votes -->
+                            <div class="votes mt-3" data-votes="0">0 votes</div>
 
-                            <!-- Title -->
-                            <h3 class="w-100 item-title mt-1 fw-bold fs-6" >{{ nominee.title }}</h3>
+                            <!--  Title & Meta -->
+                            {% if cat.title_type == "movie" %}
+                                <h3 class="w-100 item-title mt-1 fw-bold fs-6" >{{ nominee.title }}</h3>
+                                <div class="meta w-100 py-1">
+                                    {% if nom.name %}{{ nom.name }}{% endif %}
+                                    {% if nom.by %}<div class="pb-3">{{ nom.by }}</div>{% endif %}
+                                </div>
+                            {% elsif cat.title_type == "nominee" %}
+                                <h3 class="w-100 item-title mt-1 fw-bold fs-6" >{{ nom.name }}</h3>
+                                <div class="meta w-100 py-1">
+                                    {% if nom.by %}<div class="pb-3">{{ nom.by }}</div>{% endif %}
+                                    {{ nominee.title }}
+                                </div>
+                            {% endif %}
 
-                            <!-- Meta -->
-                            <div class="meta w-100 py-1">
-                                {% if nom.name %}{{ nom.name }}<br />{% endif %}
-                                {% if nom.by %}<div class="pb-3">{{ nom.by }}</div>{% endif %}
-                                
-                            </div>
-
-                            <div class="buttons">
+                            <!-- Trailer -->
+                            <div class="mt-3">
                                 {% if nominee.trailer %}
                                 {% if nominee.trailer contains "youtube.com" %}
                                 {% assign urlParts = nominee.trailer | split: "v=" %}
@@ -87,6 +95,10 @@
                                 {% assign urlParts = nominee.trailer | split: "/" %}
                                 {% assign videoID = urlParts | last %}
                                 {% assign src = 'https://player.vimeo.com/video/' | append: videoID | append: '?title=0&byline=0&portrait=0' %}
+                                
+                            </div>
+                            <!-- Streamer -->
+                            <div>
                                 <a href="#" class="btn btn-outline-secondary btn-block w-100" data-bs-toggle="modal" data-bs-target="#videoModal" data-theVideo="{{ src }}"><span class="fa fa-play"> Trailer</span></a> 
                                 {% endif %}
                                 {% endif %}
@@ -97,6 +109,8 @@
                                     {% endif %}
                                 {% endfor %}
                             </div>
+
+                            
                         </div>
                     </div> 
                 </div>
@@ -111,7 +125,7 @@
             {% include signin.html %}
         </main>
 		{% include footer.html %}
-        {% include jsbridge.html jsnominees=jsnominees  jsyearstofetch=jsyearstofetch %}
+        {% include jsbridge.html jsnominees=jsnominees jsyearstofetch=jsyearstofetch %}
 		{% include scripts.html %}
 	</body>
 </html>

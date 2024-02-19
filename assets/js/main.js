@@ -4,9 +4,7 @@ jQuery(function() {
   fadeOnScroll()
   enableTogglePicks()
   enableToolTips()
-  //enableDiscoverAllUserIdentities()
   //enableFetchCurrentUserIdentity
-  //enableShareWithUI
 })
 
 console.log("CloudKit: listening for cloudkitloaded");
@@ -55,7 +53,8 @@ function setUpAuth() {
       getTopRated()
       getMyPicks()
     }
-    
+    enableShareWithUI()
+    enableDiscoverAllUserIdentities()
     // registerForNotifications();
     container
       .whenUserSignsOut()
@@ -551,6 +550,12 @@ function hideLoading() {
   $('.spinner').removeClass('loading')
 }
 
+// Enable discover users
+function enableDiscoverAllUserIdentities() {
+  $('.discover-users').on( "click", function() {
+    discoverAllUserIdentities()
+  })
+}
 
 // Enable fetch current user identity
 function enableFetchCurrentUserIdentity() {
