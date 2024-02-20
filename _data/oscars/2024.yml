@@ -587,7 +587,7 @@ nominees:
       - source: disneyplus
         url: https://www.disneyplus.com/movies/flamin-hot/PmAiIWRz18HF
   - id: american-symphony
-    tmdb_id: 1171816
+    tmdb_id: 1171816gi
     tmdb_cat: movie
     title: American Symphony
     trailer: https://www.youtube.com/watch?v=wKSMsdq8ONs
@@ -597,7 +597,7 @@ nominees:
         by: Music and Lyric by Jon Batiste and Dan Wilson
     streaming:
       - source: netflix
-        url: https://www.netflix.com/title/81728930g
+        url: https://www.netflix.com/title/81728930
   - id: past-lives
     tmdb_id: 666277
     tmdb_cat: movie
