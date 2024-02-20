@@ -597,7 +597,7 @@ nominees:
         by: Music and Lyric by Jon Batiste and Dan Wilson
     streaming:
       - source: netflix
-        url: https://www.netflix.com/title/81728930
+        url: https://www.netflix.com/title/81728930g
   - id: past-lives
     tmdb_id: 666277
     tmdb_cat: movie
