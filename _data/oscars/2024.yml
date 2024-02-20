@@ -73,7 +73,7 @@ categories:
     title_type: movie
 nominees:
   - id: maestro
-    tmdb_id: 73826
+    tmdb_id: 523607
     tmdb_cat: movie
     title: Maestro
     trailer: https://www.youtube.com/watch?v=gJP2QblqLA0
@@ -98,7 +98,7 @@ nominees:
       - source: netflix
         url: https://www.netflix.com/title/81171868
   - id: rustin
-    tmdb_id: 332795
+    tmdb_id: 898713
     tmdb_cat: movie
     title: Rustin
     trailer: https://www.youtube.com/watch?v=EuZ-UONInl4
@@ -110,7 +110,7 @@ nominees:
       - source: netflix
         url: https://www.netflix.com/title/81111528
   - id: the-holdovers
-    tmdb_id: 348121
+    tmdb_id: 840430
     tmdb_cat: movie
     title: The Holdovers
     trailer: https://www.youtube.com/watch?v=AhKLpJmHhIg
@@ -131,7 +131,7 @@ nominees:
       - source: peacock
         url: https://www.peacocktv.com/watch/asset/movies/the-holdovers/8da8aad6-9309-3b84-bb5f-d5745f490e62
   - id: oppenheimer
-    tmdb_id: 287533
+    tmdb_id: 872585
     tmdb_cat: movie
     title: Oppenheimer
     trailer: https://www.youtube.com/watch?v=uYPbbksJxIg
@@ -169,7 +169,7 @@ nominees:
       - source: peacock
         url: https://www.peacocktv.com/watch/asset/movies/oppenheimer/602fd345-3ad6-33fd-a70d-a0e059b8d38a
   - id: american-fiction
-    tmdb_id: 350612
+    tmdb_id: 1056360
     tmdb_cat: movie
     title: American Fiction
     trailer: https://www.youtube.com/watch?v=5_4RlHpqVWM
@@ -190,7 +190,7 @@ nominees:
       - source: netflix
         url: https://www.netflix.com/title/81728930
   - id: killers-of-the-flower-moon
-    tmdb_id: 135852
+    tmdb_id: 466420
     tmdb_cat: movie
     title: Killers of the Flower Moon
     trailer: https://www.youtube.com/watch?v=1oZUCkJEuvo
@@ -222,7 +222,7 @@ nominees:
       - source: appletvplus
         url: https://tv.apple.com/us/movie/killers-of-the-flower-moon/umc.cmc.5x1fg9vferlfeutzpq6rra1zf
   - id: barbie
-    tmdb_id: 16612
+    tmdb_id: 346698
     tmdb_cat: movie
     title: Barbie
     trailer: https://www.youtube.com/watch?v=pBk4NYhWNMM
@@ -253,7 +253,7 @@ nominees:
       - source: hbomax
         url: https://play.max.com/movie/80bc4915-c826-499f-9961-b422b17559b6
   - id: poor-things
-    tmdb_id: 158867
+    tmdb_id: 792307
     tmdb_cat: movie
     title: Poor Things
     trailer: https://www.youtube.com/watch?v=-EfYJWRw2FM
@@ -283,7 +283,7 @@ nominees:
       - cat: Best Adapted Screenplay
         name: Screenplay by Tony McNamara
   - id: nyad
-    tmdb_id: 349564
+    tmdb_id: 895549
     tmdb_cat: movie
     title: Nyad
     trailer: https://www.youtube.com/watch?v=3anCgVSQb3Q
@@ -298,7 +298,7 @@ nominees:
       - source: netflix
         url: https://www.netflix.com/title/81447231
   - id: anatomy-of-a-fall
-    tmdb_id: 345695
+    tmdb_id: 915935
     tmdb_cat: movie
     title: Anatomy of a Fall
     trailer: https://www.youtube.com/watch?v=FUXawkH-ONM
@@ -315,7 +315,7 @@ nominees:
       - cat: Best Original Screenplay
         name: Screenplay - Justine Triet and Arthur Harari
   - id: the-color-purple
-    tmdb_id: 346853
+    tmdb_id: 558915
     tmdb_cat: movie
     title: The Color Purple
     trailer: https://www.youtube.com/watch?v=wPwzBUui1GA
@@ -327,7 +327,7 @@ nominees:
       - source: hbomax
         gurl: https://play.max.com/movie/0bbe998a-23b8-49a2-9729-976d53af74be
   - id: the-boy-and-the-heron
-    tmdb_id: 295917
+    tmdb_id: 508883
     tmdb_cat: movie
     title: The Boy and the Heron
     trailer: https://www.youtube.com/watch?v=t5khm-VjEu4
@@ -335,7 +335,7 @@ nominees:
       - cat: Best Animated Feature
         name: Hayao Miyazaki and Toshio Suzuki
   - id: elemental
-    tmdb_id: 337156
+    tmdb_id: 976573
     tmdb_cat: movie
     title: Elemental
     trailer: https://www.youtube.com/watch?v=hXzcyx9V0xw
@@ -346,7 +346,7 @@ nominees:
       - source: disneyplus
         url: https://www.disneyplus.com/movies/elemental/1B2ZQ9GF35W5
   - id: nimona
-    tmdb_id: 111150
+    tmdb_id: 961323
     tmdb_cat: movie
     title: Nimona
     trailer: https://www.youtube.com/watch?v=f_fuHRyQbOc
@@ -357,7 +357,7 @@ nominees:
       - source: netflix
         url: https://www.netflix.com/title/81444554
   - id: robot-dreams
-    tmdb_id: 351505
+    tmdb_id: 838240
     tmdb_cat: movie
     title: Robot Dreams
     trailer: https://www.youtube.com/watch?v=qrEsApQ1Boc
@@ -365,7 +365,7 @@ nominees:
       - cat: Best Animated Feature
         name: Pablo Berger, Ibon Cormenzana, Ignasi Estapé and Sandra Tapia Díaz
   - id: spider-man-across-the-spider-verse
-    tmdb_id: 132814
+    tmdb_id: 569094
     tmdb_cat: movie
     title: "Spider-Man: Across the Spider-Verse"
     trailer: https://www.youtube.com/watch?v=shW9i6k8cB0
@@ -376,7 +376,7 @@ nominees:
       - source: netflix
         url: https://www.netflix.com/search?q=Spider-Man%3A%20Across%20the%20Spider-Verse&jbv=81594921
   - id: el-conde
-    tmdb_id: 348991
+    tmdb_id: 991708
     tmdb_cat: movie
     title: El Conde
     trailer: https://www.youtube.com/watch?v=YGvX7ma7Xnk
@@ -387,7 +387,7 @@ nominees:
       - source: netflix
         url: https://www.netflix.com/title/81590652
   - id: napoleon
-    tmdb_id: 332434
+    tmdb_id: 753342
     tmdb_cat: movie
     title: Napoleon
     trailer: https://www.youtube.com/watch?v=LIsfMO5Jd_w
@@ -402,7 +402,7 @@ nominees:
       - source: appletvplus
         url: https://tv.apple.com/us/movie/napoleon/umc.cmc.25k80oxl3vo69c8rimk8v81s1
   - id: the-zone-of-interest
-    tmdb_id: 336494
+    tmdb_id: 467244
     tmdb_cat: movie
     title: The Zone of Interest
     trailer: https://www.youtube.com/watch?v=GFNtVaAuVYY
@@ -418,7 +418,7 @@ nominees:
       - cat: Best Adapted Screenplay
         name: Written by Jonathan Glazer
   - id: bobi-wine-the-people-s-president
-    tmdb_id: 350137
+    tmdb_id: 1004683
     tmdb_cat: movie
     title: "Bobi Wine: The People's President"
     trailer: https://www.youtube.com/watch?v=Leqt5JhRa5A
@@ -429,7 +429,7 @@ nominees:
       - source: disneyplus
         url: https://www.disneyplus.com/movies/bobi-wine-the-peoples-president/4kanVZeQLfkG
   - id: the-eternal-memory
-    tmdb_id: 349371
+    tmdb_id: 1032760
     tmdb_cat: movie
     title: The Eternal Memory
     trailer: https://www.youtube.com/watch?v=v-hxO7_oEZw
@@ -440,7 +440,7 @@ nominees:
       - source: paramountplus
         url: https://www.paramountplus.com/movies/video/M3I0r_mDFUtn6IyuHF7bgtlIqfg2nRpA/
   - id: four-daughters
-    tmdb_id: 346099
+    tmdb_id: 1069193
     tmdb_cat: movie
     title: Four Daughters
     trailer: https://www.youtube.com/watch?v=OUsu78a5phM
@@ -448,7 +448,7 @@ nominees:
       - cat: Best Documentary, Feature
         name: Kaouther Ben Hania and Nadim Cheikhrouha
   - id: to-kill-a-tiger
-    tmdb_id: 353361
+    tmdb_id: 1015356
     tmdb_cat: movie
     title: To Kill A Tiger
     trailer: https://www.youtube.com/watch?v=mC6-igJ_WWM
@@ -456,7 +456,7 @@ nominees:
       - cat: Best Documentary, Feature
         name: Nisha Pahuja, Cornelia Principe and David Oppenheim
   - id: 20-days-in-mariupol
-    tmdb_id: 347973
+    tmdb_id: 1058616
     tmdb_cat: movie
     title: 20 Days In Mariupol
     trailer: https://www.youtube.com/watch?v=9H_Fg_5x4ME
@@ -464,7 +464,7 @@ nominees:
       - cat: Best Documentary, Feature
         name: Mstyslav Chernov, Michelle Mizner and Raney Aronson-Rath
   - id: the-ab-cs-of-book-banning
-    tmdb_id: 350904
+    tmdb_id: 1186227
     tmdb_cat: movie
     title: The ABCs of Book Banning
     trailer: https://www.youtube.com/watch?v=sMaZ2bLwaeA
@@ -475,7 +475,7 @@ nominees:
       - source: paramountplus
         url: https://www.paramountplus.com/movies/video/eT_y9hgSBq68MGsk7qPI_wmBxI4T3G_8
   - id: the-barber-of-little-rock
-    tmdb_id: 353316
+    tmdb_id: 1186247
     tmdb_cat: movie
     title: The Barber Of Little Rock
     trailer: https://www.youtube.com/watch?v=LRDems-XacU
@@ -486,7 +486,7 @@ nominees:
       - source: youtube
         url: https://www.youtube.com/watch?v=1amOPUn49aM
   - id: island-in-between
-    tmdb_id: 353318
+    tmdb_id: 1203439
     tmdb_cat: movie
     title: Island in Between
     trailer: https://www.youtube.com/watch?v=vQzMHWnJ9FQ
@@ -497,7 +497,7 @@ nominees:
       - source: youtube
         url: https://www.youtube.com/watch?v=DefVP0mkHZY
   - id: the-last-repair-shop
-    tmdb_id: 352710
+    tmdb_id: 1171861
     tmdb_cat: movie
     title: The Last Repair Shop
     trailer: https://www.youtube.com/watch?v=HSLeqTWasO8
@@ -508,7 +508,7 @@ nominees:
       - source: disneyplus
         url: https://www.disneyplus.com/movies/the-last-repair-shop/7ZcinkMBrmzp
   - id: nai-nai-and-wai-po
-    tmdb_id: 353360
+    tmdb_id: 1085779
     tmdb_cat: movie
     title: Nai Nai & Wài Pó
     trailer: https://www.youtube.com/watch?v=JlyYimV6Qqw
@@ -519,7 +519,7 @@ nominees:
       - source: disneyplus
         url: https://www.disneyplus.com/movies/nai-nai-wai-po/6QtZaSyLgcaD
   - id: io-capitano
-    tmdb_id: 349495
+    tmdb_id: 937746
     tmdb_cat: movie
     title: Io capitano
     trailer: https://www.youtube.com/watch?v=5Mg_AiPGw-0
@@ -527,7 +527,7 @@ nominees:
       - cat: Best International Feature Film
         name: Italy
   - id: perfect-days
-    tmdb_id: 346126
+    tmdb_id: 976893
     tmdb_cat: movie
     title: Perfect Days
     trailer: https://www.youtube.com/watch?v=Iv8YO5BXCAQ
@@ -535,7 +535,7 @@ nominees:
       - cat: Best International Feature Film
         name: Japan
   - id: society-of-the-snow
-    tmdb_id: 349161
+    tmdb_id: 906126
     tmdb_cat: movie
     title: Society of the Snow
     trailer: https://www.youtube.com/watch?v=pDak4qLyF4Q
@@ -548,7 +548,7 @@ nominees:
       - source: netflix
         url: https://www.netflix.com/title/81268316
   - id: the-teachers-lounge
-    tmdb_id: 351366
+    tmdb_id: 998022
     tmdb_cat: movie
     title: "The Teachers' Lounge"
     trailer: https://www.youtube.com/watch?v=kbUaACY8wRQ
@@ -556,7 +556,7 @@ nominees:
       - cat: Best International Feature Film
         name: Germany
   - id: golda
-    tmdb_id: 348487
+    tmdb_id: 899524
     tmdb_cat: movie
     title: Golda
     trailer: https://www.youtube.com/watch?v=7eDU96K_VXE
@@ -567,7 +567,7 @@ nominees:
       - source: showtime
         url: 
   - id: indiana-jones-and-the-dial-of-destiny
-    tmdb_id: 134846
+    tmdb_id: 335977
     tmdb_cat: movie
     title: Indiana Jones and the Dial of Destiny
     trailer: hhttps://www.youtube.com/watch?v=ZfVYgWYaHmE
@@ -578,7 +578,7 @@ nominees:
       - source: disneyplus
         url: https://www.disneyplus.com/movies/indiana-jones-and-the-dial-of-destiny/5jJ2qq6DKlf3
   - id: flamin-hot
-    tmdb_id: 308854
+    tmdb_id: 626332
     tmdb_cat: movie
     title: Flamin' Hot
     trailer: https://www.youtube.com/watch?v=it7sNRloq-A
@@ -590,7 +590,7 @@ nominees:
       - source: disneyplus
         url: https://www.disneyplus.com/movies/flamin-hot/PmAiIWRz18HF
   - id: american-symphony
-    tmdb_id: 350892
+    tmdb_id: 1171816
     tmdb_cat: movie
     title: American Symphony
     trailer: https://www.youtube.com/watch?v=wKSMsdq8ONs
@@ -602,7 +602,7 @@ nominees:
       - source: netflix
         url: https://www.netflix.com/title/81728930
   - id: past-lives
-    tmdb_id: 343586
+    tmdb_id: 666277
     tmdb_cat: movie
     title: Past Lives
     trailer: https://www.youtube.com/watch?v=kA244xewjcI
@@ -615,7 +615,7 @@ nominees:
       - source: showtime
         url: 
   - id: letter-to-a-pig
-    tmdb_id: 353315
+    tmdb_id: 950810
     tmdb_cat: movie
     title: Letter to a Pig
     trailer: https://www.youtube.com/watch?v=Cp3f92WYxv0
@@ -623,7 +623,7 @@ nominees:
       - cat: Best Short Film, Animated
         name: Tal Kantor and Amit R. Gicelter
   - id: ninety-five-senses
-    tmdb_id: 353330
+    tmdb_id: 1040371
     tmdb_cat: movie
     title: Ninety-Five Senses
     trailer: https://www.youtube.com/watch?v=PFajvoKMdI0
@@ -631,7 +631,7 @@ nominees:
       - cat: Best Short Film, Animated
         name: Jerusha Hess and Jared Hess
   - id: our-uniform
-    tmdb_id: 353386
+    tmdb_id: 1140605
     tmdb_cat: movie
     title: Our Uniform
     trailer: https://www.youtube.com/watch?v=6rgF6G9Yyjc
@@ -639,23 +639,23 @@ nominees:
       - cat: Best Short Film, Animated
         name: Yegane Moghaddam
   - id: pachyderme
-    tmdb_id: 353313
+    tmdb_id: 950822
     tmdb_cat: movie
     title: Pachyderme
     trailer: https://www.youtube.com/watch?v=bdSxBJzYJ94
     noms: 
       - cat: Best Short Film, Animated
         name: Stéphanie Clément and Marc Rius
-  - id: war-is-over-inspired-by-the-music-of-john-and-yoko
-    tmdb_id: 353359
+  - id: war-is-over
+    tmdb_id: 1214020
     tmdb_cat: movie
-    title: WAR IS OVER! Inspired by the Music of John and Yoko
+    title: WAR IS OVER!
     trailer: https://www.youtube.com/watch?v=OrcilSXWa8M
     noms: 
       - cat: Best Short Film, Animated
         name: Dave Mullins and Brad Booker
   - id: the-after
-    tmdb_id: 350856
+    tmdb_id: 1169455
     tmdb_cat: movie
     title: The After
     trailer: https://www.youtube.com/watch?v=fV8kGLfv_nc
@@ -666,7 +666,7 @@ nominees:
       - source: netflix
         url: https://www.netflix.com/title/81460836
   - id: invincible
-    tmdb_id: 353387
+    tmdb_id: 1084765
     tmdb_cat: movie
     title: Invincible
     trailer: https://www.youtube.com/watch?v=uXpJM6bgV4Y
@@ -674,7 +674,7 @@ nominees:
       - cat: Best Short Film, Live Action
         name: Vincent René-Lortie and Samuel Caron
   - id: knight-of-fortune
-    tmdb_id: 353314
+    tmdb_id: 971468
     tmdb_cat: movie
     title: Knight of Fortune
     trailer: https://www.youtube.com/watch?v=o3j4OwOnQEs
@@ -685,7 +685,7 @@ nominees:
       - source: youtube
         url: https://www.youtube.com/watch?v=CKJK68VhFZk
   - id: red-white-and-blue
-    tmdb_id: 353317
+    tmdb_id: 1194636
     tmdb_cat: movie
     title: Red, White and Blue
     trailer: https://www.youtube.com/watch?v=_kMGfKPQsdU
@@ -693,7 +693,7 @@ nominees:
       - cat: Best Short Film, Live Action
         name: Nazrin Choudhury and Sara McFarlane
   - id: the-wonderful-story-of-henry-sugar
-    tmdb_id: 336624
+    tmdb_id: 923939
     tmdb_cat: movie
     title: The Wonderful Story of Henry Sugar
     trailer: https://www.youtube.com/watch?v=4RdncisZ_QA
@@ -704,7 +704,7 @@ nominees:
       - source: netflix
         url: https://www.netflix.com/title/81388090
   - id: the-creator
-    tmdb_id: 346573
+    tmdb_id: 670292
     tmdb_cat: movie
     title: The Creator
     trailer: https://www.youtube.com/watch?v=573GCxqkYEg
@@ -717,7 +717,7 @@ nominees:
       - source: hulu
         url: https://www.hulu.com/movie/1f7c85b7-8614-404e-aa58-5af8702c1c89
   - id: mission-impossible-dead-reckoning-part-1
-    tmdb_id: 30294
+    tmdb_id: 575264
     tmdb_cat: movie
     title: "Mission: Impossible - Dead Reckoning Part 1"
     trailer: https://www.youtube.com/watch?v=avz06PDqDbM
@@ -730,7 +730,7 @@ nominees:
       - source: paramountplus
         url: https://www.paramountplus.com/movies/video/sh0UeJexoBbPNr40vL8zV9TpG9qG7_BS
   - id: godzilla-minus-one
-    tmdb_id: 348155
+    tmdb_id: 940721
     tmdb_cat: movie
     title: Godzilla Minus One
     trailer: https://www.youtube.com/watch?v=VvSrHIX5a-0
@@ -738,7 +738,7 @@ nominees:
       - cat: Best Visual Effects
         name: Takashi Yamazaki, Kiyoko Shibuya, Masaki Takahashi and Tatsuji Nojima
   - id: guardians-of-the-galaxy-vol-3
-    tmdb_id: 11716
+    tmdb_id: 447365
     tmdb_cat: movie
     title: Guardians of the Galaxy Vol. 3
     trailer: https://www.youtube.com/watch?v=u3V5KDHRQvk
@@ -749,7 +749,7 @@ nominees:
       - source: disneyplus
         url: https://www.disneyplus.com/movies/guardians-of-the-galaxy-vol-3/1tmc3nPw04S2
   - id: may-december
-    tmdb_id: 346178
+    tmdb_id: 839369
     tmdb_cat: movie
     title: May December
     trailer: https://www.youtube.com/watch?v=wOwP6JHqag0
