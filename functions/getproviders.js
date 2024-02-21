@@ -1,5 +1,4 @@
 const axios = require("axios")
-const qs = require("qs")
 
 export function handler(event, context, callback) {
   // apply our function to the queryStringParameters and assign it to a variable

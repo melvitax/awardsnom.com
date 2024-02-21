@@ -4,13 +4,14 @@
     "description": "a token hider using netlify functions",
     "main": "app.js",
     "scripts": {
+        "axios": "^1.6.7",
         "lambda-serve": "netlify-lambda serve functions",
         "lambda-build": "netlify-lambda build functions"
     },
     "author": "Dennis Padiernos",
     "license": "ISC",
     "dependencies": {
-        "axios": "^1.6.7",
+        
         "netlify-lambda": "^2.0.16"
     }
 }
