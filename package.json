@@ -1,16 +1,19 @@
 {
-    "name": "token-hider",
-    "version": "1.0.0",
-    "description": "a token hider using netlify functions",
-    "main": "app.js",
-    "scripts": {
-        "lambda-serve": "netlify-lambda serve functions",
-        "lambda-build": "netlify-lambda build functions"
-    },
-    "author": "Dennis Padiernos",
-    "license": "ISC",
-    "dependencies": {
-        "axios": "^1.6.7",
-        "netlify-lambda": "^2.0.16"
-    }
+  "name": "awardsnom.com",
+  "version": "1.0.0",
+  "description": "https://awardsnom.com",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js", 
+    "lambda-serve": "netlify-lambda serve functions",
+    "lambda-build": "netlify-lambda build functions"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "netlify-lambda": "^2.0.16"
+  }
 }
