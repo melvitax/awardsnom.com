@@ -5,7 +5,9 @@ jQuery(function() {
   enableTogglePicks()
   enableToolTips()
   //enableFetchCurrentUserIdentity
+  enableDynamicProviderDropDowns()
 })
+
 
 console.log("CloudKit: listening for cloudkitloaded");
 window.addEventListener('cloudkitloaded', function() {
@@ -87,6 +89,34 @@ function setUpAuth() {
           console.log("authentication error: Unable to set a cookie");
         }
     });
+}
+
+function enableDynamicProviderDropDowns() {
+  $( ".providers .dropdown-toggle" ).on( "show.bs.dropdown", function() {
+    $(this).parent().children('.dropdown-menu')
+      .html( '<li class="dropdown-item">Loading...</li>');
+    let tmdb_type = $(this).attr("data-tmdb-type")
+    let tmdb_id = $(this).attr("data-tmdb-id")
+    let base_url = 'https://awardsnom.com/.netlify/functions/getproviders'
+    fetch(base_url+'/?media_type='+tmdb_type+'&id='+tmdb_id)
+      .then(data => {
+        $(this).parent().children('.dropdown-menu')
+          .html( '<li class="dropdown-item">Sucess</li>');
+          console.log(data)
+      })
+      .catch(error => {
+        console.log(error);
+        $(this).parent().children('.dropdown-menu')
+          .html( '<li class="dropdown-item">There was a problem loading content</li>');
+      })
+    
+  });
+}
+
+function getProvider() {
+  fetch('http://localhost:9000/foobar')
+  .then(data => console.log(data))
+  .catch(error => console.log(error))
 }
 
 // Fetch Top Rated

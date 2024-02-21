@@ -18,6 +18,7 @@ export function handler(event, context, callback) {
    // Here's a function we'll use to define how our response will look like when we call callback
   const pass = (body) => {callback( null, {
     statusCode: 200,
+    headers: {"Access-Control-Allow-Origin": "*"}, 
     body: JSON.stringify(body)
   })}
 

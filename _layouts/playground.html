@@ -23,9 +23,6 @@
 
             {% include subheader.html %} 
 
-            <button type="button" class="share-picks btn btn-outline-warning">Share Picks</button>
-            <button type="button" class="discover-users btn btn-outline-warning">Discover Users</button>
-
             <div class="row card-columns ml-0 mr-0 clearfix justify-content-md-center mt-4">
           
                 <!-- Category -->
@@ -105,7 +102,15 @@
                                 {% for streamer in nominee.streaming %}
                                     {% if streamer.source %}
                                     {% capture watchURL %}{% if streamer.url %}{{ streamer.url }}{% else %}#{% endif %}{% endcapture %}
-                                    <a href="{{ watchURL }}" class="btn btn-outline-secondary btn-block mt-2 w-100"><span class="source-logo {{streamer.source}}">{% include icons/{{streamer.source}}.svg %}</span></a>
+                                    <div class="btn-group w-100 providers">
+                                        <button type="button" class="btn btn-outline-secondary  mt-2 w-100" role="link" href="{{ watchURL }}"><span class="source-logo {{streamer.source}}">{% include icons/{{streamer.source}}.svg %}</span></button>
+                                        <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split mt-2 " data-bs-toggle="dropdown" aria-expanded="false" data-tmdb-id="{{ nominee.tmdb_id }}" data-tmdb-type="{{ nominee.tmdb_type }}">
+                                        <span class="visually-hidden">Toggle Dropdown</span>
+                                        </button>
+                                        <ul class="dropdown-menu ">
+                                        <li><a class="dropdown-item" href="#">Loading...</a></li>
+                                        </ul>
+                                    </div>
                                     {% endif %}
                                 {% endfor %}
                             </div>
