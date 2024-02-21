@@ -9,7 +9,7 @@ export function handler(event, context, callback) {
   const { API_TOKEN, API_URL } = process.env
   // In this example, the API Key needs to be passed in the params with a key of key.
   // We're assuming that the ApiParams var will contain the initial ?
-  const URL = `${API_URL}/${MEDIA_TYPE}/${MEDIA_ID}/watch/providers&api_key=${API_TOKEN}`
+  const URL = `${API_URL}/${MEDIA_TYPE}/${MEDIA_ID}/watch/providers?api_key=${API_TOKEN}`
   // Let's log some stuff we already have.
   console.log("Injecting token to", API_URL);
   console.log("logging event.....", event)
