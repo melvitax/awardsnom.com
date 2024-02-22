@@ -92,30 +92,37 @@
                                 {% assign urlParts = nominee.trailer | split: "/" %}
                                 {% assign videoID = urlParts | last %}
                                 {% assign src = 'https://player.vimeo.com/video/' | append: videoID | append: '?title=0&byline=0&portrait=0' %}
-                                
-                            </div>
-                            <!-- Streamer -->
-                            <div>
                                 <a href="#" class="btn btn-outline-secondary btn-block w-100" data-bs-toggle="modal" data-bs-target="#videoModal" data-theVideo="{{ src }}"><span class="fa fa-play"> Trailer</span></a> 
                                 {% endif %}
                                 {% endif %}
-                                {% for streamer in nominee.streaming %}
-                                    {% if streamer.source %}
-                                    {% capture watchURL %}{% if streamer.url %}{{ streamer.url }}{% else %}#{% endif %}{% endcapture %}
+                            </div>
+
+                            <!-- Streamer -->
+                            <div>
+                                {% if nominee.streaming and nominee.streaming.size > 0 %}
+                                    {% for streamer in nominee.streaming %}
+                                        {% if streamer.source %}
+                                        {% capture watchURL %}{% if streamer.url %}{{ streamer.url }}{% else %}#{% endif %}{% endcapture %}
+                                        <div class="btn-group w-100 providers">
+                                            <div type="button" class="btn btn-outline-secondary mt-2 w-100" role="link" onclick="location.href = '{{ watchURL }}';"><span class="source-logo {{streamer.source}}">{% include icons/{{streamer.source}}.svg %}</span></div>
+                                            <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split mt-2 " data-bs-toggle="dropdown" aria-expanded="false" data-tmdb-id="{{ nominee.tmdb_id }}" data-tmdb-type="{{ nominee.tmdb_type }}">
+                                            <span class="visually-hidden">Toggle Dropdown</span>
+                                            </button>
+                                            <ul class="dropdown-menu ">
+                                            <li><a class="dropdown-item" href="#">Loading...</a></li>
+                                            </ul>
+                                        </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% else %}
                                     <div class="btn-group w-100 providers">
-                                        <button type="button" class="btn btn-outline-secondary  mt-2 w-100" role="link" href="{{ watchURL }}"><span class="source-logo {{streamer.source}}">{% include icons/{{streamer.source}}.svg %}</span></button>
-                                        <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split mt-2 " data-bs-toggle="dropdown" aria-expanded="false" data-tmdb-id="{{ nominee.tmdb_id }}" data-tmdb-type="{{ nominee.tmdb_type }}">
-                                        <span class="visually-hidden">Toggle Dropdown</span>
-                                        </button>
+                                        <button type="button" class="btn btn-outline-secondary dropdown-toggle mt-2 w-100" role="link" data-bs-toggle="dropdown" aria-expanded="false" data-tmdb-id="{{ nominee.tmdb_id }}" data-tmdb-type="{{ nominee.tmdb_type }}"><span class="source-logo justwatch">{% include icons/justwatch.svg %}</span></button>
                                         <ul class="dropdown-menu ">
                                         <li><a class="dropdown-item" href="#">Loading...</a></li>
                                         </ul>
                                     </div>
-                                    {% endif %}
-                                {% endfor %}
+                                {% endif %}
                             </div>
-
-                            
                         </div>
                     </div> 
                 </div>

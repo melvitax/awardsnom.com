@@ -10,4 +10,5 @@
     var cloudKitEnvironment = "{{ site.cloudKitEnvironment }}";
     var nominees = [ {{ include.jsnominees | join: ', ' }} ]
     var jsyearstofetch = {{ include.jsyearstofetch }}
+    var regions = {{ site.data.regions | jsonify  }}
 </script>

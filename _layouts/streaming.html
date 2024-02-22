@@ -82,7 +82,7 @@
 
                     <div class="row border-top border-dark pt-4 mt-4">
 
-                        <h3 class="col-12 col-md-3 col-lg-2 pt-3 pb-2 text-center text-warning fw-bold fs-3 cat-title"><span class="source-logo {{serviceName}} align-bottom">{% include icons/{{serviceName}}.svg %}</span><br />{{ serviceCount }}</h3>
+                        <h3 class="col-12 col-md-3 col-lg-2 pt-3 pb-2 text-center text-warning fw-bold fs-3 cat-title"><img src="/assets/images/{{serviceName}}.svg" title="{{serviceName}}" /><br />{{ serviceCount }}</h3>
                     
                         <div class="col-12 col-md-9 col-lg-10">
                             <div class="row">
@@ -100,12 +100,33 @@
                                         <!-- Buttons -->
                                         <div class="buttons w-100 pt-3">
                                             {% assign streaming = nominee.streaming | where:"source", service %}
-                                            {% for streamer in streaming %}
-                                                {% if streamer.source %}
-                                                {% capture watchURL %}{% if streamer.url %}{{ streamer.url }}{% else %}#{% endif %}{% endcapture %}
-                                                <a href="{{ watchURL }}" class="btn btn-outline-secondary btn-block mb-2 w-100"><span class="source-logo {{streamer.source}}">{% include icons/{{streamer.source}}.svg %}</span></a>
-                                                {% endif %}
-                                            {% endfor %}
+                                            {% if streaming and streaming.size > 0 %}
+                                                {% for streamer in streaming %}
+                                                    {% if streamer.source %}
+                                                    {% capture watchURL %}{% if streamer.url %}{{ streamer.url }}{% else %}#{% endif %}{% endcapture %}
+                                                    <div class="btn-group w-100 providers">
+                                                        <div type="button" class="btn btn-outline-secondary mt-2 w-100" role="link" onclick="location.href = '{{ watchURL }}';"><div class="source-logo {{streamer.source}}"><span class="visually-hidden">{{ streamer.source }}</span>&nbsp;</div></div>
+                                                        <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split mt-2 " data-bs-toggle="dropdown" aria-expanded="false" data-tmdb-id="{{ nominee.tmdb_id }}" data-tmdb-type="{{ nominee.tmdb_type }}">
+                                                        <span class="visually-hidden">Toggle Dropdown</span>
+                                                        </button>
+                                                        <ul class="dropdown-menu ">
+                                                        <li><a class="dropdown-item" href="#">Loading...</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            {% else %}
+                                                <div class="btn-group w-100 providers">
+                                                    <button type="button" class="btn btn-outline-secondary mt-2 w-100" role="link" onclick="location.href = 'https://www.themoviedb.org/{{ nominee.tmdb_type }}/{{ nominee.tmdb_id }}/watch?locale=US';" data-tmdb-id="{{ nominee.tmdb_id }}" data-tmdb-type="{{ nominee.tmdb_type }}"><div class="source-logo justwatch"><span class="visually-hidden">JustWatch</span>&nbsp;</div></button>
+                                                    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle mt-2 " data-bs-toggle="dropdown" aria-expanded="false" data-tmdb-id="{{ nominee.tmdb_id }}" data-tmdb-type="{{ nominee.tmdb_type }}">
+                                                        <span class="visually-hidden">Toggle Dropdown</span>
+                                                        </button>
+                                                    <ul class="dropdown-menu ">
+                                                    <li><a class="dropdown-item" href="#">Loading...</a></li>
+                                                    </ul>
+                                                </div>
+                                            {% endif %}
+
                                         </div>
                                     </div>
                                 </div> <!-- nominees col > row > col -->

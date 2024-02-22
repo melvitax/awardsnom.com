@@ -8,7 +8,6 @@ jQuery(function() {
   enableDynamicProviderDropDowns()
 })
 
-
 console.log("CloudKit: listening for cloudkitloaded");
 window.addEventListener('cloudkitloaded', function() {
   configureCloudKit();
@@ -90,38 +89,127 @@ function setUpAuth() {
         }
     });
 }
+var selectedRegion = "US"
+
+function updateRegionUI() {
+  let output = regions.filter(item => item.region == selectedRegion);
+  $('.btn.region').text(output[0].flag)
+}
 
 function enableDynamicProviderDropDowns() {
+  var savedRegion = getCookie('selectedRegion')
+  if ( Object.is(savedRegion, undefined) ) {
+    selectedRegion = "US"
+    console.log('savedRegion: NONE')
+  } else {
+    selectedRegion = savedRegion 
+    console.log('savedRegion: '+ savedRegion)
+  }
+  
   $( ".providers .dropdown-toggle" ).on( "show.bs.dropdown", function() {
-    $(this).parent().children('.dropdown-menu')
-      .html( '<li class="dropdown-item">Loading...</li>');
+    let dropdown = $(this).parent().children('.dropdown-menu')
+    $(dropdown)
+      .html( '<li class="dropdown-item">Loading ...</li>');
     let tmdb_type = $(this).attr("data-tmdb-type")
     let tmdb_id = $(this).attr("data-tmdb-id")
     let base_url = 'https://awardsnom.com/.netlify/functions/getproviders'
     fetch(base_url+'/?media_type='+tmdb_type+'&id='+tmdb_id)
       .then(data => {
-        $(this).parent().children('.dropdown-menu')
-          .html( '<li class="dropdown-item">Sucess</li>');
-          console.log(data)
+        data.json()
+          .then( parsed => {
+            if ( typeof parsed.results[selectedRegion] === 'undefined') {
+              $(dropdown)
+                .html('<li class="dropdown-item">No streaming providers found for this region</li>');
+              return
+            }
+            let image_base_url = "https://image.tmdb.org/t/p/w45"
+            $(dropdown)
+              .html('');
+            let link = parsed.results[selectedRegion].link
+            let flatrate = parsed.results[selectedRegion].flatrate
+            if ( typeof flatrate !== 'undefined' ) {
+              $(dropdown)
+                .append('<li class="dropdown-item disabled">Flat Rate</li>')
+              var images = new Array
+              let sorted = flatrate.sort(function(a, b){
+                return a.display_priority - b.display_priority;
+              })
+              sorted.forEach( function(item) {
+                $(dropdown)
+                images += '<img src="' + image_base_url + item.logo_path + '" width="24" height="24" />'
+              })
+              $(dropdown)
+                .append('<li class="dropdown-item"><a href="'+link+'">'+images+'</a></li>')
+            }
+            let ads = parsed.results[selectedRegion].ads
+            if ( !Object.is(ads, undefined) ) {
+              $(dropdown)
+                .append('<li class="dropdown-item disabled">With Ads</li>')
+              var images = new Array
+              let sorted = ads.sort(function(a, b){
+                return a.display_priority - b.display_priority;
+              })
+              sorted.forEach( function(item) {
+                $(dropdown)
+                  images += '<img src="' + image_base_url + item.logo_path + '" width="24" height="24" />'
+              })
+              $(dropdown)
+                .append('<li class="dropdown-item"><a href="'+link+'">'+images+'</a></li>')
+            }
+            let rent = parsed.results[selectedRegion].rent
+            if ( !Object.is(rent, undefined) ) {
+              $(dropdown)
+                .append('<li class="dropdown-item disabled">Rent</li>')
+              var images = new Array
+              let sorted = rent.sort(function(a, b){
+                return a.display_priority - b.display_priority;
+              })
+              sorted.forEach( function(item) {
+                $(dropdown)
+                images += '<img src="' + image_base_url + item.logo_path + '" width="24" height="24" />'
+              })
+              $(dropdown)
+                .append('<li class="dropdown-item"><a href="'+link+'">'+images+'</a></li>')
+            }
+            let buy = parsed.results[selectedRegion].buy
+            if ( !Object.is(buy, undefined) ) {
+              $(dropdown)
+                .append('<li class="dropdown-item disabled">Buy</li>')
+              var images = new Array
+              let sorted = buy.sort(function(a, b){
+                return a.display_priority - b.display_priority;
+              })
+              sorted.forEach( function(item) {
+                $(dropdown)
+                images += '<img src="' + image_base_url + item.logo_path + '" width="24" height="24" />'
+              })
+              $(dropdown)
+                .append('<li class="dropdown-item"><a href="'+link+'">'+images+'</a></li>')
+            }
+          })
+          .catch(error => {
+            $(dropdown)
+              .html( '<li class="dropdown-item">There was a problem loading content</li>');
+          })
       })
       .catch(error => {
-        console.log(error);
-        $(this).parent().children('.dropdown-menu')
+        $(dropdown)
           .html( '<li class="dropdown-item">There was a problem loading content</li>');
       })
-    
   });
+  updateRegionUI()
 }
 
-function getProvider() {
-  fetch('http://localhost:9000/foobar')
-  .then(data => console.log(data))
-  .catch(error => console.log(error))
+function setRegion(region) {
+  setCookie('selectedRegion', region, 365)
+  selectedRegion = region
+  updateRegionUI() 
 }
+
 
 // Fetch Top Rated
 function getTopRated(cat) {
-  console.log("getTopRated("+cat+")")
+  //console.log("getTopRated("+cat+")")
   var container = CloudKit.getDefaultContainer();
   var publicDB = container.publicCloudDatabase;
 
@@ -146,7 +234,7 @@ function getTopRated(cat) {
       } else {
         var records = response.records;
         if (records.length === 0) {
-          console.log('getTopRated query: none found')
+          //console.log('getTopRated query: none found')
         } else {
           var cats = new Set(records.map(a => a.fields.cat.value)) 
           cats.forEach(function (cat) {
@@ -155,7 +243,7 @@ function getTopRated(cat) {
                 return a.fields.votes.value < b.fields.votes.value
               })
             var topPick = sorted[0]
-            console.log('getTopRated sorted: '+JSON.stringify(sorted.length))
+            //console.log('getTopRated sorted: '+JSON.stringify(sorted.length))
             sorted.forEach(function (nom) {
               var isTopVotes = nom.fields.cat.value == topPick.fields.cat.value && nom.fields.nom.value == topPick.fields.nom.value
               displayVoteCount(nom.fields.cat.value, nom.fields.nom.value, nom.fields.votes.value, isTopVotes)
@@ -771,4 +859,5 @@ function getCookie(c_name) {
           return unescape(y);
       }
   }
+  return undefined
 }

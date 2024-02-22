@@ -172,19 +172,96 @@ h2.show-title {
         color: #ffc107;
     }
 }
-.source-logo svg {
-    height: 1em;
-    width: auto;
-    fill: #fff;
+.source-logo {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(0deg, rgba(37,42,38,0) 0%, rgba(37,42,38,0) 11.9%, rgba(255,255,255,0) 11.9%) ;
+    background-size: contain;
 }
-.source-logo.appletv svg, .source-logo.appletvplus svg {
-    height: 1.1em;
-    margin-top: -0.3em;
+.source-logo.appletvplus {
+    background-image: url("/assets/images/appletvplus.svg");
 }
-.source-logo.netflix svg { margin-top: -0.1em; }
-.source-logo.hbomax svg { height: 0.8em; }
-.source-logo.primevideo svg { height: 1.3em; }
-.source-logo.disneyplus svg { height: 1.4em; }
+.source-logo.appletvplus:hover {
+    background-image: url("/assets/images/appletvplus-h.svg")
+}
+
+.source-logo.disneyplus {
+    background-image: url("/assets/images/disneyplus.svg");
+}
+.source-logo.disneyplus:hover {
+    background-image: url("/assets/images/disneyplus-h.svg")
+}
+
+.source-logo.hbomax {
+    background-image: url("/assets/images/hbomax.svg");
+}
+.source-logo.hbomax:hover {
+    background-image: url("/assets/images/hbomax-h.svg")
+}
+
+.source-logo.hulu {
+    background-image: url("/assets/images/hulu.svg");
+}
+.source-logo.hulu:hover {
+    background-image: url("/assets/images/hulu-h.svg")
+}
+
+.source-logo.justwatch {
+    background-image: url("/assets/images/justwatch.svg");
+}
+.source-logo.justwatch:hover {
+    background-image: url("/assets/images/justwatch-h.svg")
+}
+
+.source-logo.netflix {
+    background-image: url("/assets/images/netflix.svg");
+}
+.source-logo.netflix:hover {
+    background-image: url("/assets/images/netflix-h.svg")
+}
+
+.source-logo.paramountplus {
+    background-image: url("/assets/images/paramountplus.svg");
+}
+.source-logo.paramountplus:hover {
+    background-image: url("/assets/images/paramountplus-h.svg")
+}
+
+.source-logo.peacock {
+    background-image: url("/assets/images/peacock.svg");
+}
+.source-logo.peacock:hover {
+    background-image: url("/assets/images/peacock-h.svg")
+}
+
+.source-logo.primevideo {
+    background-image: url("/assets/images/primevideo.svg");
+}
+.source-logo.primevideo:hover {
+    background-image: url("/assets/images/primevideo-h.svg")
+}
+
+.source-logo.showtime {
+    background-image: url("/assets/images/showtime.svg");
+}
+.source-logo.showtime:hover {
+    background-image: url("/assets/images/showtime-h.svg")
+}
+
+.source-logo.vimeo {
+    background-image: url("/assets/images/vimeo.svg");
+}
+.source-logo.vimeo:hover {
+    background-image: url("/assets/images/vimeo-h.svg")
+}
+
+.source-logo.youtube {
+    background-image: url("/assets/images/youtube.svg");
+}
+.source-logo.youtube:hover {
+    background-image: url("/assets/images/youtube-h.svg")
+}
+
 .card { 
     background-color: transparent;
 }

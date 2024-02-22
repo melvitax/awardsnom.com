@@ -6,20 +6,33 @@
                 <div class="d-flex">{{site.title}} <div class="spinner spinner-border text-warning ms-1 " role="status" style="width: 1.3em; height: 1.3em;">
                     <span class="visually-hidden">Loading...</span>
                   </div></div>
-                <!-- Browse Categories -->
+                
                 <div class="d-flex">
+                    <!-- Browse Categories -->
                     {% if page.layout == "categories" %}
-                    <div type="button" class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-                        Categories
+                    <button type="button" class="btn  btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categories 
                         <span class="visually-hidden">Toggle Dropdown</span>
-                    </div>
+                    </button>
                     <ul class="dropdown-menu dropdown-menu-end" style="max-height: 50vh; max-width: 90vw; overflow-y: scroll">
                         {% for cat in include.categories %}
                         <li><a class="dropdown-item" href="/{{include.show}}/{{include.year}}/#{{ cat.title | slugify  }}">{{ cat.title }}</a></li>
                         {% endfor %}
                     </ul>
                     {% endif %}
+                    <!-- Regions -->
+                    <div class="btn-group">
+                        <button type="button" class="region btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        🏳️
+                        </button>
+                        <ul class="dropdown-menu" style="max-height: 50vh; overflow-y: scroll">
+                        {% for region in site.data.regions %}
+                        <li><a class="dropdown-item" data-region="{{ region.region }}" onclick="setRegion('{{ region.region }}')">{{ region.flag }} {{ region.title }}</a></li>
+                        {% endfor %}
+                        </ul>
+                    </div>
                 </div>
+                
             </div>
             <!-- Show Title -->
             <h1 class="site-title fw-bold col-12 col-md-auto text-center pb-2 m-0">{{ page.title }}</h1>
