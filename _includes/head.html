@@ -3,8 +3,9 @@
     {% capture pagetitle %}{% if page.layout == "nominees" %}{{ page.title }} Ballot | Nominees | {{site.title}}{% elsif page.layout == "streaming" %}{{ page.title }} Ballot | Streaming | {{ site.title }}{% else %}{{ page.title }} Ballot | {{ site.title }}{% endif %}{% endcapture %}
     <title>{{ pagetitle }}</title>
     <meta name="description" content="{{site.description}}">
-    {% if page.meta-description %}
-    <meta name="keywords" content="{{page.meta-description}}">
+    {% if page.show and page.year %}
+    {% assign data = site.data[page.show][page.year] %}
+    <meta name="keywords" content="{{ data.meta-description }}">
     {% else %}
     <meta name="keywords" content="{{site.keywords}}">
     {% endif %}
