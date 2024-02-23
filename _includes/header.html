@@ -40,8 +40,8 @@
             <div class="d-flex score-card" data-year="{{ include.year }}" data-show="{{ include.show }}" style="gap: 10px; height: 12px;">
                 {% for cat in include.categories %}
                     {% assign catid =  cat.title | slugify %}
-                    <div class="pill col bg-dark rounded-3" data-cat="{{ catid }}" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-offset="0,20" title="{{ cat.title }}">&nbsp;
-                    </div>
+                    <a href="#{{ catid }}" class=" col "><div class="pill bg-dark rounded-3" data-cat="{{ catid }}" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-offset="0,20" title="{{ cat.title }}">&nbsp;
+                    </div></a>
                 {% endfor %}
             </div>
         </div>
