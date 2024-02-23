@@ -425,6 +425,8 @@ nominees:
     streaming:
       - source: disneyplus
         url: https://www.disneyplus.com/movies/bobi-wine-the-peoples-president/4kanVZeQLfkG
+      - source: hulu
+        url: https://www.hulu.com/series/539dbd76-a38a-4c24-b95c-3606e41d4a47
   - id: the-eternal-memory
     tmdb_id: 1032760
     tmdb_type: movie
@@ -504,6 +506,8 @@ nominees:
     streaming:
       - source: disneyplus
         url: https://www.disneyplus.com/movies/the-last-repair-shop/7ZcinkMBrmzp
+      - source: hulu
+        url: https://www.hulu.com/movie/62484db8-0fcd-404a-ae0e-37c05f693fdf
   - id: nai-nai-and-wai-po
     tmdb_id: 1085779
     tmdb_type: movie
@@ -586,6 +590,8 @@ nominees:
     streaming:
       - source: disneyplus
         url: https://www.disneyplus.com/movies/flamin-hot/PmAiIWRz18HF
+      - source: hulu
+        url: https://www.hulu.com/movie/b81d7e5b-e244-432c-af28-bedf3f8e7020
   - id: american-symphony
     tmdb_id: 1171816gi
     tmdb_type: movie
