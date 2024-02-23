@@ -1,6 +1,7 @@
 showName: "Oscars"
 year: "2024"
 day: '2024-03-10'
+meta-description: Oscars 2024 online ballot and streaming tracker for Academy Awards by AwardsNom
 categories: 
   - title: Best Picture
     img_type: poster
