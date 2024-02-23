@@ -519,6 +519,8 @@ nominees:
     streaming:
       - source: disneyplus
         url: https://www.disneyplus.com/movies/nai-nai-wai-po/6QtZaSyLgcaD
+      - source: hulu
+        url: https://www.hulu.com/movie/fa461950-4d4b-48af-bea6-3cd6a634594e
   - id: io-capitano
     tmdb_id: 937746
     tmdb_type: movie
