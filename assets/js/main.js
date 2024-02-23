@@ -92,8 +92,8 @@ function setUpAuth() {
 var selectedRegion = "US"
 
 function updateRegionUI() {
-  let output = regions.filter(item => item.region == selectedRegion);
-  $('.btn.region').text(output[0].flag)
+  let thisRegion = regions.filter(item => item.region == selectedRegion);
+  $('.btn.region').text(thisRegion[0].flag)
 }
 
 function enableDynamicProviderDropDowns() {
@@ -117,14 +117,15 @@ function enableDynamicProviderDropDowns() {
       .then(data => {
         data.json()
           .then( parsed => {
+            let thisRegion = regions.filter(item => item.region == selectedRegion);
+            $(dropdown)
+              .html('<li class="dropdown-item disabled"><img src="/assets/images/justwatch.svg" style="height: 0.8em;" /><span class="float-end">'+thisRegion[0].flag+'</span></li><li><hr class="dropdown-divider"></li>');
             if ( typeof parsed.results[selectedRegion] === 'undefined') {
               $(dropdown)
-                .html('<li class="dropdown-item">No streaming providers found for this region</li>');
+                .append('<li class="dropdown-item">No streaming providers found in region</li>');
               return
             }
             let image_base_url = "https://image.tmdb.org/t/p/w45"
-            $(dropdown)
-              .html('');
             let link = parsed.results[selectedRegion].link
             let flatrate = parsed.results[selectedRegion].flatrate
             if ( typeof flatrate !== 'undefined' ) {
