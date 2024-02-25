@@ -505,6 +505,8 @@ nominees:
       - cat: Best Documentary, Short
         name: Ben Proudfoot and Kris Bowers
     streaming:
+      - source: youtube
+        url: https://www.youtube.com/watch?v=xttrkgKXtZ4
       - source: disneyplus
         url: https://www.disneyplus.com/movies/the-last-repair-shop/7ZcinkMBrmzp
       - source: hulu
