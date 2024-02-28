@@ -99,6 +99,23 @@
                                         {% endif %}
                                         <!-- Buttons -->
                                         <div class="buttons w-100 pt-3">
+                                             <!-- Trailer -->
+                                            <div class="mt-3">
+                                                {% if nominee.trailer %}
+                                                {% if nominee.trailer contains "youtube.com" %}
+                                                {% assign urlParts = nominee.trailer | split: "v=" %}
+                                                {% assign videoID = urlParts[1] %}
+                                                {% assign src = 'https://www.youtube.com/embed/' | append: videoID | append: '?showinfo=0&modestbranding=0&color=white&autoplay=0' %}
+                                                <a href="#" class="btn btn-outline-secondary btn-block w-100" data-bs-toggle="modal" data-bs-target="#videoModal" data-theVideo="{{ src }}"><i class="fa-regular fa-play"></i> Trailer</a>
+                                                {% elsif nominee.trailer contains "vimeo.com" %}
+                                                {% assign urlParts = nominee.trailer | split: "/" %}
+                                                {% assign videoID = urlParts | last %}
+                                                {% assign src = 'https://player.vimeo.com/video/' | append: videoID | append: '?title=0&byline=0&portrait=0' %}
+                                                <a href="#" class="btn btn-outline-secondary btn-block w-100" data-bs-toggle="modal" data-bs-target="#videoModal" data-theVideo="{{ src }}"><span class="fa fa-play"> Trailer</span></a> 
+                                                {% endif %}
+                                                {% endif %}
+                                            </div>
+                                             <!-- Streaming -->
                                             {% assign streaming = nominee.streaming | where:"source", service %}
                                             {% if streaming and streaming.size > 0 %}
                                                 {% for streamer in streaming %}
