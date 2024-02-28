@@ -10,7 +10,12 @@ body {
 a:link, a:hover, a:active, a:visited {
     text-decoration: none;
 }
-
+@media (min-width: 992px) {
+    .layout-categories .card-columns .col-md-2 {
+        width: 20%;
+        float: left;
+    }
+  }
 @media (min-width: 1200px) {
     .layout-categories .card-columns .col-lg-2 {
         width: 20%;
