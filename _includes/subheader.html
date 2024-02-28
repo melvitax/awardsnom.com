@@ -4,22 +4,8 @@
     <span class="lh-1 align-middle" id="apple-sign-out-button"></span>
     <span class="lh-1 align-middle" id="apple-sign-in-button"></span>
 </div>
-<div class="btn-group pt-1">
-    <button type="button" class="btn btn-outline-warning filter-dropdown dropdown-toggle mt-3" data-bs-toggle="dropdown" aria-expanded="false">
-        {% if page.layout == "nominees" %}
-        By Film
-        {% elsif page.layout == "streaming"%}
-        By Streaming
-        {% else %}
-        By Category
-        {% endif %} 
-        <i class="fa-solid fa-filter"></i>
-        <span class="visually-hidden">Toggle Dropdown</span>
-    </button>
-    <ul class="dropdown-menu dropdown-menu-end" style="max-height: 50vh; max-width: 90vw; overflow-y: scroll">
-        <li><a class="dropdown-item" href="/{{page.show}}/{{page.year}}/" >By Category {% if page.layout == "categories" %}<i class="fa-solid fa-check"></i>{% endif %}</a></li>
-        <li><a class="dropdown-item" href="/{{page.show}}/{{page.year}}/nominees/" > By Film {% if page.layout == "nominees" %}<i class="fa-solid fa-check"></i>{% endif %}</a></li>
-        <li><a class="dropdown-item" href="/{{page.show}}/{{page.year}}/streaming" >By Streaming {% if page.layout == "streaming" %}<i class="fa-solid fa-check"></i>{% endif %}</a></li>
-    </ul>
+<div class="btn-group pt-3" role="group" aria-label="Navigation Menu">
+    <a class="btn btn-{% if page.layout != 'categories' %}outline-{% endif %}warning" href="/{{page.show}}/{{page.year}}/" >Categories</a>
+    <a class="btn btn-{% if page.layout != 'nominees' %}outline-{% endif %}warning" href="/{{page.show}}/{{page.year}}/nominees/" >Films</a>
+    <a class="btn btn-{% if page.layout != 'streaming' %}outline-{% endif %}warning" href="/{{page.show}}/{{page.year}}/streaming/" >Streaming</a>
 </div>
-
