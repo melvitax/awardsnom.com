@@ -10,6 +10,13 @@ body {
 a:link, a:hover, a:active, a:visited {
     text-decoration: none;
 }
+
+@media (min-width: 1200px) {
+    .layout-categories .card-columns .col-lg-2 {
+        width: 20%;
+        float: left;
+    }
+  }
 h1.site-title {
     color: white;
     font-size: 7.8vw;
