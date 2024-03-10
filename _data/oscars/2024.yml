@@ -122,6 +122,7 @@ nominees:
       - cat: Best Supporting Actress
         id: da-vine-joy-randolph
         name: Da'Vine Joy Randolph
+        winner: true
       - cat: Best Film Editing
         name: Kevin Tent
       - cat: Best Picture
