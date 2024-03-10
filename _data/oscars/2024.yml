@@ -450,6 +450,9 @@ nominees:
     noms: 
       - cat: Best Documentary, Feature
         name: Kaouther Ben Hania and Nadim Cheikhrouha
+    streaming:
+      source: netflix
+      url: https://www.netflix.com/title/81735326
   - id: to-kill-a-tiger
     tmdb_id: 1015356
     tmdb_type: movie
