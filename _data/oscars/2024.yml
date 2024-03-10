@@ -336,6 +336,7 @@ nominees:
     noms: 
       - cat: Best Animated Feature
         name: Hayao Miyazaki and Toshio Suzuki
+        winner: true
   - id: elemental
     tmdb_id: 976573
     tmdb_type: movie
