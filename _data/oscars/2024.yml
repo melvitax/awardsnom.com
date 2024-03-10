@@ -316,6 +316,7 @@ nominees:
         name: Marie-Ange Luciani and David Thion, Producers
       - cat: Best Original Screenplay
         name: Screenplay - Justine Triet and Arthur Harari
+        winner: true
   - id: the-color-purple
     tmdb_id: 558915
     tmdb_type: movie
