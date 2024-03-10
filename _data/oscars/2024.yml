@@ -188,6 +188,7 @@ nominees:
         name: Ben LeClair, Nikos Karamigios, Cord Jefferson and Jermaine Johnson, Producers
       - cat: Best Adapted Screenplay
         name: Written for the screen by Cord Jefferson
+        winner: true
   - id: killers-of-the-flower-moon
     tmdb_id: 466420
     tmdb_type: movie
