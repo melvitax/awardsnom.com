@@ -672,6 +672,7 @@ nominees:
     noms: 
       - cat: Best Short Film, Animated
         name: Dave Mullins and Brad Booker
+        winner: true
   - id: the-after
     tmdb_id: 1169455
     tmdb_type: movie
