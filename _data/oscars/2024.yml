@@ -141,6 +141,7 @@ nominees:
       - cat: Best Actor
         id: cillian-murphy
         name: Cillian Murphy
+        winner: true
       - cat: Best Supporting Actor
         id: robert-downey-jr
         name: Robert Downey Jr.
