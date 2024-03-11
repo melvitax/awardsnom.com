@@ -247,6 +247,7 @@ nominees:
         id: what-was-i-made-for
         name: What Was I Made For?
         by: Music and Lyric by Billie Eilish and Finneas O'Connell
+        winner: true
       - cat: Best Picture
         name: David Heyman, Margot Robbie, Tom Ackerley and Robbie Brenner, Producers
       - cat: Best Production Design
