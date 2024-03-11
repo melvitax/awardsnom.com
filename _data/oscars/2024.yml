@@ -271,6 +271,7 @@ nominees:
       - cat: Best Actress
         id: emma-stone
         name: Emma Stone
+        winner: true
       - cat: Best Cinematography
         name: Robbie Ryan
       - cat: Best Costume Design
