@@ -427,6 +427,7 @@ nominees:
         name: James Wilson, Producer
       - cat: Best Sound
         name: Tarn Willers and Johnnie Burn
+        winner: true
       - cat: Best Adapted Screenplay
         name: Written by Jonathan Glazer
   - id: bobi-wine-the-people-s-president
