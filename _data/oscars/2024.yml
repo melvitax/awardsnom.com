@@ -479,6 +479,7 @@ nominees:
     noms: 
       - cat: Best Documentary, Feature
         name: Mstyslav Chernov, Michelle Mizner and Raney Aronson-Rath
+        winner: true
     streaming:
       - source: pbs
         url: https://www.pbs.org/video/20-days-in-mariupol-x62itb/
