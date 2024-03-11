@@ -523,6 +523,7 @@ nominees:
     noms: 
       - cat: Best Documentary, Short
         name: Ben Proudfoot and Kris Bowers
+        winner: true
     streaming:
       - source: youtube
         url: https://www.youtube.com/watch?v=xttrkgKXtZ4
