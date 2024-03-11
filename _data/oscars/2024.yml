@@ -162,6 +162,7 @@ nominees:
         name: Luisa Abel
       - cat: Best Original Score
         name: Ludwig Göransson
+        winner: true
       - cat: Best Picture
         name: Emma Thomas, Charles Roven and Christopher Nolan, Producers
       - cat: Best Production Design
