@@ -156,6 +156,7 @@ nominees:
         name: Christopher Nolan
       - cat: Best Film Editing
         name: Jennifer Lame
+        winner: true
       - cat: Best Makeup and Hairstyling
         name: Luisa Abel
       - cat: Best Original Score
