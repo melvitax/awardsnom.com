@@ -281,6 +281,7 @@ nominees:
         name: Ed Guiney, Andrew Lowe, Yorgos Lanthimos and Emma Stone, Producers
       - cat: Best Production Design
         name: "Production Design: James Price and Shona Heath; Set Decoration: Zsuzsa Mihalek"
+        winner: true
       - cat: Best Adapted Screenplay
         name: Screenplay by Tony McNamara
     streaming:
