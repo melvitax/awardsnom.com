@@ -150,6 +150,7 @@ nominees:
         name: Emily Blunt
       - cat: Best Cinematography
         name: Hoyte van Hoytema
+        winner: true
       - cat: Best Costume Design
         name: Ellen Mirojnick
       - cat: Best Director
