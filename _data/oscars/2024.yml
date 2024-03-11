@@ -144,6 +144,7 @@ nominees:
       - cat: Best Supporting Actor
         id: robert-downey-jr
         name: Robert Downey Jr.
+        winner: true
       - cat: Best Supporting Actress
         id: emily-blunt
         name: Emily Blunt
