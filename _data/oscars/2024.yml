@@ -156,6 +156,7 @@ nominees:
         name: Ellen Mirojnick
       - cat: Best Director
         name: Christopher Nolan
+        winner: true
       - cat: Best Film Editing
         name: Jennifer Lame
         winner: true
