@@ -764,6 +764,7 @@ nominees:
     noms: 
       - cat: Best Visual Effects
         name: Takashi Yamazaki, Kiyoko Shibuya, Masaki Takahashi and Tatsuji Nojima
+        winner: true
   - id: guardians-of-the-galaxy-vol-3
     tmdb_id: 447365
     tmdb_type: movie
