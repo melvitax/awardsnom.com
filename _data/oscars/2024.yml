@@ -419,6 +419,7 @@ nominees:
         name: Jonathan Glazer
       - cat: Best International Feature Film
         name: United Kingdom
+        winner: true
       - cat: Best Picture
         name: James Wilson, Producer
       - cat: Best Sound
