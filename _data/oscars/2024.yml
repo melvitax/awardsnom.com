@@ -731,6 +731,7 @@ nominees:
     noms: 
       - cat: Best Short Film, Live Action
         name: Wes Anderson and Steven Rales
+        winner: true
     streaming: 
       - source: netflix
         url: https://www.netflix.com/title/81388090
