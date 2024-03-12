@@ -196,6 +196,9 @@ nominees:
       - cat: Best Adapted Screenplay
         name: Written for the screen by Cord Jefferson
         winner: true
+    streaming:
+      - source: mgmplus
+        url: https://www.mgmplus.com/movie/american-fiction-2023
   - id: killers-of-the-flower-moon
     tmdb_id: 466420
     tmdb_type: movie
