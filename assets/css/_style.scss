@@ -281,6 +281,13 @@ h2.show-title {
     background-image: url("/assets/images/pbs-h.svg")
 }
 
+.source-logo.mgmplus {
+    background-image: url("/assets/images/mgmplus.svg");
+}
+.source-logo.mgmplus:hover {
+    background-image: url("/assets/images/mgmplus-h.svg")
+}
+
 .card { 
     background-color: transparent;
 }
