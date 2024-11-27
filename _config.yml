@@ -1,6 +1,6 @@
 title: AwardsNom
 description: Nominee ballot tracker for award shows
-keywords: filmmaking, oscards, awards, goldenglobes
+keywords: filmmaking,oscars,awards,goldenglobes
 baseurl: "" 
 url: "https://awardsnom.com"
 twitter: awardsnom
@@ -12,7 +12,13 @@ author:
   twitter: melvitax
   role: designer/developer
 markdown: kramdown
-exclude: ["node_modules",  "package.json", "Gemfile", "Gemfile.lock", "README.md", "LICENSE"]
+exclude: 
+  - node_modules
+  - package.json
+  - Gemfile
+  - Gemfile.lock
+  - "README.md"
+  - "LICENSE"
 timezone: 'America/New_York'
 cloudKitApiToken: "94d9b5bf1c7d0d906288b87ea68985c7110a903bb78946c9517157b8b74ad14b"
 cloudKitEnvironment: "production"
